@@ -1,2 +1,21 @@
-# kinoway
-Open-source analog of Kinopoisk.
+<div>
+  <h1>🎬Kinoway🎥</h1>
+
+  <b>
+    <i>Kinopoisk clone</i>
+  </b>
+</div>
+
+
+## Getting Started
+
+Run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
