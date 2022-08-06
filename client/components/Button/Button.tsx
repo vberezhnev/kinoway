@@ -1,8 +1,12 @@
 import styles from './Button.module.scss'
 
-const Button = () => {
+type Data = {
+    text: String
+}
+
+const Button = (props: Data) => {
     return (
-        <button>here</button>
+        <button className={styles.ButtonBase_btn}>{props.text}</button>
     )
 }
 

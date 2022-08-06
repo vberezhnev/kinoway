@@ -19,6 +19,10 @@
     div {
       .NewMovies_top {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 35px;
       }
 
       ul {

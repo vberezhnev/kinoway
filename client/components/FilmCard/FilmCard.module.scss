@@ -1,6 +1,14 @@
 @import "../../styles/variables.module.scss";
 
-li {
+.FilmCard_item {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  transition: transform 0.3s;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+
   .FilmCard_top {
     position: relative;
 
@@ -29,4 +37,8 @@ li {
 
   .FilmCard_info {
   }
+}
+
+.FilmCard_item:hover {
+  margin-bottom: 10px;
 }

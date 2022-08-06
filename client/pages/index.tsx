@@ -26,7 +26,7 @@ const Home: NextPage = () => {
           <div>
             <div className={styles.NewMovies_top}>
               <h2>New films</h2>
-              <Button />
+              <Button text="View more"/>
             </div>
             <ul>
               <FilmCard />
