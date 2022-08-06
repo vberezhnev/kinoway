@@ -1,0 +1,25 @@
+$primary-color: #64ff00;
+$foreground-color: #5b27c9;
+
+$container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+$color-white: #fff;
+$color-black: #000;
+$color-red: red;
+$color-green: #00a340;
+$color-dark: #141414;
+$color-light-dark: #1f1f1f;
+$color-primary: #005382;
+$color-dark-primary: #003f63;
+
+:export {
+  primaryColor: $primary-color;
+  foregroundColor: $foreground-color;
+
+  colorWhite: $color-white;
+  colorBlack: $color-black;
+  colorRed: $color-red;
+  colorGreen: $color-green;
+  colorDark: $color-dark;
+  colorLightDark: $color-light-dark;
+}

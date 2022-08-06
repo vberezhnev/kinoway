@@ -1,14 +1,14 @@
-
+import styles from "./Sidebar.module.scss";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#clients">Clients</a>
-      <a href="#contact">Contact</a>
+    <div className={styles.sidenav}>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

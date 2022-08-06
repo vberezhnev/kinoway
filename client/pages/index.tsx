@@ -1,31 +1,41 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
 
-import axios from 'axios'
+import axios from "axios";
 
 // Import components
-import Sidebar from '../components/Sidebar/Sidebar'
-import Header from '../components/Header/Header'
+import Header from "../components/Header/Header";
+import Sidebar from "../components/Sidebar/Sidebar";
+import FilmCard from "../components/FilmCard/FilmCard";
+import Button from "../components/Button/Button";
+
+import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
   return (
-    <div className="App">
+    <div className={styles.container}>
       <Header />
-      <div>
-        <div>
+
+      <div className={styles.App}>
+        {/* <div className={styles.sidebar}>
           <Sidebar />
-        </div>
-        <div>
-          asdasd
+        </div> */}
+
+        <div className={styles.main}>
+          <div>
+            <div className={styles.NewMovies_top}>
+              <h2>New films</h2>
+              <Button />
+            </div>
+            <ul>
+              <FilmCard />
+            </ul>
+          </div>
         </div>
       </div>
-
-      <p className="text">
-        asdasd
-      </p>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
