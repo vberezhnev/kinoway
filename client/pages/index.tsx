@@ -4,38 +4,16 @@ import Image from "next/image";
 
 import axios from "axios";
 
-// Import components
-import Header from "../components/Header/Header";
-import Sidebar from "../components/Sidebar/Sidebar";
-import FilmCard from "../components/FilmCard/FilmCard";
-import Button from "../components/Button/Button";
+import Home from "../src/components/screens/Home/Home";
 
-import styles from "../styles/Home.module.scss";
+console.log("index ", process.env.NEXT_PUBLIC_API_KEY);
 
-const Home: NextPage = () => {
+const MainPage: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <Header />
-
-      <div className={styles.App}>
-        {/* <div className={styles.sidebar}>
-          <Sidebar />
-        </div> */}
-
-        <div className={styles.main}>
-          <div>
-            <div className={styles.NewMovies_top}>
-              <h2>New films</h2>
-              <Button text="View more"/>
-            </div>
-            <ul>
-              <FilmCard />
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div>
+      <Home />
     </div>
   );
 };
 
-export default Home;
+export default MainPage;

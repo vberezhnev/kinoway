@@ -1,0 +1,20 @@
+.footerContainer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+
+  text-align: center;
+  padding: 3px;
+  background-color: #1f1f1f;
+  color: white;
+
+  .author {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    a {
+      color: skyblue;
+    }
+  }
+}

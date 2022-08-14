@@ -1,0 +1,24 @@
+.container {
+  .App {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-top: 2vh;
+    margin-right: 30vh;
+    margin-left: 30vh;
+
+    //height: 200vh;
+  }
+
+  .FilmContainer {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+  }
+
+  .sidebar {
+    div {
+    }
+  }
+}

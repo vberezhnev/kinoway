@@ -1,6 +1,8 @@
 @import "../../styles/variables.module.scss";
 
 .FilmCard_item {
+		max-width: 100%;
+		height: auto;
   display: list-item;
   text-align: -webkit-match-parent;
   transition: transform 0.3s;
@@ -9,15 +11,29 @@
   transition-timing-function: ease;
   transition-delay: 0s;
 
-  .FilmCard_top {
-    position: relative;
+	list-style: none;
 
+	@media (min-width: 1025px) {
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateY(-4px);
+        }
+    }
+	
+  .FilmCard_top {
+			position: relative;
+			disaply: block;
+			margin-bottom: 20px;
+
+			@media (max-width: 400px) {
+        margin-bottom: 15px;
+      }
+												 
     div {
       .filmImage {
         width: 22vh;
         border-radius: 8px;
-
-        margin-bottom: 20px;
       }
     }
 
