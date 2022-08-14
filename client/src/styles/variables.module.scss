@@ -9,6 +9,7 @@ $color-red: red;
 $color-green: #00a340;
 $color-dark: #141414;
 $color-light-dark: #1f1f1f;
+$color-gray: #909090;
 $color-primary: #005382;
 $color-dark-primary: #003f63;
 
@@ -22,4 +23,5 @@ $color-dark-primary: #003f63;
   colorGreen: $color-green;
   colorDark: $color-dark;
   colorLightDark: $color-light-dark;
+	colorGray: $color-gray;
 }

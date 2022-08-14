@@ -34,6 +34,13 @@
   float: right;
 }
 
+@media screen and (max-width: 900px) {
+  .header {
+    padding-left: 20vh;
+    padding-right: 20vh;
+  }
+}
+
 @media screen and (max-width: 835px) {
   .header {
     padding-left: 20vh;
