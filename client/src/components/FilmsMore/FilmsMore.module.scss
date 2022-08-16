@@ -1,0 +1,20 @@
+.main {
+  // margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+  width: 90%;
+
+	div {
+    .NewMovies_top {
+      display: flex;
+      align-items: center;
+			justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+		.films_type {
+		}
+
+		.button_load {
+		}
+  }
+}

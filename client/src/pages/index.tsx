@@ -4,14 +4,16 @@ import Image from "next/image";
 
 import axios from "axios";
 
-import Home from "../src/components/screens/Home/Home";
-
-console.log("index ", process.env.NEXT_PUBLIC_API_KEY);
+import Home from "@/components/screens/Home/Home";
+import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer";
 
 const MainPage: NextPage = () => {
   return (
     <div>
+      <Header />
       <Home />
+      <Footer />
     </div>
   );
 };

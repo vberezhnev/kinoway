@@ -8,7 +8,7 @@ import { IPerson } from "@/types/IPerson";
 import { IReviews } from "@/types/IReviews";
 
 export const kinomoreAPI = createApi({
-  reducerPath: "kinomoreAPI",
+  reducerPath: "kinowayAPI",
   baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
   endpoints: (build) => ({
     getFilmById: build.query<IMovie, string | string[] | undefined>({
