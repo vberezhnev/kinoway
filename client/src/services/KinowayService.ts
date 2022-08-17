@@ -1,11 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { API_URL, API_KEY } from "@/constants/api";
-import { IMovies } from "@/types/IMovies";
-import { IMovie } from "@/types/IMovie";
-import { IBaseQuery, IQuery } from "@/types/IQuery";
-import { getCurrentYear } from "@/helpers/getCurrentYear/getCurrentYear";
-import { IPerson } from "@/types/IPerson";
-import { IReviews } from "@/types/IReviews";
+import { API_URL, API_KEY } from "../constants/api";
+import { IMovies } from "../types/IMovies";
+import { IMovie } from "../types/IMovie";
+import { IBaseQuery, IQuery } from "../types/IQuery";
+import { getCurrentYear } from "../helpers/getCurrentYear";
+import { IPerson } from "../types/IPerson";
+import { IReviews } from "../types/IReviews";
 
 export const kinomoreAPI = createApi({
   reducerPath: "kinowayAPI",

@@ -2,7 +2,7 @@ import styles from "./FilmCard.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
-const FilmCard = (props: String) => {
+const FilmCard = (props: string) => {
   return (
     <Link href={props.href}>
       <li className={styles.FilmCard_item}>

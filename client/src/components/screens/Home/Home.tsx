@@ -6,7 +6,7 @@ import FilmsMore from "../../FilmsMore/FilmsMore";
 
 import axios from "axios";
 
-import NewFilms from "@/components/NewFilms/NewFilms";
+import NewFilms from "../../NewFilms/NewFilms";
 
 import styles from "./Home.module.scss";
 
