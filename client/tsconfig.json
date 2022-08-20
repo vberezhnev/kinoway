@@ -1,5 +1,35 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/helpers/*": [
+        "src/helpers/*"
+      ],
+      "@/types/*": [
+        "src/types/*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/UI/*": [
+        "src/components/UI/*"
+      ],
+      "@/services/*": [
+        "src/services/*"
+      ],
+      "@/store/*": [
+        "src/store/*"
+      ],
+      "@/scss/*": [
+        "src/scss/*"
+      ],
+      "@/constants/*": [
+        "src/constants/*"
+      ],
+      "@/hooks/*": [
+        "src/hooks/*"
+      ]
+    },
     "target": "es5",
     "lib": [
       "dom",
@@ -21,7 +51,9 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx"
   ],
   "exclude": [
     "node_modules"
