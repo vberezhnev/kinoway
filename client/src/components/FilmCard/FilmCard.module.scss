@@ -1,9 +1,11 @@
 @import "../../styles/variables.module.scss";
 
 .FilmCard_item {
+		display: list-item;
 		max-width: 100%;
+		width: 220px;
 		height: auto;
-  display: list-item;
+		
   text-align: -webkit-match-parent;
   transition: transform 0.3s;
   transition-property: transform;
@@ -45,6 +47,7 @@
   .FilmCard_title {
     display: inline-block;
     font-weight: 500;
+		word-wrap: break-word;
     color: $color-light-dark;
     line-height: 24px;
     text-decoration: none;

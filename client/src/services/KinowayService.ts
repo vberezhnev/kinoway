@@ -9,7 +9,7 @@ import { IReviews } from "../types/IReviews";
 
 export const kinomoreAPI = createApi({
   reducerPath: "kinowayAPI",
-  baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
+		baseQuery: fetchBaseQuery({ baseUrl: 'https://api.kinopoisk.dev' }),
   endpoints: (build) => ({
     getFilmById: build.query<IMovie, string | string[] | undefined>({
       query: (id) => `/movie?search=${id}&field=id&token=${API_KEY}`,

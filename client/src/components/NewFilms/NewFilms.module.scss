@@ -6,14 +6,15 @@
     .NewMovies_top {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
       width: 100%;
-      margin-bottom: 35px;
+      margin-bottom: 15px;
     }
 
     ul {
       display: flex;
       flex-wrap: wrap;
+			gap: 15px;
 
       li {
         list-style-type: none;

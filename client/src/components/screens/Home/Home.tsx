@@ -5,27 +5,30 @@ import FilmCard from "../../FilmCard/FilmCard";
 import FilmsMore from "../../FilmsMore/FilmsMore";
 
 import axios from "axios";
+import {TOKEN_KINOPOISK} from "../../../constants/api"
 
 import NewFilms from "../../NewFilms/NewFilms";
 
 import styles from "./Home.module.scss";
 
 const Home: NextPage = () => {
-  const [film, setFilm] = React.useState([]);
+		const [film, setFilm] = React.useState([]);
 
-  React.useEffect(() => {
-    axios
-      .get(
-        `https://api.kinopoisk.dev/movie?field=rating.kp&search=7-10&field=year&search=2017-2020&limit=10&field=typeNumber&search=2&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1&token=${process.env.NEXT_PUBLIC_API_KEY}`
-      )
-      .then((res: any) => {
-        setFilm(res.data.docs);
-        console.log(film[7].names[1].name);
-      })
-      .catch((error: string) => {
-        console.log("Error: ", error);
-      });
-  }, []);
+		console.log(TOKEN_KINOPOISK)
+
+  // React.useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://api.kinopoisk.dev/movie?field=rating.kp&search=7-10&field=year&search=2017-2020&field=typeNumber&search=2&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1&token=${TOKEN_KINOPOISK}`
+  //     )
+  //     .then((res: any) => {
+  //       setFilm(res.data.docs);
+  //       console.log(film[7].names[1].name);
+  //     })
+  //     .catch((error: string) => {
+  //       console.log("Error: ", error);
+  //     });
+  // }, []);
 
   return (
     <div className={styles.container}>

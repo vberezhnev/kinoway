@@ -29,14 +29,16 @@ const NewFilms = () => {
         <ul>
           {data?.docs?.map((data) => {
             console.log(data);
-            return (
+							return (
+									<ul className="">
               <FilmCard
-                key="1"
-                href="123"
-                src="123"
-                title="123"
-                secondTitle="123"
-              />
+                key={data.id}
+                href={`https://kinopoisk.ru/series/${data.id}`}
+                src={data.poster.previewUrl}
+                title={data.name}
+                secondTitle={data.alternativeName}
+											/>
+											</ul>
             );
           })}
         </ul>
