@@ -1,6 +1,6 @@
 import styles from "./Footer.module.scss";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div>
       <footer className={styles.footerContainer}>
@@ -11,5 +11,3 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;

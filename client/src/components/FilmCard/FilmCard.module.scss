@@ -37,7 +37,30 @@
 					
       .filmImage {
         border-radius: 8px;
-      }
+
+			}
+
+			div {
+			.ratingKP {
+					margin: 10px;
+					padding: 2px 5px 2px 5px;
+					position: absolute;
+					border-radius: 3px;
+					color: #fff;
+					z-index: 10;
+					background-color: #ff6600;
+			}
+			.ratingIMDB {
+					margin-top: 40px;
+					margin-left: 10px;
+					padding: 2px 5px 2px 5px;
+					position: absolute;
+					border-radius: 3px;
+					color: #000;
+					z-index: 10;
+					background-color: #f5c611;
+			}
+			}
     }
 
     span {

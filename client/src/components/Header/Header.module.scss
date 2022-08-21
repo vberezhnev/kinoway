@@ -23,6 +23,14 @@
     color: white;
     line-height: 25px;
     border-radius: 4px;
+
+		input {
+				background-color: #3f3f3f;
+				height: 40px;
+				border-radius: 8px;
+				border: none;
+				padding: 20px;
+		}
   }
 
   a.active {

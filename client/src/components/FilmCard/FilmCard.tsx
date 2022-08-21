@@ -8,14 +8,17 @@ const FilmCard = (props: string) => {
       <li className={styles.FilmCard_item}>
         <div className={styles.FilmCard_top}>
           <div className={styles.filmImageContainer}>
-            <Image
+					<div>
+          <span className={styles.ratingKP}><p>КП: {props.ratingKP}</p></span>
+          <span className={styles.ratingIMDB}><p>IMDb: {props.ratingIMDB}</p></span>
+					</div>
+					<Image
               className={styles.filmImage}
               src={props.src}
               width="222px"
               height="333px"
             />
           </div>
-          <span></span>
         </div>
 
         <h3 className={styles.FilmCard_title}>{props.title}</h3>
@@ -29,4 +32,4 @@ const FilmCard = (props: string) => {
   );
 };
 
-export default FilmCard;
+export default FilmCard

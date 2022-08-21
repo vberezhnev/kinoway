@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 //import Image from "next/image";
-import Header from "../components/Header/Header";
+import { Header } from "@/components/Header/Header";
+import { Footer }  from "@/components/Footer/Footer";
 
 import Home from "../components/screens/Home/Home";
 
@@ -9,7 +10,7 @@ const MainPage: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Kinomore</title>
+        <title>Kinoway</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="viewport"
@@ -19,7 +20,8 @@ const MainPage: NextPage = () => {
 					
 					</Head>
 			<Header />
-      <Home />
+					<Home />
+					<Footer />
     </div>
   );
 };
