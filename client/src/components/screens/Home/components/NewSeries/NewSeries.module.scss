@@ -1,0 +1,24 @@
+.main {
+  // margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+
+  div {
+    .NewSeries_top {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+			gap: 15px;
+
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+}
