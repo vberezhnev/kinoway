@@ -28,19 +28,17 @@ export const NewSeries = () => {
         </div>
         <ul>
           {data?.docs?.map((data: Object) => {
-            console.log(data);
-							return (
-							<ul>
-								<FilmCard
-										key={data.id}
-										href={`https://kinopoisk.ru/series/${data.id}`}
-									ratingKP={data.rating.kp}
-									ratingIMDB={data.rating.imdb}
-									src={data.poster.previewUrl}
-										title={data.name}
-										secondTitle={data.alternativeName}
-								/>
-							</ul>
+            return (
+              <ul key={data.id}>
+                <FilmCard
+                  href={`https://kinopoisk.ru/series/${data.id}`}
+                  ratingKP={data.rating.kp}
+                  ratingIMDB={data.rating.imdb}
+                  src={data.poster.previewUrl}
+                  title={data.name}
+                  secondTitle={data.alternativeName}
+                />
+              </ul>
             );
           })}
         </ul>

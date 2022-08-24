@@ -12,6 +12,14 @@ import Button from "@/components/UI-components/Button/Button";
 
 import styles from "./NewFilms.module.scss";
 
+interface Data {
+  id: number;
+  rating: object;
+  kp: number;
+  imdb: number;
+  poster: object;
+}
+
 export const NewFilms = () => {
   const { push } = useRouter();
   const { filmsLimit } = useTypedSelector((state) => state.loadReducer);
@@ -27,20 +35,18 @@ export const NewFilms = () => {
           <Button text="View more" />
         </div>
         <ul>
-          {data?.docs?.map((data: Object) => {
-            console.log(`https://kinopoisk.ru/film/${data.id}`);
-							return (
-							<ul>
-								<FilmCard
-										key={data.id}
-									  href={`https://kinopoisk.ru/films/${data.id}`}
-									ratingKP={data.rating.kp}
-									ratingIMDB={data.rating.imdb}
-										src={data.poster.previewUrl}
-										title={data.name}
-										secondTitle={data.alternativeName}
-								/>
-							</ul>
+          {data?.docs?.map((data: object | string | number) => {
+            return (
+              <ul key={data.id}>
+                <FilmCard
+                  href={`https://kinopoisk.ru/film/${data.id}`}
+                  ratingKP={data.rating.kp}
+                  ratingIMDB={data.rating.imdb}
+                  src={data.poster.previewUrl}
+                  title={data.name}
+                  secondTitle={data.alternativeName}
+                />
+              </ul>
             );
           })}
         </ul>

@@ -1,10 +1,9 @@
 
-import Button from '../../UI-components/Button/Button';
-
 import styles from './Film.module.scss'
+import styles from "./Film.module.scss";
 
 const Film = () => {
-  return (
+  /* return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.top}>
@@ -54,5 +53,5 @@ const Film = () => {
         <Reviews />
       </div>
     </section>
-  );
+  ); */
 };

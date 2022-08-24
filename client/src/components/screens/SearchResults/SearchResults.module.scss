@@ -1,0 +1,78 @@
+.styles_root {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 24px 20px;
+  border-radius: 8px;
+  transition-timing-function: ease-out;
+  transition-duration: 0.15s;
+  background-color: #fff;
+
+  div {
+    .image {
+      min-width: 64px;
+      border-radius: 4px;
+    }
+  }
+
+  .styles_content {
+    width: 100%;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .main {
+      margin-right: 15px;
+      max-width: 360px;
+
+      .movieTitle {
+        line-height: 22px;
+        font-weight: bold;
+      }
+
+      .secondaryInfo {
+        display: block;
+        font-size: 13px;
+        color: #000;
+        padding-bottom: 4px;
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 0;
+      margin-left: auto;
+
+      .rating {
+        min-width: 85px;
+        margin-top: 4px;
+        margin-right: 20px;
+
+        .kinoway {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+          margin-bottom: 4px;
+
+          .kinowayValue {
+            font-size: 22px;
+            font-weight: bold;
+            color: #3bb33b;
+            margin-right: 4px;
+          }
+
+          .kinowayCount {
+            color: #777;
+          }
+        }
+      }
+    }
+  }
+}
+
+.styles_root:hover {
+  background-color: #f7f7f7;
+}

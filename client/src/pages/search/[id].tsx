@@ -4,9 +4,14 @@ import { GetServerSideProps, NextPage } from "next";
 import { initStore } from "@/store/store";
 import { getFilmByName } from "@/services/KinowayService";
 import { SearchResults } from "@/components/screens/SearchResults/SearchResults";
+import { Layout } from "../../components/Layout/Layout";
 
 const searchResults: NextPage = () => {
-  return <SearchResults />;
+  return (
+    <Layout>
+      <SearchResults />
+    </Layout>
+  );
 };
 
 export const getServerSideProps: GetServerSideProps = async (params) => {
