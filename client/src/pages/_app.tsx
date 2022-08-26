@@ -1,5 +1,7 @@
 import type { AppProps } from "next/app";
 import { useStore } from "../store/store";
+
+import { ThemeProvider } from "next-themes";
 import { Provider } from "react-redux";
 
 import "../styles/globals.scss";
@@ -8,9 +10,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   const store = useStore(pageProps.initialReduxState);
 
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
+    <ThemeProvider>
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </ThemeProvider>
   );
 }
 
