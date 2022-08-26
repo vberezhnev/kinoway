@@ -4,10 +4,12 @@
   box-sizing: border-box;
   width: 100%;
   padding: 24px 20px;
+  //margin: 3vh;
   border-radius: 8px;
   transition-timing-function: ease-out;
   transition-duration: 0.15s;
   background-color: #fff;
+  border-bottom: 1px #444 dotted;
 
   div {
     .image {
@@ -28,6 +30,7 @@
       max-width: 360px;
 
       .movieTitle {
+        text-decoration: none;
         line-height: 22px;
         font-weight: bold;
       }
@@ -35,7 +38,7 @@
       .secondaryInfo {
         display: block;
         font-size: 13px;
-        color: #000;
+        color: #444;
         padding-bottom: 4px;
       }
     }

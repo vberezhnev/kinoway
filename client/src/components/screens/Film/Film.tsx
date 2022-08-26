@@ -1,13 +1,49 @@
+import { useRouter } from "next/router";
+import { useGetFilmByIdQuery } from "@/services/KinowayService";
 
-import styles from './Film.module.scss'
 import styles from "./Film.module.scss";
 
-const Film = () => {
-  /* return (
+export const Film = () => {
+  //const router = useRouter();
+  //const { id } = router.query;
+
+  const {
+    push,
+    query: { id },
+  } = useRouter();
+  const { data, isLoading, isError } = useGetFilmByIdQuery(id);
+  const {
+    alternativeName,
+    name,
+    type,
+    shortDescription,
+    poster,
+    year,
+    rating,
+    similarMovies,
+    ageRating,
+    fees,
+    genres,
+    slogan,
+    budget,
+    movieLength,
+    countries,
+    premiere,
+    description,
+    facts,
+    persons,
+  } = { ...data };
+
+  const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
+  const movieYear = year && `(${year})`;
+
+  console.log(data);
+
+  return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.top}>
-          <BackButton />
+          <button>Back button</button>
         </div>
         <div className={styles.content}>
           <div className={styles.left}>
@@ -16,42 +52,41 @@ const Film = () => {
               src={data?.poster?.url}
               alt={shortDescription}
             />
-            <MovieRating className={styles.rating} rating={rating} />
+            {/* <MovieRating className={styles.rating} rating={rating} /> */}
+            <span className={styles.rating}>
+              {rating?.kp ? rating.kp : rating?.imdb}
+            </span>
           </div>
           <div className={styles.right}>
-            <Title className={styles.title} variant="h1">
+            <h1 className={styles.title}>
               {movieTitle} {movieYear}
-            </Title>
-            <span className={styles.originalTitle}>alternativeName</span>
+            </h1>
+            <span className={styles.originalTitle}>{alternativeName}</span>
             <div className={styles.btns}>
-              <Button
+              <button
                 onClick={() => push(`/room/${data?.id}`)}
                 className={styles.btn}
-                variant="regular"
                 disabled={isError}
-                startIcon={<FiPlay />}
               >
                 Смотреть
-              </Button>
-              <MovieFavorite
+              </button>
+              {/* <MovieFavorite
                 className={styles.btn}
                 variant="regular"
                 id={data?.id}
                 disabled={isError}
-              />
+								/> */}
             </div>
-            <Title variant="h2" className={styles.subtitle}>
-              О {convertMovieType(type)}е
-            </Title>
-            <Info items={items} />
+            <h2 className={styles.subtitle}>About this {type}</h2>
+            {/* <Info items={items} /> */}
           </div>
         </div>
-        <Tabs tabs={tabs} />
+        {/*<Tabs tabs={tabs} />
         {similarMovies?.length ? (
           <SimilarMovies movies={similarMovies} />
         ) : null}
-        <Reviews />
+        <Reviews /> */}
       </div>
     </section>
-  ); */
+  );
 };

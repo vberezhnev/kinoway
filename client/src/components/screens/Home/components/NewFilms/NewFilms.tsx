@@ -39,7 +39,6 @@ export const NewFilms = () => {
             return (
               <ul key={data.id}>
                 <FilmCard
-                  href={`https://kinopoisk.ru/film/${data.id}`}
                   ratingKP={data.rating.kp}
                   ratingIMDB={data.rating.imdb}
                   src={data.poster.previewUrl}

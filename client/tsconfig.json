@@ -2,60 +2,33 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/helpers/*": [
-        "src/helpers/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/UI/*": [
-        "src/components/UI/*"
-      ],
-      "@/services/*": [
-        "src/services/*"
-      ],
-      "@/store/*": [
-        "src/store/*"
-      ],
-      "@/scss/*": [
-        "src/scss/*"
-      ],
-      "@/constants/*": [
-        "src/constants/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ]
+      "@/helpers/*": ["src/helpers/*"],
+      "@/types/*": ["src/types/*"],
+      "@/components/*": ["src/components/*"],
+      "@/UI/*": ["src/components/UI/*"],
+      "@/services/*": ["src/services/*"],
+      "@/store/*": ["src/store/*"],
+      "@/scss/*": ["src/scss/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/hooks/*": ["src/hooks/*"]
     },
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "**/*.jsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules"]
 }

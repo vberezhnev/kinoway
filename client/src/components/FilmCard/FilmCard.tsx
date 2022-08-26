@@ -1,10 +1,20 @@
-import styles from "./FilmCard.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { FC } from "react";
 
-const FilmCard = (props: Array<object>) => {
+import { IMovie } from "@/types/IMovie";
+
+import styles from "./FilmCard.module.scss";
+
+interface FilmCardProps {
+  item: IMovie;
+}
+
+const FilmCard: FC<FilmCardProps> = ({ item }) => {
+  const { id } = { ...item };
+
   return (
-    <Link href={props.href}>
+    <Link href={`/film/${id}`}>
       <li className={styles.FilmCard_item}>
         <div className={styles.FilmCard_top}>
           <div className={styles.filmImageContainer}>
