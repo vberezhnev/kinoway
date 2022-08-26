@@ -12,14 +12,6 @@ import Button from "@/components/UI-components/Button/Button";
 
 import styles from "./NewFilms.module.scss";
 
-interface Data {
-  id: number;
-  rating: object;
-  kp: number;
-  imdb: number;
-  poster: object;
-}
-
 export const NewFilms = () => {
   const { push } = useRouter();
   const { filmsLimit } = useTypedSelector((state) => state.loadReducer);
@@ -35,11 +27,10 @@ export const NewFilms = () => {
           <Button text="View more" />
         </div>
         <ul>
-          {data?.docs?.map((data: object | string | number) => {
-            console.log(data);
+          {data?.docs?.map((data: any) => {
             return (
               <ul key={data.id}>
-                <FilmCard item={data} />
+                <FilmCard key={data.id} item={data} />
               </ul>
             );
           })}

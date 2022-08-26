@@ -10,7 +10,7 @@ interface FilmItemProps {
 }
 
 const FilmCard: FC<FilmItemProps> = ({ item }) => {
-  const { id, poster, description, year, name, names, type, rating } = {
+  const { id, poster, description, year, name, names, type, rating }: any = {
     ...item,
   };
 
@@ -32,6 +32,7 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
               src={poster?.previewUrl}
               width="222px"
               height="333px"
+              alt={description}
             />
           </div>
         </div>
@@ -41,7 +42,9 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
         <a className={styles.FilmCard_secondTitle}>{names[1]?.name}</a>
 
         <br />
-        <span className={styles.FilmCard_info}>2022, фильм</span>
+        <span className={styles.FilmCard_info}>
+          {year}, {type}
+        </span>
       </li>
     </Link>
   );

@@ -32,7 +32,7 @@ export const Film = () => {
     description,
     facts,
     persons,
-  } = { ...data };
+  }: any = { ...data };
 
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
   const movieYear = year && `(${year})`;

@@ -1,6 +1,7 @@
 export interface IData {
-    total: number;
-    limit: number;
-    page: number;
-    pages: number;
+  docs: any;
+  total: number;
+  limit: number;
+  page: number;
+  pages: number;
 }

@@ -27,7 +27,7 @@ export const NewSeries = () => {
           <Button text="View more" />
         </div>
         <ul>
-          {data?.docs?.map((data: Object) => {
+          {data?.docs?.map((data: any) => {
             return (
               <ul key={data.id}>
                 <FilmCard item={data} />
