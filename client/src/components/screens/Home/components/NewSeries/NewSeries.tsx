@@ -30,13 +30,7 @@ export const NewSeries = () => {
           {data?.docs?.map((data: Object) => {
             return (
               <ul key={data.id}>
-                <FilmCard
-                  ratingKP={data.rating.kp}
-                  ratingIMDB={data.rating.imdb}
-                  src={data.poster.previewUrl}
-                  title={data.name}
-                  secondTitle={data.alternativeName}
-                />
+                <FilmCard item={data} />
               </ul>
             );
           })}
