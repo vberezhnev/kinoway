@@ -21,12 +21,12 @@ export const NewFilms = () => {
 
   return (
     <section className={styles.main}>
-      <div>
-        <div className={styles.NewMovies_top}>
+      <div className={`${styles.NewFilms_container} container`}>
+        <div className={styles.NewFilms_top}>
           <h2>New films</h2>
           <Button text="View more" />
         </div>
-        <ul>
+        <ul className={styles.listFilmsContainer}>
           {data?.docs?.map((data: any) => {
             return (
               <ul key={data.id}>

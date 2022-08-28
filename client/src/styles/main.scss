@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700&display=swap");
+@import "./variables.module.scss";
+@import "globals";
 
 * {
   padding: 0;
@@ -9,16 +11,22 @@
 body {
   font-family: "Fira Sans", sans-serif;
   background-color: #f4f4f4;
+
+  -webkit-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
 }
+
+// Setting a dark mode
 
 html,
 body {
   color: #000;
-  background: #fff;
+  background: #f4f4f4;
 }
 
 [data-theme="dark"],
 [data-theme="dark"] body {
   color: #fff;
-  background: #000;
+  background: #282828;
 }

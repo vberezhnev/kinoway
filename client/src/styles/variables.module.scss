@@ -13,6 +13,20 @@ $color-gray: #909090;
 $color-primary: #56abea;
 $color-dark-primary: #003f63;
 
+/*
+content-width: 1230px;
+container-offset: 15px;
+container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+*/
+
+// Width
+$content-width: 1230px;
+$container-offset: 15px;
+//$container-width: calc($content-width) + (var(--container-offset) * 2));
+
+$media-tablet: 770px;
+$media-mobile: 769px;
+
 :export {
   primaryColor: $primary-color;
   foregroundColor: $foreground-color;
@@ -24,4 +38,6 @@ $color-dark-primary: #003f63;
   colorDark: $color-dark;
   colorLightDark: $color-light-dark;
   colorGray: $color-gray;
+  mediaTablet: $media-tablet;
+  mediaMobile: $media-mobile;
 }

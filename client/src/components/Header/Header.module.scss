@@ -1,11 +1,12 @@
 @import "../../styles/variables.module.scss";
+
 .header {
   overflow: hidden;
   background-color: #1f1f1f;
   padding: 20px 10px;
 
-  padding-left: 30vh;
-  padding-right: 30vh;
+  //padding-left: 30vh;
+  //padding-right: 30vh;
   height: 72px;
 
   color: white;
@@ -36,41 +37,14 @@
   float: right;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: $media-tablet) {
   .header {
-    padding-left: 20vh;
-    padding-right: 20vh;
+    padding: 0 10vh 0 10vh;
   }
 }
 
-@media screen and (max-width: 835px) {
+@media screen and (max-width: $media-mobile) {
   .header {
-    padding-left: 20vh;
-    padding-right: 20vh;
-  }
-}
-
-@media screen and (max-width: 670px) {
-  .header {
-    padding-left: 10vh;
-    padding-right: 10vh;
-  }
-}
-
-@media screen and (max-width: 510px) {
-  .header {
-    padding-left: 2vh;
-    padding-right: 2vh;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .header {
-    padding-left: 0vh;
-    padding-right: 0vh;
-
-    a.logo {
-      display: none;
-    }
+    padding: 0 8vh 0 8vh;
   }
 }

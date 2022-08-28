@@ -4,7 +4,7 @@ import { useStore } from "../store/store";
 import { ThemeProvider } from "next-themes";
 import { Provider } from "react-redux";
 
-import "../styles/globals.scss";
+import "../styles/main.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const store = useStore(pageProps.initialReduxState);

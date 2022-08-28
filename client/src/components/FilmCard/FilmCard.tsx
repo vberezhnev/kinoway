@@ -28,10 +28,10 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
               </span>
             </div>
             <Image
+              unoptimized
               className={styles.filmImage}
               src={poster?.previewUrl}
-              width="222px"
-              height="333px"
+              layout="fill"
               alt={description}
             />
           </div>

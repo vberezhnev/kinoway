@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <div className={styles.App}>
         <NewFilms />
-        <NewSeries />
+        {/* <NewSeries /> */}
       </div>
     </div>
   );

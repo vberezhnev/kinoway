@@ -10,6 +10,12 @@ import Link from "next/link";
 export const Header = () => {
   const { theme, setTheme } = useTheme();
 
+  /* if (localStorage.getItem("theme") == "dark") {
+    setTheme("dark");
+  } else {
+    setTheme("light");
+  } */
+
   return (
     <div className={styles.header}>
       <Link href={RoutesEnum.Home}>
@@ -20,15 +26,11 @@ export const Header = () => {
           </span>
         </a>
       </Link>
+      <button onClick={() => setTheme("light")}>Light Mode</button>
+      <button onClick={() => setTheme("dark")}>Dark Mode</button>
 
       <div className={styles.headerRight}>
         <Search />
-
-        <div>
-          The current theme is: {theme}
-          <button onClick={() => setTheme("light")}>Light Mode</button>
-          <button onClick={() => setTheme("dark")}>Dark Mode</button>
-        </div>
       </div>
     </div>
   );

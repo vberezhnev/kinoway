@@ -1,9 +1,11 @@
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 
+import styles from "./Layout.module.scss";
+
 export const Layout = ({ children }: any): JSX.Element => {
   return (
-    <div>
+    <div className={styles.layoutContainer}>
       <Header />
       <main>{children}</main>
       <Footer />

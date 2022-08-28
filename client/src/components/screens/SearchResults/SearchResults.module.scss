@@ -11,6 +11,10 @@
   background-color: #fff;
   border-bottom: 1px #444 dotted;
 
+  [data-theme="dark"] .styles_root {
+    background-color: #555;
+  }
+
   div {
     .image {
       min-width: 64px;
