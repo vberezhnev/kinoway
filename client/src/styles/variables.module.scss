@@ -1,7 +1,11 @@
+$content-width: 1230px;
+$container-offset: 15px;
+$container-width: calc(#{$content-width} + #{$container-offset} * 2);
+
 $primary-color: #64ff00;
 $foreground-color: #5b27c9;
 
-$container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+//$container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
 $color-white: #fff;
 $color-black: #000;
@@ -19,17 +23,16 @@ container-offset: 15px;
 container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 */
 
-// Width
-$content-width: 1230px;
-$container-offset: 15px;
-//$container-width: calc($content-width) + (var(--container-offset) * 2));
-
 $media-tablet: 770px;
 $media-mobile: 769px;
 
 :export {
   primaryColor: $primary-color;
   foregroundColor: $foreground-color;
+
+  contentWidth: $content-width;
+  containerOffset: $container-offset;
+  //containerWidth: $container-width;
 
   colorWhite: $color-white;
   colorBlack: $color-black;

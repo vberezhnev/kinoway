@@ -1,3 +1,5 @@
+@import "../../../styles/variables.module.scss";
+
 .container {
   padding-bottom: 100px;
   display: flex;
@@ -5,9 +7,9 @@
   flex-direction: column;
 
   margin: 0 auto;
-  padding-left: var(--container-offset);
-  padding-right: var(--container-offset);
-  max-width: var(--container-width);
+  padding-left: $container-offset;
+  padding-right: $container-offset;
+  max-width: $container-width;
 
   .App {
     display: flex;
