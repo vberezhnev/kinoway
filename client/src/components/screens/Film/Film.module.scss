@@ -1,11 +1,17 @@
+@import "../../../styles/variables.module.scss";
+
 .section {
   //background-color: #f4f4f4;
+
   height: 86.2vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  padding-left: $container-offset;
+  padding-right: $container-offset;
+  max-width: $container-width;
+  min-height: 86.2vh;
 
   .content {
+    margin-top: 2vh;
     display: flex;
     margin-bottom: 50px;
 

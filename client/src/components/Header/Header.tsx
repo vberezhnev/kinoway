@@ -17,20 +17,22 @@ export const Header = () => {
   } */
 
   return (
-    <div className={styles.header}>
-      <Link href={RoutesEnum.Home}>
-        <a className={styles.logo}>
-          <span>KINO</span>
-          <span color={variables.primaryColor} className={styles.wayText}>
-            WAY
-          </span>
-        </a>
-      </Link>
-      <button onClick={() => setTheme("light")}>Light Mode</button>
-      <button onClick={() => setTheme("dark")}>Dark Mode</button>
+    <div className={styles.headerContainer}>
+      <div className={styles.content}>
+        <Link href={RoutesEnum.Home}>
+          <a className={styles.logo}>
+            <span>KINO</span>
+            <span color={variables.primaryColor} className={styles.wayText}>
+              WAY
+            </span>
+          </a>
+        </Link>
+        <button onClick={() => setTheme("light")}>Light Mode</button>
+        <button onClick={() => setTheme("dark")}>Dark Mode</button>
 
-      <div className={styles.headerRight}>
-        <Search />
+        <div className={styles.headerRight}>
+          <Search />
+        </div>
       </div>
     </div>
   );
