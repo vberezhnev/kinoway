@@ -1,20 +1,53 @@
-.main {
-  // margin-left: 160px; /* Same as the width of the sidebar */
-  padding: 0px 10px;
+@import "../../../../../styles/variables.module.scss";
 
-  div {
+.main {
+  padding-bottom: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  @media (max-width: 576px) {
+    padding-bottom: 60px;
+  }
+
+  .NewSeries_container {
+    margin: 0 auto;
+    max-width: $container-width;
+
+    @media screen and (max-width: $content-width) {
+      .NewSeries_container {
+        padding: 0 20vh 0 20vh;
+      }
+    }
+
+    @media screen and (max-width: $media-tablet) {
+      .NewSeries_container {
+        padding: 0 10vh 0 10vh;
+      }
+    }
+
+    @media screen and (max-width: $media-mobile) {
+      .NewSeries_container {
+        padding: 0 8vh 0 8vh;
+      }
+    }
+
     .NewSeries_top {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 35px;
+
+      @media (max-width: 576px) {
+        margin-bottom: 25px;
+      }
     }
 
     ul {
       display: flex;
       flex-wrap: wrap;
-			gap: 15px;
+      gap: 15px;
 
       li {
         list-style-type: none;

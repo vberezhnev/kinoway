@@ -43,7 +43,7 @@ export const SearchResults = () => {
                 </Link>
                 <p className={styles.secondInfo}>
                   {data.alternativeName}, {data.year}
-                  {data.movieLength ? true : "asd"}
+                  {data.movieLength ? true : "none"}
                 </p>
               </div>
               <div className={styles.user}>

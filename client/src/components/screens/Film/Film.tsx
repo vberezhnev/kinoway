@@ -3,6 +3,7 @@ import { useGetFilmByIdQuery } from "@/services/KinowayService";
 import { BackButton } from "@/components/UI-components/BackButton/BackButton";
 
 import styles from "./Film.module.scss";
+import Button from "../../UI-components/Button/Button";
 
 export const Film = () => {
   //const router = useRouter();
@@ -62,17 +63,17 @@ export const Film = () => {
             <h1 className={styles.title}>
               {movieTitle} {movieYear}
             </h1>
-            <span className={styles.originalTitle}>{alternativeName}</span>
+            <h3 className={styles.originalTitle}>{alternativeName}</h3>
+            <span>{shortDescription ? shortDescription : ""}</span>
             <div className={styles.btns}>
-              <button
+              <Button
                 onClick={() =>
                   push(`https://kirlovon.dev/Kinopoisk-Watch/?id=${data?.id}`)
                 }
                 className={styles.btn}
                 disabled={isError}
-              >
-                Смотреть
-              </button>
+                text="Watch"
+              />
               {/* <MovieFavorite
                 className={styles.btn}
                 variant="regular"

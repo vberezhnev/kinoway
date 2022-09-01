@@ -8,12 +8,7 @@
   border-radius: 8px;
   transition-timing-function: ease-out;
   transition-duration: 0.15s;
-  background-color: #fff;
-  border-bottom: 1px #444 dotted;
-
-  [data-theme="dark"] .styles_root {
-    background-color: #555;
-  }
+  border-bottom: 1px #888;
 
   div {
     .image {
@@ -82,4 +77,12 @@
 
 .styles_root:hover {
   background-color: #f7f7f7;
+}
+
+[data-theme="dark"] .styles_root {
+  background-color: #333;
+}
+
+[data-theme="dark"] .styles_root:hover {
+  background-color: #444;
 }

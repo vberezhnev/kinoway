@@ -8,7 +8,7 @@ import { useActions } from "@/hooks/useActions";
 
 //import Sidebar from "../UI-components/Sidebar/Sidebar";
 import FilmCard from "@/components/FilmCard/FilmCard";
-import Button from "@/components/UI-components/Button/Button";
+import MovieTop from "../../../../MovieTop/MovieTop";
 
 import styles from "./NewSeries.module.scss";
 
@@ -21,12 +21,9 @@ export const NewSeries = () => {
 
   return (
     <section className={styles.main}>
-      <div>
-        <div className={styles.NewSeries_top}>
-          <h2>New series</h2>
-          <Button text="View more" />
-        </div>
-        <ul>
+      <div className={`${styles.NewSeries_container} container`}>
+        <MovieTop header="New series" buttonText="View more" />
+        <ul className={styles.listSeriesContainer}>
           {data?.docs?.map((data: any) => {
             return (
               <ul key={data.id}>
