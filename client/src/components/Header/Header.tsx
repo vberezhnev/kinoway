@@ -10,12 +10,6 @@ import Link from "next/link";
 export const Header = () => {
   const { theme, setTheme } = useTheme();
 
-  /* if (localStorage.getItem("theme") == "dark") {
-    setTheme("dark");
-  } else {
-    setTheme("light");
-  } */
-
   return (
     <div className={styles.headerContainer}>
       <div className={styles.content}>
@@ -27,8 +21,14 @@ export const Header = () => {
             </span>
           </a>
         </Link>
-        <button onClick={() => setTheme("light")}>Light Mode</button>
-        <button onClick={() => setTheme("dark")}>Dark Mode</button>
+        <input
+          type="checkbox"
+          onChange={() => {
+            theme == "light" ? setTheme("dark") : setTheme("light");
+          }}
+          checked={theme == "light" ? false : true}
+        />
+        <span>&nbsp;Dark mode</span>
 
         <div className={styles.headerRight}>
           <Search />

@@ -1,0 +1,9 @@
+@import "../../../styles/variables.module.scss";
+
+.button {
+  background-color: $color-dark-primary;
+  padding: 10px 12px 10px 12px;
+  border-radius: 100%;
+  border: none;
+  color: white;
+}

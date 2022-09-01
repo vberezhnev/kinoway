@@ -21,10 +21,10 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
           <div className={styles.filmImageContainer}>
             <div>
               <span className={styles.ratingKP}>
-                <p>KP: {rating?.kp}</p>
+                <p>IMDb: {rating?.imdb}</p>
               </span>
               <span className={styles.ratingIMDB}>
-                <p>IMDb: {rating?.imdb}</p>
+                <p>KP: {rating?.kp}</p>
               </span>
             </div>
             <Image

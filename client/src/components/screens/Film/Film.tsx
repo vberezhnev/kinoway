@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useGetFilmByIdQuery } from "@/services/KinowayService";
+import { BackButton } from "@/components/UI-components/BackButton/BackButton";
 
 import styles from "./Film.module.scss";
 
@@ -43,7 +44,7 @@ export const Film = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.top}>
-          <button>Back button</button>
+          <BackButton />
         </div>
         <div className={styles.content}>
           <div className={styles.left}>
@@ -64,7 +65,9 @@ export const Film = () => {
             <span className={styles.originalTitle}>{alternativeName}</span>
             <div className={styles.btns}>
               <button
-                onClick={() => push(`/room/${data?.id}`)}
+                onClick={() =>
+                  push(`https://kirlovon.dev/Kinopoisk-Watch/?id=${data?.id}`)
+                }
                 className={styles.btn}
                 disabled={isError}
               >

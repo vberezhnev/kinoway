@@ -4,7 +4,7 @@
   //background-color: #f4f4f4;
 
   height: 86.2vh;
-  margin: 0 auto;
+  margin: 2vh auto;
   padding-left: $container-offset;
   padding-right: $container-offset;
   max-width: $container-width;
@@ -113,7 +113,7 @@
     font-weight: 300;
     font-size: 20px;
     line-height: 28px;
-    color: rgba(#000, 0.5);
+    color: $color-gray;
     margin-bottom: 25px;
   }
 

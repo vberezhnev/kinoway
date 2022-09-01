@@ -20,28 +20,25 @@ export const SearchResults = () => {
   });
 
   //const { Container, Heading, Description, Body, Content } = Catalog;
-  //console.log(data?.docs);
 
   return (
     <div>
       {data?.docs?.map((data: any) => {
+        console.log(data);
         return (
           <div className={styles.styles_root} key={data.id}>
             <div>
               <Image
                 className={styles.image}
-                src={data.poster.url}
-                height={"96px"}
-                width={"64px"}
+                src={data?.poster?.url ? data.poster.url : "/public/vercel.svg"}
+                width={64}
+                height={94}
               />
             </div>
 
             <div className={styles.styles_content}>
               <div className={styles.main}>
-                <Link
-                  className={styles.movieTitle}
-                  href={`https://kirlovon.dev/Kinopoisk-Watch/?id=${data.id}`}
-                >
+                <Link className={styles.movieTitle} href={`/film/${id}`}>
                   {data.name}
                 </Link>
                 <p className={styles.secondInfo}>
