@@ -32,10 +32,10 @@
       margin-bottom: 15px;
     }
 
-    .filmImageContainer {
+    .imageContainer {
       display: block;
       position: relative;
-      height: auto;
+      height: 100%;
       border-radius: 5px;
       overflow: hidden;
       background-color: $color-dark;
@@ -61,63 +61,56 @@
         background-color: rgba(#000, 0.2);
         transition: opacity 0.3s, visibility 0.3s;
       }
-
-      .filmImage {
-        border-radius: 8px;
-        width: 0px;
-        height: 0px;
-        min-width: 100%;
-        max-width: 100%;
-        min-height: 100%;
-        max-height: 100%;
-      }
-
-      div {
-        .ratingKP {
-          margin: 10px;
-          padding: 2px 5px 2px 5px;
-          position: absolute;
-          border-radius: 3px;
-          color: #fff;
-          z-index: 10;
-          background-color: #ff6600;
-        }
-        .ratingIMDB {
-          margin-top: 40px;
-          margin-left: 10px;
-          padding: 2px 5px 2px 5px;
-          position: absolute;
-          border-radius: 3px;
-          color: #000;
-          z-index: 10;
-          background-color: #f5c611;
-        }
-      }
     }
 
-    span {
+    .image {
+      display: block;
+      width: 100vh;
+      height: 10vh;
+      object-fit: cover;
+    }
+    div {
+      .ratingKP {
+        margin: 10px;
+        padding: 2px 5px 2px 5px;
+        position: absolute;
+        border-radius: 3px;
+        color: #fff;
+        z-index: 10;
+        background-color: #333;
+      }
+      .ratingIMDB {
+        margin-top: 40px;
+        margin-left: 10px;
+        padding: 2px 5px 2px 5px;
+        position: absolute;
+        border-radius: 3px;
+        color: #000;
+        z-index: 10;
+        background-color: #f5c600;
+      }
     }
   }
 
-  .FilmCard_title {
-    display: inline-block;
-    font-weight: 500;
-    word-wrap: break-word;
-    //color: $color-light-dark;
-    line-height: 24px;
-    text-decoration: none;
+  span {
   }
+}
 
-  .FilmCard_secondTitle {
-    font-size: 14px;
-    color: $color-gray;
-    line-height: 24px;
-    text-decoration: none;
-    margin-bottom: 10px;
-  }
+.FilmCard_title {
+  display: inline-block;
+  font-weight: 500;
+  word-wrap: break-word;
+  //color: $color-light-dark;
+  line-height: 24px;
+  text-decoration: none;
+}
 
-  .FilmCard_info {
-  }
+.FilmCard_secondTitle {
+  font-size: 14px;
+  color: $color-gray;
+  line-height: 24px;
+  text-decoration: none;
+  margin-bottom: 10px;
 }
 
 .FilmCard_item:hover {

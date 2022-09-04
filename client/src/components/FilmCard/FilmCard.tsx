@@ -27,14 +27,17 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
                 <p>KP: {rating?.kp}</p>
               </span>
             </div>
-            <Image
-              unoptimized
-              className={styles.filmImage}
-              src={poster?.previewUrl}
-              width={222}
-              height={333}
-              alt={description}
-            />
+            <a className={styles.imageContainer}>
+              {poster && (
+                <Image
+                  className={styles.image}
+                  src={poster?.previewUrl}
+                  width={222}
+                  height={333}
+                  alt={description}
+                />
+              )}
+            </a>
           </div>
         </div>
 
