@@ -9,7 +9,9 @@ import { Layout } from "../../components/Layout/Layout";
 const searchResults: NextPage = () => {
   return (
     <Layout>
-      <SearchResults />
+      <div className="container">
+        <SearchResults />
+      </div>
     </Layout>
   );
 };

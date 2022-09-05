@@ -10,8 +10,6 @@
 
 body {
   font-family: "Fira Sans", sans-serif;
-  background-color: #f4f4f4;
-
   -webkit-transition: background-color 300ms linear;
   -ms-transition: background-color 300ms linear;
   transition: background-color 300ms linear;
@@ -21,12 +19,15 @@ body {
 
 html,
 body {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
   color: #000;
-  background: #f4f4f4;
+  background: #f6f6f6;
+  transition: 300ms ease;
 }
 
 [data-theme="dark"],
 [data-theme="dark"] body {
-  color: #fff;
+  color: #f4f4f4;
   background: #282828;
 }

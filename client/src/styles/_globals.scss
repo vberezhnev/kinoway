@@ -1,9 +1,4 @@
-html {
-  box-sizing: border-box;
-  height: 100%;
-  font-family: var(--font-family, sans-serif);
-  -webkit-text-size-adjust: 100%;
-}
+@import "variables.module.scss";
 
 *,
 *::before,
@@ -17,7 +12,6 @@ body {
   min-height: 100%;
   font-weight: 300;
   font-size: 16px;
-  color: var(--color-light-dark);
   overflow-anchor: none;
 }
 
@@ -50,9 +44,9 @@ a {
 
 .container {
   margin: 0 auto;
-  padding-left: var(--container-offset);
-  padding-right: var(--container-offset);
-  max-width: var(--container-width);
+  padding-left: $container-offset;
+  padding-right: $container-offset;
+  max-width: $container-width;
 }
 
 #__next {
@@ -73,8 +67,8 @@ a {
 }
 
 ::selection {
-  color: var(--color-white);
-  background-color: var(--color-primary);
+  color: $color-white;
+  background-color: $color-primary;
 }
 
 #nprogress {

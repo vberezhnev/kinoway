@@ -11,7 +11,7 @@ const MovieTop = (props: IMovieTop) => {
   return (
     <div className={styles.NewMovies_top}>
       <h1>{props.header}</h1>
-      <Button text={props.buttonText} />
+      <Button>{props.buttonText}</Button>
     </div>
   );
 };

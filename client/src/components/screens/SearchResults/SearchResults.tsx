@@ -38,12 +38,17 @@ export const SearchResults = () => {
 
             <div className={styles.styles_content}>
               <div className={styles.main}>
-                <Link className={styles.movieTitle} href={`/film/${data?.id}`}>
-                  {data.name}
-                </Link>
+                <h3>
+                  <Link
+                    className={styles.movieTitle}
+                    href={`/film/${data?.id}`}
+                  >
+                    {data.name}
+                  </Link>
+                </h3>
                 <p className={styles.secondInfo}>
                   {data.alternativeName}, {data.year}
-                  {data.movieLength ? true : "none"}
+                  {data.movieLength ? `, ${data.movieLength} мин` : ""}
                 </p>
               </div>
               <div className={styles.user}>
