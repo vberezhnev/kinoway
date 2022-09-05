@@ -24,7 +24,7 @@ export const SearchResults = () => {
   return (
     <div>
       {data?.docs?.map((data: any) => {
-        console.log(data);
+        console.log(page);
         return (
           <div className={styles.styles_root} key={data.id}>
             <div>

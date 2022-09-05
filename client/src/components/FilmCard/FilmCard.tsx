@@ -29,7 +29,8 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
             </div>
             <a className={styles.imageContainer}>
               {poster && (
-                <Image
+									<Image
+									unoptimized
                   className={styles.image}
                   src={poster?.previewUrl}
                   width={222}

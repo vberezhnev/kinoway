@@ -6,13 +6,13 @@ import styles from "./Film.module.scss";
 import Button from "../../UI-components/Button/Button";
 
 export const Film = () => {
-  //const router = useRouter();
-  //const { id } = router.query;
+  const router = useRouter();
+  const { id } = router.query;
 
-  const {
-    push,
-    query: { id },
-  } = useRouter();
+  // const {
+  //   push,
+  //   query: { id },
+  // } = useRouter();
   const { data, isLoading, isError } = useGetFilmByIdQuery(id);
   const {
     alternativeName,
@@ -38,8 +38,6 @@ export const Film = () => {
 
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
   const movieYear = year && `(${year})`;
-
-  console.log(data);
 
   return (
     <section className={styles.section}>
@@ -67,13 +65,13 @@ export const Film = () => {
             <span>{shortDescription ? shortDescription : ""}</span>
             <div className={styles.btns}>
               <Button
-                onClick={() =>
-                  push(`https://kirlovon.dev/Kinopoisk-Watch/?id=${data?.id}`)
-                }
+                onClick={() => {
+                  router.push(`https://kirlovon.dev/Kinopoisk-Watch/?id=${id}`);
+                }}
                 className={styles.btn}
-                disabled={isError}
-                text="Watch"
-              />
+              >
+                Watch
+              </Button>
               {/* <MovieFavorite
                 className={styles.btn}
                 variant="regular"
