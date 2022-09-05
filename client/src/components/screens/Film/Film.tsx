@@ -45,7 +45,7 @@ export const Film = () => {
   const items = [
     {
       caption: "Страны",
-      value: countries?.map((el, idx) => (
+      value: countries?.map((el: number | string, idx: number | string) => (
         <Fragment key={idx}>
           {idx ? ", " : ""}
           {el.name}

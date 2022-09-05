@@ -8377,3 +8377,483 @@ Info 8304 [21:05:03.543] Different program with same set of files
 Info 8305 [21:05:03.633] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
 Info 8306 [21:05:03.640] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 738 structureChanged: false structureIsReused:: Completely Elapsed: 6.876095004379749ms
 Info 8307 [21:05:03.640] Different program with same set of files
+Info 8308 [21:10:38.143] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8309 [21:10:38.156] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 739 structureChanged: false structureIsReused:: Completely Elapsed: 13.185345001518726ms
+Info 8310 [21:10:38.156] Different program with same set of files
+Info 8311 [21:10:39.592] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8312 [21:10:39.603] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 740 structureChanged: false structureIsReused:: Completely Elapsed: 11.342869997024536ms
+Info 8313 [21:10:39.603] Different program with same set of files
+Info 8314 [21:10:39.916] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8315 [21:10:39.929] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 741 structureChanged: false structureIsReused:: Completely Elapsed: 13.685189001262188ms
+Info 8316 [21:10:39.930] Different program with same set of files
+Info 8317 [21:10:40.071] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8318 [21:10:40.076] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 742 structureChanged: false structureIsReused:: Completely Elapsed: 5.144260004162788ms
+Info 8319 [21:10:40.076] Different program with same set of files
+Info 8320 [21:10:40.323] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8321 [21:10:40.330] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 743 structureChanged: false structureIsReused:: Completely Elapsed: 6.946001000702381ms
+Info 8322 [21:10:40.330] Different program with same set of files
+Info 8323 [21:10:41.180] DirectoryWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/#Film.tsx# 0:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src 1 undefined Config: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Wild card directory
+Info 8324 [21:10:41.181] Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Detected file add/remove of non supported extension: /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/#Film.tsx#
+Info 8325 [21:10:41.181] Elapsed:: 0.16711000353097916ms DirectoryWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/#Film.tsx# 0:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src 1 undefined Config: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Wild card directory
+Info 8326 [21:10:41.181] DirectoryWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/#Film.tsx# 0:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components 1 undefined Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Failed Lookup Locations
+Info 8327 [21:10:41.181] Elapsed:: 0.05663900077342987ms DirectoryWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/#Film.tsx# 0:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components 1 undefined Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Failed Lookup Locations
+Info 8328 [21:10:41.370] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8329 [21:10:41.378] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 744 structureChanged: false structureIsReused:: Completely Elapsed: 7.862193003296852ms
+Info 8330 [21:10:41.378] Different program with same set of files
+Info 8331 [21:10:41.775] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8332 [21:10:41.787] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 745 structureChanged: false structureIsReused:: Completely Elapsed: 11.560409002006054ms
+Info 8333 [21:10:41.787] Different program with same set of files
+Info 8334 [21:10:42.923] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8335 [21:10:42.932] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 746 structureChanged: false structureIsReused:: Completely Elapsed: 9.071279004216194ms
+Info 8336 [21:10:42.932] Different program with same set of files
+Info 8337 [21:10:43.572] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8338 [21:10:43.590] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 747 structureChanged: false structureIsReused:: Completely Elapsed: 17.471252001821995ms
+Info 8339 [21:10:43.590] Different program with same set of files
+Info 8340 [21:10:43.590] getCompletionData: Get current token: 0.012047000229358673
+Info 8341 [21:10:43.590] getCompletionData: Is inside comment: 0.0024660006165504456
+Info 8342 [21:10:43.590] getCompletionData: Get previous token: 0.06968799978494644
+Info 8343 [21:10:43.591] getCompletionsAtPosition: isCompletionListBlocker: 0.21563799679279327
+Info 8344 [21:10:43.594] getExportInfoMap: cache hit
+Info 8345 [21:10:43.634] collectAutoImports: resolved 1 module specifiers, plus 200 ambient and 346 from cache
+Info 8346 [21:10:43.634] collectAutoImports: response is complete
+Info 8347 [21:10:43.634] collectAutoImports: 39.512948006391525
+Info 8348 [21:10:43.634] getCompletionData: Semantic work: 42.96464700251818
+Info 8349 [21:10:43.655] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 20.46493200212717
+Info 8350 [21:10:43.932] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8351 [21:10:43.955] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 748 structureChanged: false structureIsReused:: Completely Elapsed: 23.629740998148918ms
+Info 8352 [21:10:43.955] Different program with same set of files
+Info 8353 [21:10:44.523] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8354 [21:10:44.554] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 749 structureChanged: false structureIsReused:: Completely Elapsed: 31.223107993602753ms
+Info 8355 [21:10:44.554] Different program with same set of files
+Info 8356 [21:10:51.179] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8357 [21:10:51.187] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 750 structureChanged: false structureIsReused:: Completely Elapsed: 7.836572997272015ms
+Info 8358 [21:10:51.187] Different program with same set of files
+Info 8359 [21:10:51.584] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8360 [21:10:51.594] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 751 structureChanged: false structureIsReused:: Completely Elapsed: 9.944944001734257ms
+Info 8361 [21:10:51.594] Different program with same set of files
+Info 8362 [21:10:51.595] getCompletionData: Get current token: 0.01191500574350357
+Info 8363 [21:10:51.595] getCompletionData: Is inside comment: 0.002383999526500702
+Info 8364 [21:10:51.595] getCompletionData: Get previous token: 0.06819800287485123
+Info 8365 [21:10:51.595] getCompletionsAtPosition: isCompletionListBlocker: 0.0028770044445991516
+Info 8366 [21:10:51.601] getExportInfoMap: cache hit
+Info 8367 [21:10:51.614] collectAutoImports: resolved 1 module specifiers, plus 25 ambient and 95 from cache
+Info 8368 [21:10:51.614] collectAutoImports: response is complete
+Info 8369 [21:10:51.614] collectAutoImports: 12.626734003424644
+Info 8370 [21:10:51.614] getCompletionData: Semantic work: 19.40616299957037
+Info 8371 [21:10:51.633] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 18.773632995784283
+Info 8372 [21:10:51.762] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8373 [21:10:51.771] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 752 structureChanged: false structureIsReused:: Completely Elapsed: 9.076416000723839ms
+Info 8374 [21:10:51.771] Different program with same set of files
+Info 8375 [21:10:51.771] getCompletionData: Get current token: 0.016086995601654053
+Info 8376 [21:10:51.771] getCompletionData: Is inside comment: 0.0032540038228034973
+Info 8377 [21:10:51.771] getCompletionData: Get previous token: 0.09097599983215332
+Info 8378 [21:10:51.772] getCompletionsAtPosition: isCompletionListBlocker: 0.011050000786781311
+Info 8379 [21:10:51.774] getExportInfoMap: cache hit
+Info 8380 [21:10:51.778] collectAutoImports: resolved 0 module specifiers, plus 4 ambient and 37 from cache
+Info 8381 [21:10:51.778] collectAutoImports: response is complete
+Info 8382 [21:10:51.778] collectAutoImports: 3.987945005297661
+Info 8383 [21:10:51.778] getCompletionData: Semantic work: 6.04483500123024
+Info 8384 [21:10:51.796] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 17.980078995227814
+Info 8385 [21:10:51.845] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8386 [21:10:51.853] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 753 structureChanged: false structureIsReused:: Completely Elapsed: 7.656470999121666ms
+Info 8387 [21:10:51.853] Different program with same set of files
+Info 8388 [21:10:51.853] getCompletionData: Get current token: 0.012515000998973846
+Info 8389 [21:10:51.853] getCompletionData: Is inside comment: 0.0023280009627342224
+Info 8390 [21:10:51.853] getCompletionData: Get previous token: 0.12044599652290344
+Info 8391 [21:10:51.853] getCompletionsAtPosition: isCompletionListBlocker: 0.004802003502845764
+Info 8392 [21:10:51.855] getExportInfoMap: cache hit
+Info 8393 [21:10:51.859] collectAutoImports: resolved 0 module specifiers, plus 3 ambient and 7 from cache
+Info 8394 [21:10:51.859] collectAutoImports: response is complete
+Info 8395 [21:10:51.859] collectAutoImports: 3.934578001499176
+Info 8396 [21:10:51.859] getCompletionData: Semantic work: 5.715482994914055
+Info 8397 [21:10:51.872] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 12.768021002411842
+Info 8398 [21:10:52.164] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8399 [21:10:52.171] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 754 structureChanged: false structureIsReused:: Completely Elapsed: 6.112838000059128ms
+Info 8400 [21:10:52.171] Different program with same set of files
+Info 8401 [21:10:52.395] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8402 [21:10:52.404] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 755 structureChanged: false structureIsReused:: Completely Elapsed: 9.214534997940063ms
+Info 8403 [21:10:52.404] Different program with same set of files
+Info 8404 [21:10:56.554] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8405 [21:10:56.562] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 756 structureChanged: false structureIsReused:: Completely Elapsed: 7.756971001625061ms
+Info 8406 [21:10:56.562] Different program with same set of files
+Info 8407 [21:10:56.664] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8408 [21:10:56.677] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 757 structureChanged: false structureIsReused:: Completely Elapsed: 12.474716000258923ms
+Info 8409 [21:10:56.677] Different program with same set of files
+Info 8410 [21:10:57.422] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8411 [21:10:57.435] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 758 structureChanged: false structureIsReused:: Completely Elapsed: 13.018499001860619ms
+Info 8412 [21:10:57.435] Different program with same set of files
+Info 8413 [21:10:57.957] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8414 [21:10:57.971] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 759 structureChanged: false structureIsReused:: Completely Elapsed: 13.850309006869793ms
+Info 8415 [21:10:57.971] Different program with same set of files
+Info 8416 [21:10:58.269] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8417 [21:10:58.282] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 760 structureChanged: false structureIsReused:: Completely Elapsed: 13.143545001745224ms
+Info 8418 [21:10:58.282] Different program with same set of files
+Info 8419 [21:11:19.732] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8420 [21:11:19.747] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 761 structureChanged: false structureIsReused:: Completely Elapsed: 15.022316999733448ms
+Info 8421 [21:11:19.747] Different program with same set of files
+Info 8422 [21:11:20.178] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8423 [21:11:20.190] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 762 structureChanged: false structureIsReused:: Completely Elapsed: 11.852295994758606ms
+Info 8424 [21:11:20.206] Different program with same set of files
+Info 8425 [21:11:20.210] getCompletionData: Get current token: 0.01922200620174408
+Info 8426 [21:11:20.210] getCompletionData: Is inside comment: 0.005174994468688965
+Info 8427 [21:11:20.210] getCompletionData: Get previous token: 0.08516300469636917
+Info 8428 [21:11:20.211] getCompletionsAtPosition: isCompletionListBlocker: 0.2973340004682541
+Info 8429 [21:11:20.217] getExportInfoMap: cache hit
+Info 8430 [21:11:20.256] collectAutoImports: resolved 0 module specifiers, plus 200 ambient and 394 from cache
+Info 8431 [21:11:20.256] collectAutoImports: response is complete
+Info 8432 [21:11:20.256] collectAutoImports: 38.27201700210571
+Info 8433 [21:11:20.256] getCompletionData: Semantic work: 45.74250299483538
+Info 8434 [21:11:20.279] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 22.45252999663353
+Info 8435 [21:11:20.427] getCompletionData: Get current token: 0.033080004155635834
+Info 8436 [21:11:20.427] getCompletionData: Is inside comment: 0.0035309940576553345
+Info 8437 [21:11:20.428] getCompletionData: Get previous token: 0.07251100242137909
+Info 8438 [21:11:20.428] getCompletionsAtPosition: isCompletionListBlocker: 0.012540996074676514
+Info 8439 [21:11:20.431] getExportInfoMap: cache hit
+Info 8440 [21:11:20.457] collectAutoImports: resolved 0 module specifiers, plus 200 ambient and 394 from cache
+Info 8441 [21:11:20.458] collectAutoImports: response is complete
+Info 8442 [21:11:20.458] collectAutoImports: 26.32429399341345
+Info 8443 [21:11:20.458] getCompletionData: Semantic work: 29.9648359939456
+Info 8444 [21:11:20.475] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 17.606038004159927
+Info 8445 [21:11:20.480] getCompletionData: Get current token: 0.012290999293327332
+Info 8446 [21:11:20.480] getCompletionData: Is inside comment: 0.003389999270439148
+Info 8447 [21:11:20.481] getCompletionData: Get previous token: 0.2043360024690628
+Info 8448 [21:11:20.481] getCompletionsAtPosition: isCompletionListBlocker: 0.016634993255138397
+Info 8449 [21:11:20.483] getExportInfoMap: cache hit
+Info 8450 [21:11:20.509] collectAutoImports: resolved 0 module specifiers, plus 200 ambient and 394 from cache
+Info 8451 [21:11:20.509] collectAutoImports: response is complete
+Info 8452 [21:11:20.509] collectAutoImports: 25.976866997778416
+Info 8453 [21:11:20.509] getCompletionData: Semantic work: 28.630915001034737
+Info 8454 [21:11:20.525] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 15.497695997357368
+Info 8455 [21:11:20.531] getCompletionData: Get current token: 0.013299994170665741
+Info 8456 [21:11:20.531] getCompletionData: Is inside comment: 0.006778992712497711
+Info 8457 [21:11:20.531] getCompletionData: Get previous token: 0.06902899593114853
+Info 8458 [21:11:20.531] getCompletionsAtPosition: isCompletionListBlocker: 0.012477003037929535
+Info 8459 [21:11:20.533] getExportInfoMap: cache hit
+Info 8460 [21:11:20.550] collectAutoImports: resolved 0 module specifiers, plus 200 ambient and 394 from cache
+Info 8461 [21:11:20.550] collectAutoImports: response is complete
+Info 8462 [21:11:20.550] collectAutoImports: 16.968597002327442
+Info 8463 [21:11:20.550] getCompletionData: Semantic work: 18.767436005175114
+Info 8464 [21:11:20.570] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 19.481277003884315
+Info 8465 [21:11:20.575] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8466 [21:11:20.581] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 763 structureChanged: false structureIsReused:: Completely Elapsed: 6.638801001012325ms
+Info 8467 [21:11:20.581] Different program with same set of files
+Info 8468 [21:11:20.582] getCompletionData: Get current token: 0.013020001351833344
+Info 8469 [21:11:20.582] getCompletionData: Is inside comment: 0.0021720007061958313
+Info 8470 [21:11:20.582] getCompletionData: Get previous token: 0.07436199486255646
+Info 8471 [21:11:20.582] getCompletionsAtPosition: isCompletionListBlocker: 0.011947005987167358
+Info 8472 [21:11:20.587] getExportInfoMap: cache hit
+Info 8473 [21:11:20.610] collectAutoImports: resolved 0 module specifiers, plus 152 ambient and 338 from cache
+Info 8474 [21:11:20.610] collectAutoImports: response is complete
+Info 8475 [21:11:20.610] collectAutoImports: 22.68589600175619
+Info 8476 [21:11:20.610] getCompletionData: Semantic work: 28.18893699347973
+Info 8477 [21:11:20.635] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 24.233552999794483
+Info 8478 [21:11:20.784] getCompletionData: Get current token: 0.025762997567653656
+Info 8479 [21:11:20.784] getCompletionData: Is inside comment: 0.003774002194404602
+Info 8480 [21:11:20.784] getCompletionData: Get previous token: 0.11597000062465668
+Info 8481 [21:11:20.784] getCompletionsAtPosition: isCompletionListBlocker: 0.014828003942966461
+Info 8482 [21:11:20.789] getExportInfoMap: cache hit
+Info 8483 [21:11:20.821] collectAutoImports: resolved 0 module specifiers, plus 152 ambient and 338 from cache
+Info 8484 [21:11:20.821] collectAutoImports: response is complete
+Info 8485 [21:11:20.821] collectAutoImports: 31.714739002287388
+Info 8486 [21:11:20.821] getCompletionData: Semantic work: 36.998686000704765
+Info 8487 [21:11:20.858] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 37.15478599816561
+Info 8488 [21:11:20.882] getCompletionData: Get current token: 0.019825004041194916
+Info 8489 [21:11:20.882] getCompletionData: Is inside comment: 0.003802001476287842
+Info 8490 [21:11:20.883] getCompletionData: Get previous token: 0.35590900480747223
+Info 8491 [21:11:20.883] getCompletionsAtPosition: isCompletionListBlocker: 0.02065800130367279
+Info 8492 [21:11:20.887] getExportInfoMap: cache hit
+Info 8493 [21:11:20.916] collectAutoImports: resolved 0 module specifiers, plus 152 ambient and 338 from cache
+Info 8494 [21:11:20.916] collectAutoImports: response is complete
+Info 8495 [21:11:20.916] collectAutoImports: 28.41294600069523
+Info 8496 [21:11:20.916] getCompletionData: Semantic work: 32.79048400372267
+Info 8497 [21:11:20.959] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 43.61481499671936
+Info 8498 [21:11:20.967] getCompletionData: Get current token: 0.039677999913692474
+Info 8499 [21:11:20.967] getCompletionData: Is inside comment: 0.011333003640174866
+Info 8500 [21:11:20.968] getCompletionData: Get previous token: 0.2040870040655136
+Info 8501 [21:11:20.968] getCompletionsAtPosition: isCompletionListBlocker: 0.1250929981470108
+Info 8502 [21:11:20.971] getExportInfoMap: cache hit
+Info 8503 [21:11:20.995] collectAutoImports: resolved 0 module specifiers, plus 152 ambient and 338 from cache
+Info 8504 [21:11:20.995] collectAutoImports: response is complete
+Info 8505 [21:11:20.995] collectAutoImports: 23.283762000501156
+Info 8506 [21:11:20.995] getCompletionData: Semantic work: 26.462176002562046
+Info 8507 [21:11:21.008] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 13.692130997776985
+Info 8508 [21:11:21.013] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8509 [21:11:21.024] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 764 structureChanged: false structureIsReused:: Completely Elapsed: 11.297252997756004ms
+Info 8510 [21:11:21.024] Different program with same set of files
+Info 8511 [21:11:21.025] getCompletionData: Get current token: 0.023330993950366974
+Info 8512 [21:11:21.025] getCompletionData: Is inside comment: 0.0032449960708618164
+Info 8513 [21:11:21.025] getCompletionData: Get previous token: 0.16487500071525574
+Info 8514 [21:11:21.025] getCompletionsAtPosition: isCompletionListBlocker: 0.014603003859519958
+Info 8515 [21:11:21.027] getExportInfoMap: cache hit
+Info 8516 [21:11:21.033] collectAutoImports: resolved 0 module specifiers, plus 88 ambient and 155 from cache
+Info 8517 [21:11:21.033] collectAutoImports: response is complete
+Info 8518 [21:11:21.033] collectAutoImports: 6.437563002109528
+Info 8519 [21:11:21.033] getCompletionData: Semantic work: 8.083274997770786
+Info 8520 [21:11:21.047] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 13.750402003526688
+Info 8521 [21:11:21.051] getCompletionData: Get current token: 0.017644003033638
+Info 8522 [21:11:21.051] getCompletionData: Is inside comment: 0.004808001220226288
+Info 8523 [21:11:21.051] getCompletionData: Get previous token: 0.08393299579620361
+Info 8524 [21:11:21.051] getCompletionsAtPosition: isCompletionListBlocker: 0.02553500235080719
+Info 8525 [21:11:21.054] getExportInfoMap: cache hit
+Info 8526 [21:11:21.065] collectAutoImports: resolved 0 module specifiers, plus 88 ambient and 155 from cache
+Info 8527 [21:11:21.065] collectAutoImports: response is complete
+Info 8528 [21:11:21.065] collectAutoImports: 11.669477999210358
+Info 8529 [21:11:21.065] getCompletionData: Semantic work: 14.226863995194435
+Info 8530 [21:11:21.078] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 12.578184001147747
+Info 8531 [21:11:21.082] getCompletionData: Get current token: 0.012595005333423615
+Info 8532 [21:11:21.082] getCompletionData: Is inside comment: 0.0024309977889060974
+Info 8533 [21:11:21.082] getCompletionData: Get previous token: 0.0673540011048317
+Info 8534 [21:11:21.082] getCompletionsAtPosition: isCompletionListBlocker: 0.014956995844841003
+Info 8535 [21:11:21.084] getExportInfoMap: cache hit
+Info 8536 [21:11:21.091] collectAutoImports: resolved 0 module specifiers, plus 88 ambient and 155 from cache
+Info 8537 [21:11:21.092] collectAutoImports: response is complete
+Info 8538 [21:11:21.092] collectAutoImports: 7.625350996851921
+Info 8539 [21:11:21.092] getCompletionData: Semantic work: 9.452314004302025
+Info 8540 [21:11:21.104] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 12.144044004380703
+Info 8541 [21:11:21.109] getCompletionData: Get current token: 0.023528993129730225
+Info 8542 [21:11:21.109] getCompletionData: Is inside comment: 0.0033029988408088684
+Info 8543 [21:11:21.109] getCompletionData: Get previous token: 0.1596429944038391
+Info 8544 [21:11:21.109] getCompletionsAtPosition: isCompletionListBlocker: 0.012397997081279755
+Info 8545 [21:11:21.111] getExportInfoMap: cache hit
+Info 8546 [21:11:21.123] collectAutoImports: resolved 0 module specifiers, plus 88 ambient and 155 from cache
+Info 8547 [21:11:21.123] collectAutoImports: response is complete
+Info 8548 [21:11:21.123] collectAutoImports: 11.866838000714779
+Info 8549 [21:11:21.123] getCompletionData: Semantic work: 13.285440005362034
+Info 8550 [21:11:21.140] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 17.62679699808359
+Info 8551 [21:11:21.144] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8552 [21:11:21.150] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 765 structureChanged: false structureIsReused:: Completely Elapsed: 6.43707000464201ms
+Info 8553 [21:11:21.150] Different program with same set of files
+Info 8554 [21:11:21.151] getCompletionData: Get current token: 0.012519001960754395
+Info 8555 [21:11:21.151] getCompletionData: Is inside comment: 0.0022960007190704346
+Info 8556 [21:11:21.151] getCompletionData: Get previous token: 0.0700869932770729
+Info 8557 [21:11:21.151] getCompletionsAtPosition: isCompletionListBlocker: 0.01636499911546707
+Info 8558 [21:11:21.154] getExportInfoMap: cache hit
+Info 8559 [21:11:21.158] collectAutoImports: resolved 0 module specifiers, plus 29 ambient and 43 from cache
+Info 8560 [21:11:21.158] collectAutoImports: response is complete
+Info 8561 [21:11:21.158] collectAutoImports: 4.17450400441885
+Info 8562 [21:11:21.158] getCompletionData: Semantic work: 6.773325003683567
+Info 8563 [21:11:21.168] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 10.064699001610279
+Info 8564 [21:11:21.205] getCompletionData: Get current token: 0.030722998082637787
+Info 8565 [21:11:21.205] getCompletionData: Is inside comment: 0.004259005188941956
+Info 8566 [21:11:21.207] getCompletionData: Get previous token: 1.8764310032129288
+Info 8567 [21:11:21.207] getCompletionsAtPosition: isCompletionListBlocker: 0.0189720019698143
+Info 8568 [21:11:21.209] getExportInfoMap: cache hit
+Info 8569 [21:11:21.216] collectAutoImports: resolved 0 module specifiers, plus 29 ambient and 43 from cache
+Info 8570 [21:11:21.216] collectAutoImports: response is complete
+Info 8571 [21:11:21.216] collectAutoImports: 6.945236004889011
+Info 8572 [21:11:21.216] getCompletionData: Semantic work: 9.251764997839928
+Info 8573 [21:11:21.230] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 13.72461399435997
+Info 8574 [21:11:21.233] getCompletionData: Get current token: 0.01182500272989273
+Info 8575 [21:11:21.233] getCompletionData: Is inside comment: 0.0032389983534812927
+Info 8576 [21:11:21.233] getCompletionData: Get previous token: 0.07095900177955627
+Info 8577 [21:11:21.233] getCompletionsAtPosition: isCompletionListBlocker: 0.015327997505664825
+Info 8578 [21:11:21.235] getExportInfoMap: cache hit
+Info 8579 [21:11:21.241] collectAutoImports: resolved 0 module specifiers, plus 29 ambient and 43 from cache
+Info 8580 [21:11:21.241] collectAutoImports: response is complete
+Info 8581 [21:11:21.241] collectAutoImports: 5.861225999891758
+Info 8582 [21:11:21.241] getCompletionData: Semantic work: 7.932790003716946
+Info 8583 [21:11:21.258] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 16.71535699814558
+Info 8584 [21:11:21.263] getCompletionData: Get current token: 0.02093200385570526
+Info 8585 [21:11:21.263] getCompletionData: Is inside comment: 0.003756999969482422
+Info 8586 [21:11:21.263] getCompletionData: Get previous token: 0.08181700110435486
+Info 8587 [21:11:21.263] getCompletionsAtPosition: isCompletionListBlocker: 0.01456199586391449
+Info 8588 [21:11:21.265] getExportInfoMap: cache hit
+Info 8589 [21:11:21.272] collectAutoImports: resolved 0 module specifiers, plus 29 ambient and 43 from cache
+Info 8590 [21:11:21.272] collectAutoImports: response is complete
+Info 8591 [21:11:21.272] collectAutoImports: 7.1543879956007
+Info 8592 [21:11:21.272] getCompletionData: Semantic work: 9.277055002748966
+Info 8593 [21:11:21.290] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 17.534942999482155
+Info 8594 [21:11:21.294] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8595 [21:11:21.308] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 766 structureChanged: false structureIsReused:: Completely Elapsed: 13.289765998721123ms
+Info 8596 [21:11:21.308] Different program with same set of files
+Info 8597 [21:11:21.308] getCompletionData: Get current token: 0.012000001966953278
+Info 8598 [21:11:21.308] getCompletionData: Is inside comment: 0.0022069960832595825
+Info 8599 [21:11:21.308] getCompletionData: Get previous token: 0.05006299912929535
+Info 8600 [21:11:21.308] getCompletionsAtPosition: isCompletionListBlocker: 0.01109199970960617
+Info 8601 [21:11:21.310] getExportInfoMap: cache hit
+Info 8602 [21:11:21.378] collectAutoImports: resolved 6 module specifiers, plus 657 ambient and -2046 from cache
+Info 8603 [21:11:21.378] collectAutoImports: response is complete
+Info 8604 [21:11:21.378] collectAutoImports: 68.29386699944735
+Info 8605 [21:11:21.378] getCompletionData: Semantic work: 69.90560600161552
+Info 8606 [21:11:21.424] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 45.38467800617218
+Info 8607 [21:11:22.565] getCompletionData: Get current token: 0.032805994153022766
+Info 8608 [21:11:22.566] getCompletionData: Is inside comment: 0.004770003259181976
+Info 8609 [21:11:22.566] getCompletionData: Get previous token: 0.08962700515985489
+Info 8610 [21:11:22.566] getCompletionsAtPosition: isCompletionListBlocker: 0.01897599548101425
+Info 8611 [21:11:22.569] getExportInfoMap: cache hit
+Info 8612 [21:11:22.625] collectAutoImports: resolved 0 module specifiers, plus 657 ambient and 2283 from cache
+Info 8613 [21:11:22.625] collectAutoImports: response is complete
+Info 8614 [21:11:22.625] collectAutoImports: 55.92212800681591
+Info 8615 [21:11:22.625] getCompletionData: Semantic work: 59.20040299743414
+Info 8616 [21:11:22.648] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 23.479303993284702
+Info 8617 [21:12:04.460] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8618 [21:12:04.466] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 767 structureChanged: false structureIsReused:: Completely Elapsed: 5.80426299571991ms
+Info 8619 [21:12:04.466] Different program with same set of files
+Info 8620 [21:12:06.860] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8621 [21:12:06.878] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 768 structureChanged: false structureIsReused:: Completely Elapsed: 18.29695799946785ms
+Info 8622 [21:12:06.878] Different program with same set of files
+Info 8623 [21:12:07.202] forEachExternalModuleToImportFrom autoImportProvider: 0.6612749993801117
+Info 8624 [21:12:07.210] forEachExternalModuleToImportFrom autoImportProvider: 1.0764579996466637
+Info 8625 [21:12:07.213] forEachExternalModuleToImportFrom autoImportProvider: 0.7847979962825775
+Info 8626 [21:12:08.084] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8627 [21:12:08.093] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 769 structureChanged: false structureIsReused:: Completely Elapsed: 9.07922700047493ms
+Info 8628 [21:12:08.093] Different program with same set of files
+Info 8629 [21:12:09.555] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8630 [21:12:09.571] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 770 structureChanged: false structureIsReused:: Completely Elapsed: 15.803366996347904ms
+Info 8631 [21:12:09.571] Different program with same set of files
+Info 8632 [21:12:09.902] forEachExternalModuleToImportFrom autoImportProvider: 0.8854239955544472
+Info 8633 [21:12:09.906] forEachExternalModuleToImportFrom autoImportProvider: 0.6944520026445389
+Info 8634 [21:12:12.146] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8635 [21:12:12.158] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 771 structureChanged: false structureIsReused:: Completely Elapsed: 11.679102003574371ms
+Info 8636 [21:12:12.158] Different program with same set of files
+Info 8637 [21:12:13.851] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8638 [21:12:13.887] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 772 structureChanged: false structureIsReused:: Completely Elapsed: 36.02435600012541ms
+Info 8639 [21:12:13.887] Different program with same set of files
+Info 8640 [21:12:23.051] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8641 [21:12:23.059] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 773 structureChanged: false structureIsReused:: Completely Elapsed: 7.562148004770279ms
+Info 8642 [21:12:23.059] Different program with same set of files
+Info 8643 [21:12:25.222] DirectoryWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/#Film.tsx# 0:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src 1 undefined Config: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Wild card directory
+Info 8644 [21:12:25.223] Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Detected file add/remove of non supported extension: /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/#Film.tsx#
+Info 8645 [21:12:25.223] Elapsed:: 1.323841005563736ms DirectoryWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/#Film.tsx# 0:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src 1 undefined Config: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Wild card directory
+Info 8646 [21:12:25.223] DirectoryWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/#Film.tsx# 0:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components 1 undefined Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Failed Lookup Locations
+Info 8647 [21:12:25.224] Elapsed:: 0.34365200251340866ms DirectoryWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/#Film.tsx# 0:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components 1 undefined Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Failed Lookup Locations
+Info 8648 [21:12:25.234] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8649 [21:12:25.244] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 774 structureChanged: false structureIsReused:: Completely Elapsed: 9.792346999049187ms
+Info 8650 [21:12:25.244] Different program with same set of files
+Info 8651 [22:06:22.826] DirectoryWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json 0:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src 1 undefined Config: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Wild card directory
+Info 8652 [22:06:22.829] Elapsed:: 2.485122002661228ms DirectoryWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json 0:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src 1 undefined Config: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Wild card directory
+Info 8653 [22:06:23.113] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json
+Info 8654 [22:06:23.116] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json Version: 775 structureChanged: false structureIsReused:: Completely Elapsed: 2.44064299762249ms
+Info 8655 [22:06:23.633] FileWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json 2:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json 2000 undefined Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Config file
+Info 8656 [22:06:23.634] `remove Project::
+Info 8657 [22:06:23.634] Project '/home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json' (Configured)
+Info 8658 [22:06:23.634] 	Files (344)
+
+Info 8659 [22:06:23.634] -----------------------------------------------
+Info 8660 [22:06:23.634] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 8661 [22:06:23.634] 	Files (118)
+
+Info 8662 [22:06:23.634] -----------------------------------------------
+Info 8663 [22:06:23.655] Search path: /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film
+Info 8664 [22:06:23.656] For info: /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/Film.tsx :: Config file name: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json
+Info 8665 [22:06:23.656] Creating configuration project /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json
+Info 8666 [22:06:23.673] Elapsed:: 39.83111100643873ms FileWatcher:: Triggered with /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json 2:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json 2000 undefined Project: /home/beethoven/Templates/NextJS/kinoway/client/src/tsconfig.json WatchType: Config file
+Info 8667 [22:06:23.923] Loading configured project /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json
+Info 8668 [22:06:23.999] Config: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json : {
+ "rootNames": [
+  "/home/beethoven/Templates/NextJS/kinoway/client/next-env.d.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/constants/api.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/constants/routes.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/helpers/getCurrentYear.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/hooks/useActions.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/hooks/useDebounce.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/hooks/useTypedSelector.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/pages/api/hello.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/services/KinowayService.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/store/actions.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/store/store.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/store/reducers/filters.slice.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/store/reducers/loadMore.slice.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/store/reducers/pagination.slice.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/store/reducers/search.slice.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/store/reducers/toggle.slice.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/types/IData.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/types/IFact.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/types/IMessage.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/types/IMovie.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/types/IMovies.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/types/IPerson.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/types/IQuery.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/types/IReview.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/types/IReviews.ts",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/FilmCard/FilmCard.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/FilmsMore/FilmsMore.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/Footer/Footer.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/Header/Header.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/Info/Info.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/Layout/Layout.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/MovieTop/MovieTop.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/Search.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/UI-components/BackButton/BackButton.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/UI-components/Button/Button.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/UI-components/Sidebar/Sidebar.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/Film.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Home/Home.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Home/components/NewFilms/NewFilms.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Home/components/NewSeries/NewSeries.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/SearchResults/SearchResults.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/pages/_app.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/pages/index.tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/pages/film/[id].tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/src/pages/search/[id].tsx",
+  "/home/beethoven/Templates/NextJS/kinoway/client/next.config.js"
+ ],
+ "options": {
+  "baseUrl": "/home/beethoven/Templates/NextJS/kinoway/client",
+  "paths": {
+   "@/helpers/*": [
+    "src/helpers/*"
+   ],
+   "@/types/*": [
+    "src/types/*"
+   ],
+   "@/components/*": [
+    "src/components/*"
+   ],
+   "@/UI/*": [
+    "src/components/UI/*"
+   ],
+   "@/services/*": [
+    "src/services/*"
+   ],
+   "@/store/*": [
+    "src/store/*"
+   ],
+   "@/scss/*": [
+    "src/scss/*"
+   ],
+   "@/constants/*": [
+    "src/constants/*"
+   ],
+   "@/hooks/*": [
+    "src/hooks/*"
+   ]
+  },
+  "target": 1,
+  "lib": [
+   "lib.dom.d.ts",
+   "lib.dom.iterable.d.ts",
+   "lib.esnext.d.ts"
+  ],
+  "allowJs": true,
+  "skipLibCheck": true,
+  "strict": true,
+  "forceConsistentCasingInFileNames": true,
+  "noEmit": true,
+  "esModuleInterop": true,
+  "module": 99,
+  "moduleResolution": 2,
+  "resolveJsonModule": true,
+  "isolatedModules": true,
+  "jsx": 1,
+  "incremental": true,
+  "pathsBasePath": "/home/beethoven/Templates/NextJS/kinoway/client",
+  "configFilePath": "/home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json"
+ }
+}
+Info 8669 [22:06:24.044] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json
+Info 8670 [22:06:25.818] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 1774.380217000842ms
+Info 8671 [22:06:25.819] Project '/home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json' (Configured)
+Info 8672 [22:06:25.819] 	Files (347)
+
+Info 8673 [22:06:25.819] -----------------------------------------------
+Info 8674 [22:06:25.847] AutoImportProviderProject: found 4 root files in 4 dependencies in 26.537298999726772 ms
+Info 8675 [22:06:25.848] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject2*
+Info 8676 [22:06:26.126] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject2* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 277.5575499981642ms
+Info 8677 [22:06:26.126] Project '/dev/null/autoImportProviderProject2*' (AutoImportProvider)
+Info 8678 [22:06:26.126] 	Files (118)
+
+Info 8679 [22:06:26.126] -----------------------------------------------
+Info 8680 [22:06:26.174] Before ensureProjectForOpenFiles:
+Info 8681 [22:06:26.174] After ensureProjectForOpenFiles:
+Info 8682 [22:06:26.174] got projects updated in background, updating diagnostics for /home/beethoven/Templates/NextJS/kinoway/client/src/components/screens/Film/Film.tsx
