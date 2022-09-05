@@ -38,7 +38,7 @@ export const SearchResults = () => {
 
             <div className={styles.styles_content}>
               <div className={styles.main}>
-                <Link className={styles.movieTitle} href={`/film/${id}`}>
+                <Link className={styles.movieTitle} href={`/film/${data?.id}`}>
                   {data.name}
                 </Link>
                 <p className={styles.secondInfo}>

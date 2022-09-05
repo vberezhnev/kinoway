@@ -14,6 +14,12 @@
     margin: 0 auto;
     max-width: $container-width;
 
+    .listFilmsContainer {
+      display: flex;
+
+      justify-content: center;
+    }
+
     @media screen and (max-width: $content-width) {
       .NewFilms_container {
         padding: 0 20vh 0 20vh;
@@ -29,6 +35,12 @@
     @media screen and (max-width: $media-mobile) {
       .NewFilms_container {
         padding: 0 8vh 0 8vh;
+
+        .listFilmsContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
 
