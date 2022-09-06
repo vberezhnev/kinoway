@@ -45,20 +45,20 @@ export const Film = () => {
   const items = [
     {
       caption: "Страны",
-      value: countries?.map((el: number | string, idx: number | string) => (
+      value: countries?.map(({ el, idx }: any) => (
         <Fragment key={idx}>
           {idx ? ", " : ""}
-          {el.name}
+          {el?.name}
         </Fragment>
       )),
       condition: countries?.length,
     },
     {
       caption: "Жанр",
-      value: genres?.map((el, idx) => (
+      value: genres?.map(({ el, idx }: any) => (
         <Fragment key={idx}>
           {idx ? ", " : ""}
-          {el.name}
+          {el?.name}
         </Fragment>
       )),
       condition: genres?.length,

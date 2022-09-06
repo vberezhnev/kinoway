@@ -1,22 +1,28 @@
 @import "../../../styles/variables.module.scss";
 
 .ButtonBase_btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    color: $color-white;
-    font-weight: 500;
-    padding: 13px 15px;
-    font-size: 16px;
-    line-height: 16px;
-    border: 1px solid transparent;
-    overflow: hidden;
-    border-radius: 5px;
-    background-color: $color-primary;
-    transition: color .3s ease,background-color .3s ease,border-color .3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  color: $color-white;
+  font-weight: 500;
+  padding: 13px 15px;
+  font-size: 16px;
+  line-height: 16px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: $color-primary;
+  transition: color 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .ButtonBase_btn:hover {
-    background-color: $color-dark-primary;
+  background-color: $color-dark-primary;
+}
+
+.ButtonBase_btn:active {
+  -webkit-transform: scale(0.98);
+  transform: scale(0.98);
 }
