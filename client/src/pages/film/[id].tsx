@@ -2,14 +2,9 @@ import { GetServerSideProps, NextPage } from "next";
 import { Film } from "@/components/screens/Film/Film";
 import { getFilmByName } from "@/services/KinowayService";
 import { initStore } from "@/store/store";
-import { Layout } from "@/components/Layout/Layout";
 
 const FilmPage: NextPage = () => {
-  return (
-    <Layout>
-      <Film />
-    </Layout>
-  );
+  return <Film />;
 };
 
 export const getServerSideProps: GetServerSideProps = async (params) => {

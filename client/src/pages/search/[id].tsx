@@ -4,15 +4,12 @@ import { GetServerSideProps, NextPage } from "next";
 import { initStore } from "@/store/store";
 import { getFilmByName } from "@/services/KinowayService";
 import { SearchResults } from "@/components/screens/SearchResults/SearchResults";
-import { Layout } from "../../components/Layout/Layout";
 
 const searchResults: NextPage = () => {
   return (
-    <Layout>
-      <div className="container">
-        <SearchResults />
-      </div>
-    </Layout>
+    <div className="container">
+      <SearchResults />
+    </div>
   );
 };
 

@@ -19,8 +19,6 @@ export const SearchResults = () => {
     filters,
   });
 
-  //const { Container, Heading, Description, Body, Content } = Catalog;
-
   return (
     <div>
       {data?.docs?.map((data: any) => {
