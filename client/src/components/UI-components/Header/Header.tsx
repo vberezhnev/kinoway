@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss";
-import variables from "../../styles/variables.module.scss";
+import variables from "../../../styles/variables.module.scss";
 
 import { useTheme } from "next-themes";
 

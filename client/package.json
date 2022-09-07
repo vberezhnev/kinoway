@@ -12,6 +12,7 @@
     "@reduxjs/toolkit": "^1.8.4",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
+    "framer-motion": "^7.2.1",
     "next": "12.2.2",
     "next-redux-wrapper": "^7.0.5",
     "next-themes": "^0.2.0",

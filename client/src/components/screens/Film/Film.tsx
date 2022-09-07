@@ -45,7 +45,7 @@ export const Film = () => {
   const items = [
     {
       caption: "Страны",
-      value: countries?.map(({ el, idx }: any) => (
+      value: countries?.map((el: any, idx: any) => (
         <Fragment key={idx}>
           {idx ? ", " : ""}
           {el?.name}
@@ -55,12 +55,15 @@ export const Film = () => {
     },
     {
       caption: "Жанр",
-      value: genres?.map(({ el, idx }: any) => (
-        <Fragment key={idx}>
-          {idx ? ", " : ""}
-          {el?.name}
-        </Fragment>
-      )),
+      value: genres?.map((el: Object | string, idx: any) => {
+        console.log(typeof el);
+        return (
+          <Fragment key={idx}>
+            {idx ? ", " : ""}
+            {el?.name ? el?.name : "Неизвестен"}
+          </Fragment>
+        );
+      }),
       condition: genres?.length,
     },
     { caption: "Слоган", value: slogan, condition: slogan },
@@ -69,29 +72,30 @@ export const Film = () => {
       value: <span className={styles.age}>{ageRating}+</span>,
       condition: ageRating,
     },
-    /* {
+    {
       caption: "Бюджет",
-      value: `${budget?.currency} ${convertNumbers(budget?.value)}`,
+      value: `${budget?.currency} ${budget?.value}`, //${convertNumbers(budget?.value)}
       condition: budget?.value,
     },
     { caption: "Время", value: `${movieLength} мин`, condition: movieLength },
     {
       caption: "Сборы в США",
-      value: `${fees?.usa?.currency} ${convertNumbers(fees?.usa?.value)}`,
+      value: `${fees?.usa?.currency} USA`, //${convertNumbers(fees?.usa?.value)}
       condition: fees?.usa,
     },
     {
       caption: "Сборы в мире",
-      value: `+ ${fees?.world?.currency} ${convertNumbers(worldFees)} = ${
+      value: `+ ${fees?.world?.currency} worldFees = ${
+        //${convertNumbers(worldFees)}
         fees?.world?.currency
-      } ${convertNumbers(fees?.world?.value)}`,
+      } ${fees?.world?.value}`, //${convertNumbers(fees?.world?.value)}
       condition: fees?.usa,
     },
     {
       caption: "Премьера в мире",
-      value: convertTimestampToDate(premiere?.world, "D MMMM YYYY"),
+      value: premiere?.world, //convertTimestampToDate(premiere?.world, "D MMMM YYYY")
       condition: premiere?.world,
-    }, */
+    },
   ];
 
   return (
