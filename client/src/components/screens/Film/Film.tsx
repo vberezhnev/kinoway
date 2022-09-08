@@ -41,12 +41,13 @@ export const Film = () => {
 
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
   const movieYear = year && `(${year})`;
+  const worldFees = fees?.world?.value - fees?.usa?.value;
 
   const items = [
     {
       caption: "Страны",
       value: countries?.map((el: any, idx: any) => (
-        <Fragment key={idx}>
+        <Fragment key={idx!}>
           {idx ? ", " : ""}
           {el?.name}
         </Fragment>
@@ -55,15 +56,12 @@ export const Film = () => {
     },
     {
       caption: "Жанр",
-      value: genres?.map((el: Object | string, idx: any) => {
-        console.log(typeof el);
-        return (
-          <Fragment key={idx}>
-            {idx ? ", " : ""}
-            {el?.name ? el?.name : "Неизвестен"}
-          </Fragment>
-        );
-      }),
+      value: genres?.map((el: any, idx: any) => (
+        <Fragment key={idx!}>
+          {idx ? ", " : ""}
+          {el?.name ? el?.name : "Неизвестен"}
+        </Fragment>
+      )),
       condition: genres?.length,
     },
     { caption: "Слоган", value: slogan, condition: slogan },
@@ -85,7 +83,7 @@ export const Film = () => {
     },
     {
       caption: "Сборы в мире",
-      value: `+ ${fees?.world?.currency} worldFees = ${
+      value: `+ ${fees?.world?.currency} ${worldFees} = ${
         //${convertNumbers(worldFees)}
         fees?.world?.currency
       } ${fees?.world?.value}`, //${convertNumbers(fees?.world?.value)}
