@@ -1,6 +1,5 @@
 .searchContainer {
   a {
-    color: black;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
@@ -14,20 +13,21 @@
       border-radius: 8px;
       border: none;
       padding: 20px;
+      color: white;
     }
 
     input:focus {
       outline: none;
     }
-
-    input:focus {
-      color: white;
-    }
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 520px) {
   .searchContainer {
-    display: none;
+    a {
+      input {
+        width: 10px;
+      }
+    }
   }
 }
