@@ -7,6 +7,9 @@ import { useTypedSelector } from "@/hooks/useTypedSelector";
 import { useActions } from "@/hooks/useActions";
 import { useDebounce } from "@/hooks/useDebounce";
 
+import { SearchList } from "./components/SearchList/SearchList";
+import { ButtonBase } from "@/components/UI-components/ButtonBase/ButtonBase";
+
 import styles from "./Search.module.scss";
 
 export const Search = () => {
@@ -55,18 +58,48 @@ export const Search = () => {
         onSubmit={submitForm}
         ref={formRef}
         action="#"
-        className={styles.visible}
+        className={`${styles.form} ${visible} ${styles.visible}`}
       >
         <a>
           <input
             data-testid="input"
+            type="search"
             ref={inputRef}
             className={styles.dark}
             value={value}
             onChange={handleChange}
+            onClick={() => setVisible(false)}
           />
         </a>
+        <ButtonBase
+          ripple
+          type="button"
+          className={styles.hideSearch}
+          onClick={() => setVisible(false)}
+        >
+          FiChevronLeft
+        </ButtonBase>
+        <ButtonBase
+          ripple
+          type="button"
+          className={`${styles.closeBtn} ${value} ${styles.active}`}
+          onClick={handleClearInput}
+        >
+          FiX
+        </ButtonBase>
+        <ButtonBase
+          ripple
+          className={styles.searchBtn}
+          disabled={!value.length}
+          onClick={submitForm}
+        >
+          🔍
+        </ButtonBase>
+        {isActive && <SearchList value={debouncedValue} />}
       </form>
+      <ButtonBase onClick={openSearch} className={styles.openSearch}>
+        🔍
+      </ButtonBase>
     </div>
   );
 };

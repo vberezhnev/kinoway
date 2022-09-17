@@ -2540,7 +2540,12 @@
     "react-is" "^18.0.0"
     "use-sync-external-store" "^1.0.0"
 
-"react@*", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.2 || ^18.0.0-0", "react@^18.0.0", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@18.2.0":
+"react-use-ripple@^1.5.2":
+  "integrity" "sha512-pK7PLEaEGJ4xCM5acxW+ua7ba0lqxbhNzBHzEw+MoD0yVFT3r8SkfkG6aSpiEm4iLZO9HOeSnUz+1k7YVuYX5w=="
+  "resolved" "https://registry.npmjs.org/react-use-ripple/-/react-use-ripple-1.5.2.tgz"
+  "version" "1.5.2"
+
+"react@*", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.2 || ^18.0.0-0", "react@^18.0.0", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

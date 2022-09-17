@@ -15,12 +15,10 @@ type Data = {
   children: React.ReactNode;
 };
 
-const Button = ({ props, onClick, children }: any) => {
+export const Button = ({ props, onClick, children }: any) => {
   return (
     <button className={styles.ButtonBase_btn} onClick={onClick}>
       {children}
     </button>
   );
 };
-
-export default Button;
