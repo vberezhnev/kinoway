@@ -1,3 +1,5 @@
+@import "../../styles/variables.module.scss";
+
 .form {
   position: relative;
 
@@ -42,7 +44,7 @@
       padding-left: 40px;
       font-size: 16px;
       line-height: 16px;
-      background-color: var(--color-light-dark);
+      background-color: $color-light-dark;
     }
   }
 }

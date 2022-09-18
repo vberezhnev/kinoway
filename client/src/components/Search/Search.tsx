@@ -43,7 +43,7 @@ export const Search = () => {
     setDebouncedValue("");
   };
 
-  //useOnClickOutside(formRef, () => setVisible(false))
+  // useOnClickOutside(formRef, () => setVisible(false));
 
   const isActive = debouncedValue && visible;
 
@@ -65,7 +65,7 @@ export const Search = () => {
             data-testid="input"
             type="search"
             ref={inputRef}
-            className={styles.dark}
+            className={`${styles.dark} ${styles.input}`}
             value={value}
             onChange={handleChange}
             onClick={() => setVisible(false)}
@@ -85,7 +85,7 @@ export const Search = () => {
           className={`${styles.closeBtn} ${value} ${styles.active}`}
           onClick={handleClearInput}
         >
-          FiX
+          X
         </ButtonBase>
         <ButtonBase
           ripple

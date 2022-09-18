@@ -1,4 +1,4 @@
-import Button from "@/components/UI-components/Button/Button";
+import { Button } from "@/components/UI-components/Button/Button";
 
 import styles from "./MovieTop.module.scss";
 
