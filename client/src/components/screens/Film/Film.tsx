@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useGetFilmByIdQuery } from "@/services/KinowayService";
 
 import { BackButton } from "@/components/UI-components/BackButton/BackButton";
-import Button from "@/components/UI-components/Button/Button";
+import { Button } from "@/components/UI-components/Button/Button";
 import { Info } from "@/components/Info/Info";
 
 import styles from "./Film.module.scss";

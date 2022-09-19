@@ -4,15 +4,22 @@ import { FC } from "react";
 import Link from "next/link";
 import styles from "./SearchItem.module.scss";
 import Image from "next/image";
-import classNames from "classnames";
 
 interface SearchItemProps {
   item: IMovie;
 }
 
 export const SearchItem: FC<SearchItemProps> = ({ item }) => {
-  const { name, id, poster, description, year, enName, movieLength, rating } =
-    item;
+  const {
+    title,
+    id,
+    poster,
+    description,
+    year,
+    alternativeName,
+    movieLength,
+    rating,
+  } = item;
 
   return (
     <Link href={`/film/${id}`}>
@@ -27,7 +34,9 @@ export const SearchItem: FC<SearchItemProps> = ({ item }) => {
             />
           </div>
           <div className={styles.text}>
-            <span className={styles.title}>{name ? name : enName}</span>
+            <span className={styles.title}>
+              {title ? title : alternativeName}
+            </span>
             <span className={styles.info}>
               {year}
               {movieLength && `, ${movieLength} мин.`}
