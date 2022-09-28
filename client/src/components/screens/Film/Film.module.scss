@@ -113,10 +113,10 @@
   }
 
   .originalTitle {
-    display: block;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 18px;
+    font-weight: 200;
+    vertical-align: middle;
+    letter-spacing: -0.2px;
     color: $color-gray;
     margin-bottom: 20px;
   }
@@ -125,6 +125,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 35px;
+    padding: 10px 10px 10px 0;
 
     @media (max-width: 576px) {
       margin-bottom: 25px;

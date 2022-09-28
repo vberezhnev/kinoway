@@ -4,9 +4,14 @@ import { useGetFilmByIdQuery } from "@/services/KinowayService";
 
 import { BackButton } from "@/components/UI-components/BackButton/BackButton";
 import { Button } from "@/components/UI-components/Button/Button";
+import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import { Info } from "@/components/Info/Info";
 
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+
 import styles from "./Film.module.scss";
+import { TaskAbortError } from "@reduxjs/toolkit";
 
 export const Film = () => {
   const router = useRouter();
@@ -96,6 +101,8 @@ export const Film = () => {
     },
   ];
 
+  console.log(data);
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -109,10 +116,10 @@ export const Film = () => {
               src={data?.poster?.url}
               alt={shortDescription}
             />
-            {/* <MovieRating className={styles.rating} rating={rating} /> */}
-            <span className={styles.rating}>
+            <MovieRating className={styles.rating} rating={rating} />
+            {/* <span className={styles.rating}>
               {rating?.kp ? rating.kp : rating?.imdb}
-            </span>
+							</span> */}
           </div>
           <div className={styles.right}>
             <h1 className={styles.title}>
@@ -129,7 +136,7 @@ export const Film = () => {
                 }}
                 className={styles.btn}
               >
-                Watch
+                Смотреть онлайн
               </Button>
               {/* <MovieFavorite
                 className={styles.btn}
@@ -147,6 +154,18 @@ export const Film = () => {
           <SimilarMovies movies={similarMovies} />
         ) : null}
         <Reviews /> */}
+        <Tabs>
+          <TabList>
+            <Tab>Persons</Tab>
+            <Tab>123123</Tab>
+          </TabList>
+          <TabPanel>
+            <h2>similarMovies</h2>
+          </TabPanel>
+          <TabPanel>
+            <h2>Any content 2</h2>
+          </TabPanel>
+        </Tabs>
       </div>
     </section>
   );
