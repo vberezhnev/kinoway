@@ -648,6 +648,11 @@
     "strip-ansi" "^6.0.0"
     "wrap-ansi" "^7.0.0"
 
+"clsx@^1.1.0":
+  "integrity" "sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg=="
+  "resolved" "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz"
+  "version" "1.2.1"
+
 "color-convert@^1.9.0":
   "integrity" "sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg=="
   "resolved" "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz"
@@ -2476,7 +2481,7 @@
     "err-code" "^2.0.2"
     "retry" "^0.12.0"
 
-"prop-types@^15.8.1":
+"prop-types@^15.5.0", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -2539,6 +2544,14 @@
     "hoist-non-react-statics" "^3.3.2"
     "react-is" "^18.0.0"
     "use-sync-external-store" "^1.0.0"
+
+"react-tabs@^5.1.0":
+  "integrity" "sha512-jsPVEPuhG7JljTo8Q4ujz4UKRpG90nHlDClAdvV5KrLxCHU+MT/kg7dmhq8fDv8+frciDtaYeFFlTVRLm4N5AQ=="
+  "resolved" "https://registry.npmjs.org/react-tabs/-/react-tabs-5.1.0.tgz"
+  "version" "5.1.0"
+  dependencies:
+    "clsx" "^1.1.0"
+    "prop-types" "^15.5.0"
 
 "react-use-ripple@^1.5.2":
   "integrity" "sha512-pK7PLEaEGJ4xCM5acxW+ua7ba0lqxbhNzBHzEw+MoD0yVFT3r8SkfkG6aSpiEm4iLZO9HOeSnUz+1k7YVuYX5w=="

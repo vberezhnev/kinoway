@@ -26,12 +26,12 @@ export const SearchItem: FC<SearchItemProps> = ({ item }) => {
       <a className={styles.container}>
         <div className={styles.left}>
           <div className={styles.imageContainer}>
-            <Image
+            {/*<Image
               unoptimized
               layout="fill"
-              src={poster.previewUrl}
+              src={poster.previewUrl ? poster.previewUrl : null}
               alt={description}
-            />
+							/>*/}
           </div>
           <div className={styles.text}>
             <span className={styles.title}>

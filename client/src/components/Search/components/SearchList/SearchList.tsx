@@ -1,10 +1,11 @@
 import { FC, useEffect, useState } from "react";
-import { ButtonBase } from "@/components/UI-components/ButtonBase/ButtonBase";
-import { SearchItem } from "../SearchItem/SearchItem";
 import { useGetFilmsBySearchQuery } from "@/services/KinowayService";
 //import { Spinner, SpinnerSizes } from "@/UI/Spinner/Spinner";
 import { Button } from "@/components/UI-components/Button/Button";
-//import classNames from "classnames";
+
+// Components
+import { ButtonBase } from "@/components/UI-components/ButtonBase/ButtonBase";
+import { SearchItem } from "../SearchItem/SearchItem";
 
 import styles from "./SearchList.module.scss";
 

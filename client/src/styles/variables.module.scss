@@ -9,13 +9,16 @@ $foreground-color: #5b27c9;
 
 $color-white: #f4f4f4;
 $color-black: #000;
+$color-gray: #060606;
 $color-red: red;
 $color-green: #00a340;
 $color-dark: #141414;
 $color-light-dark: #1f1f1f;
-$color-gray: #909090;
 $color-primary: #82aaec;
 $color-dark-primary: #003f63;
+
+$watch-film-color: #f50;
+$watch-film-border: 30px;
 
 /*
 content-width: 1230px;
@@ -25,6 +28,8 @@ container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
 $media-tablet: 770px;
 $media-mobile: 769px;
+
+$offset: 20px;
 
 :export {
   primaryColor: $primary-color;

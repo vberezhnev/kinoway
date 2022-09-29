@@ -13,6 +13,7 @@
     height: 100%;
     z-index: 2;
     transition: opacity 0.3s;
+    display: none;
 
     &.visible {
       opacity: 1;
@@ -22,7 +23,7 @@
 }
 
 .search {
-  width: 400px;
+  width: 300px;
 
   @media (max-width: 1280px) {
     width: 370px;
@@ -34,16 +35,16 @@
   }
 
   input {
-    background-color: #3f3f3f;
-      height: 40px;
-      border-radius: 8px;
-      border: none;
-      padding: 20px;
+    //background-color: #3f3f3f;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    padding: 20px;
 
     @media (max-width: 768px) {
       height: inherit;
       border-radius: 0;
-      color: var(--color-white);
+      color: $color-white;
       padding-left: 40px;
       font-size: 16px;
       line-height: 16px;
@@ -62,7 +63,7 @@
   top: 50%;
   right: -42px;
   transform: translateY(-50%);
-  color: var(--color-white);
+  color: $color-white;
 
   @media (max-width: 768px) {
     display: none;
@@ -85,7 +86,7 @@
   width: 24px;
   height: 24px;
   transform: translateY(-50%);
-  color: var(--color-white);
+  color: $color-white;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
@@ -146,6 +147,6 @@
   svg {
     width: 16px;
     height: 16px;
-    stroke: var(--color-white);
+    stroke: $color-white;
   }
 }

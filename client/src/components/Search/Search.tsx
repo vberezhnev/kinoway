@@ -68,7 +68,7 @@ export const Search = () => {
             className={`${styles.dark} ${styles.input}`}
             value={value}
             onChange={handleChange}
-            onClick={() => setVisible(false)}
+            onClick={() => setVisible(true)}
           />
         </a>
         <ButtonBase
@@ -85,7 +85,7 @@ export const Search = () => {
           className={`${styles.closeBtn} ${value} ${styles.active}`}
           onClick={handleClearInput}
         >
-          X
+          {" "}
         </ButtonBase>
         <ButtonBase
           ripple

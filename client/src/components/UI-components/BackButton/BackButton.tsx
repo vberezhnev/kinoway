@@ -7,7 +7,7 @@ export const BackButton = () => {
 
   return (
     <button className={styles.button} onClick={() => router.back()}>
-      ◄ Back
+      ↫ Back
     </button>
   );
 };

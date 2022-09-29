@@ -21,16 +21,20 @@ export const Header = () => {
             </span>
           </a>
         </Link>
-        <input
-          type="checkbox"
-          onChange={() => {
-            theme == "light" ? setTheme("dark") : setTheme("light");
-          }}
-          checked={theme == "light" ? false : true}
-        />
-        <span>&nbsp;Dark mode</span>
 
         <div className={styles.headerRight}>
+          <div className={styles.toggleSwitch}>
+            <label>
+              <input
+                type="checkbox"
+                onChange={() => {
+                  theme == "light" ? setTheme("dark") : setTheme("light");
+                }}
+                checked={theme == "light" ? false : true}
+              />
+              <span className={styles.slider}></span>
+            </label>
+          </div>
           <Search />
         </div>
       </div>
