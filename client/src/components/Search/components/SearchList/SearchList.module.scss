@@ -2,9 +2,8 @@
 
 .wrapper {
   --offset: 15px;
-  z-index: 10000;
+  z-index: 999;
   position: absolute;
-  z-index: 2;
   top: calc(100% + 7px);
   left: 0;
   width: 100%;
@@ -31,7 +30,7 @@
 
 .btns {
   display: flex;
-  background-color: var(--color-light-dark);
+  background-color: $color-light-dark;
   overflow: hidden;
   height: 40px;
   border-radius: 5px;
@@ -40,7 +39,7 @@
 .btn {
   width: 100%;
   min-height: inherit;
-  background-color: var(--color-light-dark);
+  background-color: $color-light-dark;
   border-radius: 0;
 
   &:hover {
@@ -50,10 +49,10 @@
 
 .active {
   pointer-events: none;
-  background-color: var(--color-black);
+  background-color: $color-black;
 
   @media (max-width: 768px) {
-    background-color: var(--color-dark);
+    background-color: $color-dark;
   }
 }
 
@@ -108,23 +107,23 @@
 
 .more {
   color: #fff;
-  padding: var(--offset);
+  padding: $offset;
   text-align: left;
   display: block;
-  background-color: var(--color-dark);
+  background-color: $color-dark;
   font-size: 13px;
   line-height: 16px;
   transition: background-color 0.3s;
 
   @media (max-width: 768px) {
-    background-color: var(--color-dark);
+    background-color: $color-dark;
 
     &:hover {
-      background-color: var(--color-light-dark);
+      background-color: $color-light-dark;
     }
   }
 
   &:hover {
-    background-color: var(--color-black);
+    background-color: $color-black;
   }
 }

@@ -3,7 +3,7 @@ export enum RoutesEnum {
   Films = "/films",
   Series = "/series",
   Cartoons = "/cartoons",
-  Favourites = "/favourites",
+  Favourites = "/favorites",
   Login = "/login",
   Register = "/register",
 }

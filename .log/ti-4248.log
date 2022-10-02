@@ -1,0 +1,59 @@
+[13:16:08.776] Global cache location '/home/beethoven/.cache/typescript/4.6', safe file path '/nix/store/7yhr9pm7w9l4bqn7r6qsc65mvfwsqv20-typescript-4.6.4/lib/node_modules/typescript/lib/typingSafeList.json', types map path /nix/store/7yhr9pm7w9l4bqn7r6qsc65mvfwsqv20-typescript-4.6.4/lib/node_modules/typescript/lib/typesMap.json
+[13:16:08.814] Processing cache location '/home/beethoven/.cache/typescript/4.6'
+[13:16:08.814] Trying to find '/home/beethoven/.cache/typescript/4.6/package.json'...
+[13:16:09.298] Loaded content of '/home/beethoven/.cache/typescript/4.6/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.611"},"devDependencies":{"@types/gh-pages":"^3.2.1","@types/react":"^18.0.14","@types/react-dom":"^18.0.5","@types/tailwindcss":"^3.0.10","@types/testing-library__jest-dom":"^5.14.4"}}
+[13:16:09.298] Loaded content of '/home/beethoven/.cache/typescript/4.6/package-lock.json'
+[13:16:09.931] Adding entry into typings cache: 'gh-pages' => '/home/beethoven/.cache/typescript/4.6/node_modules/@types/gh-pages/index.d.ts'
+[13:16:10.191] Adding entry into typings cache: 'react' => '/home/beethoven/.cache/typescript/4.6/node_modules/@types/react/index.d.ts'
+[13:16:10.270] Adding entry into typings cache: 'react-dom' => '/home/beethoven/.cache/typescript/4.6/node_modules/@types/react-dom/index.d.ts'
+[13:16:10.361] Adding entry into typings cache: 'tailwindcss' => '/home/beethoven/.cache/typescript/4.6/node_modules/@types/tailwindcss/index.d.ts'
+[13:16:10.438] Adding entry into typings cache: 'testing-library__jest-dom' => '/home/beethoven/.cache/typescript/4.6/node_modules/@types/testing-library__jest-dom/index.d.ts'
+[13:16:10.439] Finished processing cache location '/home/beethoven/.cache/typescript/4.6'
+[13:16:10.439] Process id: 4255
+[13:16:10.439] NPM location: /nix/store/nld1byyfapgcm40dvwv3smv6i004wsxs-nodejs-14.19.3/bin/npm (explicit '--npmLocation' not  provided)
+[13:16:10.439] validateDefaultNpmLocation: false
+[13:16:10.439] Npm config file: /home/beethoven/.cache/typescript/4.6/package.json
+[13:16:10.439] Updating types-registry npm package...
+[13:16:10.439] Exec: /nix/store/nld1byyfapgcm40dvwv3smv6i004wsxs-nodejs-14.19.3/bin/npm install --ignore-scripts types-registry@latest
+[13:16:36.064]     Succeeded. stdout:
+    + types-registry@0.1.611
+    updated 1 package and audited 24 packages in 6.233s
+
+3 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+[13:16:36.064] Updated types-registry npm package
+[22:02:29.736] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":[],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList","kind":"discover"}
+[22:02:29.780] Loaded safelist from types map file '/nix/store/7yhr9pm7w9l4bqn7r6qsc65mvfwsqv20-typescript-4.6.4/lib/node_modules/typescript/lib/typesMap.json'
+[22:02:29.780] Explicitly included types: []
+[22:02:29.781] Inferred typings from unresolved imports: []
+[22:02:29.782] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList/bower_components","/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList/node_modules"]}
+[22:02:29.782] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList/bower_components","/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList/node_modules"]}
+[22:02:29.783] DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList/bower_components
+[22:02:29.790] DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[22:02:29.792] Elapsed:: 2.2367280051112175ms DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[22:02:29.792] DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList/node_modules
+[22:02:29.792] DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[22:02:29.792] Elapsed:: 0.17962700128555298ms DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/components/SearchList/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[22:02:29.793] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[22:02:29.793] Response has been sent.
+[22:02:29.793] No new typings were requested as a result of typings discovery
+[22:02:30.969] Got install request {"projectName":"/dev/null/inferredProject2*","fileNames":[],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search","kind":"discover"}
+[22:02:30.969] Explicitly included types: []
+[22:02:30.969] Inferred typings from unresolved imports: []
+[22:02:30.969] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/bower_components","/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/node_modules"]}
+[22:02:30.969] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/bower_components","/home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/node_modules"]}
+[22:02:30.969] DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/bower_components
+[22:02:30.969] DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/bower_components 1 undefined Project: /dev/null/inferredProject2* watcher already invoked: false
+[22:02:30.970] Elapsed:: 0.11366400122642517ms DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/bower_components 1 undefined Project: /dev/null/inferredProject2* watcher already invoked: false
+[22:02:30.970] DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/node_modules
+[22:02:30.970] DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/node_modules 1 undefined Project: /dev/null/inferredProject2* watcher already invoked: false
+[22:02:30.970] Elapsed:: 0.08702100068330765ms DirectoryWatcher:: Added:: WatchInfo: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/node_modules 1 undefined Project: /dev/null/inferredProject2* watcher already invoked: false
+[22:02:30.970] Sending response:
+    {"projectName":"/dev/null/inferredProject2*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[22:02:30.970] Response has been sent.
+[22:02:30.970] No new typings were requested as a result of typings discovery

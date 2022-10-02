@@ -1,7 +1,7 @@
 @import "../../../styles/variables.module.scss";
 
 .headerContainer {
-  overflow: hidden;
+  //overflow: hidden;
   background-color: #1f1f1f;
   padding: 20px 10px;
 
@@ -26,7 +26,12 @@
 
     .toggleSwitch {
       position: relative;
+      right: 65px;
       width: 60px;
+
+      @media (max-width: 767px) {
+        right: 0;
+      }
 
       a {
         position: relative;

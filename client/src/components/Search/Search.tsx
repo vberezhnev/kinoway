@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 
-import { useGetFilmsBySearchQuery } from "@/services/KinowayService";
 import { RoutesEnum } from "@/constants/routes";
 import { useTypedSelector } from "@/hooks/useTypedSelector";
 import { useActions } from "@/hooks/useActions";
@@ -43,7 +42,7 @@ export const Search = () => {
     setDebouncedValue("");
   };
 
-  // useOnClickOutside(formRef, () => setVisible(false));
+  //useOnClickOutside(formRef, () => setVisible(false));
 
   const isActive = debouncedValue && visible;
 
@@ -60,7 +59,7 @@ export const Search = () => {
         action="#"
         className={`${styles.form} ${visible} ${styles.visible}`}
       >
-        <a>
+        <a className={styles.search}>
           <input
             data-testid="input"
             type="search"

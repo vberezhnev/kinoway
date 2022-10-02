@@ -3,7 +3,7 @@ import { Button } from "../UI-components/Button/Button";
 
 import styles from "./FilmsMore.module.scss";
 
-const FilmsMore = (props: string) => {
+const FilmsMore = () => {
   return (
     <div className={styles.main}>
       <div>

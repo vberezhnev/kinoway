@@ -24,19 +24,24 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
                 <p>IMDb: {rating?.imdb}</p>
               </span>
               <span className={styles.ratingIMDB}>
-                <p>KP: {rating?.kp}</p>
+                <p>KP: {Math.round(rating?.kp * 10) / 10}</p>
               </span>
             </div>
             <a className={styles.imageContainer}>
               {poster && (
-									<Image
-									unoptimized
+                <div
                   className={styles.image}
-                  src={poster?.previewUrl}
-                  width={222}
-                  height={333}
-                  alt={description}
-                />
+                  style={{
+                    position: "relative",
+                  }}
+                >
+                  <Image
+                    unoptimized
+                    src={poster?.previewUrl}
+                    alt={description}
+                    layout="fill"
+                  />
+                </div>
               )}
             </a>
           </div>

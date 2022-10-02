@@ -33,7 +33,6 @@
     }
 
     .imageContainer {
-      display: block;
       position: relative;
       height: 100%;
       border-radius: 5px;
@@ -61,14 +60,21 @@
         background-color: rgba(#000, 0.2);
         transition: opacity 0.3s, visibility 0.3s;
       }
+
+      .image {
+        position: relative;
+        width: 222px;
+        height: 333px;
+      }
+
+      @media (min-width: 530px) {
+        .image {
+          width: 222px;
+          height: 333px;
+        }
+      }
     }
 
-    .image {
-      display: block;
-      width: 100vh;
-      height: 10vh;
-      object-fit: cover;
-    }
     div {
       .ratingKP {
         margin: 10px;
