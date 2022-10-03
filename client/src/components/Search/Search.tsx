@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 
+import { FiX, FiSearch, FiChevronLeft } from "react-icons/fi";
 import { RoutesEnum } from "@/constants/routes";
 import { useTypedSelector } from "@/hooks/useTypedSelector";
 import { useActions } from "@/hooks/useActions";
@@ -47,8 +48,8 @@ export const Search = () => {
   const isActive = debouncedValue && visible;
 
   const openSearch = () => {
-    setVisible(true);
-    inputRef.current?.focus();
+    setVisible(false);
+    //inputRef.current?.focus();
   };
 
   return (
@@ -76,15 +77,15 @@ export const Search = () => {
           className={styles.hideSearch}
           onClick={() => setVisible(false)}
         >
-          FiChevronLeft
+          <FiChevronLeft />
         </ButtonBase>
         <ButtonBase
           ripple
           type="button"
-          className={`${styles.closeBtn} ${value} ${styles.active}`}
+          className={`${styles.closeBtn} ${value && styles.active}`}
           onClick={handleClearInput}
         >
-          {" "}
+          <FiX />
         </ButtonBase>
         <ButtonBase
           ripple
@@ -92,12 +93,12 @@ export const Search = () => {
           disabled={!value.length}
           onClick={submitForm}
         >
-          🔍
+          <FiSearch />
         </ButtonBase>
-        {isActive && <SearchList value={debouncedValue} />}
+        {isActive && <SearchList value={debouncedValue} />}{" "}
       </form>
       <ButtonBase onClick={openSearch} className={styles.openSearch}>
-        🔍
+        <FiSearch />{" "}
       </ButtonBase>
     </div>
   );

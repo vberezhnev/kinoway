@@ -4,6 +4,7 @@ import { useGetFilmByIdQuery } from "@/services/KinowayService";
 
 import { BackButton } from "@/components/UI-components/BackButton/BackButton";
 import { Button } from "@/components/UI-components/Button/Button";
+import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/ButtonPlayMovie";
 import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import { Info } from "@/components/Info/Info";
 
@@ -130,20 +131,22 @@ export const Film = () => {
               {shortDescription ? shortDescription : ""}
             </span>
             <div className={styles.btns}>
-              <Button
+              {/* <Button
                 onClick={() => {
                   router.push(`https://kirlovon.dev/Kinopoisk-Watch/?id=${id}`);
                 }}
                 className={styles.btn}
               >
                 Смотреть онлайн
-              </Button>
+								</Button> */}
+
               {/* <MovieFavorite
                 className={styles.btn}
                 variant="regular"
                 id={data?.id}
                 disabled={isError}
 								/> */}
+              <ButtonPlayMovie text="Смотреть"></ButtonPlayMovie>
             </div>
             <h2 className={styles.subtitle}>About this {type}</h2>
             <Info items={items} />

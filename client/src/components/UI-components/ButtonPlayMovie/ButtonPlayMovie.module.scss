@@ -1,0 +1,31 @@
+@import "../../../styles/variables.module.scss";
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    width: auto;
+    height: auto;
+    border-radius: 30px;
+    padding: 13px 24px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    border: 1px solid transparent;
+
+    color: $color-white;
+    background-color: $color-primary;
+    transition: color 0.3s ease, background-color 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: $color-dark-primary;
+  }
+}

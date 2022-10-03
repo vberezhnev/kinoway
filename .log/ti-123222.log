@@ -1,0 +1,28 @@
+[18:41:53.170] Global cache location '/home/beethoven/.cache/typescript/4.6', safe file path '/nix/store/7yhr9pm7w9l4bqn7r6qsc65mvfwsqv20-typescript-4.6.4/lib/node_modules/typescript/lib/typingSafeList.json', types map path /nix/store/7yhr9pm7w9l4bqn7r6qsc65mvfwsqv20-typescript-4.6.4/lib/node_modules/typescript/lib/typesMap.json
+[18:41:53.171] Processing cache location '/home/beethoven/.cache/typescript/4.6'
+[18:41:53.171] Trying to find '/home/beethoven/.cache/typescript/4.6/package.json'...
+[18:41:53.172] Loaded content of '/home/beethoven/.cache/typescript/4.6/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.611"},"devDependencies":{"@types/gh-pages":"^3.2.1","@types/react":"^18.0.14","@types/react-dom":"^18.0.5","@types/tailwindcss":"^3.0.10","@types/testing-library__jest-dom":"^5.14.4"}}
+[18:41:53.172] Loaded content of '/home/beethoven/.cache/typescript/4.6/package-lock.json'
+[18:41:53.188] Adding entry into typings cache: 'gh-pages' => '/home/beethoven/.cache/typescript/4.6/node_modules/@types/gh-pages/index.d.ts'
+[18:41:53.195] Adding entry into typings cache: 'react' => '/home/beethoven/.cache/typescript/4.6/node_modules/@types/react/index.d.ts'
+[18:41:53.200] Adding entry into typings cache: 'react-dom' => '/home/beethoven/.cache/typescript/4.6/node_modules/@types/react-dom/index.d.ts'
+[18:41:53.210] Adding entry into typings cache: 'tailwindcss' => '/home/beethoven/.cache/typescript/4.6/node_modules/@types/tailwindcss/index.d.ts'
+[18:41:53.213] Adding entry into typings cache: 'testing-library__jest-dom' => '/home/beethoven/.cache/typescript/4.6/node_modules/@types/testing-library__jest-dom/index.d.ts'
+[18:41:53.213] Finished processing cache location '/home/beethoven/.cache/typescript/4.6'
+[18:41:53.214] Process id: 123233
+[18:41:53.214] NPM location: /nix/store/nld1byyfapgcm40dvwv3smv6i004wsxs-nodejs-14.19.3/bin/npm (explicit '--npmLocation' not  provided)
+[18:41:53.214] validateDefaultNpmLocation: false
+[18:41:53.214] Npm config file: /home/beethoven/.cache/typescript/4.6/package.json
+[18:41:53.214] Updating types-registry npm package...
+[18:41:53.214] Exec: /nix/store/nld1byyfapgcm40dvwv3smv6i004wsxs-nodejs-14.19.3/bin/npm install --ignore-scripts types-registry@latest
+[18:41:56.464]     Succeeded. stdout:
+    + types-registry@0.1.612
+    updated 1 package and audited 24 packages in 2.257s
+
+3 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+[18:41:56.465] Updated types-registry npm package
