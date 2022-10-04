@@ -103,7 +103,7 @@
     font-size: 40px;
     line-height: 48px;
     max-width: 650px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 
     @media (max-width: 576px) {
       font-size: 26px;
@@ -118,13 +118,13 @@
     vertical-align: middle;
     letter-spacing: -0.2px;
     color: $color-gray;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 
   .btns {
     display: flex;
     align-items: center;
-    margin-bottom: 35px;
+    margin-top: 15px;
     padding: 10px 10px 10px 0;
 
     @media (max-width: 576px) {

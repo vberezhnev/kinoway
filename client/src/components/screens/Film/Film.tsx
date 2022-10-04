@@ -3,8 +3,10 @@ import { useRouter } from "next/router";
 import { useGetFilmByIdQuery } from "@/services/KinowayService";
 
 import { BackButton } from "@/components/UI-components/BackButton/BackButton";
-import { Button } from "@/components/UI-components/Button/Button";
+
 import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/ButtonPlayMovie";
+//import { ButtonPlayMovieSecondary } from "@/components/UI-components/ButtonPlayMovieSecondary/ButtonPlayMovieSecondary";
+
 import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import { Info } from "@/components/Info/Info";
 
@@ -12,7 +14,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 import styles from "./Film.module.scss";
-import { TaskAbortError } from "@reduxjs/toolkit";
+//import { TaskAbortError } from "@reduxjs/toolkit";
 
 export const Film = () => {
   const router = useRouter();
@@ -118,9 +120,6 @@ export const Film = () => {
               alt={shortDescription}
             />
             <MovieRating className={styles.rating} rating={rating} />
-            {/* <span className={styles.rating}>
-              {rating?.kp ? rating.kp : rating?.imdb}
-							</span> */}
           </div>
           <div className={styles.right}>
             <h1 className={styles.title}>
@@ -139,6 +138,34 @@ export const Film = () => {
               >
                 Смотреть онлайн
 								</Button> */}
+              <ButtonPlayMovie
+                color="orange"
+                onClick={() => {
+                  router.push(`https://kirlovon.dev/Kinopoisk-Watch/?id=${id}`);
+                }}
+              >
+                <b>Смотреть</b>
+              </ButtonPlayMovie>
+              <ButtonPlayMovie
+                color="black"
+                onClick={() => {
+                  router.push(`https://www.kinopoisk.ru/film/${id}`);
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="14"
+                  viewBox="0 0 10 14"
+                  fill="#fff"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 0h10v14l-5-3-5 3V0z"
+                  />
+                </svg>
+              </ButtonPlayMovie>
 
               {/* <MovieFavorite
                 className={styles.btn}
@@ -146,7 +173,6 @@ export const Film = () => {
                 id={data?.id}
                 disabled={isError}
 								/> */}
-              <ButtonPlayMovie text="Смотреть"></ButtonPlayMovie>
             </div>
             <h2 className={styles.subtitle}>About this {type}</h2>
             <Info items={items} />

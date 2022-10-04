@@ -10,12 +10,7 @@ interface ButtonBaseProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   animationDuration?: number;
 }
 
-type Data = {
-  text: String;
-  children: React.ReactNode;
-};
-
-export const Button = ({ props, onClick, children }: any) => {
+export const Button = ({ onClick, children }: any) => {
   return (
     <button className={styles.ButtonBase_btn} onClick={onClick}>
       {children}
