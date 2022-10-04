@@ -104,8 +104,6 @@ export const Film = () => {
     },
   ];
 
-  console.log(data);
-
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -160,8 +158,8 @@ export const Film = () => {
                   fill="#fff"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M0 0h10v14l-5-3-5 3V0z"
                   />
                 </svg>
