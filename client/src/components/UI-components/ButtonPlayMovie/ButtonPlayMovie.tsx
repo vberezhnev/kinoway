@@ -27,9 +27,10 @@ const ButtonPlayMovieComponent = ({
     <div className={styles.buttonContainer}>
       <button
         className={
-          (styles.button,
+          (
           classNames(
-            variant === "stroke" && styles.stroke,
+							styles.button,
+							variant === "stroke" && styles.stroke,
             variant === "regular" && styles.regular,
             variant === "sm" && styles.small,
 
@@ -37,9 +38,9 @@ const ButtonPlayMovieComponent = ({
             color === "black" && styles.black,
             color === "white" && styles.white,
             color === "orange" && styles.orange,
-            color === "gray" && styles.gray
-          ),
-          className)
+							color === "gray" && styles.gray,
+          className),
+          )
         }
         onClick={onClick}
       >
