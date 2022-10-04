@@ -26,22 +26,19 @@ const ButtonPlayMovieComponent = ({
   return (
     <div className={styles.buttonContainer}>
       <button
-        className={
-          (
-          classNames(
-							styles.button,
-							variant === "stroke" && styles.stroke,
-            variant === "regular" && styles.regular,
-            variant === "sm" && styles.small,
+        className={classNames(
+          styles.button,
+          variant === "stroke" && styles.stroke,
+          variant === "regular" && styles.regular,
+          variant === "sm" && styles.small,
 
-            color === "standart" && styles.standart,
-            color === "black" && styles.black,
-            color === "white" && styles.white,
-            color === "orange" && styles.orange,
-							color === "gray" && styles.gray,
-          className),
-          )
-        }
+          color === "standart" && styles.standart,
+          color === "black" && styles.black,
+          color === "white" && styles.white,
+          color === "orange" && styles.orange,
+          color === "gray" && styles.gray,
+          className
+        )}
         onClick={onClick}
       >
         {children}
