@@ -1,7 +1,6 @@
 // Utility for conditionally joining classNames together.
 // https://github.com/JedWatson/classnames
 
-//@ts-ignore
 export function classNames() {
   var hasOwn = {}.hasOwnProperty;
   var classes = [];
