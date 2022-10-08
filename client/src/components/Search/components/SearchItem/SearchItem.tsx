@@ -1,6 +1,6 @@
 import { IMovie } from "@/types/IMovie";
 import { FC } from "react";
-//import {Rating} from "@/components/Rating/Rating";
+import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import Link from "next/link";
 import styles from "./SearchItem.module.scss";
 import Image from "next/image";
@@ -10,28 +10,23 @@ interface SearchItemProps {
 }
 
 export const SearchItem: FC<SearchItemProps> = ({ item }) => {
-  const {
-    title,
-    id,
-    poster,
-    description,
-    year,
-    alternativeName,
-    movieLength,
-    rating,
-  } = item;
+  const { title, id, description, year, alternativeName, movieLength, rating } =
+    item;
+
+  console.log(item);
 
   return (
     <Link href={`/film/${id}`}>
       <a className={styles.container}>
+        <MovieRating className={styles.rating} rating={rating} />
         <div className={styles.left}>
           <div className={styles.imageContainer}>
-            {/*<Image
+            <Image
               unoptimized
               layout="fill"
-              src={poster.previewUrl ? poster.previewUrl : null}
+              src={`https://st.kp.yandex.net/images/film_iphone/iphone360_${id}.jpg`}
               alt={description}
-							/>*/}
+            />
           </div>
           <div className={styles.text}>
             <span className={styles.title}>
@@ -43,7 +38,6 @@ export const SearchItem: FC<SearchItemProps> = ({ item }) => {
             </span>
           </div>
         </div>
-        {/* <Rating className={styles.rating} rating={rating} /> */}
       </a>
     </Link>
   );

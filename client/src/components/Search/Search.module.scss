@@ -30,20 +30,16 @@
   input {
     height: 20px;
     width: 300px;
-    padding-right: 40px;
-
-    @media (max-width: 768px) {
-      width: auto;
-      border-radius: 0;
-      color: $color-white;
-      font-size: 16px;
-      line-height: 16px;
-    }
+    padding: 14px;
+    border-radius: 4px;
+    background-color: #333;
+    color: $color-white;
+    border: none;
 
     @media (max-width: 512px) {
       width: calc(100% - 100px);
 
-      margin-left: 40px;
+      margin-left: 50px;
       padding: 0px;
     }
   }

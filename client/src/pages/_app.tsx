@@ -12,9 +12,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const store = useStore(pageProps.initialReduxState);
 
   return (
-    <ThemeProvider>
-      <Provider store={store}>
-        <Layout>
+    <Provider store={store}>
+      <Layout>
+        <ThemeProvider>
           <motion.div
             key={router.route}
             initial="hidden"
@@ -22,13 +22,13 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             variants={{
               hidden: {
                 scale: 0.9,
-                opacity: 0,
+                opacity: 0.3,
               },
               visible: {
                 scale: 1,
                 opacity: 1,
                 transition: {
-                  delay: 1,
+                  delay: 0.4,
                 },
               },
             }}
@@ -36,9 +36,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             {" "}
             <Component {...pageProps} />
           </motion.div>
-        </Layout>
-      </Provider>
-    </ThemeProvider>
+        </ThemeProvider>
+      </Layout>
+    </Provider>
   );
 }
 

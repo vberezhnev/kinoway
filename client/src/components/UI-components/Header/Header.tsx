@@ -13,9 +13,9 @@ export const Header = () => {
       <div className={styles.content}>
         <Link href={RoutesEnum.Home}>
           <a className={styles.logo}>
-            <span>KINO</span>
+            <span>K</span>
             <span color={variables.primaryColor} className={styles.wayText}>
-              WAY
+              W
             </span>
           </a>
         </Link>
