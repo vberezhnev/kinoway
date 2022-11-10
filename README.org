@@ -1,0 +1,15 @@
+#+title:🎬Kinoway🎥
+
+*** Client (TS) [0/10]
+- [ ] Redesign main page
+- [ ] Create favorites list
+- [ ] Create UI-library
+- [ ] Create tabs and info on film page
+- [ ] Optimize film page opening
+- [ ] Optimize image loading
+- [ ] Fix buttons hover effect
+- [ ] Fix mobile header
+- [ ] Fix search drop-down menu
+- [ ] Fix light/dark theme switcher
+
+*** Sever (Golang)
