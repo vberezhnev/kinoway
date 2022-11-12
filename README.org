@@ -13,3 +13,4 @@
 - [ ] Fix light/dark theme switcher
 
 *** Sever (Golang)
+- [ ] Create ~.env.local~ and ~.env.example~

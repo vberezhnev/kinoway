@@ -1,13 +1,13 @@
-Info 0    [15:42:08.315] Starting TS Server
-Info 1    [15:42:08.351] Version: 4.6.4
-Info 2    [15:42:08.351] Arguments: /nix/store/nld1byyfapgcm40dvwv3smv6i004wsxs-nodejs-14.19.3/bin/node /nix/store/7yhr9pm7w9l4bqn7r6qsc65mvfwsqv20-typescript-4.6.4/lib/node_modules/typescript/lib/tsserver.js --logFile /home/beethoven/Templates/NextJS/kinoway/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/97c225159088c48e393275ed3b92bb4b/tscancellation*
-Info 3    [15:42:08.351] Platform: linux NodeVersion: 14 CaseSensitive: true
-Info 4    [15:42:08.351] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
-Info 5    [15:42:08.370] Format host information updated
-Info 6    [15:42:08.383] Search path: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search
-Info 7    [15:42:08.411] For info: /home/beethoven/Templates/NextJS/kinoway/client/src/components/Search/Search.tsx :: Config file name: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json
-Info 8    [15:42:08.411] Creating configuration project /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json
-Info 9    [15:42:08.605] Config: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json : {
+Info 0    [13:48:29.423] Starting TS Server
+Info 1    [13:48:29.537] Version: 4.8.4
+Info 2    [13:48:29.537] Arguments: /nix/store/b51np2s730v8xa5pnbjiih1dm9vf7325-nodejs-14.20.1/bin/node /home/beethoven/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/tsserver.js --logFile /home/beethoven/Templates/NextJS/kinoway/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/36dc9c7d68abb50d151e0c8f90f87c68/tscancellation*
+Info 3    [13:48:29.537] Platform: linux NodeVersion: 14 CaseSensitive: true
+Info 4    [13:48:29.537] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [13:48:29.582] Format host information updated
+Info 6    [13:48:29.605] Search path: /home/beethoven/Templates/NextJS/kinoway/client/src/pages/film
+Info 7    [13:48:29.637] For info: /home/beethoven/Templates/NextJS/kinoway/client/src/pages/film/[id].tsx :: Config file name: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json
+Info 8    [13:48:29.637] Creating configuration project /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json
+Info 9    [13:48:29.873] Config: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json : {
  "rootNames": [
   "/home/beethoven/Templates/NextJS/kinoway/client/next-env.d.ts",
   "/home/beethoven/Templates/NextJS/kinoway/client/src/constants/api.ts",
@@ -116,16 +116,16 @@ Info 9    [15:42:08.605] Config: /home/beethoven/Templates/NextJS/kinoway/client
   "configFilePath": "/home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json"
  }
 }
-Info 10   [15:42:25.566] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json
-Info 11   [15:42:38.300] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 12734.594135001302ms
-Info 12   [15:42:38.300] Project '/home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json' (Configured)
-Info 13   [15:42:38.301] 	Files (441)
+Info 10   [13:48:43.555] Starting updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json
+Info 11   [13:48:54.595] Finishing updateGraphWorker: Project: /home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 11040.44502600003ms
+Info 12   [13:48:54.596] Project '/home/beethoven/Templates/NextJS/kinoway/client/tsconfig.json' (Configured)
+Info 13   [13:48:54.596] 	Files (426)
 
-Info 14   [15:42:38.301] -----------------------------------------------
-Info 15   [15:42:38.545] AutoImportProviderProject: found 5 root files in 5 dependencies in 242.12898299843073 ms
-Info 16   [15:42:38.546] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
-Info 17   [15:42:39.132] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 585.3261179998517ms
-Info 18   [15:42:39.132] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
-Info 19   [15:42:39.132] 	Files (127)
+Info 14   [13:48:54.596] -----------------------------------------------
+Info 15   [13:48:54.755] AutoImportProviderProject: found 3 root files in 3 dependencies in 154.50339999981225 ms
+Info 16   [13:48:54.758] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
+Info 17   [13:48:54.999] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 240.44910700060427ms
+Info 18   [13:48:54.999] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 19   [13:48:54.999] 	Files (63)
 
-Info 20   [15:42:39.132] -----------------------------------------------
+Info 20   [13:48:54.999] -----------------------------------------------
