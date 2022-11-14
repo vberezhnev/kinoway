@@ -9,8 +9,13 @@ import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/Butt
 
 import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import { Info } from "@/components/Info/Info";
+import {
+  Reviews,
+  //MovieFavorite,
+  SimilarMovies,
+  FilmTabs,
+} from "./components";
 
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 import styles from "./Film.module.scss";
@@ -179,14 +184,13 @@ export const Film = () => {
             <Info items={items} />
           </div>
         </div>
-        {/*<Tabs tabs={tabs} />
+        <FilmTabs data={data} />
         {similarMovies?.length ? (
           <SimilarMovies movies={similarMovies} />
-        ) : null}
-        <Reviews /> */}
-        <Tabs>
+        ) : null}{" "}
+        {/* <Tabs>
           <TabList>
-            <Tab>Persons</Tab>
+            <Tab></Tab>
             <Tab>123123</Tab>
           </TabList>
           <TabPanel>
@@ -195,7 +199,7 @@ export const Film = () => {
           <TabPanel>
             <h2>Any content 2</h2>
           </TabPanel>
-        </Tabs>
+					</Tabs> */}
       </div>
     </section>
   );

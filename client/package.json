@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
+    "@storybook/react": "^6.5.13",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "framer-motion": "^7.2.1",
@@ -19,9 +20,11 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-ratio": "^0.1.5",
     "react-redux": "^8.0.2",
     "react-tabs": "^5.1.0",
-    "react-use-ripple": "^1.5.2"
+    "react-use-ripple": "^1.5.2",
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@types/node": "18.0.5",

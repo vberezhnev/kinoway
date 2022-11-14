@@ -5,6 +5,8 @@ import { IMovie } from "@/types/IMovie";
 import { IBaseQuery, IQuery } from "@/types/IQuery";
 import { getCurrentYear } from "@/helpers/getCurrentYear";
 import { IPerson } from "@/types/IPerson";
+import { IImages } from "@/types/IImages";
+import { IReviews } from "@/types/IReviews";
 
 export const kinomoreAPI = createApi({
   reducerPath: "kinomoreAPI",
@@ -52,6 +54,14 @@ export const kinomoreAPI = createApi({
       query: ({ query, type, limit }) =>
         `/movie?search=${query}&field=name&limit=${limit}&sortField=year&sortType=-1&field=typeNumber&search=${type}&isStrict=false&token=${API_KEY}`,
     }),
+    getReviewsById: build.query<IReviews, IBaseQuery>({
+      query: ({ id, limit }) =>
+        `/review?search=${id}&field=movieId&limit=${limit}&token=${API_KEY}`,
+    }),
+    getMovieImages: build.query<IImages, IBaseQuery>({
+      query: ({ id, limit }) =>
+        `/image?search=${id}&field=movieId&limit=${limit}&token=${API_KEY}`,
+    }),
   }),
 });
 
@@ -67,6 +77,8 @@ export const {
   useGetFavouritesQuery,
   useGetFilmsByIdQuery,
   useGetFilmsBySearchQuery,
+  useGetReviewsByIdQuery,
+  useGetMovieImagesQuery,
 } = kinomoreAPI;
 
 export const {
