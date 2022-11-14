@@ -1,11 +1,12 @@
 #+title:🎬Kinoway🎥
 
-*** Client (TS) [1/11]
-+ [ ] Create favorites list
-+ [ ] Create tabs and info on film page
+*** Client (TS) [3/12]
++ [X] Create favorites list
++ [X] Create tabs and info on film page
 + [ ] Create UI-library
 + [ ] Fix buttons hover effect
 + [X] Fix light/dark theme switcher
++ [ ] Fix footer on film search page
 + [ ] Fix mobile header
 + [ ] Fix search drop-down menu
 + [ ] Fix system of markers (Red/Silver/Green Colors)
