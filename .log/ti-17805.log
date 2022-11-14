@@ -1,0 +1,19 @@
+[11:40:13.474] Global cache location '/home/beethoven/.cache/typescript/4.8', safe file path '/home/beethoven/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/typingSafeList.json', types map path /home/beethoven/.emacs.d/.cache/lsp/npm/typescript/lib/node_modules/typescript/lib/typesMap.json
+[11:40:13.475] Processing cache location '/home/beethoven/.cache/typescript/4.8'
+[11:40:13.475] Trying to find '/home/beethoven/.cache/typescript/4.8/package.json'...
+[11:40:13.573] Loaded content of '/home/beethoven/.cache/typescript/4.8/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.617"}}
+[11:40:13.573] Loaded content of '/home/beethoven/.cache/typescript/4.8/package-lock.json'
+[11:40:13.573] Finished processing cache location '/home/beethoven/.cache/typescript/4.8'
+[11:40:13.574] Process id: 17812
+[11:40:13.574] NPM location: /nix/store/b51np2s730v8xa5pnbjiih1dm9vf7325-nodejs-14.20.1/bin/npm (explicit '--npmLocation' not  provided)
+[11:40:13.574] validateDefaultNpmLocation: false
+[11:40:13.574] Npm config file: /home/beethoven/.cache/typescript/4.8/package.json
+[11:40:13.574] Updating types-registry npm package...
+[11:40:13.574] Exec: /nix/store/b51np2s730v8xa5pnbjiih1dm9vf7325-nodejs-14.20.1/bin/npm install --ignore-scripts types-registry@latest
+[11:40:28.334]     Succeeded. stdout:
+    + types-registry@0.1.618
+    updated 1 package and audited 1 package in 3.471s
+found 0 vulnerabilities
+
+
+[11:40:28.334] Updated types-registry npm package

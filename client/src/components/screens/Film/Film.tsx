@@ -45,11 +45,14 @@ export const Film = () => {
     description,
     facts,
     persons,
+    tabs,
   }: any = { ...data };
 
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
   const movieYear = year && `(${year})`;
   const worldFees = fees?.world?.value - fees?.usa?.value;
+
+  console.log(tabs);
 
   const items = [
     {

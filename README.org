@@ -1,16 +1,17 @@
 #+title:🎬Kinoway🎥
 
 *** Client (TS) [0/10]
-- [ ] Redesign main page
-- [ ] Create favorites list
-- [ ] Create UI-library
-- [ ] Create tabs and info on film page
-- [ ] Optimize film page opening
-- [ ] Optimize image loading
-- [ ] Fix buttons hover effect
-- [ ] Fix mobile header
-- [ ] Fix search drop-down menu
-- [ ] Fix light/dark theme switcher
-
-*** Sever (Golang)
-- [ ] Create ~.env.local~ and ~.env.example~
++ [ ] Create favorites list
++ [ ] Create tabs and info on film page
++ [ ] Create UI-library
++ [ ] Fix buttons hover effect
++ [ ] Fix light/dark theme switcher
++ [ ] Fix mobile header
++ [ ] Fix search drop-down menu
++ [ ] Fix system of markers (Red/Silver/Green Colors)
++ [ ] Optimize film page opening
++ [ ] Optimize image loading
++ [ ] Redesign main page
+	
+*** Sever (Golang) [1/1]
++ [X] Create ~.env.local~ and ~.env.example~
