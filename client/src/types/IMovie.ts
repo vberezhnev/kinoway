@@ -43,6 +43,7 @@ interface IMovieTechnology {
 
 export interface IMoviePerson {
   id: number;
+  name: string;
   title: string;
   alternativeTitle: string;
   description: string;
