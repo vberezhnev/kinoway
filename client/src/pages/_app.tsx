@@ -13,8 +13,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
   return (
     <Provider store={store}>
-      <Layout>
-        <ThemeProvider>
+      <ThemeProvider defaultTheme="system">
+        <Layout>
           <motion.div
             key={router.route}
             initial="hidden"
@@ -36,8 +36,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             {" "}
             <Component {...pageProps} />
           </motion.div>
-        </ThemeProvider>
-      </Layout>
+        </Layout>
+      </ThemeProvider>
     </Provider>
   );
 }

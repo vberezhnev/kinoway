@@ -13,7 +13,7 @@ export const ThemeSwitcher = () => {
           onChange={() => {
             theme == "light" ? setTheme("dark") : setTheme("light");
           }}
-          checked={theme == "light" ? false : true}
+          checked={theme == "dark" ? true : false}
         />
         <span className={styles.slider}></span>
       </label>
