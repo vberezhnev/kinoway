@@ -1,12 +1,15 @@
 #+title:🎬Kinoway🎥
 
+[[./static/banner.png]]
+
 *** Client (TS) [3/12]
++ [ ] Bugfix film page
 + [X] Create favorites list
 + [X] Create tabs and info on film page
 + [ ] Create UI-library
 + [ ] Fix buttons hover effect
-+ [X] Fix light/dark theme switcher
 + [ ] Fix footer on film search page
++ [X] Fix light/dark theme switcher
 + [ ] Fix mobile header
 + [ ] Fix search drop-down menu
 + [ ] Fix system of markers (Red/Silver/Green Colors)

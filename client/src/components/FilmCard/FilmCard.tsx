@@ -14,7 +14,7 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
     ...item,
   };
 
-  console.log(names);
+  console.log(name[1].name);
 
   return (
     <Link href={`/film/${id}`}>
@@ -51,7 +51,7 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
 
         <h3 className={styles.FilmCard_title}>{name}</h3>
         <br />
-        <a className={styles.FilmCard_secondTitle}>{name[1]?.name}</a>
+        <a className={styles.FilmCard_secondTitle}>{name[0]?.name}</a>
 
         <br />
         <span className={styles.FilmCard_info}>
