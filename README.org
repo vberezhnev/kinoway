@@ -1,6 +1,17 @@
 #+title:🎬Kinoway🎥
 
-[[./static/banner.png]]
+#+begin_html
+<div align="center">
+<img src="./static/banner.png">
+</div>
+
+<p align="center">
+<img src="https://img.shields.io/github/stars/Tell396/kinoway?color=e57474&labelColor=1e2528&style=for-the-badge"> <img src="https://img.shields.io/github/issues/Tell396/kinoway?color=67b0e8&labelColor=1e2528&style=for-the-badge">
+<img src="https://img.shields.io/static/v1?label=license&message=MIT&color=8ccf7e&labelColor=1e2528&style=for-the-badge">
+<img src="https://img.shields.io/github/forks/Tell396/kinoway?color=e5c76b&labelColor=1e2528&style=for-the-badge">
+</p>
+#+end_html
+
 
 *** Client (TS) [3/12]
 + [ ] Bugfix film page
