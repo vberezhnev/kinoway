@@ -2,6 +2,7 @@ import { useGetFilmByNameQuery } from "@/services/KinowayService";
 import { useTypedSelector } from "@/hooks/useTypedSelector";
 import { useRouter } from "next/router";
 //import { RoutesEnum } from "@/constants/routes";
+import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,7 +23,7 @@ export const SearchResults = () => {
   return (
     <div>
       {data?.docs?.map((data: any) => {
-        console.log(page);
+        console.log(data.rating.kp);
         return (
           <div className={styles.styles_root} key={data.id}>
             <div>
@@ -52,9 +53,11 @@ export const SearchResults = () => {
               <div className={styles.user}>
                 <div className={styles.rating}>
                   <div className={styles.kinoway}>
-                    <span className={styles.kinowayValue}>
-                      {data.rating.kp}
-                    </span>
+                    <MovieRating
+                      rating={data.rating.kp}
+                      className="kinowayValue"
+                    />
+                    <span className={styles.kinowayValue}>{}</span>
                     <span className={styles.kinowayCount}>17 667</span>
                   </div>
                   <div className="styles">Топ 250: 1</div>

@@ -1,10 +1,12 @@
+@import "../../../styles/variables.module.scss";
+
 .container {
   position: relative;
 
   @media (max-width: 768px) {
-    margin-right: calc(var(--container-offset) / -100 * 100);
-    margin-left: calc(var(--container-offset) / -100 * 100);
-    padding: 0 var(--container-offset);
+    margin-right: calc($container-offset / -100 * 100);
+    margin-left: calc($container-offset / -100 * 100);
+    padding: 0 $container-offset;
   }
 
   &:before {
@@ -29,9 +31,9 @@
   overflow-x: auto;
 
   @media (max-width: 768px) {
-    margin-right: calc(var(--container-offset) / -100 * 100);
-    margin-left: calc(var(--container-offset) / -100 * 100);
-    padding: 0 var(--container-offset);
+    margin-right: calc($container-offset / -100 * 100);
+    margin-left: calc($container-offset / -100 * 100);
+    padding: 0 $container-offset;
   }
 
   &::-webkit-scrollbar {
@@ -80,7 +82,7 @@
 
 .selected {
   font-weight: 400;
-  color: var(--color-primary);
+  color: $color-primary;
 
   &:after {
     opacity: 1;

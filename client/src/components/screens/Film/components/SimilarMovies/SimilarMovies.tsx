@@ -14,10 +14,10 @@ export const SimilarMovies: FC<SimilarMoviesProps> = ({ movies }) => {
     <div className={styles.container}>
       <Carousel title="Похожее кино" quantity={movies?.length}>
         {movies?.map((item) => {
-          console.log(item);
+          console.log(item.rating);
           return (
             <SwiperSlide key={item.id}>
-              <FilmCard key={item.id} item={item} />
+              <FilmCard item={item} />
             </SwiperSlide>
           );
         })}
