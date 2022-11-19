@@ -49,7 +49,7 @@ export const Search = () => {
 
   const openSearch = () => {
     setVisible(false);
-    //inputRef.current?.focus();
+    inputRef.current?.focus();
   };
 
   return (
@@ -97,9 +97,9 @@ export const Search = () => {
         </ButtonBase>
         {isActive && <SearchList value={debouncedValue} />}{" "}
       </form>
-      {/* <ButtonBase onClick={() => openSearch} className={styles.openSearch}>
+      <ButtonBase onClick={() => openSearch} className={styles.openSearch}>
         <FiSearch />{" "}
-			</ButtonBase> */}
+      </ButtonBase>
     </div>
   );
 };

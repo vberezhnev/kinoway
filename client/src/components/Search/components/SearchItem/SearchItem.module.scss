@@ -4,12 +4,12 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: var(--offset);
-  color: var(--color-white);
+  padding: $offset;
+  color: $color-white;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: var(--color-light-dark);
+    background-color: $color-light-dark;
   }
 }
 
@@ -19,8 +19,8 @@
 
 .imageContainer {
   position: relative;
-  width: 32px;
-  height: 48px;
+  width: 55px;
+  height: 88px;
   flex-shrink: 0;
   display: block;
   border-radius: 5px;

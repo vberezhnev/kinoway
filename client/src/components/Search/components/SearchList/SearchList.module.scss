@@ -34,14 +34,14 @@
   overflow: hidden;
   width: calc(100% - 1px);
   height: 40px;
-  border-radius: 5px;
+  //border-radius: 5px;
 }
 
 .btn {
   width: 100%;
   min-height: inherit;
   background-color: $color-light-dark;
-  border-radius: 3;
+  //border-radius: 3;
 
   &:hover {
     background-color: rgba(#333, 0.1);

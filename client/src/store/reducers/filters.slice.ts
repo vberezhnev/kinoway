@@ -14,11 +14,11 @@ export const filtersSlice = createSlice({
   name: "filters",
   initialState,
   reducers: {
-    setFiterYears: (state, action) => {
-      state.filters.year = action.payload;
-    },
     setFilterRatings: (state, action) => {
       state.filters.rating = action.payload;
+    },
+    setFiterYears: (state, action) => {
+      state.filters.year = action.payload;
     },
     setSortByRelease: (state, action) => {
       state.filters.sortByRelease = action.payload;
@@ -33,8 +33,8 @@ export const filtersSlice = createSlice({
 });
 
 export const {
-  setFiterYears,
   setFilterRatings,
+  setFiterYears,
   setSortByRelease,
   setFilterGenre,
   resetFilters,
