@@ -1,6 +1,7 @@
 import { Fragment, useMemo } from "react";
 import { useRouter } from "next/router";
 import { useGetFilmByIdQuery } from "@/services/KinowayService";
+import Link from "next/link"
 
 import { SiKinopoisk } from "react-icons/si";
 import { MdFavoriteBorder } from "react-icons/md";
@@ -143,14 +144,11 @@ export const Film = () => {
               {shortDescription ? shortDescription : ""}
             </span>
             <div className={styles.btns}>
-              <ButtonPlayMovie
-                color="orange"
-                onClick={() => {
-                  router.push(`https://kirlovon.dev/Kinopoisk-Watch/?id=${id}`);
-                }}
-              >
-                <b>Смотреть</b>
-              </ButtonPlayMovie>
+              <ButtonPlayMovie color="orange">
+					<Link href={`https://kirlovon.dev/Kinopoisk-Watch/?id=${id}`}>
+                <a target="_blank"><b>Смотреть</b></a>
+					</Link>
+          </ButtonPlayMovie>
               <ButtonPlayMovie
                 color="black"
                 onClick={() => {
@@ -158,8 +156,7 @@ export const Film = () => {
                 }}
               >
                 <MdFavoriteBorder />{" "}
-              </ButtonPlayMovie>
-
+      </ButtonPlayMovie>
               <ButtonPlayMovie
                 color="black"
                 onClick={() => {
@@ -193,18 +190,6 @@ export const Film = () => {
         {similarMovies?.length ? (
           <SimilarMovies movies={similarMovies} />
         ) : null}{" "}
-        {/* <Tabs>
-          <TabList>
-            <Tab></Tab>
-            <Tab>123123</Tab>
-          </TabList>
-          <TabPanel>
-            <h2>similarMovies</h2>
-          </TabPanel>
-          <TabPanel>
-            <h2>Any content 2</h2>
-          </TabPanel>
-					</Tabs> */}
       </div>
     </section>
   );
