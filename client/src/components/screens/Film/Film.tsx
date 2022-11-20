@@ -2,10 +2,11 @@ import { Fragment, useMemo } from "react";
 import { useRouter } from "next/router";
 import { useGetFilmByIdQuery } from "@/services/KinowayService";
 
-import { BackButton } from "@/components/UI-components/BackButton/BackButton";
+import { SiKinopoisk } from "react-icons/si";
+import { MdFavoriteBorder } from "react-icons/md";
 
+import { BackButton } from "@/components/UI-components/BackButton/BackButton";
 import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/ButtonPlayMovie";
-//import { ButtonPlayMovieSecondary } from "@/components/UI-components/ButtonPlayMovieSecondary/ButtonPlayMovieSecondary";
 
 import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import { Info } from "@/components/Info/Info";
@@ -98,11 +99,9 @@ export const Film = () => {
       condition: fees?.usa,
     },
     {
+      //${convertNumbers(worldFees)}
       caption: "Сборы в мире",
-      value: `+ ${fees?.world?.currency} ${worldFees} = ${
-        //${convertNumbers(worldFees)}
-        fees?.world?.currency
-      } ${fees?.world?.value}`, //${convertNumbers(fees?.world?.value)}
+      value: `${worldFees} = ${fees?.world?.currency} ${fees?.world?.value}`, //${convertNumbers(fees?.world?.value)}
       condition: fees?.usa,
     },
     {
@@ -136,14 +135,6 @@ export const Film = () => {
               {shortDescription ? shortDescription : ""}
             </span>
             <div className={styles.btns}>
-              {/* <Button
-                onClick={() => {
-                  router.push(`https://kirlovon.dev/Kinopoisk-Watch/?id=${id}`);
-                }}
-                className={styles.btn}
-              >
-                Смотреть онлайн
-								</Button> */}
               <ButtonPlayMovie
                 color="orange"
                 onClick={() => {
@@ -158,19 +149,16 @@ export const Film = () => {
                   router.push(`https://www.kinopoisk.ru/film/${id}`);
                 }}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="14"
-                  viewBox="0 0 10 14"
-                  fill="#fff"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M0 0h10v14l-5-3-5 3V0z"
-                  />
-                </svg>
+                <MdFavoriteBorder />{" "}
+              </ButtonPlayMovie>
+
+              <ButtonPlayMovie
+                color="black"
+                onClick={() => {
+                  router.push(`https://www.kinopoisk.ru/film/${id}`);
+                }}
+              >
+                <SiKinopoisk />{" "}
               </ButtonPlayMovie>
 
               {/* <MovieFavorite

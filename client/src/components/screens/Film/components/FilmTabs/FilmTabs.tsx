@@ -19,7 +19,7 @@ export const FilmTabs: FC<FilmTabsProps> = ({ data }) => {
     query: { id },
   } = useRouter();
 
-  //const { imagesLimit } = useTypedSelector((state) => state.loadReducer);
+  // const { imagesLimit } = useTypedSelector((state) => state.loadReducer);
 
   const { data: images, isFetching: imagesFetching } = useGetMovieImagesQuery({
     id,
@@ -50,8 +50,12 @@ export const FilmTabs: FC<FilmTabsProps> = ({ data }) => {
     },
     {
       txt: "Изображения",
-      content: 123123, // <Images isFetching={imagesFetching} data={images} />
+      content: 123, // <Images isFetching={imagesFetching} data={images} />
       condition: images?.docs?.length,
+    },
+    {
+      txt: "asd",
+      content: 213,
     },
   ];
 
