@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
-
 import { FiX, FiSearch, FiChevronLeft } from "react-icons/fi";
+
 import { RoutesEnum } from "@/constants/routes";
 import { useTypedSelector } from "@/hooks/useTypedSelector";
 import { useActions } from "@/hooks/useActions";

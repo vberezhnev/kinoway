@@ -72,6 +72,11 @@ export const Film = () => {
       condition: countries?.length,
     },
     {
+      caption: "Дата выхода",
+      value: movieYear, //${convertNumbers(budget?.value)}
+      condition: movieYear,
+    },
+    {
       caption: "Жанр",
       value: genres?.map((el: any, idx: any) => (
         <Fragment key={idx!}>

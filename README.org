@@ -12,18 +12,17 @@
 </p>
 #+end_html
 
-*** Client (TS) [4/15]
+*** Client (TS) [4/14]
 + [ ] Add loader for all pages
-+ [ ] Bugfix film page
 + [ ] Bugfix: Quickly switching tabs on the movie page breaks the logic of the site
-+ [X] Create favorites list
++ [ ] Create favorites list
 + [X] Create tabs and info on film page
 + [ ] Create UI-library
 + [ ] Fix buttons hover effect
 + [ ] Fix footer on film search page
 + [X] Fix light/dark theme switcher
 + [ ] Fix mobile header
-+ [ ] Fix search drop-down menu
++ [X] Fix search drop-down menu
 + [X] Fix system of markers (Red/Silver/Green Colors)
 + [ ] Optimize film page opening
 + [ ] Optimize image loading
