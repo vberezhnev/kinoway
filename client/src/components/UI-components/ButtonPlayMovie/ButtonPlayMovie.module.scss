@@ -25,8 +25,7 @@
 
     color: $color-white;
     background-color: $color-primary;
-    transition: color 0.3s ease, background-color 0.3s ease,
-      border-color 0.3s ease;
+    transition: 0.3s ease;
   }
 
   // COLORS //
@@ -46,6 +45,7 @@
   }
 
   .button:hover {
-    background-color: $color-dark-primary;
+    background-color: $color-primary;
+    opacity: 0.4;
   }
 }

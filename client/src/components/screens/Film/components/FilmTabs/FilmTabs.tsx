@@ -1,11 +1,16 @@
+import { FC } from "react";
+import { useRouter } from "next/router";
+
 import { useTypedSelector } from "@/hooks/useTypedSelector";
 import { useGetMovieImagesQuery } from "@/services/KinowayService";
+
 import { IMovie } from "@/types/IMovie";
-import { Tabs } from "@/components/UI-components/Tabs/Tabs";
-import { useRouter } from "next/router";
+import { Images } from "../index";
 import { MainRoles } from "../index";
-import { FC } from "react";
+
+import { Tabs } from "@/components/UI-components/Tabs/Tabs";
 import { Facts } from "@/components/Facts/Facts";
+
 import styles from "./FilmTabs.module.scss";
 
 interface FilmTabsProps {
@@ -19,11 +24,11 @@ export const FilmTabs: FC<FilmTabsProps> = ({ data }) => {
     query: { id },
   } = useRouter();
 
-  // const { imagesLimit } = useTypedSelector((state) => state.loadReducer);
+  const { imagesLimit } = useTypedSelector((state) => state.loadReducer);
 
   const { data: images, isFetching: imagesFetching } = useGetMovieImagesQuery({
     id,
-    limit: 12, //imagesLimit
+    limit: imagesLimit,
   });
 
   const roles = persons?.filter((el) => {
@@ -50,12 +55,8 @@ export const FilmTabs: FC<FilmTabsProps> = ({ data }) => {
     },
     {
       txt: "Изображения",
-      content: 123, // <Images isFetching={imagesFetching} data={images} />
+      content: <Images isFetching={imagesFetching} data={images} />,
       condition: images?.docs?.length,
-    },
-    {
-      txt: "asd",
-      content: 213,
     },
   ];
 

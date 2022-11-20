@@ -4,6 +4,7 @@ import { useGetFilmByIdQuery } from "@/services/KinowayService";
 
 import { SiKinopoisk } from "react-icons/si";
 import { MdFavoriteBorder } from "react-icons/md";
+import { SlFilm } from "react-icons/sl";
 
 import { BackButton } from "@/components/UI-components/BackButton/BackButton";
 import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/ButtonPlayMovie";
@@ -54,6 +55,8 @@ export const Film = () => {
     tabs,
   }: any = { ...data };
 
+  console.log(data);
+
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
   const movieYear = year && `(${year})`;
   const worldFees = fees?.world?.value - fees?.usa?.value;
@@ -73,7 +76,7 @@ export const Film = () => {
     },
     {
       caption: "Дата выхода",
-      value: movieYear, //${convertNumbers(budget?.value)}
+      value: movieYear,
       condition: movieYear,
     },
     {
@@ -106,7 +109,7 @@ export const Film = () => {
     {
       //${convertNumbers(worldFees)}
       caption: "Сборы в мире",
-      value: `${worldFees} = ${fees?.world?.currency} ${fees?.world?.value}`, //${convertNumbers(fees?.world?.value)}
+      value: `$ ${fees?.world?.value}`, //${convertNumbers(fees?.world?.value)}
       condition: fees?.usa,
     },
     {
@@ -164,6 +167,15 @@ export const Film = () => {
                 }}
               >
                 <SiKinopoisk />{" "}
+              </ButtonPlayMovie>
+
+              <ButtonPlayMovie
+                color="black"
+                onClick={() => {
+                  router.push(`https://www.kinopoisk.ru/film/${id}`);
+                }}
+              >
+                <SlFilm />{" "}
               </ButtonPlayMovie>
 
               {/* <MovieFavorite

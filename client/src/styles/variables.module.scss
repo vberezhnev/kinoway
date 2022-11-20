@@ -20,11 +20,9 @@ $color-dark-primary: #494077;
 $watch-film-color: #f50;
 $watch-film-border: 30px;
 
-/*
-content-width: 1230px;
-container-offset: 15px;
-container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-*/
+// content-width: 1230px;
+// container-offset: 15px;
+// container-width: calc(($content-width + $container-offset) * 2));
 
 $media-tablet: 770px;
 $media-mobile: 769px;
