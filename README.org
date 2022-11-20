@@ -12,13 +12,15 @@
 </p>
 #+end_html
 
-*** Client (TS) [5/14]
+*** Client (TS) [6/16]
 + [ ] Add loader for all pages
++ [ ] Add settings for snowfall
++ [ ] Add snowfall
 + [ ] Bugfix: Quickly switching tabs on the movie page breaks the logic of the site
 + [ ] Create favorites list
 + [X] Create tabs and info on film page
 + [ ] Create UI-library
-+ [ ] Fix buttons hover effect
++ [X] Fix buttons hover effect
 + [ ] Fix footer on film search page
 + [X] Fix light/dark theme switcher
 + [ ] Fix mobile header
