@@ -2,6 +2,7 @@ import { Fragment, useMemo } from "react";
 import { useRouter } from "next/router";
 import { useGetFilmByIdQuery } from "@/services/KinowayService";
 import Link from "next/link"
+import Head from "next/head"
 
 import { SiKinopoisk } from "react-icons/si";
 import { MdFavoriteBorder } from "react-icons/md";
@@ -120,9 +121,12 @@ export const Film = () => {
     },
   ];
 
-  return (
+		return (
     <section className={styles.section}>
-      <div className={styles.container}>
+				<Head>
+						<title>{movieTitle}</title>
+				</Head>
+				<div className={styles.container}>
         <div className={styles.top}>
           <BackButton />
         </div>

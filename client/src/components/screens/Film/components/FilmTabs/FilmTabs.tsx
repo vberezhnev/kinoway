@@ -24,11 +24,11 @@ export const FilmTabs: FC<FilmTabsProps> = ({ data }) => {
     query: { id },
   } = useRouter();
 
-  const { imagesLimit } = useTypedSelector((state) => state.loadReducer);
+  //const { imagesLimit } = useTypedSelector((state) => state.loadReducer);
 
   const { data: images, isFetching: imagesFetching } = useGetMovieImagesQuery({
     id,
-    limit: imagesLimit,
+    limit: 8, // imagesLimit
   });
 
   const roles = persons?.filter((el) => {

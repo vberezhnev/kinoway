@@ -12,7 +12,7 @@
 </p>
 #+end_html
 
-*** Client (TS) [4/14]
+*** Client (TS) [5/14]
 + [ ] Add loader for all pages
 + [ ] Bugfix: Quickly switching tabs on the movie page breaks the logic of the site
 + [ ] Create favorites list
@@ -25,7 +25,7 @@
 + [X] Fix search drop-down menu
 + [X] Fix system of markers (Red/Silver/Green Colors)
 + [ ] Optimize film page opening
-+ [ ] Optimize image loading
++ [X] Optimize image loading
 + [ ] Redesign main page
 	
 *** Sever (Golang) [1/1]

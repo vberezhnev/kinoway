@@ -1,16 +1,20 @@
 import { FC } from "react";
-import { IImages } from "@/types/IImages";
-import { LoadMoreButton } from "@/components/LoadMoreButton/LoadMoreButton";
-import { useActions } from "@/hooks/useActions";
-import LightGallery from "lightgallery/react";
-import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-zoom.css";
-import lgZoom from "lightgallery/plugins/zoom";
-import styles from "./Images.module.scss";
 import Image from "next/image";
 
+import LightGallery from "lightgallery/react";
+import lgZoom from "lightgallery/plugins/zoom";
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+
+import { LoadMoreButton } from "@/components/LoadMoreButton/LoadMoreButton";
+import { useActions } from "@/hooks/useActions";
+
+import { IImages } from "@/types/IImages";
+
+import styles from "./Images.module.scss";
+
 interface ImagesProps {
-  data: IImages | undefined;
+		data: IImages | undefined;
   isFetching: boolean;
 }
 
@@ -19,6 +23,7 @@ export const Images: FC<ImagesProps> = ({ data, isFetching }) => {
 
   const condition = data?.docs?.length === data?.total;
 
+	//@ts-ignore
   const { loadMoreImages } = useActions();
 
   return (
