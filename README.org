@@ -16,6 +16,7 @@
 + [ ] Add loader for all pages
 + [ ] Add settings for snowfall
 + [ ] Add snowfall
++ [ ] Bugfix header
 + [ ] Bugfix: Quickly switching tabs on the movie page breaks the logic of the site
 + [ ] Create favorites list
 + [X] Create tabs and info on film page
