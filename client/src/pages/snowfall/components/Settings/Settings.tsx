@@ -10,7 +10,7 @@ import { CirclePicker } from "react-color";
 import { useSettingsStore } from "../../settings";
 import { ThemeProvider } from "./theme";
 
-import "./Settings.module.css";
+import styles from "./Settings.module.css";
 
 const ValueChip = (props: ChipProps) => {
   return <Chip {...props} sx={{ ml: 1 }} size="small" component="span" />;
@@ -38,11 +38,15 @@ const colors = [
 ];
 
 const Settings = () => {
-  const settings = useSettingsStore();
+		const settings = useSettingsStore();
+		//const settings = localStorage.getItem('snowfall');
+		
+		console.log(settings)
+		//localStorage.setItem('snowfall', JSON.stringify(settings))
 
   return (
     <ThemeProvider>
-      <Paper className="settings-container">
+      <Paper className={styles.settingsContainer}>
         <Stack spacing={1}>
           <div>
             <Typography gutterBottom>
