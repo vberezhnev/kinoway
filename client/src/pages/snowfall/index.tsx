@@ -1,11 +1,11 @@
 import Snowfall from "react-snowfall";
-import Settings from "./components/Settings";
-import { useSettingsStore } from "./settings";
+import { Settings } from "@/components/SnowfallSettings/Settings";
+import useSettingsStore from "./settings";
 import React, { useEffect } from "react";
 import logo from "./logo.png";
 import styles from './App.module.scss'
 
-const App = () => {
+const SnowfallPage = () => {
   const { color, snowflakeCount, radius, speed, wind, useImages } =
     useSettingsStore();
 
@@ -24,4 +24,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default SnowfallPage

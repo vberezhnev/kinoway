@@ -7,7 +7,7 @@ import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { CirclePicker } from "react-color";
-import { useSettingsStore } from "../../settings";
+import useSettingsStore from "../../pages/snowfall/settings";
 import { ThemeProvider } from "./theme";
 
 import styles from "./Settings.module.css";
@@ -37,7 +37,7 @@ const colors = [
   "#607d8b",
 ];
 
-const Settings = () => {
+export const Settings = () => {
 		const settings = useSettingsStore();
 		//const settings = localStorage.getItem('snowfall');
 		
@@ -144,5 +144,3 @@ const Settings = () => {
     </ThemeProvider>
   );
 };
-
-export default Settings;
