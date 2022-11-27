@@ -11,7 +11,6 @@
 		<img src="https://img.shields.io/github/forks/Tell396/kinoway?color=e5c76b&labelColor=1e2528&style=for-the-badge">
 </p>
 
-
 <div align="center">
 		<i><b>Movies — are an experience</b></i>
 		<br><br>
@@ -22,26 +21,30 @@
 Kinoway is a free and open client-based online movie service that uses the Kinopoisk API.
 
 ** TODO List
-*** Client (TS) [6/19]
+*** Client (TS) [10/21]
 + [ ] Add loader for all pages
-+ [ ] Add settings for snowfall
-+ [ ] Add snowfall
-+ [ ] Bugfix header
-+ [ ] Bugfix: Quickly switching tabs on the movie page breaks the logic of the site
++ [ ] Add snowfall turn on/off mode
++ [ ] Change footer URL
 + [ ] Create favorites list
-+ [X] Create tabs and info on film page
 + [ ] Create UI-library
 + [ ] Create "View more" page
-+ [X] Fix buttons hover effect
 + [ ] Fix footer on film search page
-+ [X] Fix light/dark theme switcher
-+ [ ] Fix mobile header
-+ [X] Fix search drop-down menu
-+ [X] Fix system of markers (Red/Silver/Green Colors)
++ [ ] Fix "Simiral movies" component
 + [ ] ! Make images in Search component bigger
 + [ ] Optimize film page opening
-+ [X] Optimize image loading
 + [ ] Redesign main page
++ [X] Add settings for snowfall
++ [X] Bugfix header
++ [X] Bugfix: Quickly switching tabs on the movie page breaks the logic of the site
++ [X] Create tabs and info on film page
++ [X] Fix buttons hover effect
++ [X] Fix light/dark theme switcher
++ [X] Fix mobile header
++ [X] Fix search drop-down menu
++ [X] Fix system of markers (Red/Silver/Green Colors)
++ [X] Optimize image loading
 	
 *** Sever (Golang) [1/1]
++ [ ] Deploy server
++ [ ] Add auth with JWT
 + [X] Create ~.env.local~ and ~.env.example~
