@@ -21,10 +21,9 @@
 Kinoway is a free and open client-based online movie service that uses the Kinopoisk API.
 
 ** ToDo List
-*** Client (TS) [10/21]
+*** Client (TS) [11/21]
 + [ ] Add loader for all pages
 + [ ] Add snowfall turn on/off mode
-+ [ ] Change footer URL
 + [ ] Create favorites list
 + [ ] Create UI-library
 + [ ] Create "View more" page
@@ -33,6 +32,7 @@ Kinoway is a free and open client-based online movie service that uses the Kinop
 + [ ] ! Make images in Search component bigger
 + [ ] Optimize film page opening
 + [ ] Redesign main page
++ [X] Change footer URL
 + [X] Add settings for snowfall
 + [X] Bugfix header
 + [X] Bugfix: Quickly switching tabs on the movie page breaks the logic of the site
