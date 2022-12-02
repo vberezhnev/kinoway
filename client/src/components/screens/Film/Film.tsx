@@ -166,6 +166,11 @@ export const Film = () => {
                                 <SiKinopoisk />{" "}
                             </ButtonPlayMovie>
 
+                            <MovieFavorite
+                                className={styles.btn}
+                                id={data?.id}
+                                disabled={false}
+                            />
                             <ButtonPlayMovie
                                 color="black"
                                 onClick={() => {
@@ -174,13 +179,6 @@ export const Film = () => {
                             >
                                 <SlFilm />{" "}
                             </ButtonPlayMovie>
-
-                            <MovieFavorite
-                                className={styles.btn}
-                                variant="regular"
-                                id={data?.id}
-                                disabled={isError}
-                            />
                         </div>
                         <h2 className={styles.subtitle}>About this {type}</h2>
                         <Info items={items} />

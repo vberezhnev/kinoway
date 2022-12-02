@@ -3,6 +3,7 @@ import { useLocalStorage } from "usehooks-ts";
 
 export const useFavorites = () => {
     const [favorites, setFavorites] = useLocalStorage<number[]>("favorites", []);
+    console.log(favorites);
 
     const toggleFavorite = useCallback(
         (id: number) => {

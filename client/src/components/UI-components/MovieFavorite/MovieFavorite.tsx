@@ -2,8 +2,10 @@ import { FC } from "react";
 import { FiBookmark, FiCheck } from "react-icons/fi";
 import { useFavorites } from "@/hooks/useFavorite";
 import { ButtonBase } from "@/components/UI-components/ButtonBase/ButtonBase";
+import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/ButtonPlayMovie";
 import { classNames } from "@/helpers/classNames";
 import styles from "./MovieFavorite.module.scss";
+import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 
 export interface MovieFavoriteProps {
     id: string | number | string[] | undefined;
@@ -23,7 +25,7 @@ export const MovieFavorite: FC<MovieFavoriteProps> = ({
     const { toggleFavorite } = useFavorites();
 
     return (
-        <ButtonBase
+        <ButtonPlayMovie
             ripple
             onClick={() => toggleFavorite(Number(id))}
             className={classNames(
@@ -31,10 +33,10 @@ export const MovieFavorite: FC<MovieFavoriteProps> = ({
                 isFavorite && styles.active,
                 className
             )}
-            startIcon={isFavorite ? <FiCheck /> : <FiBookmark />}
+            startIcon={isFavorite ? <MdFavorite /> : <MdFavoriteBorder />}
             disabled={disabled}
         >
-            Буду смотреть
-        </ButtonBase>
+            Добавить в избранное
+        </ButtonPlayMovie>
     );
 };
