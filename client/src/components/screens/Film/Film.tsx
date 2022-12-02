@@ -13,12 +13,7 @@ import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/Butt
 
 import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import { Info } from "@/components/Info/Info";
-import {
-    Reviews,
-    //MovieFavorite,
-    SimilarMovies,
-    FilmTabs,
-} from "./components";
+import { Reviews, MovieFavorite, SimilarMovies, FilmTabs } from "./components";
 
 import "react-tabs/style/react-tabs.css";
 
@@ -180,12 +175,12 @@ export const Film = () => {
                                 <SlFilm />{" "}
                             </ButtonPlayMovie>
 
-                            {/* <MovieFavorite
-                className={styles.btn}
-                variant="regular"
-                id={data?.id}
-                disabled={isError}
-								/> */}
+                            <MovieFavorite
+                                className={styles.btn}
+                                variant="regular"
+                                id={data?.id}
+                                disabled={isError}
+                            />
                         </div>
                         <h2 className={styles.subtitle}>About this {type}</h2>
                         <Info items={items} />

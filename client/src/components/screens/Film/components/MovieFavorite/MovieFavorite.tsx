@@ -1,18 +1,18 @@
 import { useMemo } from "react";
 import {
-  MovieFavorite as MovieFavoriteButton,
-  MovieFavoriteProps as MovieFavoriteButtonProps,
+    MovieFavorite as MovieFavoriteButton,
+    MovieFavoriteProps as MovieFavoriteButtonProps,
 } from "@/components/UI-components/MovieFavorite/index";
-import { useFavourites } from "@/hooks/useFavourite";
+import { useFavorites } from "@/hooks/useFavorite";
 
-export type MovieFavoriteProps = Omit<MovieFavoriteButtonProps, "isFavourite">;
+export type MovieFavoriteProps = Omit<MovieFavoriteButtonProps, "isFavorite">;
 
 export const MovieFavorite = (props: MovieFavoriteProps) => {
-  const { favourites } = useFavourites();
-  const isFavourite = useMemo(
-    () => favourites.includes(Number(props.id)),
-    [favourites, props.id]
-  );
+    const { favorites } = useFavorites();
+    const isFavorite = useMemo(
+        () => favorites.includes(Number(props.id)),
+        [favorites, props.id]
+    );
 
-  return <MovieFavoriteButton {...props} isFavourite={isFavourite} />;
+    return <MovieFavoriteButton {...props} isFavorite={isFavorite} />;
 };
