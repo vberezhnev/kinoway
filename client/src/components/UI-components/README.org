@@ -1,0 +1,18 @@
+* Components
+
+*** Dependencies:
++ react
++ react-use-ripple
++ react-tabs
++ react-icons
++ react-color
++ react-ratio
++ next-themes
++ next
++ @mui/material
++ swiper
+	
+_Installation with one command_
+#+begin_src bash
+	npm install react react-use-ripple react-tabs next-themes next react-icons react-color react-ratio @mui/material swiper
+#+end_src
