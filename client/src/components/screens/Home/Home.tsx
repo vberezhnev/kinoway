@@ -14,7 +14,7 @@ const Home: NextPage = () => {
                 <Snowfall
                     snowflakeCount={200}
                     style={{
-                        height: "230vh",
+                        height: "100%",
                     }}
                 />
                 <NewFilms />

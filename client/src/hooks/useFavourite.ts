@@ -1,23 +1,23 @@
-import { useCallback } from 'react';
-import { useLocalStorage } from 'usehooks-ts';
+import { useCallback } from "react";
+import { useLocalStorage } from "usehooks-ts";
 
-export const useFavourites = () => {
-	const [favourites, setFavourites] = useLocalStorage<number[]>('favourites', []);
+export const useFavorites = () => {
+    const [favorites, setFavorites] = useLocalStorage<number[]>("favorites", []);
 
-	const toggleFavourite = useCallback(
-		(id: number) => {
-			if (favourites.includes(id)) {
-				setFavourites(favourites.filter((favourite: number) => favourite !== id));
-			} else {
-				setFavourites([...favourites, id]);
-			}
-			// eslint-disable-next-line react-hooks/exhaustive-deps
-		},
-		[favourites]
-	);
+    const toggleFavorite = useCallback(
+        (id: number) => {
+            if (favorites.includes(id)) {
+                setFavorites(favorites.filter((favorite: number) => favorite !== id));
+            } else {
+                setFavorites([...favorites, id]);
+            }
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        },
+        [favorites]
+    );
 
-	return {
-		favourites,
-		toggleFavourite,
-	};
+    return {
+        favorites,
+        toggleFavorite,
+    };
 };
