@@ -1,0 +1,20 @@
+#+title: Maria (Server for [[https://github.com/tell396/kinoway][Kinoway]]) 
+
+** How the JWT Signature Works
+So if the header and signature of a JWT can be accessed by anyone, what _actually_ makes a JWT secure? The answer lies in how the third portion (the signature) is generated.
+Consider an application that wants to issue a JWT to a user (for example, user1) that has successfully signed in.
+Making the header and payload are pretty straightforward: The header is fixed for our use case, and the payload JSON object is formed by setting the user ID and the expiry time in unix milliseconds.
+The application issuing the token will also have a key, which is a secret value, and known only to the application itself.
+The base64 representations of the header and payload are then combined with the secret key and then passed through a hashing algorithm (in this case its HS256, as mentioned in the header)
+
+[[image-url:https://www.sohamkamani.com/golang/jwt-authentication/jwt-algo.svg]]
+
+The details of how the algorithm is implemented is out of scope for this post, but the important thing to note is that it is one way, which means that we cannot reverse the algorithm and obtain the components that went into making the signature - so our secret key remains secret.
+
+** Verifying a JWT
+To verify a JWT, the server generates the signature once again using the header and payload from the incoming JWT, and its secret key. If the newly generated signature matches the one on the JWT, then the JWT is considered valid.
+Now, if you are someone trying to issue a fake token, you can easily generate the header and payload, but without knowing the key, there is no way to generate a valid signature. If you try to tamper with the existing payload of a valid JWT, the signatures will no longer match.
+
+[[image-url:https://www.sohamkamani.com/golang/jwt-authentication/jwt-verification.svg]]
+
+In this way, the JWT acts as a way to authorize users in a secure manner, without actually storing any information (besides the key) on the issuing server.
