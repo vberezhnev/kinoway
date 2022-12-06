@@ -1,0 +1,30 @@
+#+title: Calypso (Client for [[https://github.com/tell396/kinoway][Kinoway]])
+
+This is a [[https://nextjs.org/][Next.js]] project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+** Getting Started
+
+First, run the development server:
+
+#+begin_src bash
+npm run dev
+# or
+yarn dev
+#+end_src
+
+Open [[http://localhost:3000]] with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+[[https://nextjs.org/docs/api-routes/introduction][API routes]] can be accessed on [[http://localhost:3000/api/hello]]. This endpoint can be edited in `pages/api/hello.ts`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [[https://nextjs.org/docs/api-routes/introduction][API routes]] instead of React pages.
+
+** Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!

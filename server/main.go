@@ -50,7 +50,7 @@ func generateJWT() (string, error) {
 	return tokenString, nil
 }
 
-// Comment these
+// comment these
 func verifyJWT(endpointHandler func(writer http.ResponseWriter, request *http.Request)) http.HandlerFunc {
 	return http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
 		if request.Header["Token"] != nil {
@@ -60,13 +60,13 @@ func verifyJWT(endpointHandler func(writer http.ResponseWriter, request *http.Re
 					writer.WriteHeader(http.StatusUnauthorized)
 					_, err := writer.Write([]byte("You're Unauthorized"))
 					if err != nil {
-						r
+						return nil, err
 					}
 				}
 				return "", nil
 
 			})
-			// Parsing errors result
+			// parsing errors result
 			if err != nil {
 				writer.WriteHeader(http.StatusUnauthorized)
 				_, err2 := writer.Write([]byte("You're Unauthorized due to error parsing the JWT"))
@@ -75,7 +75,7 @@ func verifyJWT(endpointHandler func(writer http.ResponseWriter, request *http.Re
 				}
 
 			}
-			// If there's a token
+			// if there's a token
 			if token.Valid {
 				endpointHandler(writer, request)
 			} else {
@@ -92,7 +92,7 @@ func verifyJWT(endpointHandler func(writer http.ResponseWriter, request *http.Re
 				return
 			}
 		}
-		// Response for if there's no token header
+		// response for if there's no token header
 	})
 }
 
