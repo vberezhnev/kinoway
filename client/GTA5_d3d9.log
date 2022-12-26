@@ -1,0 +1,12 @@
+info:  Game: GTA5.exe
+info:  DXVK: v1.10.3
+info:  Built-in extension providers:
+info:    Win32 WSI
+info:    OpenVR
+info:    OpenXR
+info:  OpenVR: could not open registry key, status 2
+info:  OpenVR: Failed to locate module
+info:  Enabled instance extensions:
+info:    VK_KHR_get_surface_capabilities2
+info:    VK_KHR_surface
+info:    VK_KHR_win32_surface

@@ -36,7 +36,7 @@ export const MovieFavorite: FC<MovieFavoriteProps> = ({
             startIcon={isFavorite ? <MdFavorite /> : <MdFavoriteBorder />}
             disabled={disabled}
         >
-            Добавить в избранное
+            Смотреть позже
         </ButtonPlayMovie>
     );
 };

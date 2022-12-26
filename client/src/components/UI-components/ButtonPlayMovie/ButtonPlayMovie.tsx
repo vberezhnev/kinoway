@@ -12,6 +12,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     endIcon?: ReactNode;
     animationDuration?: number;
     onClick?: any;
+    children: ReactNode;
 }
 
 const ButtonPlayMovieComponent = (
