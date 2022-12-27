@@ -143,7 +143,7 @@ export const Film = () => {
                         </span>
                         <div className={styles.btns}>
                             <ButtonPlayMovie color="orange">
-                                <Link href={`https://kirlovon.dev/Kinopoisk-Watch/?id=${id}`}>
+                                <Link href={`https://kinopoisk-watch.org/player/?id=${id}`}>
                                     <a target="_blank">
                                         <b>Смотреть</b>
                                     </a>
