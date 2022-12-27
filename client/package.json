@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.2",
     "@reduxjs/toolkit": "^1.9.0",
     "@storybook/react": "^6.5.13",
     "axios": "^0.27.2",
@@ -18,15 +21,19 @@
     "next": "^12.2.2",
     "next-redux-wrapper": "^7.0.5",
     "next-themes": "^0.2.0",
+    "node-sass": "^7.0.1",
     "react": "^18.2.0",
+    "react-color": "2.19.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-ratio": "^0.1.5",
     "react-redux": "^8.0.5",
+    "react-scripts": "^5.0.1",
     "react-snowfall": "^1.2.1",
     "react-tabs": "^5.1.0",
     "swiper": "^8.4.4",
     "usehooks-ts": "^2.9.1",
+<<<<<<< HEAD
     "zustand": "^4.1.1",
     "react-scripts": "^5.0.1",
     "@emotion/react": "^11.10.0",
@@ -34,14 +41,21 @@
     "@mui/material": "^5.10.2",
     "node-sass": "^7.0.1",
     "react-color": "2.19.3"
+=======
+    "zustand": "^4.1.1"
+>>>>>>> 8bd45b9 (Story #93. Finally bugfix.)
   },
   "devDependencies": {
     "@types/node": "18.0.5",
     "@types/react": "18.0.15",
-    "@types/react-dom": "18.0.6",
     "@types/react-color": "^3.0.6",
+    "@types/react-dom": "18.0.6",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.2",
+<<<<<<< HEAD
+=======
+    "sass": "^1.57.1",
+>>>>>>> 8bd45b9 (Story #93. Finally bugfix.)
     "typescript": "4.7.4"
   }
 }

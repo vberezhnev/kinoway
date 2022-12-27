@@ -5,5 +5,8 @@ client/build
 
 server/.env*.local
 server/.env
+server/tagret
+server/Cargo.toml
+server/build
 
 .log/
