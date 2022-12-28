@@ -149,6 +149,12 @@ export const Film = () => {
                                     </a>
                                 </Link>
                             </ButtonPlayMovie>
+
+                            <MovieFavorite
+                                className={styles.btn}
+                                id={data?.id}
+                                disabled={false}
+                            />
                             <ButtonPlayMovie
                                 color="black"
                                 onClick={() => {
@@ -166,11 +172,6 @@ export const Film = () => {
                                 <SiKinopoisk />{" "}
                             </ButtonPlayMovie>
 
-                            <MovieFavorite
-                                className={styles.btn}
-                                id={data?.id}
-                                disabled={false}
-                            />
                             <ButtonPlayMovie
                                 color="black"
                                 onClick={() => {
