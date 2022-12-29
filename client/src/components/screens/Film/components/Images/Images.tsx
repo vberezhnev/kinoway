@@ -14,48 +14,48 @@ import { IImages } from "@/types/IImages";
 import styles from "./Images.module.scss";
 
 interface ImagesProps {
-		data: IImages | undefined;
-  isFetching: boolean;
+    data: IImages | undefined;
+    isFetching: boolean;
 }
 
 export const Images: FC<ImagesProps> = ({ data, isFetching }) => {
-  const { docs, total } = { ...data };
+    const { docs, total } = { ...data };
 
-  const condition = data?.docs?.length === data?.total;
+    const condition = data?.docs?.length === data?.total;
 
-	//@ts-ignore
-  const { loadMoreImages } = useActions();
+    //@ts-ignore
+    const { loadMoreImages } = useActions();
 
-  return (
-    <div className={styles.container}>
-      <h2 className={styles.title}>
-        Изображения <span>({total})</span>
-      </h2>
-      <LightGallery
-        plugins={[lgZoom]}
-        download={false}
-        elementClassNames={styles.wrapper}
-        speed={500}
-      >
-        {docs?.map((image, idx) => {
-          return (
-            <a className={styles.item} key={idx} href={image.url}>
-              <Image
-                layout="fill"
-                className={styles.image}
-                src={image.url}
-                alt=""
-              />
-            </a>
-          );
-        })}
-      </LightGallery>
-      <LoadMoreButton
-        className={styles.btn}
-        isFetching={isFetching}
-        condition={condition}
-        onClick={() => loadMoreImages()}
-      />
-    </div>
-  );
+    return (
+        <div className={styles.container}>
+            <h2 className={styles.title}>
+                Изображения <span>({total})</span>
+            </h2>
+            <LightGallery
+                plugins={[lgZoom]}
+                download={false}
+                elementClassNames={styles.wrapper}
+                speed={500}
+            >
+                {docs?.map((image, idx) => {
+                    return (
+                        <a className={styles.item} key={idx} href={image.url}>
+                            <Image
+                                layout="fill"
+                                className={styles.image}
+                                src={image.url}
+                                alt=""
+                            />
+                        </a>
+                    );
+                })}
+            </LightGallery>
+            <LoadMoreButton
+                className={styles.btn}
+                isFetching={isFetching}
+                condition={condition}
+                onClick={() => loadMoreImages()}
+            />
+        </div>
+    );
 };

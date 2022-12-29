@@ -22,7 +22,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: ReactNode;
 }
 
-const ButtonPlayMovieComponent = forwardRef<HTMLButtonElement, ButtonProps>(
+export const ButtonPlayMovieComponent = forwardRef<
+    HTMLButtonElement,
+    ButtonProps
+>(
     (
         {
             children,
@@ -71,5 +74,7 @@ const ButtonPlayMovieComponent = forwardRef<HTMLButtonElement, ButtonProps>(
         );
     }
 );
+
+ButtonPlayMovieComponent.displayName = "ButtonDisplayMovieComponent";
 
 export const ButtonPlayMovie = memo(ButtonPlayMovieComponent);
