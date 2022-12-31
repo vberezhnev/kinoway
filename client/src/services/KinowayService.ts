@@ -8,8 +8,8 @@ import { IPerson } from "@/types/IPerson";
 import { IImages } from "@/types/IImages";
 import { IReviews } from "@/types/IReviews";
 
-export const kinomoreAPI = createApi({
-    reducerPath: "kinomoreAPI",
+export const kinowayAPI = createApi({
+    reducerPath: "kinowayAPI",
     baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
     endpoints: (build) => ({
         getFilmById: build.query<IMovie, string | string[] | undefined>({
@@ -79,7 +79,7 @@ export const {
     useGetFilmsBySearchQuery,
     useGetReviewsByIdQuery,
     useGetMovieImagesQuery,
-} = kinomoreAPI;
+} = kinowayAPI;
 
 export const {
     getNewFilms,
@@ -90,4 +90,4 @@ export const {
     getSeries,
     getCartoons,
     getPersonById,
-} = kinomoreAPI.endpoints;
+} = kinowayAPI.endpoints;
