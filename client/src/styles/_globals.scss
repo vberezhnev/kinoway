@@ -58,7 +58,7 @@ a {
 
 .wrapper {
   padding: 40px;
-  background-color: var(--color-white);
+  background-color: $color-white;
   height: 100%;
 
   @media (max-width: 768px) {
@@ -86,7 +86,7 @@ a {
 
   div.bar {
     height: inherit;
-    background-color: var(--color-primary);
+    background-color: $color-primary;
 
     .peg {
       display: none;
