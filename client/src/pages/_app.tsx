@@ -43,7 +43,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Provider store={store}>
             <Head>
                 <title>
-                    Онлайн-кинотеатр Kinomore - фильмы, сериалы и мультфильмы смотреть
+                    Онлайн-кинотеатр Kinoway - фильмы, сериалы и мультфильмы смотреть
                     онлайн бесплатно в хорошем качестве
                 </title>
                 <link rel="icon" href="/favicon.ico" />
