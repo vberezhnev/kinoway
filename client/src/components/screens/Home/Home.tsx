@@ -13,20 +13,9 @@ const Home: NextPage = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.App}>
-                {snowOn ? (
-                    <Snowfall
-                        snowflakeCount={200}
-                        style={{
-                            height: "100%",
-                        }}
-                    />
-                ) : null}
-                <button onClick={() => setSnowOn(!snowOn)}>Toggle Snow</button>
-                {/* <RandomFilms /> */}
-                <NewFilms />
-                <NewSeries />
-            </div>
+            <RandomFilms />
+            <NewFilms />
+            <NewSeries />
         </div>
     );
 };
