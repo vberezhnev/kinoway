@@ -4,7 +4,7 @@ import Snowfall from "react-snowfall";
 
 import { NewFilms } from "@/components/screens/Home/components/NewFilms/NewFilms";
 import { NewSeries } from "@/components/screens/Home/components/NewSeries/NewSeries";
-// import { RandomFilms } from "@/components/screens/Home/components/RandomFilms/RandomFilms";
+import { RandomFilms } from "@/components/screens/Home/components/RandomFilms/RandomFilms";
 
 import styles from "./Home.module.scss";
 

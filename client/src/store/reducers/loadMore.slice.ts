@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     filmsLimit: 10,
     seriesLimit: 10,
-    imagesLimit: 9,
+    imagesLimit: 10,
 };
 
 export const loadSlice = createSlice({
