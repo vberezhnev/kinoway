@@ -21,6 +21,8 @@
 Kinoway is a free and open client-based online movie service that uses the Kinopoisk API.
 
 ** ToDo List
+- ~@components~ *is architecture fail.* *We shall use* ~../../../../~
+
 *** Client (TS) [0/14]
 + [ ] Add loader for all pages
 + [ ] Add reviews section form movies
