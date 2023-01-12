@@ -53,12 +53,13 @@
   width: 34px;
   height: 34px;
   top: 50%;
-  right: -42px;
+  right: 10px;
+  float: right;
   transform: translateY(-50%);
   color: $color-white;
 
   @media (max-width: 768px) {
-    display: none;
+    // display: none;
   }
 
   svg {
@@ -113,7 +114,7 @@
   //margin-left: -9px;
 
   @media (min-width: 769px) {
-    display: none;
+    // display: none;
   }
 
   svg {

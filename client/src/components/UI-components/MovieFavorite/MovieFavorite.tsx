@@ -1,8 +1,6 @@
 import { FC } from "react";
-import { FiBookmark, FiCheck } from "react-icons/fi";
 import { useFavorites } from "@/hooks/useFavorite";
-import { ButtonBase } from "@/components/UI-components/ButtonBase/ButtonBase";
-import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/ButtonPlayMovie";
+import { ButtonPlayMovie } from "@/UI/ButtonPlayMovie/ButtonPlayMovie";
 import { classNames } from "@/helpers/classNames";
 import styles from "./MovieFavorite.module.scss";
 import { BsBookmarkPlus, BsFillBookmarkFill } from "react-icons/bs";

@@ -23,8 +23,8 @@ Kinoway is a free and open client-based online movie service that uses the Kinop
 ** ToDo List
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 
-*** Client (TS) [0/14]
-+ [ ] Add loader for all pages
+*** Client (TS) [1/14]
++ [X] Add loader for all pages
 + [ ] Add reviews section form movies
 + [ ] Add "Too many requests" API from Kinopoisk error
 + [ ] Create 404 page
@@ -39,7 +39,7 @@ Kinoway is a free and open client-based online movie service that uses the Kinop
 + [ ] Optimize film page opening
 + [ ] Redesign main page
 
-*** Sever (Golang) [1/3]
+*** Sever (Rust) [1/3]
 + [ ] Deploy server
 + [ ] Add auth with JWT
 + [X] Create ~.env.local~ and ~.env.example~
