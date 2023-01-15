@@ -25,12 +25,14 @@ const FilmList: FC<FilmItemProps> = ({ item }) => {
         ...item,
     };
 
+    console.log(poster);
+
     return (
         <div className={styles.styles_root}>
             <div>
                 <Image
                     className={styles.image}
-                    src={poster ? "/public/vercel.svg" : ""}
+                    src={poster ? poster.previewUrl : "/public/vercel.svg"}
                     width={100}
                     height={160}
                 />
