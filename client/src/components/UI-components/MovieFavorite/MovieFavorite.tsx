@@ -3,7 +3,7 @@ import { useFavorites } from "@/hooks/useFavorite";
 import { ButtonPlayMovie } from "@/UI/ButtonPlayMovie/ButtonPlayMovie";
 import { classNames } from "@/helpers/classNames";
 import styles from "./MovieFavorite.module.scss";
-import { BsBookmarkPlus, BsFillBookmarkFill } from "react-icons/bs";
+import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 
 export interface MovieFavoriteProps {
     id: string | number | string[] | undefined;
@@ -31,10 +31,10 @@ export const MovieFavorite: FC<MovieFavoriteProps> = ({
                 isFavorite && styles.active,
                 className
             )}
-            startIcon={isFavorite ? <BsFillBookmarkFill /> : <BsBookmarkPlus />}
+            startIcon={isFavorite ? <MdFavorite /> : <MdFavoriteBorder />}
             disabled={disabled}
         >
-            Добавить в избранное
+            {isFavorite ? " " : "Добавить в избранное"}
         </ButtonPlayMovie>
     );
 };

@@ -5,7 +5,6 @@ import Link from "next/link";
 import Head from "next/head";
 
 import { SiKinopoisk } from "react-icons/si";
-import { MdFavoriteBorder } from "react-icons/md";
 import { SlFilm } from "react-icons/sl";
 
 import { BackButton } from "@/components/UI-components/BackButton/BackButton";
@@ -155,14 +154,6 @@ export const Film = () => {
                                 id={data?.id}
                                 disabled={false}
                             />
-                            <ButtonPlayMovie
-                                color="black"
-                                onClick={() => {
-                                    router.push(`https://www.kinopoisk.ru/film/${id}`);
-                                }}
-                            >
-                                <MdFavoriteBorder />{" "}
-                            </ButtonPlayMovie>
                             <ButtonPlayMovie
                                 color="black"
                                 onClick={() => {

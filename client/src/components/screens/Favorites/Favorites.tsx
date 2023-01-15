@@ -3,7 +3,8 @@ import { useTypedSelector } from "@/hooks/useTypedSelector";
 // import { Filters } from '@/components/Filters/Filters';
 import { useFavorites } from "@/hooks/useFavorite";
 import FilmCard from "@/components/FilmCard/FilmCard";
-import Head from "next/head";
+import FilmList from "@/components/FilmList/FilmList";
+import styles from "./Favorites.module.scss";
 
 export const Favorites = () => {
     const { favorites } = useFavorites();
@@ -19,13 +20,15 @@ export const Favorites = () => {
     console.log(data?.docs);
 
     return (
-        <div>
-            {data?.docs.map((data: any, index: any) => {
-                // console.log(data.name);
-
-                // return <div key={index}>Имя фильма: {data.name}</div>;
-                return <FilmCard item={data} />;
-            })}
+        <div className={styles.container}>
+            <div className={styles.App}>
+                {data?.docs.map((data: any, index: any) => {
+                    return <FilmCard item={data} />;
+                })}
+                {data?.docs.map((data: any, index: any) => {
+                    return <FilmList item={data} />;
+                })}
+            </div>
         </div>
     );
 };

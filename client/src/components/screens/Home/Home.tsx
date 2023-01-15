@@ -9,8 +9,6 @@ import { RandomFilms } from "@/components/screens/Home/components/RandomFilms/Ra
 import styles from "./Home.module.scss";
 
 const Home: NextPage = () => {
-    const [snowOn, setSnowOn] = useState(true);
-
     return (
         <div className={styles.container}>
             <RandomFilms />
