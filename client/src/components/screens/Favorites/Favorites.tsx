@@ -2,7 +2,6 @@ import { useGetFavoritesQuery } from "@/services/KinowayService";
 import { useTypedSelector } from "@/hooks/useTypedSelector";
 // import { Filters } from '@/components/Filters/Filters';
 import { useFavorites } from "@/hooks/useFavorite";
-import FilmCard from "@/components/FilmCard/FilmCard";
 import FilmList from "@/components/FilmList/FilmList";
 import styles from "./Favorites.module.scss";
 
@@ -23,10 +22,7 @@ export const Favorites = () => {
         <div className={styles.container}>
             <div className={styles.App}>
                 {data?.docs.map((data: any, index: any) => {
-                    return <FilmCard item={data} />;
-                })}
-                {data?.docs.map((data: any, index: any) => {
-                    return <FilmList item={data} />;
+                    return <FilmList item={data} key={index} />;
                 })}
             </div>
         </div>

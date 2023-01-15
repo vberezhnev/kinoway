@@ -4,10 +4,6 @@ import { useRouter } from "next/router";
 //import { RoutesEnum } from "@/constants/routes";
 import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import FilmList from "@/components/FilmList/FilmList";
-import Link from "next/link";
-import Image from "next/image";
-
-import styles from "./SearchResults.module.scss";
 
 export const SearchResults = () => {
     const {
@@ -23,9 +19,8 @@ export const SearchResults = () => {
 
     return (
         <div>
-            {data?.docs?.map((data: any) => {
-                console.log(data.rating.kp);
-                return <FilmList item={data} />;
+            {data?.docs?.map((data: any, index: any) => {
+                return <FilmList item={data} key={index} />;
             })}
         </div>
     );

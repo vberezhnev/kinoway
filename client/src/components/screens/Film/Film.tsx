@@ -162,15 +162,6 @@ export const Film = () => {
                             >
                                 <SiKinopoisk />{" "}
                             </ButtonPlayMovie>
-
-                            <ButtonPlayMovie
-                                color="black"
-                                onClick={() => {
-                                    router.push(`https://www.kinopoisk.ru/film/${id}`);
-                                }}
-                            >
-                                <SlFilm />{" "}
-                            </ButtonPlayMovie>
                         </div>
                         <h2 className={styles.subtitle}>About this {type}</h2>
                         <Info items={items} />
