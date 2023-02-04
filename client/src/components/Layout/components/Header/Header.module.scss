@@ -1,10 +1,9 @@
 @import "../../../../styles/variables.module.scss";
 
 .headerContainer {
-  //overflow: hidden;
   background-color: #1f1f1f;
   padding: 20px 10px;
-  height: 72px;
+  min-height: 72px;
 
   color: white;
 
@@ -21,12 +20,16 @@
       .wayText {
         color: $color-primary;
       }
+
+      @media screen and (min-width: $media-mobile) {
+        position: absolute;
+      }
     }
   }
 
   a {
-    text-align: center;
-    padding: 8px;
+    // text-align: center;
+    // padding: 8px;
     text-decoration: none;
     font-size: 18px;
     color: white;
@@ -39,7 +42,13 @@
 }
 
 .headerRight {
-  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+
+  .favorite {
+    padding: 3px;
+  }
 }
 
 @media screen and (max-width: $media-tablet) {

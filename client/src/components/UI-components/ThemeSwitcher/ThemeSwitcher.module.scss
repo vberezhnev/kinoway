@@ -1,6 +1,5 @@
 .toggleSwitch {
   position: relative;
-  right: 65px;
   width: 60px;
 
   @media (max-width: 767px) {
@@ -10,7 +9,7 @@
   a {
     position: relative;
     top: 100px;
-    left: 10px;
+    // left: 10px;
     font-size: 10px;
     text-decoration: none;
     color: rgb(27, 129, 112);
