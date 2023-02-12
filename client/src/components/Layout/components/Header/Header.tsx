@@ -1,29 +1,34 @@
 import styles from "./Header.module.scss";
-import variables from "../../../../styles/variables.module.scss";
-import { Search } from "@/components/Search/Search";
-import { RoutesEnum } from "@/constants/routes";
 import Link from "next/link";
+import variables from "../../../../styles/variables.module.scss";
+// components
+import { Search } from "@/components/Search/Search";
 import { ThemeSwitcher } from "@/UI/ThemeSwitcher/ThemeSwitcher";
 
-export const Header = () => {
-    return (
-        <div className={styles.headerContainer}>
-            <div className={styles.content}>
-                <Link href={RoutesEnum.Home}>
-                    <a className={styles.logo}>
-                        <span>K</span>
-                        <span color={variables.primaryColor} className={styles.wayText}>
-                            W
-                        </span>
-                    </a>
-                </Link>
+import { RoutesEnum } from "@/constants/routes";
+import { MdFavorite } from "react-icons/md";
 
-                <div className={styles.headerRight}>
-                    <ThemeSwitcher />
-                    <Search />
-                    <Link href={RoutesEnum.Favourites}>Favorites</Link>
-                </div>
-            </div>
+export const Header = () => {
+  return (
+    <div className={styles.headerContainer}>
+      <div className={styles.content}>
+        <Link href={RoutesEnum.Home}>
+          <a className={styles.logo}>
+            <span>K</span>
+            <span color={variables.primaryColor} className={styles.wayText}>
+              W
+            </span>
+          </a>
+        </Link>
+
+        <div className={styles.headerRight}>
+          <ThemeSwitcher className={styles.ThemeSwitcher} />
+          <Link href={RoutesEnum.Favourites} className={styles.favorite}>
+            <MdFavorite size="1.6em" />
+          </Link>
+          <Search className={styles.search} />
         </div>
-    );
+      </div>
+    </div>
+  );
 };

@@ -23,23 +23,24 @@ Kinoway is a free and open client-based online movie service that uses the Kinop
 ** ToDo List
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 
-*** Client (TS) [1/14]
-+ [X] Add loader for all pages
-+ [ ] Add reviews section form movies
-+ [ ] Add "Too many requests" API from Kinopoisk error
-+ [ ] Create 404 page
-+ [ ] Create "Actor" page
-+ [ ] Create component to provide ~data~ on it. Like ~<Content data={data} loading={isLoading} error={isError} />~
-+ [ ] Create "Random films" section with 4-5 random films
-+ [ ] Create "View more" page
-+ [ ] Fix footer on film search page
-+ [ ] Fix "Simiral movies" component
-+ [ ] Fix "NaN" mark of film in SearchResults component
-+ [ ] Fix "NaN" mark of film in SimilarMovies component
-+ [ ] Optimize film page opening
-+ [ ] Redesign main page
-
+*** Client (TS) [1/15]
+1) [ ] Add "Too many requests" API from Kinopoisk error
+2) [X] Add loader for all pages
+3) [ ] Add reviews section form movies
+4) [ ] Create "Actor" page
+5) [ ] Create "Random films" section with 4-5 random films
+6) [ ] Create "View more" page
+7) [ ] Create 404 page
+8) [ ] Create component to provide ~data~ on it. Like ~<Content data={data} loading={isLoading} error={isError} />~
+9) [ ] Fix "NaN" mark of film in SearchResults component
+10) [ ] Fix "NaN" mark of film in SimilarMovies component
+11) [ ] Fix "Simiral movies" component
+12) [ ] Fix footer on film search page
+13) [ ] Optimize film page opening
+14) [ ] Redesign main page
+15) [ ] Replace localstorage in theme state with redux
+	
 *** Sever (Rust) [1/3]
-+ [ ] Deploy server
-+ [ ] Add auth with JWT
-+ [X] Create ~.env.local~ and ~.env.example~
+1) [ ] Deploy server
+2) [ ] Add auth with JWT
+3) [X] Create ~.env.local~ and ~.env.example~

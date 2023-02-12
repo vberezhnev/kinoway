@@ -16,8 +16,6 @@ export const Favorites = () => {
         query,
     });
 
-    console.log(data?.docs);
-
     return (
         <div className={styles.container}>
             <div className={styles.App}>
