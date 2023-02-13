@@ -13,12 +13,14 @@ export const Header = () => {
     <div className={styles.headerContainer}>
       <div className={styles.content}>
         <Link href={RoutesEnum.Home}>
-          <a className={styles.logo}>
-            <span>K</span>
-            <span color={variables.primaryColor} className={styles.wayText}>
-              W
-            </span>
-          </a>
+          <div>
+            <a className={styles.logo}>
+              <span>K</span>
+              <span color={variables.primaryColor} className={styles.wayText}>
+                W
+              </span>
+            </a>
+          </div>
         </Link>
 
         <div className={styles.headerRight}>
