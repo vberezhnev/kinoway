@@ -8,31 +8,31 @@ import { getNewFilms, getNewSeries } from "@/services/KinowayService";
 import Home from "../components/screens/Home/Home";
 
 const MainPage: NextPage = () => {
-    return (
-        <div>
-            <Head>
-                <title>Kinoway</title>
-                <link rel="icon" href="/public/favicon.ico" />
-                <meta
-                    name="viewport"
-                    content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-                />
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-            </Head>
-            <Home />
-        </div>
-    );
+  return (
+    <div>
+      <Head>
+        <title>Kinoway</title>
+        <link rel="icon" href="/public/favicon.ico" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+      </Head>
+      <Home />
+    </div>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-    const store = initStore();
-    const state = store.getState();
-    const { filmsLimit, seriesLimit } = state.loadReducer;
+  const store = initStore();
+  const state = store.getState();
+  const { filmsLimit, seriesLimit } = state.loadReducer;
 
-    await store.dispatch(getNewFilms.initiate(filmsLimit));
-    await store.dispatch(getNewSeries.initiate(seriesLimit));
+  await store.dispatch(getNewFilms.initiate(filmsLimit));
+  await store.dispatch(getNewSeries.initiate(seriesLimit));
 
-    return { props: { initialReduxState: store.getState() } };
+  return { props: { initialReduxState: store.getState() } };
 };
 
 export default MainPage;

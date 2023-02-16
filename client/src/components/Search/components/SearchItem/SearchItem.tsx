@@ -17,28 +17,30 @@ export const SearchItem: FC<SearchItemProps> = ({ item }) => {
 
   return (
     <Link href={`/film/${id}`}>
-      <a className={styles.container}>
-        <MovieRating className={styles.rating} rating={rating} />
-        <div className={styles.left}>
-          <div className={styles.imageContainer}>
-            <Image
-              unoptimized
-              layout="fill"
-              src={`https://st.kp.yandex.net/images/film_iphone/iphone360_${id}.jpg`}
-              alt={description}
-            />
+      <div>
+        <a className={styles.container}>
+          <MovieRating className={styles.rating} rating={rating} />
+          <div className={styles.left}>
+            <div className={styles.imageContainer}>
+              <Image
+                unoptimized
+                layout="fill"
+                src={`https://st.kp.yandex.net/images/film_iphone/iphone360_${id}.jpg`}
+                alt={description}
+              />
+            </div>
+            <div className={styles.text}>
+              <span className={styles.title}>
+                {title ? title : alternativeName}
+              </span>
+              <span className={styles.info}>
+                {year}
+                {movieLength && `, ${movieLength} мин.`}
+              </span>
+            </div>
           </div>
-          <div className={styles.text}>
-            <span className={styles.title}>
-              {title ? title : alternativeName}
-            </span>
-            <span className={styles.info}>
-              {year}
-              {movieLength && `, ${movieLength} мин.`}
-            </span>
-          </div>
-        </div>
-      </a>
+        </a>
+      </div>
     </Link>
   );
 };

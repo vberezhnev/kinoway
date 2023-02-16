@@ -13,8 +13,8 @@ export const Header = () => {
     <div className={styles.headerContainer}>
       <div className={styles.content}>
         <Link href={RoutesEnum.Home}>
-          <div>
-            <a className={styles.logo}>
+          <div className={styles.logo}>
+            <a>
               <span>K</span>
               <span color={variables.primaryColor} className={styles.wayText}>
                 W

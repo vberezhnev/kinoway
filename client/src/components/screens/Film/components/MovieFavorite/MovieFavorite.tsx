@@ -14,7 +14,5 @@ export const MovieFavorite = (props: MovieFavoriteProps) => {
     [favorites, props.id]
   );
 
-  console.log(props.id);
-
   return <MovieFavoriteButton {...props} isFavorite={isFavorite} />;
 };

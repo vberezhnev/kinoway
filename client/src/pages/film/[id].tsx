@@ -16,6 +16,8 @@ export const getServerSideProps: GetServerSideProps = async (params) => {
 
   await store.dispatch(getFilmByName.initiate({ id, page, filters }));
 
+  console.log(getFilmByName.initiate({ id, page, filters }));
+
   return { props: { initialReduxState: store.getState() } };
 };
 export default FilmPage;

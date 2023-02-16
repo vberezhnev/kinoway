@@ -6,23 +6,21 @@ import FilmCard from "@/components/FilmCard/FilmCard";
 import styles from "./SimilarMovies.module.scss";
 
 interface SimilarMoviesProps {
-    movies: IMovie[] | undefined;
+  movies: IMovie[] | undefined;
 }
 
 export const SimilarMovies: FC<SimilarMoviesProps> = ({ movies }) => {
-    return (
-        <div className={styles.container}>
-            <Carousel title="Похожее кино" quantity={movies?.length}>
-                {movies?.map((data) => {
-                    console.log(data);
-                    console.log("here");
-                    return (
-                        <SwiperSlide key={data.id}>
-                            <FilmCard item={data} />
-                        </SwiperSlide>
-                    );
-                })}
-            </Carousel>
-        </div>
-    );
+  return (
+    <div className={styles.container}>
+      <Carousel title="Похожее кино" quantity={movies?.length}>
+        {movies?.map((data) => {
+          return (
+            <SwiperSlide key={data.id}>
+              <FilmCard item={data} />
+            </SwiperSlide>
+          );
+        })}
+      </Carousel>
+    </div>
+  );
 };
