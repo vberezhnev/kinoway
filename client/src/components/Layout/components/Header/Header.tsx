@@ -24,11 +24,11 @@ export const Header = () => {
         </Link>
 
         <div className={styles.headerRight}>
-          <ThemeSwitcher className={styles.ThemeSwitcher} />
+          <ThemeSwitcher />
           <Link href={RoutesEnum.Favourites} className={styles.favorite}>
             <MdFavorite size="1.6em" />
           </Link>
-          <Search className={styles.search} />
+          <Search />
         </div>
       </div>
     </div>
