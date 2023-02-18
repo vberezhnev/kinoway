@@ -20,13 +20,17 @@
 
 Kinoway is a free and open client-based online movie service that uses the Kinopoisk API.
 
+#+begin_center
+Watch movies and TV series for free, in high definition, with no restrictions!
+#+end_center
+
 ** ToDo List
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 
-*** Client (TS) [1/15]
+*** Client (TS) [2/15]
 1) [ ] Add "Too many requests" API from Kinopoisk error
 2) [X] Add loader for all pages
-3) [ ] Add reviews section form movies
+3) [X] Add reviews section form movies
 4) [ ] Create "Actor" page
 5) [ ] Create "Random films" section with 4-5 random films
 6) [ ] Create "View more" page

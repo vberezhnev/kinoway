@@ -6,25 +6,27 @@ import FilmList from "@/components/FilmList/FilmList";
 import styles from "./Favorites.module.scss";
 
 export const Favorites = () => {
-    const { favorites } = useFavorites();
-    const { filters } = useTypedSelector((state) => state.filtersReducer);
-    const { page } = useTypedSelector((state) => state.paginationReducer);
-    const query = favorites.map((el) => `search=${el}&field=id`).join("&");
-    const { data, isLoading, isFetching } = useGetFavoritesQuery({
-        page,
-        filters,
-        query,
-    });
+  const { favorites } = useFavorites();
+  const { filters } = useTypedSelector((state) => state.filtersReducer);
+  const { page } = useTypedSelector((state) => state.paginationReducer);
+  const query = favorites.map((el) => `search=${el}&field=id`).join("&");
+  const { data, isLoading, isFetching } = useGetFavoritesQuery({
+    page,
+    filters,
+    query,
+  });
 
-    return (
-        <div className={styles.container}>
-            <div className={styles.App}>
-                {data?.docs.map((data: any, index: any) => {
-                    return <FilmList item={data} key={index} />;
-                })}
-            </div>
-        </div>
-    );
+  // console.log(data);
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.App}>
+        {/* {data?.docs.map((data: any, index: any) => {
+          return <FilmList item={data} key={index} />;
+					})} */}
+      </div>
+    </div>
+  );
 };
 
 export default Favorites;

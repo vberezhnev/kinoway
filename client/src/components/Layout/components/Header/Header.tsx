@@ -25,7 +25,11 @@ export const Header = () => {
 
         <div className={styles.headerRight}>
           <ThemeSwitcher />
-          <Link href={RoutesEnum.Favourites} className={styles.favorite}>
+          <Link
+            href={RoutesEnum.Favourites}
+            className={styles.favorite}
+            legacyBehavior
+          >
             <MdFavorite size="1.6em" />
           </Link>
           <Search />

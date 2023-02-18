@@ -169,6 +169,7 @@ export const Film = () => {
           </div>
         </div>
         <FilmTabs data={data} />
+        <Reviews />
         {similarMovies?.length ? (
           <SimilarMovies movies={similarMovies} />
         ) : null}{" "}

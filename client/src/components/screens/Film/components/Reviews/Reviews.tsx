@@ -24,8 +24,10 @@ export const Reviews = () => {
     return (
       <>
         {docs?.map((item) => {
+          console.log(item);
           return <ReviewItem key={item.id} item={item} />;
         })}
+
         <LoadMoreButton
           className={styles.loadMore}
           isFetching={isFetching}
