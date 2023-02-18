@@ -24,7 +24,6 @@ export const Reviews = () => {
     return (
       <>
         {docs?.map((item) => {
-          console.log(item);
           return <ReviewItem key={item.id} item={item} />;
         })}
 

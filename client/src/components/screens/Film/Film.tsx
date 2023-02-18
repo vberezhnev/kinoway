@@ -132,9 +132,7 @@ export const Film = () => {
             <MovieRating className={styles.rating} rating={rating} />
           </div>
           <div className={styles.right}>
-            <h1 className={styles.title}>
-              {movieTitle} {movieYear}
-            </h1>
+            <h1 className={styles.title}>{movieTitle}</h1>
             <h3 className={styles.originalTitle}>{alternativeName}</h3>
             <span className={styles.shortDescription}>
               {shortDescription ? shortDescription : ""}

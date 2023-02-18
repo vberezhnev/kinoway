@@ -7,6 +7,8 @@
   justify-content: center;
   transition: background-color 0.3s, color 0.3s;
   border: 1px solid transparent;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 
   &[disabled] {
     opacity: 0.5;
@@ -33,6 +35,10 @@
       background-color: rgba(#999, 0.25);
     }
   }
+}
+
+.favorite::after {
+  transition: all 0.8s;
 }
 
 .text {
