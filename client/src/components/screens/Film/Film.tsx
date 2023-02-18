@@ -5,7 +5,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 import { SiKinopoisk } from "react-icons/si";
-import { SlFilm } from "react-icons/sl";
+import { FaImdb } from "react-icons/fa";
 
 import { BackButton } from "@/components/UI-components/BackButton/BackButton";
 import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/ButtonPlayMovie";
@@ -49,13 +49,18 @@ export const Film = () => {
     facts,
     persons,
     tabs,
+    color,
   }: any = { ...data };
 
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
   const movieYear = year && `(${year})`;
   const worldFees = fees?.world?.value; // - fees?.usa?.value
 
+  // @ts-ignore
+  const imdbId = `${data?.externalId?.imdb}`;
+
   console.log(data);
+  console.log(color ? color : "Unknown");
 
   const isTop250 = () => {
     // TODO
@@ -105,7 +110,7 @@ export const Film = () => {
     { caption: "Время", value: `${movieLength} мин`, condition: movieLength },
     {
       caption: "Сборы в США",
-      value: `${fees?.usa?.currency ? "${fees?.usa?.currency} USD" : "—"}`, //${convertNumbers(fees?.usa?.value)}
+      value: `${fees?.usa?.currency ? fees?.usa?.currency : "—"}`, //${convertNumbers(fees?.usa?.value)}
       condition: fees?.usa,
     },
     {
@@ -147,20 +152,32 @@ export const Film = () => {
             </span>
             <div className={styles.btns}>
               <ButtonPlayMovie color="orange">
-                <Link href={`https://kinopoisk-watch.org/player/?id=${id}`}>
-                  <div>
-                    <a target="_blank">
+                <div>
+                  <a target="_blank">
+                    <Link href={`https://kinopoisk-watch.org/player/?id=${id}`}>
                       <b>Смотреть</b>
-                    </a>
-                  </div>
-                </Link>
+                    </Link>
+                  </a>
+                </div>
               </ButtonPlayMovie>
+
+              {/* <div
+                style={{
+                  backgroundColor: color,
+                  borderRadius: "50%",
+                  width: "20px",
+                  height: "20px",
+                  display: "inline-block",
+                  margin: "5px",
+                }}
+								></div> */}
 
               <MovieFavorite
                 className={styles.btn}
                 id={data?.id}
                 disabled={false}
               />
+
               <ButtonPlayMovie
                 color="black"
                 onClick={() => {
@@ -168,6 +185,15 @@ export const Film = () => {
                 }}
               >
                 <SiKinopoisk />{" "}
+              </ButtonPlayMovie>
+
+              <ButtonPlayMovie
+                color="black"
+                onClick={() => {
+                  router.push(`https://www.imdb.com/title/${imdbId}`);
+                }}
+              >
+                <FaImdb />{" "}
               </ButtonPlayMovie>
             </div>
             <h2 className={styles.subtitle}>About this {type}</h2>
