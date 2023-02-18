@@ -12,24 +12,20 @@ export const Header = () => {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.content}>
-        <Link href={RoutesEnum.Home}>
-          <div className={styles.logo}>
-            <a>
+        <Link href={RoutesEnum.Home} legacyBehavior>
+          <a className={styles.logo}>
+            <div>
               <span>K</span>
               <span color={variables.primaryColor} className={styles.wayText}>
                 W
               </span>
-            </a>
-          </div>
+            </div>
+          </a>
         </Link>
 
         <div className={styles.headerRight}>
           <ThemeSwitcher />
-          <Link
-            href={RoutesEnum.Favourites}
-            className={styles.favorite}
-            legacyBehavior
-          >
+          <Link href={RoutesEnum.Favourites} className={styles.favorite}>
             <MdFavorite size="1.6em" />
           </Link>
           <Search />
