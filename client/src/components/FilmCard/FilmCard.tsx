@@ -24,8 +24,6 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
     ...item,
   };
 
-  console.log(names);
-
   return (
     <Link href={`/film/${id}`}>
       <li className={styles.FilmCard_item}>

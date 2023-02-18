@@ -53,9 +53,17 @@ export const Film = () => {
 
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
   const movieYear = year && `(${year})`;
-  const worldFees = fees?.world?.value - fees?.usa?.value;
+  const worldFees = fees?.world?.value; // - fees?.usa?.value
 
-  console.log(similarMovies);
+  console.log(data);
+
+  const isTop250 = () => {
+    // TODO
+  };
+
+  const isTop10 = () => {
+    // TODO
+  };
 
   const items = [
     {
@@ -97,13 +105,13 @@ export const Film = () => {
     { caption: "Время", value: `${movieLength} мин`, condition: movieLength },
     {
       caption: "Сборы в США",
-      value: `${fees?.usa?.currency} USA`, //${convertNumbers(fees?.usa?.value)}
+      value: `${fees?.usa?.currency ? "${fees?.usa?.currency} USD" : "—"}`, //${convertNumbers(fees?.usa?.value)}
       condition: fees?.usa,
     },
     {
       //${convertNumbers(worldFees)}
       caption: "Сборы в мире",
-      value: `${fees?.world?.value}`, //${convertNumbers(fees?.world?.value)}
+      value: `${fees?.world?.value ? fees?.world?.value : "—"} `, //${convertNumbers(fees?.world?.value)}
       condition: fees?.usa,
     },
     {

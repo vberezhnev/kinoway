@@ -35,7 +35,7 @@ export const ReviewItem: FC<ReviewItemProps> = ({ item }) => {
           className={styles.showMore}
           onClick={() => setIsTruncated((prev) => !prev)}
         >
-          {isTruncated ? "Показать всю рецензию" : "скрыть рецензию"}
+          {isTruncated ? "Показать всю рецензию" : "Cкрыть рецензию"}
         </ButtonBase>
       </div>
       <div className={styles.bottom}>
