@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { useEffect } from "react";
 
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { ThemeProvider } from "next-themes";
 
 import { Provider } from "react-redux";
@@ -41,9 +41,19 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const theme = extendTheme({
+    colors: {
+      kinoway: {
+        100: "#6754c7",
+        // ...
+        900: "#1a202c",
+      },
+    },
+  });
+
   return (
     <Provider store={store}>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Head>
           <title>
             Онлайн-кинотеатр Kinoway - фильмы, сериалы и мультфильмы смотреть

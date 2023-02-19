@@ -1,14 +1,24 @@
 import styles from "./Header.module.scss";
 import Link from "next/link";
+import { useEffect } from "react";
 import variables from "../../../../styles/variables.module.scss";
 // components
 import { Search } from "@/components/Search/Search";
-import { ThemeSwitcher } from "@/UI/ThemeSwitcher/ThemeSwitcher";
 
 import { RoutesEnum } from "@/constants/routes";
 import { MdFavorite } from "react-icons/md";
+import { Button, useColorMode } from "@chakra-ui/react";
 
 export const Header = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  useEffect(() => {
+    console.log("colorMode", colorMode);
+    if (colorMode === "light") {
+      toggleColorMode();
+    }
+  }, []);
+
   return (
     <div className={styles.headerContainer}>
       <div className={styles.content}>
@@ -24,7 +34,7 @@ export const Header = () => {
         </Link>
 
         <div className={styles.headerRight}>
-          <ThemeSwitcher />
+          <Button onClick={() => toggleColorMode()}>{}</Button>
           <Link href={RoutesEnum.Favourites} className={styles.favorite}>
             <MdFavorite size="1.6em" />
           </Link>
@@ -34,3 +44,6 @@ export const Header = () => {
     </div>
   );
 };
+
+// import { ThemeSwitcher } from "@/UI/ThemeSwitcher/ThemeSwitcher";
+// <ThemeSwitcher />
