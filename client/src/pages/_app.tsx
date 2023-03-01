@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 import { useEffect } from "react";
 
 import { ThemeProvider } from "next-themes";
@@ -83,7 +84,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
               },
             }}
           >
-            {" "}
+            <Analytics />
             <Component {...pageProps} />
           </motion.div>
         </Layout>
