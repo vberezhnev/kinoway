@@ -19,6 +19,7 @@ import {
   Image,
   Flex,
   Spacer,
+  AbsoluteCenter,
 } from "@chakra-ui/react";
 import styles from "./FilmCard.module.scss";
 
@@ -43,8 +44,18 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
 
   return (
     <Link href={`/film/${id}`}>
-      <Card maxW="sm" w={260} h={400}>
-        <CardBody spacing={10}>
+      <Card maxW="sm" w={260} minHeight={480}>
+        <CardBody>
+          <Box position="relative">
+            <Box position="absolute" right={0}>
+              <Box className={styles.ratingKP}>
+                <p>IMDb: {rating?.imdb}</p>
+              </Box>
+              <Box className={styles.ratingIMDB}>
+                <p>KP: {Math.round(rating?.kp * 10) / 10}</p>
+              </Box>
+            </Box>
+          </Box>
           <Image src={poster?.previewUrl} borderRadius="md" w={222} h={333} />
           <Stack mt="3" spacing="3"></Stack>
           <Flex>
@@ -53,26 +64,8 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
               <Text color="gray.500">{alternativeName}</Text>
             </Box>
             <Spacer />
-            <Box>
-              <span className={styles.ratingKP}>
-                <p>IMDb: {rating?.imdb}</p>
-              </span>
-              <span className={styles.ratingIMDB}>
-                <p>KP: {Math.round(rating?.kp * 10) / 10}</p>
-              </span>
-            </Box>
           </Flex>
         </CardBody>
-        <CardFooter>
-          <ButtonGroup spacing="3">
-            <Button variant="solid" colorScheme="orange">
-              Смотреть
-            </Button>
-            <Button variant="ghost" colorScheme="blue">
-              Больше информации
-            </Button>
-          </ButtonGroup>
-        </CardFooter>
       </Card>
     </Link>
   );
