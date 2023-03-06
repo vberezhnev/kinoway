@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 import { useEffect } from "react";
 
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
@@ -97,14 +98,14 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                     delay: 0.4,
                   },
                 },
-              }}
-            >
-              {" "}
-              <Component {...pageProps} />
-            </motion.div>
-          </Layout>
-        </ThemeProvider>
-      </ChakraProvider>
+              },
+            }}
+          >
+            <Analytics />
+            <Component {...pageProps} />
+          </motion.div>
+        </Layout>
+      </ThemeProvider>
     </Provider>
   );
 }

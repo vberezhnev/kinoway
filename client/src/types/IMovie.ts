@@ -116,7 +116,8 @@ export interface IMovie {
   lists: [];
   logo: { url: string };
   movieLength: number;
-  title: string;
+  // title: string;
+  name: string;
   names: { name: string }[];
   persons: IMoviePerson[];
   poster: IMoviePoster;
