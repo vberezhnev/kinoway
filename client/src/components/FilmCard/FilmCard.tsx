@@ -17,6 +17,8 @@ import {
   ButtonGroup,
   Button,
   Image,
+  Flex,
+  Spacer,
 } from "@chakra-ui/react";
 import styles from "./FilmCard.module.scss";
 
@@ -40,23 +42,39 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
   };
 
   return (
-    <Card maxW="sm">
-      <CardBody>
-        <Image src={poster?.previewUrl} borderRadius="md" />
-        <Stack mt="6" spacing="3"></Stack>
-      </CardBody>
-      <Divider />
-      <CardFooter>
-        <ButtonGroup spacing="1">
-          <Button variant="solid" colorScheme="orange">
-            Смотреть
-          </Button>
-          <Button variant="ghost" colorScheme="blue">
-            Больше информации
-          </Button>
-        </ButtonGroup>
-      </CardFooter>
-    </Card>
+    <Link href={`/film/${id}`}>
+      <Card maxW="sm" w={260} h={400}>
+        <CardBody spacing={10}>
+          <Image src={poster?.previewUrl} borderRadius="md" w={222} h={333} />
+          <Stack mt="3" spacing="3"></Stack>
+          <Flex>
+            <Box>
+              <Heading size="md">{name}</Heading>
+              <Text color="gray.500">{alternativeName}</Text>
+            </Box>
+            <Spacer />
+            <Box>
+              <span className={styles.ratingKP}>
+                <p>IMDb: {rating?.imdb}</p>
+              </span>
+              <span className={styles.ratingIMDB}>
+                <p>KP: {Math.round(rating?.kp * 10) / 10}</p>
+              </span>
+            </Box>
+          </Flex>
+        </CardBody>
+        <CardFooter>
+          <ButtonGroup spacing="3">
+            <Button variant="solid" colorScheme="orange">
+              Смотреть
+            </Button>
+            <Button variant="ghost" colorScheme="blue">
+              Больше информации
+            </Button>
+          </ButtonGroup>
+        </CardFooter>
+      </Card>
+    </Link>
   );
 
   // return (

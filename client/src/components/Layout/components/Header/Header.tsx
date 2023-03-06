@@ -8,6 +8,7 @@ import { Search } from "@/components/Search/Search";
 import { RoutesEnum } from "@/constants/routes";
 import { MdFavorite } from "react-icons/md";
 import { Button, useColorMode } from "@chakra-ui/react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 export const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -34,7 +35,9 @@ export const Header = () => {
         </Link>
 
         <div className={styles.headerRight}>
-          <Button onClick={() => toggleColorMode()}>{}</Button>
+          <Button onClick={() => toggleColorMode()}>
+            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          </Button>
           <Link href={RoutesEnum.Favourites} className={styles.favorite}>
             <MdFavorite size="1.6em" />
           </Link>
