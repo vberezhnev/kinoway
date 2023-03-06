@@ -2,6 +2,7 @@ import { ButtonHTMLAttributes, ReactNode, useRef } from "react";
 import { forwardRef } from "react";
 
 import styles from "./Button.module.scss";
+import { Button as ChakraButton } from "@chakra-ui/react";
 
 interface ButtonBaseProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   ripple?: boolean;
@@ -11,9 +12,9 @@ interface ButtonBaseProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = ({ onClick, children }: any) => {
-  return (
-    <button className={styles.ButtonBase_btn} onClick={onClick}>
-      {children}
-    </button>
-  );
+  return <ChakraButton onClick={onClick}>{children}</ChakraButton>;
 };
+
+/* <button className={styles.ButtonBase_btn} onClick={onClick}>
+      {children}
+			</button> */

@@ -6,11 +6,10 @@
   box-sizing: border-box;
   width: 100%;
   padding: 18px 20px;
-  //margin: 3vh;
   border-radius: 8px;
   transition-timing-function: ease-out;
   transition-duration: 0.15s;
-  border-bottom: 1px #888;
+  // border-bottom: 1px #888;
   margin: 2vh 0 1vh 0;
 
   div {
@@ -57,12 +56,13 @@
         margin-right: 20px;
 
         .kinoway {
-          display: flex;
+          display: none;
           flex-wrap: wrap;
           align-items: baseline;
           margin-bottom: 4px;
 
           .kinowayValue {
+            display: none;
             font-size: 22px;
             font-weight: bold;
             color: #3bb33b;

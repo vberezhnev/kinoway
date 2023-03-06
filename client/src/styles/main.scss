@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "Fira Sans", sans-serif;
+  // font-family: "Fira Sans", sans-serif;
   -webkit-transition: background-color 300ms linear;
   -ms-transition: background-color 300ms linear;
   transition: background-color 300ms linear;
@@ -17,14 +17,14 @@ body {
 
 // Setting a dark mode
 
-html,
-body {
-  height: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: #000;
-  background: #f6f6f6;
-  transition: 300ms ease;
-}
+// html,
+// body {
+//   height: 100%;
+//   -webkit-text-size-adjust: 100%;
+//   color: #000;
+//   background: #f6f6f6;
+//   transition: 300ms ease;
+// }
 
 [data-theme="dark"],
 [data-theme="dark"] body {
