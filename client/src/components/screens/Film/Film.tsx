@@ -155,7 +155,37 @@ export const Film = () => {
                 <div>
                   <a target="_blank">
                     <Link href={`https://kinopoisk-watch.org/player/?id=${id}`}>
-                      <b>Смотреть</b>
+                      <b>Смотреть (Плеер 1)</b>
+                    </Link>
+                  </a>
+                </div>
+              </ButtonPlayMovie>
+
+              <ButtonPlayMovie color="orange">
+                <div>
+                  <a target="_blank">
+                    <Link href={`https://flicksbar.cc/film/${id}/`}>
+                      <b>Смотреть (Плеер 2)</b>
+                    </Link>
+                  </a>
+                </div>
+              </ButtonPlayMovie>
+
+              <ButtonPlayMovie color="orange">
+                <div>
+                  <a target="_blank">
+                    <Link href={`https://vavada-7.com/#${id}`}>
+                      <b>Смотреть (Плеер 3)</b>
+                    </Link>
+                  </a>
+                </div>
+              </ButtonPlayMovie>
+
+              <ButtonPlayMovie color="orange">
+                <div>
+                  <a target="_blank">
+                    <Link href={`https://ww5.frkp.lol/film/${id}/`}>
+                      <b>Смотреть (Плеер 4)</b>
                     </Link>
                   </a>
                 </div>

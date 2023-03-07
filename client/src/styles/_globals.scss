@@ -1,5 +1,9 @@
 @import "variables.module.scss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 *::before,
 *::after {

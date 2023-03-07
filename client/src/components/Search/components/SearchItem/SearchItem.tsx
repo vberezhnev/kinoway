@@ -10,10 +10,8 @@ interface SearchItemProps {
 }
 
 export const SearchItem: FC<SearchItemProps> = ({ item }) => {
-  const { title, id, description, year, alternativeName, movieLength, rating } =
+  const { name, id, description, year, alternativeName, movieLength, rating } =
     item;
-
-  console.log(item);
 
   return (
     <Link href={`/film/${id}`}>
@@ -31,7 +29,7 @@ export const SearchItem: FC<SearchItemProps> = ({ item }) => {
             </div>
             <div className={styles.text}>
               <span className={styles.title}>
-                {title ? title : alternativeName}
+                {name ? name : alternativeName}
               </span>
               <span className={styles.info}>
                 {year}
