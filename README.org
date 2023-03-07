@@ -24,6 +24,28 @@ Kinoway is a free and open client-based online movie service that uses the Kinop
 Watch movies and TV series for free, in high definition, with no restrictions!
 #+end_center
 
+** 👉Installation🤘
+*** 1. Clone this repository:
+#+begin_src bash
+  git clone https://github.com/Tell396/kinoway
+#+end_src
+
+*** 2. Create and change variables in ~client/.env.local~:
+#+begin_src bash
+  NEXT_PUBLIC_API_URL=your-token
+  NEXT_PUBLIC_API_KEY=very-secret-url
+#+end_src
+
+*** 3. Install deps (force):
+#+begin_src bash
+  npm i -f
+#+end_src
+
+*** 4. Now we can start🚀
+#+begin_src bash
+  npm run dev
+#+end_src
+
 ** ToDo List
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 

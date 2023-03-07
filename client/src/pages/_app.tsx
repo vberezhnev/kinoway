@@ -54,32 +54,29 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store}>
+      <Head>
+        <title>
+          Онлайн-кинотеатр Kinoway - фильмы, сериалы и мультфильмы смотреть
+          онлайн бесплатно в хорошем качестве
+        </title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <meta property="og:description" content="Kinoway - фильмы и сериалы" />
+        <meta property="og:title" content="Kinoway - фильмы и сериалы" />
+        <meta
+          name="description"
+          content="Смотрите фильмы онлайн, в качестве, приятной домашней обстановке. Смотрите что хотите и когда хотите: сериалы, фильмы, мультфильмы и многое другое."
+        />
+        <meta
+          name="keywords"
+          content="фильмы сериалы онлайн в хорошем отличном качестве кино видео смотреть новинки кинофильмы онлайн кинотеатр 2012 2013 просмотр видеоролики"
+        />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+      </Head>
       <ChakraProvider theme={theme}>
-        <Head>
-          <title>
-            Онлайн-кинотеатр Kinoway - фильмы, сериалы и мультфильмы смотреть
-            онлайн бесплатно в хорошем качестве
-          </title>
-          <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-          />
-          <meta
-            property="og:description"
-            content="Kinoway - фильмы и сериалы"
-          />
-          <meta property="og:title" content="Kinoway - фильмы и сериалы" />
-          <meta
-            name="description"
-            content="Смотрите фильмы онлайн, в качестве, приятной домашней обстановке. Смотрите что хотите и когда хотите: сериалы, фильмы, мультфильмы и многое другое."
-          />
-          <meta
-            name="keywords"
-            content="фильмы сериалы онлайн в хорошем отличном качестве кино видео смотреть новинки кинофильмы онлайн кинотеатр 2012 2013 просмотр видеоролики"
-          />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-        </Head>
         <ThemeProvider defaultTheme="system">
           <Layout>
             <motion.div
@@ -98,14 +95,14 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                     delay: 0.4,
                   },
                 },
-              },
-            }}
-          >
-            <Analytics />
-            <Component {...pageProps} />
-          </motion.div>
-        </Layout>
-      </ThemeProvider>
+              }}
+            >
+              <Analytics />
+              <Component {...pageProps} />
+            </motion.div>
+          </Layout>
+        </ThemeProvider>
+      </ChakraProvider>
     </Provider>
   );
 }
