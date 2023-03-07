@@ -49,7 +49,7 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 ** ToDo List
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 
-*** Client (TS) [4/15]
+*** Client (TS) [5/15]
 1) [ ] Add "Too many requests" API from Kinopoisk error
 2) [X] Add loader for all pages
 3) [X] Add reviews section form movies
@@ -59,7 +59,7 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 7) [ ] Create 404 page
 8) [ ] Create component to provide ~data~ on it. Like ~<Content data={data} loading={isLoading} error={isError} />~
 9) [X] Fix "NaN" mark of film in SearchResults component
-10) [ ] Fix "NaN" mark of film in SimilarMovies component
+10) [X] Fix "NaN" mark of film in SimilarMovies component
 11) [X] Fix "Similar movies" component
 12) [ ] Fix footer on film search page
 13) [ ] Optimize film page opening
@@ -69,7 +69,7 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 **** ChakraUI
 1) [X] Update buttons 
 2) [X] Update theme switcher
-3) [ ] Update film cards
+3) [X] Update film cards
 4) [ ] Update LoadMoreButto
 5) [ ] Update spinner
 6) [ ] Update header. Add burger menu
