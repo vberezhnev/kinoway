@@ -15,7 +15,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.10.2",
     "@reduxjs/toolkit": "^1.9.0",
-    "@storybook/react": "^6.1.21",
+    "@storybook/react": "^6.5.16",
     "@vercel/analytics": "^0.1.11",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
