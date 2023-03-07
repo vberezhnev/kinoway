@@ -22,6 +22,7 @@ import {
   AbsoluteCenter,
 } from "@chakra-ui/react";
 import styles from "./FilmCard.module.scss";
+import { MovieRating } from "../UI-components/MovieRating/MovieRating";
 
 interface FilmItemProps {
   item: IMovie;
@@ -48,12 +49,13 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
         <CardBody>
           <Box position="relative">
             <Box position="absolute" right={0}>
-              <Box className={styles.ratingKP}>
+              {/*<Box className={styles.ratingKP}>
                 <p>IMDb: {rating?.imdb}</p>
               </Box>
               <Box className={styles.ratingIMDB}>
                 <p>KP: {Math.round(rating?.kp * 10) / 10}</p>
-              </Box>
+								</Box>*/}
+              <MovieRating rating={rating} />
             </Box>
           </Box>
           <Image src={poster?.previewUrl} borderRadius="md" w={222} h={333} />
