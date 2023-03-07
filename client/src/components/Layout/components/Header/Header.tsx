@@ -12,6 +12,7 @@ import {
   StarIcon,
   TimeIcon,
   CloseIcon,
+  HamburgerIcon,
 } from "@chakra-ui/icons";
 import {
   Menu,
@@ -29,11 +30,19 @@ import {
   Box,
   Text,
   Stack,
+  Fade,
+  ScaleFade,
+  Slide,
+  SlideFade,
+  Collapse,
+  useDisclosure,
+  Icon,
 } from "@chakra-ui/react";
 
 export const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const [isOpen, setIsOpen] = React.useState(false);
+  const { isToggle, onToggle } = useDisclosure();
+  const [isOpen, setIsOpen] = useState(false); //React.useState(false)
 
   const bg = useColorModeValue("#313131", "#313131");
   const color = useColorModeValue("white", "white");
@@ -106,8 +115,19 @@ export const Header = () => {
 
   const MenuToggle = ({ toggle, isOpen }: any) => {
     return (
-      <Box display={{ base: "block", md: "none" }} onClick={toggle}>
-        {isOpen ? <CloseIcon /> : <SunIcon />}
+      <Box
+        display={{ base: "block", md: "none" }}
+        onClick={toggle}
+        cursor="pointer"
+        transition="0.5s linear"
+        _hover={{ transform: "scale(1.1)" }}
+      >
+        <Icon
+          as={isOpen ? CloseIcon : HamburgerIcon}
+          boxSize={6}
+          transform={isOpen ? "rotate(90deg)" : undefined}
+          transition="0.5s linear"
+        />
       </Box>
     );
   };
@@ -115,11 +135,11 @@ export const Header = () => {
   const Logo = (props: any) => {
     return (
       <Box {...props}>
-        <Text fontSize="lg" fontWeight="bold">
-          <Link href={RoutesEnum.Home} legacyBehavior>
-            <a>KW</a>
-          </Link>
-        </Text>
+        <Link href={RoutesEnum.Home} legacyBehavior>
+          <Text fontSize="xl" fontWeight="bold">
+            KW
+          </Text>
+        </Link>
       </Box>
     );
   };
@@ -142,8 +162,10 @@ export const Header = () => {
         justify="space-between"
         wrap="wrap"
         w="100%"
-        mb={8}
+        mb={5}
         p={8}
+        // maxW="1260px"
+        // h="72px"
         bg={["#1f1f1f", "#1f1f1f", "transparent", "transparent"]}
         color={["white", "white", "primary.700", "primary.700"]}
         {...props}
@@ -163,55 +185,4 @@ export const Header = () => {
       <MenuLinks isOpen={isOpen} />
     </NavBarContainer>
   );
-
-  // return (
-  //   <div className={styles.headerContainer}>
-  //     <div className={styles.content}>
-  //       <Link href={RoutesEnum.Home} legacyBehavior>
-  //         <a className={styles.logo}>
-  //           <div>
-  //             <span>K</span>
-  //             <span color={variables.primaryColor} className={styles.wayText}>
-  //               W
-  //             </span>
-  //           </div>
-  //         </a>
-  //       </Link>
-
-  //       <div className={styles.headerRight}>
-  //         <MenuToggle toggle={toggle} isOpen={isOpen} />
-  //         <Button
-  //           bg={bg}
-  //           color={color}
-  //           onClick={() => toggleColorMode()}
-  //           _hover={{
-  //             background: "#424242",
-  //             color: "white",
-  //           }}
-  //         >
-  //           {colorMode === "light" ? (
-  //             <MoonIcon boxSize={5} />
-  //           ) : (
-  //             <SunIcon boxSize={5} />
-  //           )}
-  //         </Button>
-  //         <Link href={RoutesEnum.Favourites}>
-  //           <Button
-  //             mr={2}
-  //             ml={2}
-  //             bg={bg}
-  //             color={color}
-  //             _hover={{
-  //               background: "#424242",
-  //               color: "white",
-  //             }}
-  //           >
-  //             <StarIcon boxSize={5} />
-  //           </Button>
-  //         </Link>
-  //         <Search />
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
 };
