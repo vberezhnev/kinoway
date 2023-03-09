@@ -74,7 +74,7 @@ export const Search = () => {
             onClick={() => setVisible(true)}
           />
 					</a> */}
-        <InputGroup side="lg">
+        <InputGroup>
           <Input
             className={styles.search}
             value={value}
@@ -89,11 +89,27 @@ export const Search = () => {
               mr={1}
               disabled={!value.length}
               onClick={submitForm}
+              bg="#313131"
+              color="white"
+              _hover={{
+                background: "#424242",
+                color: "white",
+              }}
             >
               <Search2Icon />
             </Button>
 
-            <Button h="1.75rem" size="sm" onClick={handleClearInput}>
+            <Button
+              h="1.75rem"
+              size="sm"
+              onClick={handleClearInput}
+              bg="#313131"
+              color="white"
+              _hover={{
+                background: "#424242",
+                color: "white",
+              }}
+            >
               <CloseIcon />
             </Button>
           </InputRightElement>

@@ -8,6 +8,7 @@ import { ButtonBase } from "@/components/UI-components/ButtonBase/ButtonBase";
 import { SearchItem } from "../SearchItem/SearchItem";
 
 import styles from "./SearchList.module.scss";
+import { Spinner } from "@/UI/Spinner/Spinner";
 
 interface SearchListProps {
   value: string;
@@ -34,26 +35,35 @@ export const SearchList: FC<SearchListProps> = ({ value }) => {
       <div className={styles.top}>
         <div className={styles.btns}>
           <Button
-            type="button"
-            variant="sm"
             onClick={() => handleChangeType("1")}
-            className={`${styles.btn} ${type === "1" && styles.active}`}
+            bg="#313131"
+            color="white"
+            _hover={{
+              background: "#424242",
+              color: "white",
+            }}
           >
             Фильмы
           </Button>
           <Button
-            type="button"
-            variant="sm"
             onClick={() => handleChangeType("2")}
-            className={`${styles.btn} ${type === "2" && styles.active}`}
+            bg="#313131"
+            color="white"
+            _hover={{
+              background: "#424242",
+              color: "white",
+            }}
           >
             Сериалы
           </Button>
           <Button
-            type="button"
-            variant="sm"
             onClick={() => handleChangeType("3")}
-            className={`${styles.btn} ${type === "3" && styles.active}`}
+            bg="#313131"
+            color="white"
+            _hover={{
+              background: "#424242",
+              color: "white",
+            }}
           >
             Мультики
           </Button>
@@ -72,7 +82,7 @@ export const SearchList: FC<SearchListProps> = ({ value }) => {
               </>
             ) : (
               <div className={styles.loader}>
-                {/* <Spinner variant="dark" size={SpinnerSizes.medium} /> */}
+                <Spinner variant="dark" size={2} />
               </div>
             )}
           </>

@@ -11,10 +11,14 @@ interface ButtonBaseProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   animationDuration?: number;
 }
 
-export const Button = ({ onClick, children }: any) => {
-  return <ChakraButton onClick={onClick}>{children}</ChakraButton>;
+export const Button = ({ onClick, children, props }: any) => {
+  return (
+    <ChakraButton {...props} onClick={onClick}>
+      {children}
+    </ChakraButton>
+  );
 };
 
 /* <button className={styles.ButtonBase_btn} onClick={onClick}>
       {children}
-			</button> */
+      </button> */
