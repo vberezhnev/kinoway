@@ -134,67 +134,73 @@ export const Film = () => {
   ];
 
   return (
-    <section className={styles.section}>
-      <div className={classNames("container wrapper", styles.container)}>
-        <div className={styles.top}>
-          <BackButton />
-        </div>
-        <div className={styles.content}>
-          <div className={styles.left}>
-            <img
-              className={styles.image}
-              src={data?.poster?.url}
-              alt={shortDescription}
-            />
-            <MovieRating className={styles.rating} rating={rating} />
+    <>
+      <Head>
+        <title>{movieTitle}</title>
+      </Head>
+      <section className={styles.section}>
+        <div className={classNames("container wrapper", styles.container)}>
+          <div className={styles.top}>
+            <BackButton />
           </div>
-          <div className={styles.right}>
-            <p className={styles.title}>
-              {movieTitle} {movieYear}
-            </p>
-            <span className={styles.originalTitle}>{alternativeName}</span>
-            <div className={styles.btns}>
-              <ButtonPlayMovie color="orange">
-                <div>
-                  <a target="_blank">
-                    <Link href={`https://kinopoisk-watch.org/player/?id=${id}`}>
-                      <b>Смотреть (Плеер 1)</b>
-                    </Link>
-                  </a>
-                </div>
-              </ButtonPlayMovie>
+          <div className={styles.content}>
+            <div className={styles.left}>
+              <img
+                className={styles.image}
+                src={data?.poster?.url}
+                alt={shortDescription}
+              />
+              <MovieRating className={styles.rating} rating={rating} />
+            </div>
+            <div className={styles.right}>
+              <p className={styles.title}>
+                {movieTitle} {movieYear}
+              </p>
+              <span className={styles.originalTitle}>{alternativeName}</span>
+              <div className={styles.btns}>
+                <ButtonPlayMovie color="orange">
+                  <div>
+                    <a target="_blank">
+                      <Link
+                        href={`https://kinopoisk-watch.org/player/?id=${id}`}
+                      >
+                        <b>Смотреть (Плеер 1)</b>
+                      </Link>
+                    </a>
+                  </div>
+                </ButtonPlayMovie>
 
-              <ButtonPlayMovie color="orange">
-                <div>
-                  <a target="_blank">
-                    <Link href={`https://flicksbar.cc/film/${id}/`}>
-                      <b>Смотреть (Плеер 2)</b>
-                    </Link>
-                  </a>
-                </div>
-              </ButtonPlayMovie>
+                <ButtonPlayMovie color="orange">
+                  <div>
+                    <a target="_blank">
+                      <Link href={`https://flicksbar.cc/film/${id}/`}>
+                        <b>Смотреть (Плеер 2)</b>
+                      </Link>
+                    </a>
+                  </div>
+                </ButtonPlayMovie>
 
-              <ButtonPlayMovie color="orange">
-                <div>
-                  <a target="_blank">
-                    <Link href={`https://vavada-7.com/#${id}`}>
-                      <b>Смотреть (Плеер 3)</b>
-                    </Link>
-                  </a>
-                </div>
-              </ButtonPlayMovie>
+                <ButtonPlayMovie color="orange">
+                  <div>
+                    <a target="_blank">
+                      <Link href={`https://vavada-7.com/#${id}`}>
+                        <b>Смотреть (Плеер 3)</b>
+                      </Link>
+                    </a>
+                  </div>
+                </ButtonPlayMovie>
 
-              <ButtonPlayMovie color="orange">
-                <div>
-                  <a target="_blank">
-                    <Link href={`https://ww5.frkp.lol/film/${id}/`}>
-                      <b>Смотреть (Плеер 4)</b>
-                    </Link>
-                  </a>
-                </div>
-              </ButtonPlayMovie>
+                <ButtonPlayMovie color="orange">
+                  <div>
+                    <a target="_blank">
+                      <Link href={`https://ww5.frkp.lol/film/${id}/`}>
+                        <b>Смотреть (Плеер 4)</b>
+                      </Link>
+                    </a>
+                  </div>
+                </ButtonPlayMovie>
 
-              {/* <div
+                {/* <div
                 style={{
                   backgroundColor: color,
                   borderRadius: "50%",
@@ -205,40 +211,41 @@ export const Film = () => {
                 }}
 								></div> */}
 
-              <MovieFavorite
-                className={styles.btn}
-                id={data?.id}
-                disabled={false}
-              />
+                <MovieFavorite
+                  className={styles.btn}
+                  id={data?.id}
+                  disabled={false}
+                />
 
-              <ButtonPlayMovie
-                color="black"
-                onClick={() => {
-                  router.push(`https://www.kinopoisk.ru/film/${id}`);
-                }}
-              >
-                <SiKinopoisk />{" "}
-              </ButtonPlayMovie>
+                <ButtonPlayMovie
+                  color="black"
+                  onClick={() => {
+                    router.push(`https://www.kinopoisk.ru/film/${id}`);
+                  }}
+                >
+                  <SiKinopoisk />{" "}
+                </ButtonPlayMovie>
 
-              <ButtonPlayMovie
-                color="black"
-                onClick={() => {
-                  router.push(`https://www.imdb.com/title/${imdbId}`);
-                }}
-              >
-                <FaImdb />{" "}
-              </ButtonPlayMovie>
+                <ButtonPlayMovie
+                  color="black"
+                  onClick={() => {
+                    router.push(`https://www.imdb.com/title/${imdbId}`);
+                  }}
+                >
+                  <FaImdb />{" "}
+                </ButtonPlayMovie>
+              </div>
+              <p className={styles.subtitle}>О фильме</p>
+              <Info items={items} />
             </div>
-            <p className={styles.subtitle}>О фильме</p>
-            <Info items={items} />
           </div>
+          <FilmTabs data={data} />
+          {similarMovies?.length ? (
+            <SimilarMovies movies={similarMovies} />
+          ) : null}
+          <Reviews />
         </div>
-        <FilmTabs data={data} />
-        {similarMovies?.length ? (
-          <SimilarMovies movies={similarMovies} />
-        ) : null}
-        <Reviews />
-      </div>
-    </section>
+      </section>
+    </>
   );
 };

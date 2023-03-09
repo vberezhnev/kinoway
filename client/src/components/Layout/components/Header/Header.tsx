@@ -147,7 +147,8 @@ export const Header = () => {
         w="100%"
         mb={5}
         p={8}
-        // maxW="1260px"
+        pr={{ sm: "0px", md: "20px", xl: "415px" }}
+        pl={{ sm: "0px", md: "20px", xl: "415px" }}
         // h="72px"
         bg={["#1f1f1f", "#1f1f1f", "transparent", "transparent"]}
         color={["white", "white", "primary.700", "primary.700"]}
