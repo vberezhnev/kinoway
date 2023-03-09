@@ -63,19 +63,9 @@ export const Search = () => {
         action="#"
         className={`${styles.form} ${visible} ${styles.visible}`}
       >
-        {/* <a className={styles.search}>
-          <input
-            data-testid="input"
-            type="search"
-            ref={inputRef}
-            className={`${styles.dark} ${styles.input}`}
-            value={value}
-            onChange={handleChange}
-            onClick={() => setVisible(true)}
-          />
-					</a> */}
         <InputGroup>
           <Input
+            ref={inputRef}
             className={styles.search}
             value={value}
             onChange={handleChange}

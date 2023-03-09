@@ -20,17 +20,17 @@ export const MovieRating: FC<MovieRatingProps> = ({ rating, className }) => {
   return (
     <>
       {rating && (
-        <>
-          <Box bg={isHighRatingKP} m={1} p={1} borderRadius={6}>
+        <Box ml="-50px" pos="absolute">
+          <Box bg={isHighRatingKP} p={1} borderRadius={6}>
             <Text fontSize="sm">
               KP: {Number(rating?.kp ? rating.kp : "—").toFixed(1)}
             </Text>
           </Box>
 
-          <Box bg={isHighRatingIMDB} m={1} p={1} borderRadius={6}>
+          <Box pos="absolute" bg={isHighRatingIMDB} p={1} borderRadius={6}>
             <Text fontSize="sm">IMDB: {rating?.imdb ? rating?.imdb : "—"}</Text>
           </Box>
-        </>
+        </Box>
       )}
     </>
   );

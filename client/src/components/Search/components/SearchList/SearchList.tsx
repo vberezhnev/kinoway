@@ -8,7 +8,6 @@ import { ButtonBase } from "@/components/UI-components/ButtonBase/ButtonBase";
 import { SearchItem } from "../SearchItem/SearchItem";
 
 import styles from "./SearchList.module.scss";
-import { Spinner } from "@/UI/Spinner/Spinner";
 
 interface SearchListProps {
   value: string;
@@ -82,7 +81,7 @@ export const SearchList: FC<SearchListProps> = ({ value }) => {
               </>
             ) : (
               <div className={styles.loader}>
-                <Spinner variant="dark" size={2} />
+                {/* <Spinner variant="dark" size={2} /> */}
               </div>
             )}
           </>
