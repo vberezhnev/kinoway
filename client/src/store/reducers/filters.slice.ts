@@ -1,4 +1,4 @@
-import { getCurrentYear } from "../../helpers/getCurrentYear";
+import { getCurrentYear } from "@/helpers/getCurrentYear";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -14,11 +14,11 @@ export const filtersSlice = createSlice({
   name: "filters",
   initialState,
   reducers: {
-    setFilterRatings: (state, action) => {
-      state.filters.rating = action.payload;
-    },
     setFiterYears: (state, action) => {
       state.filters.year = action.payload;
+    },
+    setFilterRatings: (state, action) => {
+      state.filters.rating = action.payload;
     },
     setSortByRelease: (state, action) => {
       state.filters.sortByRelease = action.payload;
@@ -33,8 +33,8 @@ export const filtersSlice = createSlice({
 });
 
 export const {
-  setFilterRatings,
   setFiterYears,
+  setFilterRatings,
   setSortByRelease,
   setFilterGenre,
   resetFilters,

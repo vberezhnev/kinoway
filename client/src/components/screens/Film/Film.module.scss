@@ -22,7 +22,7 @@
 
 .container {
   padding-bottom: 100px;
-  background-color: white;
+  // background-color: white;
   padding: 3vh;
 
   @media (max-width: 768px) {
@@ -84,7 +84,7 @@
   overflow: hidden;
   object-fit: cover;
   aspect-ratio: 2 / 3;
-  background-color: var(--color-dark);
+  // background-color: var(--color-dark);
 
   @media (max-width: 576px) {
     width: 250px;

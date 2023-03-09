@@ -15,6 +15,10 @@ import { Info } from "@/components/Info/Info";
 import { Reviews, MovieFavorite, SimilarMovies, FilmTabs } from "./components";
 
 import "react-tabs/style/react-tabs.css";
+import { classNames } from "@/helpers/classNames";
+
+import { Button } from "@chakra-ui/react";
+import { Tabs } from "@/UI/Tabs/Tabs";
 
 import styles from "./Film.module.scss";
 //import { TaskAbortError } from "@reduxjs/toolkit";
@@ -51,6 +55,9 @@ export const Film = () => {
     tabs,
     color,
   }: any = { ...data };
+
+  console.log(data);
+  // <Tabs tabs={tabs} />
 
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
   const movieYear = year && `(${year})`;
@@ -128,10 +135,7 @@ export const Film = () => {
 
   return (
     <section className={styles.section}>
-      <Head>
-        <title>{movieTitle}</title>
-      </Head>
-      <div className={styles.container}>
+      <div className={classNames("container wrapper", styles.container)}>
         <div className={styles.top}>
           <BackButton />
         </div>
@@ -145,11 +149,10 @@ export const Film = () => {
             <MovieRating className={styles.rating} rating={rating} />
           </div>
           <div className={styles.right}>
-            <h1 className={styles.title}>{movieTitle}</h1>
-            <h3 className={styles.originalTitle}>{alternativeName}</h3>
-            <span className={styles.shortDescription}>
-              {shortDescription ? shortDescription : ""}
-            </span>
+            <p className={styles.title}>
+              {movieTitle} {movieYear}
+            </p>
+            <span className={styles.originalTitle}>{alternativeName}</span>
             <div className={styles.btns}>
               <ButtonPlayMovie color="orange">
                 <div>
@@ -226,15 +229,15 @@ export const Film = () => {
                 <FaImdb />{" "}
               </ButtonPlayMovie>
             </div>
-            <h2 className={styles.subtitle}>About this {type}</h2>
+            <p className={styles.subtitle}>О фильме</p>
             <Info items={items} />
           </div>
         </div>
         <FilmTabs data={data} />
-        <Reviews />
         {similarMovies?.length ? (
           <SimilarMovies movies={similarMovies} />
-        ) : null}{" "}
+        ) : null}
+        <Reviews />
       </div>
     </section>
   );

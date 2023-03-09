@@ -70,9 +70,9 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 1) [X] Update buttons 
 2) [X] Update theme switcher
 3) [X] Update film cards
-4) [ ] Update LoadMoreButto
+4) [ ] Update LoadMoreButton
 5) [ ] Update spinner
-6) [ ] Update header. Add burger menu
+6) [X] Update header. Add burger menu
 7) [ ] Update PlayMovie button
 
 *** Sever (Rust) (Not started yet) [1/3]

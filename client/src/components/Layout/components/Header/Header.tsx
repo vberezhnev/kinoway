@@ -41,7 +41,6 @@ import {
 
 export const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isToggle, onToggle } = useDisclosure();
   const [isOpen, setIsOpen] = useState(false); //React.useState(false)
 
   const bg = useColorModeValue("#313131", "#313131");
@@ -92,22 +91,6 @@ export const Header = () => {
             </Button>
           </Link>
           <Search />
-
-          <MenuItem to="/signup">
-            <Button
-              size="sm"
-              rounded="md"
-              color={["primary.500", "primary.500", "white", "white"]}
-              bg={bg}
-              color={color}
-              _hover={{
-                background: "#424242",
-                color: "white",
-              }}
-            >
-              Create Account
-            </Button>
-          </MenuItem>
         </Stack>
       </Box>
     );

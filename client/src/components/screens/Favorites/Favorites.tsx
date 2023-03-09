@@ -6,6 +6,8 @@ import FilmList from "@/components/FilmList/FilmList";
 import FilmCard from "@/components/FilmCard/FilmCard";
 
 import styles from "./Favorites.module.scss";
+import { Filters } from "@/components/Filters/Filters";
+import { Flex, Spacer, Box, Wrap, WrapItem } from "@chakra-ui/react";
 
 export const Favorites = () => {
   const { favorites } = useFavorites();
@@ -18,14 +20,22 @@ export const Favorites = () => {
     query,
   });
 
-  // console.log(data);
+  console.log(data);
 
   return (
     <div className={styles.container}>
       <div className={styles.App}>
-        {data?.docs.map((data: any, index: any) => {
-          return <FilmList item={data} key={index} />;
-        })}
+        <Flex wrap="wrap">
+          <Box p={8}>
+            <Filters />
+          </Box>
+          <Spacer />
+          <Box p={8}>
+            {data?.docs.map((data: any, index: any) => {
+              return <FilmList item={data} key={index} />;
+            })}
+          </Box>
+        </Flex>
       </div>
     </div>
   );
