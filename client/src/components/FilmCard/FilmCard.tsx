@@ -48,13 +48,7 @@ const FilmCard: FC<FilmItemProps> = ({ item }) => {
       <Card maxW="sm" w={260} minHeight={480}>
         <CardBody>
           <Box position="relative">
-            <Box position="absolute" right={0}>
-              {/*<Box className={styles.ratingKP}>
-                <p>IMDb: {rating?.imdb}</p>
-              </Box>
-              <Box className={styles.ratingIMDB}>
-                <p>KP: {Math.round(rating?.kp * 10) / 10}</p>
-								</Box>*/}
+            <Box position="absolute" right="10px">
               <MovieRating rating={rating} />
             </Box>
           </Box>
