@@ -24,7 +24,6 @@ export const MovieFavorite: FC<MovieFavoriteProps> = ({
 
   return (
     <ButtonPlayMovie
-      ripple
       onClick={() => toggleFavorite(Number(id))}
       className={classNames(
         styles.favorite,

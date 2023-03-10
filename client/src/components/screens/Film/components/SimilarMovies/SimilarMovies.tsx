@@ -16,7 +16,7 @@ export const SimilarMovies: FC<SimilarMoviesProps> = ({ movies }) => {
         {movies?.map((data) => {
           return (
             <SwiperSlide key={data.id}>
-              <FilmCard item={data} style={{ margin: "0 15px 0 0" }} />
+              <FilmCard item={data} />
             </SwiperSlide>
           );
         })}
