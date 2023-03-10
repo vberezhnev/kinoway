@@ -37,6 +37,7 @@ import {
   Collapse,
   useDisclosure,
   Icon,
+  Heading,
 } from "@chakra-ui/react";
 
 export const Header = () => {
@@ -119,8 +120,8 @@ export const Header = () => {
     return (
       <Box {...props}>
         <Link href={RoutesEnum.Home} legacyBehavior>
-          <Text fontSize="xl" fontWeight="bold">
-            KW
+          <Text fontSize="2xl" fontWeight="bold">
+            KINO<span style={{ color: "#6754c7" }}>WAY</span>
           </Text>
         </Link>
       </Box>
@@ -161,7 +162,7 @@ export const Header = () => {
   return (
     <NavBarContainer bg="#1f1f1f">
       <Logo
-        w="100px"
+        w="120px"
         color={["white", "white", "primary.500", "primary.500"]}
       />
       <MenuToggle toggle={toggle} isOpen={isOpen} />
