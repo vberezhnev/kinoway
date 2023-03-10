@@ -23,7 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const store = useStore(pageProps.initialReduxState);
 
   NProgress.configure({
-    showSpinner: false,
+    showSpinner: true,
   });
 
   useEffect(() => {
@@ -68,7 +68,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="Kinoway - фильмы и сериалы" />
         <meta
           name="description"
-          content="Смотрите фильмы онлайн, в качестве, приятной домашней обстановке. Смотрите что хотите и когда хотите: сериалы, фильмы, мультфильмы и многое другое."
+          content="Смотрите фильмы онлайн, в хорошем качестве, приятной домашней обстановке. Смотрите что хотите и когда хотите: сериалы, фильмы, мультфильмы и многое другое."
         />
         <meta
           name="keywords"

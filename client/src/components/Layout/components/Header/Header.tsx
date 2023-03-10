@@ -55,7 +55,7 @@ export const Header = () => {
         flexBasis={{ base: "100%", md: "auto" }}
       >
         <Stack
-          spacing={8}
+          spacing={6}
           align="center"
           justify={["center", "space-between", "flex-end", "flex-end"]}
           direction={["column", "row", "row", "row"]}
@@ -149,7 +149,6 @@ export const Header = () => {
         p={8}
         pr={{ sm: "0px", md: "20px", xl: "415px" }}
         pl={{ sm: "0px", md: "20px", xl: "415px" }}
-        // h="72px"
         bg={["#1f1f1f", "#1f1f1f", "transparent", "transparent"]}
         color={["white", "white", "primary.700", "primary.700"]}
         {...props}

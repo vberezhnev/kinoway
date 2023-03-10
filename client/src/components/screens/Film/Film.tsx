@@ -158,7 +158,7 @@ export const Film = () => {
               </p>
               <span className={styles.originalTitle}>{alternativeName}</span>
               <div className={styles.btns}>
-                <ButtonPlayMovie color="orange">
+                <ButtonPlayMovie>
                   <div>
                     <a target="_blank">
                       <Link
@@ -170,7 +170,7 @@ export const Film = () => {
                   </div>
                 </ButtonPlayMovie>
 
-                <ButtonPlayMovie color="orange">
+                <ButtonPlayMovie>
                   <div>
                     <a target="_blank">
                       <Link href={`https://flicksbar.cc/film/${id}/`}>
@@ -180,7 +180,7 @@ export const Film = () => {
                   </div>
                 </ButtonPlayMovie>
 
-                <ButtonPlayMovie color="orange">
+                <ButtonPlayMovie>
                   <div>
                     <a target="_blank">
                       <Link href={`https://vavada-7.com/#${id}`}>
@@ -190,7 +190,7 @@ export const Film = () => {
                   </div>
                 </ButtonPlayMovie>
 
-                <ButtonPlayMovie color="orange">
+                <ButtonPlayMovie>
                   <div>
                     <a target="_blank">
                       <Link href={`https://ww5.frkp.lol/film/${id}/`}>
