@@ -4,6 +4,7 @@ import { SwiperSlide } from "swiper/react";
 import { Carousel } from "@/components/Carousel/Carousel";
 import FilmCard from "@/components/FilmCard/FilmCard";
 import styles from "./SimilarMovies.module.scss";
+import { Box } from "@chakra-ui/react";
 
 interface SimilarMoviesProps {
   movies: IMovie[] | undefined;
@@ -16,7 +17,9 @@ export const SimilarMovies: FC<SimilarMoviesProps> = ({ movies }) => {
         {movies?.map((data) => {
           return (
             <SwiperSlide key={data.id}>
-              <FilmCard item={data} />
+              <Box mr={3}>
+                <FilmCard item={data} />
+              </Box>
             </SwiperSlide>
           );
         })}

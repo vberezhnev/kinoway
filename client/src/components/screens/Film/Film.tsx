@@ -12,7 +12,13 @@ import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/Butt
 
 import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import { Info } from "@/components/Info/Info";
-import { Reviews, MovieFavorite, SimilarMovies, FilmTabs } from "./components";
+import {
+  Reviews,
+  MovieFavorite,
+  MovieWatchLater,
+  SimilarMovies,
+  FilmTabs,
+} from "./components";
 
 import "react-tabs/style/react-tabs.css";
 import { classNames } from "@/helpers/classNames";
@@ -53,7 +59,6 @@ export const Film = () => {
     facts,
     persons,
     tabs,
-    color,
   }: any = { ...data };
 
   console.log(data);
@@ -65,9 +70,6 @@ export const Film = () => {
 
   // @ts-ignore
   const imdbId = `${data?.externalId?.imdb}`;
-
-  console.log(data);
-  console.log(color ? color : "Unknown");
 
   const isTop250 = () => {
     // TODO
@@ -200,18 +202,15 @@ export const Film = () => {
                   </div>
                 </ButtonPlayMovie>
 
-                {/* <div
-                style={{
-                  backgroundColor: color,
-                  borderRadius: "50%",
-                  width: "20px",
-                  height: "20px",
-                  display: "inline-block",
-                  margin: "5px",
-                }}
-								></div> */}
+                <br />
 
                 <MovieFavorite
+                  className={styles.btn}
+                  id={data?.id}
+                  disabled={false}
+                />
+
+                <MovieWatchLater
                   className={styles.btn}
                   id={data?.id}
                   disabled={false}

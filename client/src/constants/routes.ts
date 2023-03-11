@@ -1,9 +1,10 @@
 export enum RoutesEnum {
-    Home = "/",
-    // Films = "/films",
-    // Series = "/series",
-    // Cartoons = "/cartoons",
-    Favourites = "/favorites",
-    Login = "/login",
-    // Register = "/register",
+  Home = "/",
+  Films = "/films",
+  // Series = "/series",
+  // Cartoons = "/cartoons",
+  Favorites = "/favorites",
+  WatchLater = "/watchLater",
+  Login = "/login",
+  // Register = "/register",
 }

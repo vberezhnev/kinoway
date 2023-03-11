@@ -13,6 +13,7 @@ import {
   TimeIcon,
   CloseIcon,
   HamburgerIcon,
+  CalendarIcon,
 } from "@chakra-ui/icons";
 import {
   Menu,
@@ -77,7 +78,7 @@ export const Header = () => {
               <SunIcon boxSize={5} />
             )}
           </Button>
-          <Link href={RoutesEnum.Favourites}>
+          <Link href={RoutesEnum.Favorites}>
             <Button
               mr={2}
               ml={2}
@@ -89,6 +90,20 @@ export const Header = () => {
               }}
             >
               <StarIcon boxSize={5} />
+            </Button>
+          </Link>
+          <Link href={RoutesEnum.WatchLater}>
+            <Button
+              mr={2}
+              ml={2}
+              bg={bg}
+              color={color}
+              _hover={{
+                background: "#424242",
+                color: "white",
+              }}
+            >
+              <CalendarIcon boxSize={5} />
             </Button>
           </Link>
           <Search />
