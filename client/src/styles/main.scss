@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700&display=swap");
-@import "./variables.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+// @import "./variables.module.scss";
 @import "globals";
 
 * {
@@ -9,25 +11,8 @@
 }
 
 body {
-  // font-family: "Fira Sans", sans-serif;
-  // -webkit-transition: background-color 300ms linear;
-  // -ms-transition: background-color 300ms linear;
-  // transition: background-color 300ms linear;
+  font-family: "Comfortaa", sans-serif;
+  -webkit-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
 }
-
-// Setting a dark mode
-
-// html,
-// body {
-//   height: 100%;
-//   -webkit-text-size-adjust: 100%;
-//   color: #000;
-//   background: #f6f6f6;
-//   transition: 300ms ease;
-// }
-
-// [data-theme="dark"],
-// [data-theme="dark"] body {
-//   color: #f4f4f4;
-//   background: #282828;
-// }

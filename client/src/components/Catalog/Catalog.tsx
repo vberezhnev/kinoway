@@ -1,5 +1,5 @@
 import { PropsWithChildren, useEffect } from "react";
-import FilmCard from "@/components/FilmCard/FilmCard";
+import { FilmCard } from "@/components/FilmCard/FilmCard";
 import { FiltersToggle } from "./components/FiltersToggle/FiltersToggle";
 import { Pagination } from "@/UI/Pagination/Pagination";
 import { Spinner, SpinnerSizes } from "@/UI/Spinner/Spinner";
@@ -11,101 +11,97 @@ import classNames from "classnames";
 import styles from "./Catalog.module.scss";
 
 interface ContentProps {
-    data: IMovies | undefined;
-    isFetching?: boolean;
-    isLoading?: boolean;
+  data: IMovies | undefined;
+  isFetching?: boolean;
+  isLoading?: boolean;
 }
 
 function Catalog({ children }: PropsWithChildren<{}>) {
-    return <div className={styles.catalog}>{children}</div>;
+  return <div className={styles.catalog}>{children}</div>;
 }
 module Catalog {
-    export const Container = ({ children }: PropsWithChildren<{}>) => {
-        return (
-            <div className={classNames("container wrapper", styles.container)}>
-                {children}
-            </div>
-        );
-    };
-
-    export const Heading = ({ children }: PropsWithChildren<{}>) => {
-        return <Title className={styles.title}>{children}</Title>;
-    };
-
-    export const Subtitle = ({ children }: PropsWithChildren<{}>) => {
-        return (
+  export const Container = ({ children }: PropsWithChildren<{}>) => {
+    return (
+      <div className={classNames("container wrapper", styles.container)}>
+        {children}
+      </div>
     );
-    };
+  };
 
-    export const Description = ({ children }: PropsWithChildren<{}>) => {
-        return <p className={styles.desc}>{children}</p>;
-    };
+  export const Heading = ({ children }: PropsWithChildren<{}>) => {
+    return <Title className={styles.title}>{children}</Title>;
+  };
 
-    export const Loader = () => {
-        return (
-            <div className={styles.spinner}>
-                <Spinner size={SpinnerSizes.medium} />
-            </div>
-        );
-    };
-
-    export const Grid = ({ data }: ContentProps) => {
-        return (
+  export const Subtitle = ({ children }: PropsWithChildren<{}>) => {
+    return (
+      <Title className={styles.subtitle} variant="h2">
+        {children}
+      </Title>
     );
-    };
+  };
 
-    export const Body = ({ children }: PropsWithChildren<{}>) => {
-        return (
+  export const Description = ({ children }: PropsWithChildren<{}>) => {
+    return <p className={styles.desc}>{children}</p>;
+  };
+
+  export const Loader = () => {
+    return (
+      <div className={styles.spinner}>
+        <Spinner size={SpinnerSizes.medium} />
+      </div>
     );
-    };
+  };
 
-    export const Content = ({ data, isLoading, isFetching }: ContentProps) => {
-        const { page } = useTypedSelector((state) => state.paginationReducer);
-        const { setPage } = useActions();
+  export const Grid = ({ data }: ContentProps) => {
+    return (
+      <div className={styles.grid}>
+        {data?.docs?.map((el) => (
+          <FilmCard key={el.id} item={el} />
+        ))}
+      </div>
+    );
+  };
 
-        useEffect(() => {
-            scrollTo(0, 0);
-        }, [page]);
+  export const Body = ({ children }: PropsWithChildren<{}>) => {
+    return (
+      <div className={styles.body}>
+        <FiltersToggle />
+        {children}
+      </div>
+    );
+  };
 
-        const CatalogContent = (
-            <>
-                <Catalog.Grid data={data} />
-                <Pagination page={page} setPage={setPage} pages={data?.pages} />
-            </>
-        );
+  export const Content = ({ data, isLoading, isFetching }: ContentProps) => {
+    const { page } = useTypedSelector((state) => state.paginationReducer);
+    const { setPage } = useActions();
 
-        return (
-            <>
-                {isLoading || isFetching ? (
-                    <Loader />
-                ) : (
-                    <div>
-                        {!data?.docs?.length ? (
-                            <Subtitle>Ничего не найдено!</Subtitle>
-                        ) : (
-                            CatalogContent
-                        )}
-                    </div>
-                )}
-            </>
-        );
+    useEffect(() => {
+      scrollTo(0, 0);
+    }, [page]);
 
-        // return (
-        //   <>
-        //     {isLoading || isFetching ? (
-        //       <Loader />
-        //     ) : (
-        //       <div className={styles.content}>
-        //         {!data?.docs?.length ? (
-        //           <Subtitle>Ничего не найдено!</Subtitle>
-        //         ) : (
-        //           CatalogContent
-        //         )}
-        //       </div>
-        //     )}
-        //   </>
-        // );
-    };
+    const CatalogContent = (
+      <>
+        <Catalog.Grid data={data} />
+        <Pagination page={page} setPage={setPage} pages={data?.pages} />
+      </>
+    );
+
+    return (
+      <>
+        {isLoading || isFetching ? (
+          <Loader />
+        ) : (
+          <div className={styles.content}>
+            {!data?.docs?.length ? (
+              <Subtitle>Ничего не найдено!</Subtitle>
+            ) : (
+              CatalogContent
+            )}
+          </div>
+        )}
+      </>
+    );
+  };
 }
 
 export { Catalog };

@@ -41,7 +41,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 
-export const Header = () => {
+export const Header = (props: any) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isOpen, setIsOpen] = useState(false); //React.useState(false)
 
@@ -175,7 +175,7 @@ export const Header = () => {
   };
 
   return (
-    <NavBarContainer bg="#1f1f1f">
+    <NavBarContainer bg="#1f1f1f" {...props}>
       <Logo
         w="120px"
         color={["white", "white", "primary.500", "primary.500"]}
