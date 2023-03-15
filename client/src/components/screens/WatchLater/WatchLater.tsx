@@ -3,7 +3,7 @@ import { useTypedSelector } from "@/hooks/useTypedSelector";
 // import { Filters } from '@/components/Filters/Filters';
 import { useWatchLater } from "@/hooks/useWatchLater";
 import FilmList from "@/components/FilmList/FilmList";
-import FilmCard from "@/components/FilmCard/FilmCard";
+import { FilmCard } from "@/components/FilmCard/FilmCard";
 
 import styles from "./WatchLater.module.scss";
 import { Filters } from "@/components/Filters/Filters";
@@ -24,19 +24,17 @@ export const WatchLater = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.App}>
-        <Flex wrap="wrap">
-          <Box p={8}>
-            <Filters />
-          </Box>
-          <Spacer />
-          <Box p={8}>
-            {data?.docs.map((data: any, index: any) => {
-              return <FilmList item={data} key={index} />;
-            })}
-          </Box>
-        </Flex>
-      </div>
+      <Flex wrap="wrap">
+        <Box p={8}>
+          <Filters />
+        </Box>
+        <Spacer />
+        <Box p={8}>
+          {data?.docs.map((data: any, index: any) => {
+            return <FilmList item={data} key={index} />;
+          })}
+        </Box>
+      </Flex>
     </div>
   );
 };

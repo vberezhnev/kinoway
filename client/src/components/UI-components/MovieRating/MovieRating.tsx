@@ -20,7 +20,7 @@ export const MovieRating: FC<MovieRatingProps> = ({ rating, className }) => {
   return (
     <>
       {rating && (
-        <Box pos="absolute">
+        <Box pos="absolute" style={{ zIndex: 10 }}>
           <Box bg={isHighRatingKP} p={1} borderRadius={6}>
             <Text fontSize="sm">
               KP: {Number(rating?.kp ? rating.kp : "—").toFixed(1)}

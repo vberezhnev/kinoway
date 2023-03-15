@@ -2,7 +2,7 @@ import { FC } from "react";
 import { IMovie } from "@/types/IMovie";
 import { SwiperSlide } from "swiper/react";
 import { Carousel } from "@/components/Carousel/Carousel";
-import FilmCard from "@/components/FilmCard/FilmCard";
+import { FilmCard } from "@/components/FilmCard/FilmCard";
 import styles from "./SimilarMovies.module.scss";
 import { Box } from "@chakra-ui/react";
 

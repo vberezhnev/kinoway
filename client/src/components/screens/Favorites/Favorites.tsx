@@ -3,7 +3,7 @@ import { useTypedSelector } from "@/hooks/useTypedSelector";
 // import { Filters } from '@/components/Filters/Filters';
 import { useFavorites } from "@/hooks/useFavorite";
 import FilmList from "@/components/FilmList/FilmList";
-import FilmCard from "@/components/FilmCard/FilmCard";
+import { FilmCard } from "@/components/FilmCard/FilmCard";
 
 import styles from "./Favorites.module.scss";
 import { Filters } from "@/components/Filters/Filters";
