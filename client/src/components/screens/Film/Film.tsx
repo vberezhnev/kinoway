@@ -23,7 +23,15 @@ import {
 import "react-tabs/style/react-tabs.css";
 import { classNames } from "@/helpers/classNames";
 
-import { Badge, Box, Button } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Badge,
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+} from "@chakra-ui/react";
 import { Tabs } from "@/UI/Tabs/Tabs";
 
 import styles from "./Film.module.scss";
@@ -65,7 +73,6 @@ export const Film = () => {
   }: any = { ...data };
 
   console.log(data);
-  // <Tabs tabs={tabs} />
 
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
   const movieYear = year && `(${year})`;
@@ -73,24 +80,6 @@ export const Film = () => {
 
   // @ts-ignore
   const imdbId = `${data?.externalId?.imdb}`;
-
-  const isTop250: boolean = () => {
-    if (top250 != null) {
-      console.log("This film in 250");
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  /* const isTop10: boolean = () => {
-   *   if (top10 != null) {
-   *     console.log("This film in 10");
-   *     return true;
-   *   } else {
-   *     return false;
-   *   }
-   * }; */
 
   const items = [
     {
@@ -121,7 +110,20 @@ export const Film = () => {
     { caption: "Слоган", value: slogan, condition: slogan },
     {
       caption: "Возраст",
-      value: <span className={styles.age}>{ageRating}+</span>,
+      value: (
+        <Box
+          display="inline-block"
+          p="1px 3px 0px"
+          borderRadius="3px"
+          fontSize="11px"
+          lineHeight="16px"
+          fontWeight="600"
+          border="1px solid"
+          borderColor="#000"
+        >
+          {ageRating}+
+        </Box>
+      ),
       condition: ageRating,
     },
     {
@@ -154,118 +156,173 @@ export const Film = () => {
         <title>{movieTitle}</title>
       </Head>
       <section className={styles.section}>
-        <div className={classNames("container wrapper", styles.container)}>
+        <Box pb={["100px", "70px", "50px"]} p="2vh">
           <Box>
-            <div className={styles.top}>
-              <BackButton />
-              {isTop250 ? (
-                <Badge colorScheme="green" fontSize="1em" variant="solid">
-                  Top 250: {top250}
-                </Badge>
-              ) : (
-                <div>nothing</div>
-              )}
-            </div>
-            <div className={styles.content}>
-              <div className={styles.left}>
-                <img
-                  className={styles.image}
-                  src={data?.poster?.url}
-                  alt={shortDescription}
-                />
-                <MovieRating className={styles.rating} rating={rating} />
-              </div>
-              <div className={styles.right}>
-                <p className={styles.title}>
-                  {movieTitle} {movieYear}
-                </p>
-                <span className={styles.originalTitle}>{alternativeName}</span>
-                <div className={styles.btns}>
-                  <ButtonPlayMovie>
-                    <div>
-                      <a target="_blank">
-                        <Link
-                          href={`https://kinopoisk-watch.org/player/?id=${id}`}
-                        >
-                          <b>Смотреть (Плеер 1)</b>
-                        </Link>
-                      </a>
-                    </div>
-                  </ButtonPlayMovie>
-
-                  <ButtonPlayMovie>
-                    <div>
-                      <a target="_blank">
-                        <Link href={`https://flicksbar.cc/film/${id}/`}>
-                          <b>Смотреть (Плеер 2)</b>
-                        </Link>
-                      </a>
-                    </div>
-                  </ButtonPlayMovie>
-
-                  <ButtonPlayMovie>
-                    <div>
-                      <a target="_blank">
-                        <Link href={`https://vavada-7.com/#${id}`}>
-                          <b>Смотреть (Плеер 3)</b>
-                        </Link>
-                      </a>
-                    </div>
-                  </ButtonPlayMovie>
-
-                  <ButtonPlayMovie>
-                    <div>
-                      <a target="_blank">
-                        <Link href={`https://ww5.frkp.lol/film/${id}/`}>
-                          <b>Смотреть (Плеер 4)</b>
-                        </Link>
-                      </a>
-                    </div>
-                  </ButtonPlayMovie>
-
-                  <br />
-
-                  <MovieFavorite
-                    className={styles.btn}
-                    id={data?.id}
-                    disabled={false}
+            <Box
+              alignItems="center"
+              justifyContent="space-between"
+              mb={["30px", "25px"]}
+            >
+              <Flex>
+                <BackButton />
+              </Flex>
+            </Box>
+            <Box mt="2vh" mb={["50px", "30px"]}>
+              <Flex>
+                <Box
+                  position="relative"
+                  mr={["50px", "40px", "40px"]}
+                  mb={["50px", "30px", "20px"]}
+                  width="fit-content"
+                  flexShrink="0"
+                >
+                  <Image
+                    position="relative"
+                    w={["300px", "250px"]}
+                    height="auto"
+                    style={{ aspectRatio: "2 / 3" }}
+                    borderRadius="10px"
+                    overflow="hidden"
+                    objectFit="cover"
+                    src={data?.poster?.url}
+                    alt={shortDescription}
                   />
-
-                  <MovieWatchLater
-                    className={styles.btn}
-                    id={data?.id}
-                    disabled={false}
-                  />
-
-                  <ButtonPlayMovie
-                    color="black"
-                    onClick={() => {
-                      router.push(`https://www.kinopoisk.ru/film/${id}`);
-                    }}
+                  <MovieRating rating={rating} />
+                </Box>
+                <Box w="full">
+                  <Heading
+                    fontSize={{ base: "40px", md: "26px" }}
+                    fontWeight="800"
+                    lineHeight={["48px", "33px"]}
+                    maxW="650px"
+                    mb={["8px", "15px"]}
                   >
-                    <SiKinopoisk />{" "}
-                  </ButtonPlayMovie>
-
-                  <ButtonPlayMovie
-                    color="black"
-                    onClick={() => {
-                      router.push(`https://www.imdb.com/title/${imdbId}`);
-                    }}
+                    {movieTitle} {movieYear}
+                  </Heading>
+                  <Heading
+                    fontWeight="200"
+                    fontSize="18px"
+                    verticalAlign="middle"
+                    letterSpacing="-0.2px"
+                    lineHeight={["48px", "33px"]}
+                    mb="8px"
                   >
-                    <FaImdb />{" "}
-                  </ButtonPlayMovie>
-                </div>
-                <p className={styles.subtitle}>О фильме</p>
-                <Info items={items} />
-              </div>
-            </div>
+                    {alternativeName}
+                  </Heading>
+
+                  {top250 ? (
+                    <Badge
+                      colorScheme={top250 ? "green" : "red"}
+                      fontSize="1em"
+                      variant="solid"
+                    >
+                      Top 250: {top250}
+                    </Badge>
+                  ) : (
+                    <div></div>
+                  )}
+
+                  <Box
+                    alignItems="center"
+                    mt="15px"
+                    pt="10px"
+                    pr="10px"
+                    pb="10px"
+                    pl="0px"
+                    mb={["", "25px"]}
+                  >
+                    <Flex wrap="wrap">
+                      <ButtonPlayMovie>
+                        <Box>
+                          <a target="_blank">
+                            <Link
+                              href={`https://kinopoisk-watch.org/player/?id=${id}`}
+                            >
+                              <b>Смотреть (Плеер 1)</b>
+                            </Link>
+                          </a>
+                        </Box>
+                      </ButtonPlayMovie>
+
+                      <ButtonPlayMovie>
+                        <Box>
+                          <Link href={`https://flicksbar.cc/film/${id}/`}>
+                            <a target="_blank">
+                              <b>Смотреть (Плеер 2)</b>
+                            </a>
+                          </Link>
+                        </Box>
+                      </ButtonPlayMovie>
+
+                      <ButtonPlayMovie>
+                        <Box>
+                          <a target="_blank">
+                            <Link href={`https://vavada-7.com/#${id}`}>
+                              <b>Смотреть (Плеер 3)</b>
+                            </Link>
+                          </a>
+                        </Box>
+                      </ButtonPlayMovie>
+
+                      <ButtonPlayMovie>
+                        <Box>
+                          <a target="_blank">
+                            <Link href={`https://ww5.frkp.lol/film/${id}/`}>
+                              <b>Смотреть (Плеер 4)</b>
+                            </Link>
+                          </a>
+                        </Box>
+                      </ButtonPlayMovie>
+
+                      <MovieFavorite
+                        className={styles.btn}
+                        id={data?.id}
+                        disabled={false}
+                      />
+
+                      <MovieWatchLater
+                        className={styles.btn}
+                        id={data?.id}
+                        disabled={false}
+                      />
+
+                      <ButtonPlayMovie
+                        color="black"
+                        onClick={() => {
+                          router.push(`https://www.kinopoisk.ru/film/${id}`);
+                        }}
+                      >
+                        <SiKinopoisk />{" "}
+                      </ButtonPlayMovie>
+
+                      <ButtonPlayMovie
+                        color="black"
+                        onClick={() => {
+                          router.push(`https://www.imdb.com/title/${imdbId}`);
+                        }}
+                      >
+                        <FaImdb />{" "}
+                      </ButtonPlayMovie>
+                    </Flex>
+                  </Box>
+                  <Heading
+                    fontWeight="800"
+                    fontSize={["24px", "20px"]}
+                    lineHeight="30px"
+                  >
+                    О фильме
+                  </Heading>
+                  <Info items={items} />
+                </Box>
+              </Flex>
+            </Box>
             <FilmTabs data={data} />
             {similarMovies?.length ? (
               <SimilarMovies movies={similarMovies} />
             ) : null}
             <Reviews />
           </Box>
-        </div>
+        </Box>
       </section>
     </>
   );
