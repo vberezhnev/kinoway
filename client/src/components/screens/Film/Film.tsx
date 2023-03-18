@@ -23,15 +23,7 @@ import {
 import "react-tabs/style/react-tabs.css";
 import { classNames } from "@/helpers/classNames";
 
-import {
-  AspectRatio,
-  Badge,
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Image,
-} from "@chakra-ui/react";
+import { Badge, Box, Flex, Heading, Image } from "@chakra-ui/react";
 import { Tabs } from "@/UI/Tabs/Tabs";
 
 import styles from "./Film.module.scss";
@@ -315,9 +307,13 @@ export const Film = () => {
               </Box>
             </Flex>
           </Box>
-          <FilmTabs data={data} pb={["50px", "100px"]} />
+          <Box pb={["50px", "100px"]}>
+            <FilmTabs data={data} />
+          </Box>
           {similarMovies?.length ? (
-            <SimilarMovies movies={similarMovies} pb={["50px", "100px"]} />
+            <Box pb={["50px", "100px"]}>
+              <SimilarMovies movies={similarMovies} />
+            </Box>
           ) : null}{" "}
           <Reviews />
         </Box>

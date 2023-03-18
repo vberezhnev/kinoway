@@ -1,28 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { FC } from "react";
+import { IMovieRating } from "@/types/IMovie";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
-export const MovieRating = ({ rating }) => {
+interface MovieRatingProps {
+  rating: IMovieRating | undefined;
+  className?: string;
+}
+
+export const MovieRating: FC<MovieRatingProps> = ({ rating, className }) => {
   const kpRating = Number(rating?.kp);
   const imdbRating = Number(rating?.imdb);
-
-  const maxRating = 10;
-
-  const kpBarStyle = {
-    width: `${(kpRating / maxRating) * 100}%`,
-    backgroundColor: "#E53E3E",
-    height: "0.5rem",
-    borderTopLeftRadius: "0.5rem",
-    borderBottomLeftRadius: "0.5rem",
-  };
-
-  const imdbBarStyle = {
-    width: `${(imdbRating / maxRating) * 100}%`,
-    backgroundColor: "#3182CE",
-    height: "0.5rem",
-    borderTopRightRadius: "0.5rem",
-    borderBottomRightRadius: "0.5rem",
-  };
 
   const bgStyle = {
     backgroundColor:
@@ -38,7 +25,7 @@ export const MovieRating = ({ rating }) => {
   return (
     <>
       {rating && (
-        <Box style={bgStyle}>
+        <Box style={bgStyle} className={className}>
           <Flex alignItems="center">
             <Box>
               <Text fontSize="sm" fontWeight="bold" color="white">
@@ -53,11 +40,4 @@ export const MovieRating = ({ rating }) => {
       )}
     </>
   );
-};
-
-MovieRating.propTypes = {
-  rating: PropTypes.shape({
-    kp: PropTypes.number,
-    imdb: PropTypes.number,
-  }),
 };
