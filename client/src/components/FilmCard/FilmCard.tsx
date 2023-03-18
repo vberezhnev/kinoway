@@ -48,7 +48,7 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
       <Card maxW="sm" w={260} minHeight={480}>
         <CardBody>
           <Box position="relative">
-            <Box position="absolute" right="10px">
+            <Box position="absolute" left="10px" top="10px">
               <MovieRating rating={rating} />
             </Box>
           </Box>

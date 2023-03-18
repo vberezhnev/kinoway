@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 //import { RoutesEnum } from "@/constants/routes";
 import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 import FilmList from "@/components/FilmList/FilmList";
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Container, Spinner } from "@chakra-ui/react";
 
 export const SearchResults = () => {
   const {
@@ -20,13 +20,11 @@ export const SearchResults = () => {
 
   return (
     <div className="h-full">
-      {data?.docs?.map((data: any, index: any) => {
-        return (
-          <Box style={{ minHeight: "80vh" }}>
-            <FilmList item={data} key={index} />
-          </Box>
-        );
-      })}
+      <Box style={{ minHeight: "77vh" }}>
+        {data?.docs?.map((data: any, index: any) => {
+          return <FilmList item={data} key={index} />;
+        })}
+      </Box>
     </div>
   );
 };

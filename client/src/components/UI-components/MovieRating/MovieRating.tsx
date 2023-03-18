@@ -1,37 +1,63 @@
-import { IMovieRating } from "@/types/IMovie";
-import { Box, Text } from "@chakra-ui/react";
-import { FC } from "react";
+import React from "react";
+import PropTypes from "prop-types";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
-interface MovieRatingProps {
-  rating: IMovieRating | undefined;
-  className?: string;
-}
+export const MovieRating = ({ rating }) => {
+  const kpRating = Number(rating?.kp);
+  const imdbRating = Number(rating?.imdb);
 
-export const MovieRating: FC<MovieRatingProps> = ({ rating, className }) => {
-  let kp_rating = Math.floor(Number(rating?.kp));
-  const imdb_rating = Math.floor(Number(rating?.imdb));
+  const maxRating = 10;
 
-  const isHighRatingKP =
-    Math.floor(Number(rating?.kp)) >= 6 ? "green.300" : "red.300";
+  const kpBarStyle = {
+    width: `${(kpRating / maxRating) * 100}%`,
+    backgroundColor: "#E53E3E",
+    height: "0.5rem",
+    borderTopLeftRadius: "0.5rem",
+    borderBottomLeftRadius: "0.5rem",
+  };
 
-  const isHighRatingIMDB =
-    Math.floor(Number(rating?.imdb)) >= 6 ? "green.300" : "red.300";
+  const imdbBarStyle = {
+    width: `${(imdbRating / maxRating) * 100}%`,
+    backgroundColor: "#3182CE",
+    height: "0.5rem",
+    borderTopRightRadius: "0.5rem",
+    borderBottomRightRadius: "0.5rem",
+  };
+
+  const bgStyle = {
+    backgroundColor:
+      kpRating >= 6 && imdbRating >= 6
+        ? "#3BB33B"
+        : kpRating < 6 && imdbRating < 6
+        ? "#D32F2F"
+        : "#5F5F5F",
+    borderRadius: "0",
+    padding: "3px 10px 3px 10px",
+  };
 
   return (
     <>
       {rating && (
-        <Box pos="absolute" style={{ zIndex: 10 }}>
-          <Box bg={isHighRatingKP} p={1} borderRadius={6}>
-            <Text fontSize="sm">
-              KP: {Number(rating?.kp ? rating.kp : "—").toFixed(1)}
-            </Text>
-          </Box>
-
-          <Box pos="absolute" bg={isHighRatingIMDB} p={1} borderRadius={6}>
-            <Text fontSize="sm">IMDB: {rating?.imdb ? rating?.imdb : "—"}</Text>
-          </Box>
+        <Box style={bgStyle}>
+          <Flex alignItems="center">
+            <Box>
+              <Text fontSize="sm" fontWeight="bold" color="white">
+                {kpRating.toFixed(1)}
+              </Text>
+              {/* <Text fontSize="sm" fontWeight="bold">
+									IMDb: {rating?.imdb ? rating.imdb.toFixed(1) : "—"}
+									</Text> */}
+            </Box>
+          </Flex>
         </Box>
       )}
     </>
   );
+};
+
+MovieRating.propTypes = {
+  rating: PropTypes.shape({
+    kp: PropTypes.number,
+    imdb: PropTypes.number,
+  }),
 };
