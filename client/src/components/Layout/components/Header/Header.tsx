@@ -175,7 +175,11 @@ export const Header = (props: any) => {
   };
 
   return (
-    <NavBarContainer bg="#1f1f1f" {...props}>
+    <NavBarContainer
+      bg="gray.900"
+      {...props}
+      transition="background-color 200ms linear"
+    >
       <Logo
         w="120px"
         color={["white", "white", "primary.500", "primary.500"]}
