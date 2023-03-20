@@ -17,7 +17,12 @@ export const Footer = () => {
         <Text mt="20px" mb="20px">
           Made with love by{" "}
           <Link href="https://berezhnev.vercel.app">
-            <ChakraLink color="twitter.400">Berezhnev Vladimir</ChakraLink>
+            <ChakraLink
+              href="https://berezhnev.netlify.app"
+              color="twitter.400"
+            >
+              Berezhnev Vladimir
+            </ChakraLink>
           </Link>
         </Text>
       </Box>

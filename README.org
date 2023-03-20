@@ -49,8 +49,8 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 ** ToDo List
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 
-*** Client (TS) [8/20]
-1) [ ] Add "Too many requests" API from Kinopoisk error
+*** Client (TS) [8/21]
+1) [-] Add "Too many requests" API from Kinopoisk error
 2) [X] Add loader for all pages
 3) [ ] Add reviews section form movies
 4) [ ] Add filters
@@ -58,18 +58,19 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 6) [ ] Create "Random films" section with 4-5 random films
 7) [ ] Create "View more" page with films, TV shows and filters
 8) [X] Create 404 page
-9) [ ] Delete ~.module.scss~ files and move to whole ChakraUI
-10) [ ] Add more content for [[file:client/src/components/screens/Film/Film.tsx][Film.tsx]]
-11) [-] Add soft changing for dark/white theme
-12) [X] Create component to provide ~data~ on it. Like ~<Content data={data} loading={isLoading} error={isError} />~
-13) [X] Fix "NaN" mark of film in SearchResults component
-14) [X] Fix "NaN" mark of film in SimilarMovies component
-15) [X] Fix "Similar movies" component
-16) [X] Add "Watch later" button (component)
-17) [X] Fix footer on film search page
-18) [ ] Optimize film page opening
-19) [ ] Redesign main page
-20) [-] Replace localstorage in theme state with redux
+9) [ ] Add rating to SearchList component
+10) [ ] Delete ~.module.scss~ files and move to whole ChakraUI
+11) [ ] Add more content for [[file:client/src/components/screens/Film/Film.tsx][Film.tsx]]
+12) [-] Add soft changing for dark/white theme
+13) [X] Create component to provide ~data~ on it. Like ~<Content data={data} loading={isLoading} error={isError} />~
+14) [X] Fix "NaN" mark of film in SearchResults component
+15) [X] Fix "NaN" mark of film in SimilarMovies component
+16) [X] Fix "Similar movies" component
+17) [X] Add "Watch later" button (component)
+18) [X] Fix footer on film search page
+19) [ ] Optimize film page opening
+20) [ ] Redesign main page
+21) [-] Replace localstorage in theme state with redux
 
 **** ChakraUI
 1) [X] Update buttons 
