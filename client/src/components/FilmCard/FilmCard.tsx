@@ -43,26 +43,34 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
     ...item,
   };
 
+  console.log(item);
+
   return (
     <Link href={`/film/${id}`}>
-      <Card maxW="sm" w={260} minHeight={480}>
-        <CardBody>
-          <Box position="relative">
-            <Box position="absolute" left="10px" top="10px">
-              <MovieRating rating={rating} />
-            </Box>
-          </Box>
-          <Image src={poster?.previewUrl} borderRadius="md" w={222} h={333} />
-          <Stack mt="3" spacing="3"></Stack>
-          <Flex>
-            <Box>
-              <Heading size="md">{name}</Heading>
-              <Text color="gray.500">{alternativeName}</Text>
-            </Box>
-            <Spacer />
-          </Flex>
-        </CardBody>
-      </Card>
+      <div className={styles.movieCard}>
+        <a href={`/film/${id}`}>
+          <figure className={styles.cardBanner}>
+            <img src={poster.previewUrl} alt={name} />
+          </figure>
+        </a>
+        <div className={styles.titleWrapper}>
+          <a href={`/film/${id}`}>
+            <h3 className={styles.cardTitle}>{name}</h3>
+          </a>
+          <time dateTime={year}>{year}</time>
+        </div>
+        <div className={styles.cardMeta}>
+          <div className={`${styles.badge} ${styles.badgeOutline}`}>HD</div>
+          <div className={styles.duration}>
+            {/* <ion-icon name="time-outline" /> */}
+            <time dateTime="PT137M">137 min</time>
+          </div>
+          <div className={styles.rating}>
+            {/* <ion-icon name="star" /> */}
+            <data>{rating}</data>
+          </div>
+        </div>
+      </div>
     </Link>
   );
 };

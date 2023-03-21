@@ -1,3 +1,17 @@
+$color_1: var(--white);
+$color_2: var(--citrine);
+$color_3: var(--raisin-black);
+$color_4: var(--gainsboro);
+$color_5: var(--xiketic);
+$color_6: var(--rich-black-fogra-29);
+$color_7: var(--gray-x);
+$color_8: var(--light-gray);
+$color_9: var(--eerie-black);
+$color_10: var(--black);
+$font-family_1: var(--ff-poppins);
+$border-color_1: var(--white);
+$border-color_2: var(--citrine);
+
 $content-width: 1230px;
 $container-offset: 15px;
 $container-width: calc(#{$content-width} + #{$container-offset} * 2);
@@ -19,10 +33,6 @@ $color-dark-primary: #494077;
 
 $watch-film-color: #f50;
 $watch-film-border: 30px;
-
-// content-width: 1230px;
-// container-offset: 15px;
-// container-width: calc(($content-width + $container-offset) * 2));
 
 $media-tablet: 770px;
 $media-mobile: 769px;
