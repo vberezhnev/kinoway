@@ -6,7 +6,12 @@ export const Footer = () => {
   return (
     <Box>
       <footer className="footer">
-        <div className="footer-top">
+        <Box
+          backgroundImage="url('./images/footer-bg.jpg')"
+          paddingBlock="80px 50px"
+          backgroundSize="cover"
+          backgroundPosition="center"
+        >
           <div className="container">
             <div className="footer-brand-wrapper">
               <a href="./index.html" className="logo">
@@ -88,7 +93,7 @@ export const Footer = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </Box>
       </footer>
 
       <Box>

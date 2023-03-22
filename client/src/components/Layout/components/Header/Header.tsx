@@ -136,23 +136,23 @@ export const Header = (props: any) => {
       <Box {...props}>
         <Link href={RoutesEnum.Home} legacyBehavior>
           <Text fontSize="2xl" fontWeight="bold">
-            KINO<span style={{ color: "#6754c7" }}>WAY</span>
+            KINOWAY
           </Text>
         </Link>
       </Box>
     );
   };
 
-  const MenuItem = ({ children, to = "/", ...rest }: any) => {
-    return (
-      <Link href={to}>
-        <Text display="block" {...rest}>
-          {children}
-        </Text>
-      </Link>
-    );
-  };
-
+  /* const MenuItem = ({ children, to = "/", ...rest }: any) => {
+   *   return (
+   *     <Link href={to}>
+   *       <Text display="block" {...rest}>
+   *         {children}
+   *       </Text>
+   *     </Link>
+   *   );
+   * };
+   */
   const NavBarContainer = ({ children, ...props }: any) => {
     return (
       <Flex
@@ -181,7 +181,7 @@ export const Header = (props: any) => {
       transition="background-color 200ms linear"
     >
       <Logo
-        w="120px"
+        w="200px"
         color={["white", "white", "primary.500", "primary.500"]}
       />
       <MenuToggle toggle={toggle} isOpen={isOpen} />
