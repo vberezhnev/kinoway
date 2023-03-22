@@ -6,21 +6,15 @@ import { IMovie } from "@/types/IMovie";
 import {
   Heading,
   Stack,
-  StackDivider,
   Box,
   Text,
   Card,
-  CardHeader,
   CardBody,
-  CardFooter,
-  Divider,
-  ButtonGroup,
-  Button,
   Image,
   Flex,
   Spacer,
-  AbsoluteCenter,
 } from "@chakra-ui/react";
+
 import styles from "./FilmCard.module.scss";
 import { MovieRating } from "../UI-components/MovieRating/MovieRating";
 
@@ -46,31 +40,49 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
   console.log(item);
 
   return (
-    <Link href={`/film/${id}`}>
-      <div className={styles.movieCard}>
+    <div className={styles.movieCard}>
+      <Link href={`/film/${id}`}>
+        <figure className={styles.cardBanner}>
+          <img src={poster?.url} alt={description} className="img" />
+        </figure>
+      </Link>
+      <div className={styles.titleWrapper}>
         <a href={`/film/${id}`}>
-          <figure className={styles.cardBanner}>
-            <img src={poster.previewUrl} alt={name} />
-          </figure>
+          <h3 className={styles.cardTitle}>{name}</h3>
         </a>
-        <div className={styles.titleWrapper}>
-          <a href={`/film/${id}`}>
-            <h3 className={styles.cardTitle}>{name}</h3>
-          </a>
-          <time dateTime={year}>{year}</time>
-        </div>
-        <div className={styles.cardMeta}>
-          <div className={`${styles.badge} ${styles.badgeOutline}`}>HD</div>
-          <div className={styles.duration}>
-            {/* <ion-icon name="time-outline" /> */}
-            <time dateTime="PT137M">137 min</time>
-          </div>
-          <div className={styles.rating}>
-            {/* <ion-icon name="star" /> */}
-            <data>{rating}</data>
-          </div>
-        </div>
+        <time>{year}</time>
       </div>
-    </Link>
+      <div className={styles.cardMeta}>
+        <div className={styles.badge}>HD</div>
+        <div className={styles.duration}>
+          <time>{type}</time>
+        </div>
+        <div className={styles.rating}></div>
+        <MovieRating rating={rating} />
+      </div>
+    </div>
   );
+
+  /* return (
+   *   <Link href={`/film/${id}`}>
+   *     <Card maxW="sm" w={260} minHeight={480}>
+   *       <CardBody>
+   *         <Box position="relative">
+   *           <Box position="absolute" left="10px" top="10px">
+   *             <MovieRating rating={rating} />
+   *           </Box>
+   *         </Box>
+   *         <Image src={poster?.previewUrl} borderRadius="md" w={222} h={333} />
+   *         <Stack mt="3" spacing="3"></Stack>
+   *         <Flex>
+   *           <Box>
+   *             <Heading size="md">{name}</Heading>
+   *             <Text color="gray.500">{alternativeName}</Text>
+   *           </Box>
+   *           <Spacer />
+   *         </Flex>
+   *       </CardBody>
+   *     </Card>
+   *   </Link>
+   * ); */
 };

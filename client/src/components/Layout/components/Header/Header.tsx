@@ -162,9 +162,9 @@ export const Header = (props: any) => {
         wrap="wrap"
         w="100%"
         mb={5}
-        p={8}
-        pr={{ sm: "0px", md: "20px", xl: "415px" }}
-        pl={{ sm: "0px", md: "20px", xl: "415px" }}
+        p={5}
+        pr={{ sm: "0px", md: "20px", lg: "100px", xl: "420px" }}
+        pl={{ sm: "0px", md: "20px", lg: "100px", xl: "420px" }}
         bg={["#1f1f1f", "#1f1f1f", "transparent", "transparent"]}
         color={["white", "white", "primary.700", "primary.700"]}
         {...props}
@@ -176,7 +176,7 @@ export const Header = (props: any) => {
 
   return (
     <NavBarContainer
-      bg="gray.900"
+      bg="#1A202C"
       {...props}
       transition="background-color 200ms linear"
     >

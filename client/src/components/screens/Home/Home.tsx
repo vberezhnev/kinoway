@@ -24,98 +24,98 @@ const Home: NextPage = () => {
       {/* 
     - #HEADER
   */}
-      <header className="header" data-header>
-        <div className="container">
-          <div className="overlay" data-overlay />
-          <a href="./index.html" className="logo">
-            <img src="./assets/images/logo.svg" alt="Filmlane logo" />
-          </a>
-          <div className="header-actions">
+      {/* <header className="header" data-header>
+						<div className="container">
+						<div className="overlay" data-overlay />
+						<a href="./index.html" className="logo">
+            <img src="./assets/images/logo.svg" alt="Kinoway logo" />
+						</a>
+						<div className="header-actions">
             <button className="search-btn">
-              <ion-icon name="search-outline" />
+            <ion-icon name="search-outline" />
             </button>
             <div className="lang-wrapper">
-              <label htmlFor="language">
-                <ion-icon name="globe-outline" />
-              </label>
-              <select name="language" id="language">
-                <option value="en">EN</option>
-                <option value="au">AU</option>
-                <option value="ar">AR</option>
-                <option value="tu">TU</option>
-              </select>
+            <label htmlFor="language">
+            <ion-icon name="globe-outline" />
+            </label>
+            <select name="language" id="language">
+            <option value="en">EN</option>
+            <option value="au">AU</option>
+            <option value="ar">AR</option>
+            <option value="tu">TU</option>
+            </select>
             </div>
             <button className="btn btn-primary">Sign in</button>
-          </div>
-          <button className="menu-open-btn" data-menu-open-btn>
+						</div>
+						<button className="menu-open-btn" data-menu-open-btn>
             <ion-icon name="reorder-two" />
-          </button>
-          <nav className="navbar" data-navbar>
+						</button>
+						<nav className="navbar" data-navbar>
             <div className="navbar-top">
-              <a href="./index.html" className="logo">
-                <img src="./assets/images/logo.svg" alt="Filmlane logo" />
-              </a>
-              <button className="menu-close-btn" data-menu-close-btn>
-                <ion-icon name="close-outline" />
-              </button>
+            <a href="./index.html" className="logo">
+            <img src="./assets/images/logo.svg" alt="Kinoway logo" />
+            </a>
+            <button className="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline" />
+            </button>
             </div>
             <ul className="navbar-list">
-              <li>
-                <a href="./index.html" className="navbar-link">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="navbar-link">
-                  Movie
-                </a>
-              </li>
-              <li>
-                <a href="#" className="navbar-link">
-                  Tv Show
-                </a>
-              </li>
-              <li>
-                <a href="#" className="navbar-link">
-                  Web Series
-                </a>
-              </li>
-              <li>
-                <a href="#" className="navbar-link">
-                  Pricing
-                </a>
-              </li>
+            <li>
+            <a href="./index.html" className="navbar-link">
+            Home
+            </a>
+            </li>
+            <li>
+            <a href="#" className="navbar-link">
+            Movie
+            </a>
+            </li>
+            <li>
+            <a href="#" className="navbar-link">
+            Tv Show
+            </a>
+            </li>
+            <li>
+            <a href="#" className="navbar-link">
+            Web Series
+            </a>
+            </li>
+            <li>
+            <a href="#" className="navbar-link">
+            Pricing
+            </a>
+            </li>
             </ul>
             <ul className="navbar-social-list">
-              <li>
-                <a href="#" className="navbar-social-link">
-                  <ion-icon name="logo-twitter" />
-                </a>
-              </li>
-              <li>
-                <a href="#" className="navbar-social-link">
-                  <ion-icon name="logo-facebook" />
-                </a>
-              </li>
-              <li>
-                <a href="#" className="navbar-social-link">
-                  <ion-icon name="logo-pinterest" />
-                </a>
-              </li>
-              <li>
-                <a href="#" className="navbar-social-link">
-                  <ion-icon name="logo-instagram" />
-                </a>
-              </li>
-              <li>
-                <a href="#" className="navbar-social-link">
-                  <ion-icon name="logo-youtube" />
-                </a>
-              </li>
+            <li>
+            <a href="#" className="navbar-social-link">
+            <ion-icon name="logo-twitter" />
+            </a>
+            </li>
+            <li>
+            <a href="#" className="navbar-social-link">
+            <ion-icon name="logo-facebook" />
+            </a>
+            </li>
+            <li>
+            <a href="#" className="navbar-social-link">
+            <ion-icon name="logo-pinterest" />
+            </a>
+            </li>
+            <li>
+            <a href="#" className="navbar-social-link">
+            <ion-icon name="logo-instagram" />
+            </a>
+            </li>
+            <li>
+            <a href="#" className="navbar-social-link">
+            <ion-icon name="logo-youtube" />
+            </a>
+            </li>
             </ul>
-          </nav>
-        </div>
-      </header>
+						</nav>
+						</div>
+						</header> */}
       <main>
         <article>
           {/* 
@@ -124,7 +124,7 @@ const Home: NextPage = () => {
           <section className="hero">
             <div className="container">
               <div className="hero-content">
-                <p className="hero-subtitle">Filmlane</p>
+                <p className="hero-subtitle">Kinoway</p>
                 <h1 className="h1 hero-title">
                   Unlimited <strong>Movie</strong>, TVs Shows, &amp; More.
                 </h1>
@@ -178,126 +178,126 @@ const Home: NextPage = () => {
                 </ul>
               </div>
               <ul className="movies-list  has-scrollbar">
-                {/* <NewFilms /> */}
                 <li>
-                  <div className="movie-card">
-                    <a href="./movie-details.html">
-                      <figure className="card-banner">
+                  <NewFilms />
+                  {/* <div className="movie-card">
+												<a href="./movie-details.html">
+												<figure className="card-banner">
                         <img
-                          src="./assets/images/upcoming-1.png"
-                          alt="The Northman movie poster"
+                        src="./assets/images/upcoming-1.png"
+                        alt="The Northman movie poster"
                         />
-                      </figure>
-                    </a>
-                    <div className="title-wrapper">
-                      <a href="./movie-details.html">
+												</figure>
+												</a>
+												<div className="title-wrapper">
+												<a href="./movie-details.html">
                         <h3 className="card-title">The Northman</h3>
-                      </a>
-                      <time dateTime={2022}>2022</time>
-                    </div>
-                    <div className="card-meta">
-                      <div className="badge badge-outline">HD</div>
-                      <div className="duration">
+												</a>
+												<time dateTime={2022}>2022</time>
+												</div>
+												<div className="card-meta">
+												<div className="badge badge-outline">HD</div>
+												<div className="duration">
                         <ion-icon name="time-outline" />
                         <time dateTime="PT137M">137 min</time>
-                      </div>
-                      <div className="rating">
+												</div>
+												<div className="rating">
                         <ion-icon name="star" />
                         <data>8.5</data>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="movie-card">
-                    <a href="./movie-details.html">
-                      <figure className="card-banner">
+												</div>
+												</div>
+												</div>
+												</li>
+												<li>
+												<div className="movie-card">
+												<a href="./movie-details.html">
+												<figure className="card-banner">
                         <img
-                          src="./assets/images/upcoming-2.png"
-                          alt="Doctor Strange in the Multiverse of Madness movie poster"
+                        src="./assets/images/upcoming-2.png"
+                        alt="Doctor Strange in the Multiverse of Madness movie poster"
                         />
-                      </figure>
-                    </a>
-                    <div className="title-wrapper">
-                      <a href="./movie-details.html">
+												</figure>
+												</a>
+												<div className="title-wrapper">
+												<a href="./movie-details.html">
                         <h3 className="card-title">
-                          Doctor Strange in the Multiverse of Madness
+                        Doctor Strange in the Multiverse of Madness
                         </h3>
-                      </a>
-                      <time dateTime={2022}>2022</time>
-                    </div>
-                    <div className="card-meta">
-                      <div className="badge badge-outline">4K</div>
-                      <div className="duration">
+												</a>
+												<time dateTime={2022}>2022</time>
+												</div>
+												<div className="card-meta">
+												<div className="badge badge-outline">4K</div>
+												<div className="duration">
                         <ion-icon name="time-outline" />
                         <time dateTime="PT126M">126 min</time>
-                      </div>
-                      <div className="rating">
+												</div>
+												<div className="rating">
                         <ion-icon name="star" />
                         <data>NR</data>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="movie-card">
-                    <a href="./movie-details.html">
-                      <figure className="card-banner">
+												</div>
+												</div>
+												</div>
+												</li>
+												<li>
+												<div className="movie-card">
+												<a href="./movie-details.html">
+												<figure className="card-banner">
                         <img
-                          src="./assets/images/upcoming-3.png"
-                          alt="Memory movie poster"
+                        src="./assets/images/upcoming-3.png"
+                        alt="Memory movie poster"
                         />
-                      </figure>
-                    </a>
-                    <div className="title-wrapper">
-                      <a href="./movie-details.html">
+												</figure>
+												</a>
+												<div className="title-wrapper">
+												<a href="./movie-details.html">
                         <h3 className="card-title">Memory</h3>
-                      </a>
-                      <time dateTime={2022}>2022</time>
-                    </div>
-                    <div className="card-meta">
-                      <div className="badge badge-outline">2K</div>
-                      <div className="duration">
+												</a>
+												<time dateTime={2022}>2022</time>
+												</div>
+												<div className="card-meta">
+												<div className="badge badge-outline">2K</div>
+												<div className="duration">
                         <ion-icon name="time-outline" />
                         <time dateTime>N/A</time>
-                      </div>
-                      <div className="rating">
+												</div>
+												<div className="rating">
                         <ion-icon name="star" />
                         <data>NR</data>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="movie-card">
-                    <a href="./movie-details.html">
-                      <figure className="card-banner">
+												</div>
+												</div>
+												</div>
+												</li>
+												<li>
+												<div className="movie-card">
+												<a href="./movie-details.html">
+												<figure className="card-banner">
                         <img
-                          src="./assets/images/upcoming-4.png"
-                          alt="The Unbearable Weight of Massive Talent movie poster"
+                        src="./assets/images/upcoming-4.png"
+                        alt="The Unbearable Weight of Massive Talent movie poster"
                         />
-                      </figure>
-                    </a>
-                    <div className="title-wrapper">
-                      <a href="./movie-details.html">
+												</figure>
+												</a>
+												<div className="title-wrapper">
+												<a href="./movie-details.html">
                         <h3 className="card-title">
-                          The Unbearable Weight of Massive Talent
+                        The Unbearable Weight of Massive Talent
                         </h3>
-                      </a>
-                      <time dateTime={2022}>2022</time>
-                    </div>
-                    <div className="card-meta">
-                      <div className="badge badge-outline">HD</div>
-                      <div className="duration">
+												</a>
+												<time dateTime={2022}>2022</time>
+												</div>
+												<div className="card-meta">
+												<div className="badge badge-outline">HD</div>
+												<div className="duration">
                         <ion-icon name="time-outline" />
                         <time dateTime="PT107M">107 min</time>
-                      </div>
-                      <div className="rating">
+												</div>
+												<div className="rating">
                         <ion-icon name="star" />
                         <data>NR</data>
-                      </div>
-                    </div>
-                  </div>
+												</div>
+												</div>
+												</div> */}
                 </li>
               </ul>
             </div>
@@ -781,103 +781,6 @@ const Home: NextPage = () => {
       {/* 
     - #FOOTER
   */}
-      <footer className="footer">
-        <div className="footer-top">
-          <div className="container">
-            <div className="footer-brand-wrapper">
-              <a href="./index.html" className="logo">
-                <img src="./assets/images/logo.svg" alt="Filmlane logo" />
-              </a>
-              <ul className="footer-list">
-                <li>
-                  <a href="./index.html" className="footer-link">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="footer-link">
-                    Movie
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="footer-link">
-                    TV Show
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="footer-link">
-                    Web Series
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="footer-link">
-                    Pricing
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="divider" />
-            <div className="quicklink-wrapper">
-              <ul className="quicklink-list">
-                <li>
-                  <a href="#" className="quicklink-link">
-                    Faq
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="quicklink-link">
-                    Help center
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="quicklink-link">
-                    Terms of use
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="quicklink-link">
-                    Privacy
-                  </a>
-                </li>
-              </ul>
-              <ul className="social-list">
-                <li>
-                  <a href="#" className="social-link">
-                    <ion-icon name="logo-facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="social-link">
-                    <ion-icon name="logo-twitter" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="social-link">
-                    <ion-icon name="logo-pinterest" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="social-link">
-                    <ion-icon name="logo-linkedin" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <div className="container">
-            <p className="copyright">
-              © 2022 <a href="#">codewithsadee</a>. All Rights Reserved
-            </p>
-            <img
-              src="./assets/images/footer-bottom-img.png"
-              alt="Online banking companies logo"
-              className="footer-bottom-img"
-            />
-          </div>
-        </div>
-      </footer>
       {/* 
     - #GO TO TOP
   */}

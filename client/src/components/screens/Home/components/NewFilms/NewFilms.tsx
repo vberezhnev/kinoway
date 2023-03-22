@@ -11,7 +11,7 @@ import styles from "./NewFilms.module.scss";
 
 export const NewFilms = () => {
   const { push } = useRouter();
-  const { filmsLimit } = useTypedSelector((state) => state.loadReducer);
+  const { filmsLimit } = useTypedSelector(state => state.loadReducer);
   const { data, isFetching } = useGetNewFilmsQuery(filmsLimit);
   const { loadMoreFilms } = useActions();
   const condition = data?.docs?.length === data?.total;
@@ -22,11 +22,7 @@ export const NewFilms = () => {
         <MovieTop header="New Films" buttonText="View more" />
         <ul className={styles.listFilmsContainer}>
           {data?.docs?.map((data: any) => {
-            return (
-              <ul key={data.id}>
-                <FilmCard key={data.id} item={data} />
-              </ul>
-            );
+            return <FilmCard key={data.id} item={data} />;
           })}
         </ul>
       </div>

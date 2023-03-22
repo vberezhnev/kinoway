@@ -1,11 +1,11 @@
 @import "../../styles/variables.module.scss";
 
-.movie-card {
+.movieCard {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  .card-banner {
+  .cardBanner {
     position: relative;
     background: var(--gunmetal-1);
     aspect-ratio: 2 / 3;
@@ -26,12 +26,12 @@
       }
     }
     img {
-      width: 100%;
-      height: 100%;
+      width: 300px;
+      height: 450px;
       object-fit: cover;
     }
   }
-  .title-wrapper {
+  .titleWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,7 +43,7 @@
       font-weight: var(--fw-500);
     }
   }
-  .card-title {
+  .cardTitle {
     color: var(--color_1);
     font-size: var(--fs-7);
     transition: var(--transition-1);
@@ -51,7 +51,7 @@
       color: var(--color_2);
     }
   }
-  .card-meta {
+  .cardMeta {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -73,5 +73,19 @@
     font-size: 13px;
     --ionicon-stroke-width: 50px;
     color: var(--color_2);
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: $color_4;
+  font-size: var(--fs-11);
+  font-weight: var(--fw-500);
+  ion-icon {
+    font-size: 13px;
+    --ionicon-stroke-width: 50px;
+    color: $color_2;
   }
 }
