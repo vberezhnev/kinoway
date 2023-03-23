@@ -161,7 +161,6 @@ export const Header = (props: any) => {
         justify="space-between"
         wrap="wrap"
         w="100%"
-        mb={5}
         p={5}
         pr={{ sm: "0px", md: "20px", lg: "100px", xl: "420px" }}
         pl={{ sm: "0px", md: "20px", lg: "100px", xl: "420px" }}

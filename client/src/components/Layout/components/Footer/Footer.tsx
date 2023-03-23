@@ -72,22 +72,22 @@ export const Footer = () => {
               <ul className="social-list">
                 <li>
                   <a href="#" className="social-link">
-                    <ion-icon name="logo-facebook" />
+                    {/* <ion-icon name="logo-facebook" /> */}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="social-link">
-                    <ion-icon name="logo-twitter" />
+                    {/* <ion-icon name="logo-twitter" /> */}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="social-link">
-                    <ion-icon name="logo-pinterest" />
+                    {/* <ion-icon name="logo-pinterest" /> */}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="social-link">
-                    <ion-icon name="logo-linkedin" />
+                    {/* <ion-icon name="logo-linkedin" /> */}
                   </a>
                 </li>
               </ul>

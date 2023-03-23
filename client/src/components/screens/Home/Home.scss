@@ -440,33 +440,6 @@ body.active {
   opacity: 1;
   pointer-events: all;
 }
-.hero {
-  background: url("./images/hero-bg.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 750px;
-  height: 100vh;
-  max-height: 1000px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-block: var(--section-padding);
-}
-.hero-content {
-  margin-top: 60px;
-}
-.hero-subtitle {
-  color: $color_2;
-  font-size: var(--fs-4);
-  font-weight: var(--fw-700);
-  margin-bottom: 10px;
-}
-.hero-title {
-  margin-bottom: 30px;
-  > strong {
-    color: $color_2;
-  }
-}
 .upcoming {
   background: url("./images/upcoming-bg.png") no-repeat;
   background-size: cover;
@@ -965,7 +938,7 @@ body.active {
     min-height: unset;
   }
   .hero-content {
-    margin-top: 20px;
+    // margin-top: 20px;
   }
   .upcoming {
     .movies-list {
