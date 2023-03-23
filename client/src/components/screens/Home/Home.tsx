@@ -79,7 +79,15 @@ const Home: NextPage = () => {
         - #TV SERIES
       */}
           <section className="tv-series">
-            <NewSeries />
+            <div className="container">
+              <p className="section-subtitle">Best TV Series</p>
+              <h2 className="h2 section-title">World Best TV Series</h2>
+              <ul className="movies-list has-scrollbar">
+                <li>
+                  <NewSeries />
+                </li>
+              </ul>
+            </div>
           </section>
           {/* 
         - #CTA

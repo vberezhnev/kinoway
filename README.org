@@ -49,7 +49,7 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 ** ToDo List
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 
-*** Client (TS) [8/21]
+*** Client (TS) [9/23]
 1) [-] Add "Too many requests" API from Kinopoisk error
 2) [X] Add loader for all pages
 3) [ ] Add reviews section form movies
@@ -69,8 +69,10 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 17) [X] Add "Watch later" button (component)
 18) [X] Fix footer on film search page
 19) [ ] Optimize film page opening
-20) [ ] Redesign main page
-21) [-] Replace localstorage in theme state with redux
+20) [X] Redesign main page
+21) [ ] Redesign film page
+22) [ ] Change logic of ~Hero.tsx~ compoennt. Like ~Header movieData={pathToData}~.
+23) [-] Replace localstorage in theme state with redux
 
 **** ChakraUI
 1) [X] Update buttons 
