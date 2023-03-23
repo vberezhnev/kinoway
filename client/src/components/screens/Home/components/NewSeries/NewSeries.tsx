@@ -24,11 +24,7 @@ export const NewSeries = () => {
         <MovieTop header="New series" buttonText="View more" />
         <ul className={styles.listSeriesContainer}>
           {data?.docs?.map((data: any) => {
-            return (
-              <ul key={data.id}>
-                <FilmCard item={data} />
-              </ul>
-            );
+            return <FilmCard key={data.id} item={data} />;
           })}
         </ul>
       </div>
