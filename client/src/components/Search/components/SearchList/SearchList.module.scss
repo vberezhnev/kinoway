@@ -30,7 +30,7 @@
 
 .btns {
   display: flex;
-  background-color: $color-light-dark;
+  background-color: var(--color-light-dark);
   overflow: hidden;
   width: calc(100% - 1px);
   height: 40px;
@@ -40,7 +40,7 @@
 .btn {
   width: 100%;
   min-height: inherit;
-  background-color: $color-light-dark;
+  background-color: var(--color-light-dark);
   //border-radius: 3;
 
   &:hover {
@@ -50,10 +50,10 @@
 
 .active {
   pointer-events: none;
-  background-color: $color-black;
+  background-color: var(--color-black);
 
   @media (max-width: 768px) {
-    background-color: $color-dark;
+    background-color: var(--color-dark);
   }
 }
 
@@ -111,20 +111,20 @@
   padding: $offset;
   text-align: left;
   display: block;
-  background-color: $color-dark;
+  background-color: var(--color-dark);
   font-size: 13px;
   line-height: 16px;
   transition: background-color 0.3s;
 
   @media (max-width: 768px) {
-    background-color: $color-dark;
+    background-color: var(--color-dark);
 
     &:hover {
-      background-color: $color-light-dark;
+      background-color: var(--color-light-dark);
     }
   }
 
   &:hover {
-    background-color: $color-black;
+    background-color: var(--color-black);
   }
 }

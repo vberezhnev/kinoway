@@ -71,8 +71,8 @@ a {
 }
 
 ::selection {
-  color: $color-white;
-  background-color: $color-primary;
+  color: var(--color-white);
+  background-color: var(--primary-color);
 }
 
 #nprogress {
@@ -90,7 +90,7 @@ a {
 
   div.bar {
     height: inherit;
-    background-color: $color-primary;
+    background-color: var(--primary-color);
 
     .peg {
       display: none;

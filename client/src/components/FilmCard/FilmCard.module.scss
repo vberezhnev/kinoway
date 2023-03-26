@@ -80,12 +80,12 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  color: $color_4;
+  color: var(--color_4);
   font-size: var(--fs-11);
   font-weight: var(--fw-500);
   ion-icon {
     font-size: 13px;
     --ionicon-stroke-width: 50px;
-    color: $color_2;
+    color: var(--color_2);
   }
 }

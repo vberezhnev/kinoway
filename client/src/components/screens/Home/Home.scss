@@ -1,40 +1,3 @@
-@import "../../../styles/variables.module.scss";
-
-:root {
-  --rich-black-fogra-29: hsl(225, 25%, 9%);
-  --rich-black-fogra-39: hsl(170, 21%, 5%);
-  --raisin-black: hsl(228, 13%, 15%);
-  --eerie-black: hsl(207, 19%, 11%);
-  --light-gray: hsl(0, 3%, 80%);
-  --gunmetal-1: hsl(229, 15%, 21%);
-  --gunmetal-2: hsl(216, 22%, 18%);
-  --gainsboro: hsl(0, 7%, 88%);
-  --citrine: hsl(57, 97%, 45%);
-  --xiketic: hsl(253, 21%, 13%);
-  --gray-x: hsl(0, 0%, 74%);
-  --white: hsl(0, 100%, 100%);
-  --black: hsl(0, 0%, 0%);
-  --jet: hsl(0, 0%, 20%);
-  --ff-poppins: "Poppins", sans-serif;
-  --fs-1: 36px;
-  --fs-2: 32px;
-  --fs-3: 30px;
-  --fs-4: 24px;
-  --fs-5: 20px;
-  --fs-6: 18px;
-  --fs-7: 16px;
-  --fs-8: 15px;
-  --fs-9: 14px;
-  --fs-10: 13px;
-  --fs-11: 12px;
-  --fs-12: 11px;
-  --fw-500: 500;
-  --fw-700: 700;
-  --transition-1: 0.15s ease;
-  --transition-2: 0.25s ease-in;
-  --section-padding: 100px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -86,7 +49,7 @@ select {
   cursor: pointer;
 }
 html {
-  font-family: $font-family_1;
+  font-family: var(--font-family_1);
   scroll-behavior: smooth;
 }
 body {
@@ -99,22 +62,22 @@ body.active {
   padding-inline: 15px;
 }
 .h1 {
-  color: $color_1;
+  color: var(--color_1);
   line-height: 1.2;
   font-size: var(--fs-1);
 }
 .h2 {
-  color: $color_1;
+  color: var(--color_1);
   line-height: 1.2;
   font-size: var(--fs-2);
 }
 .h3 {
-  color: $color_1;
+  color: var(--color_1);
   line-height: 1.2;
   font-size: var(--fs-6);
 }
 .section-subtitle {
-  color: $color_2;
+  color: var(--color_2);
   font-size: var(--fs-11);
   font-weight: var(--fw-500);
   text-transform: uppercase;
@@ -126,7 +89,7 @@ body.active {
   text-align: center;
 }
 .badge {
-  color: $color_1;
+  color: var(--color_1);
   font-size: var(--fs-12);
   font-weight: var(--fw-700);
   border: 2px solid transparent;
@@ -134,10 +97,10 @@ body.active {
 }
 .badge-fill {
   background: var(--white);
-  color: $color_3;
+  color: var(--color_3);
 }
 .badge-outline {
-  border-color: $border-color_1;
+  border-color: var(--border-color_1);
 }
 .meta-wrapper {
   display: flex;
@@ -159,12 +122,12 @@ body.active {
   align-items: center;
   gap: 5px 10px;
   a {
-    color: $color_4;
+    color: var(--color_4);
     font-size: var(--fs-9);
     font-weight: var(--fw-500);
     transition: var(--transition-1);
     &:is(:hover) {
-      color: $color_2;
+      color: var(--color_2);
     }
   }
 }
@@ -178,13 +141,13 @@ body.active {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: $color_4;
+    color: var(--color_4);
     font-size: var(--fs-9);
     font-weight: var(--fw-500);
   }
   ion-icon {
     --ionicon-stroke-width: 50px;
-    color: $color_2;
+    color: var(--color_2);
   }
 }
 // &:focus {
@@ -203,7 +166,7 @@ body.active {
 //   }
 // }
 .btn {
-  color: $color_1;
+  color: var(--color_1);
   font-size: var(--fs-11);
   font-weight: var(--fw-700);
   text-transform: uppercase;
@@ -223,7 +186,7 @@ body.active {
   background: var(--rich-black-fogra-29);
   &:is(:hover) {
     background: var(--citrine);
-    color: $color_5;
+    color: var(--color_5);
   }
 }
 .movies-list {
@@ -274,7 +237,7 @@ body.active {
 //     }
 //   }
 //   .card-title {
-//     color: $color_1;
+//     color: var(--color_1);
 //     font-size: var(--fs-7);
 //     transition: var(--transition-1);
 //     &:is(:hover) {
@@ -363,7 +326,7 @@ body.active {
   display: none;
 }
 .menu-open-btn {
-  color: $color_1;
+  color: var(--color_1);
   font-size: 40px;
 }
 .navbar {
@@ -391,7 +354,7 @@ body.active {
   align-items: center;
 }
 .menu-close-btn {
-  color: $color_1;
+  color: var(--color_1);
   font-size: 25px;
   padding: 5px;
   ion-icon {
@@ -403,14 +366,14 @@ body.active {
   margin-bottom: 30px;
 }
 .navbar-link {
-  color: $color_1;
+  color: var(--color_1);
   font-size: var(--fs-8);
   font-weight: var(--fw-500);
   padding: 10px 25px;
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
   transition: var(--transition-1);
   &:is(:hover) {
-    color: $color_2;
+    color: var(--color_2);
   }
 }
 .navbar-social-list {
@@ -421,10 +384,10 @@ body.active {
 }
 .navbar-social-link {
   font-size: 20px;
-  color: $color_1;
+  color: var(--color_1);
   transition: var(--transition-1);
   &:is(:hover) {
-    color: $color_2;
+    color: var(--color_2);
   }
 }
 .overlay {
@@ -452,7 +415,7 @@ body.active {
     margin-bottom: 30px;
   }
   .filter-btn {
-    color: $color_1;
+    color: var(--color_1);
     background: var(--raisin-black);
     font-size: var(--fs-11);
     font-weight: var(--fw-500);
@@ -460,7 +423,7 @@ body.active {
     padding: 12px 26px;
     border-radius: 50px;
     &:focus {
-      border-color: $border-color_2;
+      border-color: var(--border-color_2);
     }
   }
   .movies-list {
@@ -496,7 +459,7 @@ body.active {
   bottom: 0;
   right: 86px;
   background: var(--citrine);
-  color: $color_6;
+  color: var(--color_6);
   font-size: var(--fs-11);
   text-transform: uppercase;
   font-weight: var(--fw-500);
@@ -515,7 +478,7 @@ body.active {
 }
 .service-subtitle {
   position: relative;
-  color: $color_4;
+  color: var(--color_4);
   font-size: var(--fs-11);
   font-weight: var(--fw-500);
   text-transform: uppercase;
@@ -536,7 +499,7 @@ body.active {
   margin-bottom: 20px;
 }
 .service-text {
-  color: $color_7;
+  color: var(--color_7);
   font-size: var(--fs-9);
   font-weight: var(--fw-500);
   line-height: 1.8;
@@ -544,13 +507,13 @@ body.active {
 }
 .service-card {
   .card-text {
-    color: $color_7;
+    color: var(--color_7);
     font-size: var(--fs-9);
     font-weight: var(--fw-500);
     line-height: 1.8;
   }
   .card-icon {
-    color: $color_1;
+    color: var(--color_1);
     width: 85px;
     height: 85px;
     display: grid;
@@ -596,7 +559,7 @@ body.active {
   .filter-btn {
     position: relative;
     background: var(--rich-black-fogra-39);
-    color: $color_8;
+    color: var(--color_8);
     font-size: var(--fs-10);
     font-weight: var(--fw-700);
     text-transform: uppercase;
@@ -604,7 +567,7 @@ body.active {
     border-radius: 4px;
     box-shadow: inset 0 3px 7px hsla(0, 0%, 0%, 0.8);
     &:focus {
-      color: $color_2;
+      color: var(--color_2);
       text-shadow: 0 3px 25px hsla(57, 97%, 45%, 0.5);
       &::before {
         content: "";
@@ -648,7 +611,7 @@ body.active {
     margin-bottom: 25px;
   }
   .email-field {
-    color: $color_9;
+    color: var(--color_9);
     font-size: var(--fs-9);
     padding: 18px 32px;
     border-radius: 4px;
@@ -657,21 +620,21 @@ body.active {
   }
 }
 .cta-title {
-  color: $color_9;
+  color: var(--color_9);
   font-size: var(--fs-3);
   text-transform: uppercase;
   line-height: 1.2;
   margin-bottom: 5px;
 }
 .cta-text {
-  color: $color_9;
+  color: var(--color_9);
   font-size: var(--fs-9);
   font-weight: var(--fw-500);
   line-height: 1.8;
 }
 .cta-form-btn {
   background: var(--eerie-black);
-  color: $color_2;
+  color: var(--color_2);
   font-size: var(--fs-9);
   font-weight: var(--fw-700);
   text-transform: uppercase;
@@ -683,7 +646,7 @@ body.active {
   transition: var(--transition-1);
   &:is(:hover) {
     background: var(--citrine);
-    color: $color_9;
+    color: var(--color_9);
   }
 }
 .footer-top {
@@ -723,7 +686,7 @@ body.active {
   column-gap: 10px;
 }
 .footer-link {
-  color: $color_8;
+  color: var(--color_8);
   font-size: var(--fs-9);
   font-weight: var(--fw-700);
   text-transform: uppercase;
@@ -755,7 +718,7 @@ body.active {
 }
 .social-link {
   background: var(--rich-black-fogra-29);
-  color: $color_7;
+  color: var(--color_7);
   font-size: 14px;
   width: 35px;
   height: 35px;
@@ -769,7 +732,7 @@ body.active {
   padding-block: 25px;
 }
 .copyright {
-  color: $color_7;
+  color: var(--color_7);
   font-size: var(--fs-10);
   font-weight: var(--fw-500);
   line-height: 1.7;
@@ -777,7 +740,7 @@ body.active {
   margin-bottom: 15px;
   > a {
     display: inline-block;
-    color: $color_2;
+    color: var(--color_2);
   }
 }
 .footer-bottom-img {
@@ -790,7 +753,7 @@ body.active {
   bottom: 20px;
   right: 20px;
   background: var(--citrine);
-  color: $color_9;
+  color: var(--color_9);
   width: 50px;
   height: 50px;
   display: grid;
@@ -836,7 +799,7 @@ body.active {
   display: grid;
   place-items: center;
   font-size: 120px;
-  color: $color_1;
+  color: var(--color_1);
   transition: var(--transition-1);
   &:hover {
     background: hsla(0, 0%, 0%, 0.25);
@@ -844,18 +807,18 @@ body.active {
 }
 .detail-subtitle {
   font-size: var(--fs-5);
-  color: $color_2;
+  color: var(--color_2);
   font-weight: var(--fw-700);
   margin-bottom: 10px;
 }
 .detail-title {
   margin-bottom: 20px;
   strong {
-    color: $color_2;
+    color: var(--color_2);
   }
 }
 .storyline {
-  color: $color_7;
+  color: var(--color_7);
   font-size: var(--fs-9);
   font-weight: var(--fw-500);
   line-height: 1.8;
@@ -875,25 +838,25 @@ body.active {
   .share {
     ion-icon {
       font-size: 25px;
-      color: $color_1;
+      color: var(--color_1);
       margin-inline: auto;
     }
     span {
-      color: $color_4;
+      color: var(--color_4);
       font-size: var(--fs-11);
       transition: var(--transition-1);
     }
     &:is(:hover) {
-      color: $color_2;
+      color: var(--color_2);
     }
   }
   .title {
-    color: $color_1;
+    color: var(--color_1);
     font-weight: var(--fw-700);
   }
   .text {
     font-size: var(--fs-11);
-    color: $color_4;
+    color: var(--color_4);
   }
   .btn-primary {
     font-size: 10px;
@@ -908,7 +871,7 @@ body.active {
 .download-btn {
   max-width: max-content;
   background: var(--citrine);
-  color: $color_6;
+  color: var(--color_6);
   font-size: var(--fs-11);
   font-weight: var(--fw-500);
   text-transform: uppercase;
@@ -995,7 +958,7 @@ body.active {
   }
   .search-btn {
     position: relative;
-    color: $color_1;
+    color: var(--color_1);
     ion-icon {
       --ionicon-stroke-width: 80px;
     }
@@ -1014,16 +977,16 @@ body.active {
     align-items: center;
     gap: 5px;
     label {
-      color: $color_2;
+      color: var(--color_2);
       font-size: 20px;
     }
     select {
-      color: $color_1;
+      color: var(--color_1);
       font-size: var(--fs-9);
       font-weight: var(--fw-700);
     }
     option {
-      color: $color_10;
+      color: var(--color_1);
     }
   }
   .hero-content {

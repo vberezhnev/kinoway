@@ -75,9 +75,7 @@ const Home: NextPage = () => {
               </ul>
             </div>
           </section>
-          {/* 
-        - #TV SERIES
-      */}
+
           <section className="tv-series">
             <div className="container">
               <p className="section-subtitle">Best TV Series</p>
@@ -89,9 +87,7 @@ const Home: NextPage = () => {
               </ul>
             </div>
           </section>
-          {/* 
-        - #CTA
-      */}
+
           <section className="cta">
             <CTA />
           </section>

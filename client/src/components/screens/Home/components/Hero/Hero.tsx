@@ -22,7 +22,7 @@ export const Hero = () => {
         <Flex className="heroContent" marginTop="60px" flexDirection="column">
           <Text
             className="heroSubtitle"
-            color="$color_2"
+            color="kinoway.900"
             fontSize="var(--fs-4)"
             fontWeight="var(--fw-700)"
             marginBottom="10px"

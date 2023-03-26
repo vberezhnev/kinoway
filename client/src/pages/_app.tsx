@@ -89,27 +89,27 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <meta name="apple-mobile-web-app-capable" content="yes" />
         </Head>
         <Layout>
-          <motion.div
-            key={router.route}
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {
+          {/* <motion.div
+								key={router.route}
+								initial="hidden"
+								animate="visible"
+								variants={{
+								hidden: {
                 scale: 0.9,
                 opacity: 0.3,
-              },
-              visible: {
+								},
+								visible: {
                 scale: 1,
                 opacity: 1,
                 transition: {
-                  delay: 0.4,
+                delay: 0.4,
                 },
-              },
-            }}
-          >
-            <Analytics />
-            <Component {...pageProps} />
-          </motion.div>
+								},
+								}}
+								> */}
+          <Analytics />
+          <Component {...pageProps} />
+          {/* </motion.div> */}
         </Layout>
       </Provider>
     </ChakraProvider>

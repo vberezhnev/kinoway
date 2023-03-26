@@ -33,7 +33,7 @@
     padding: 14px;
     border-radius: 4px;
     background-color: #333;
-    color: $color-white;
+    color: var(--color-white);
     border: none;
 
     @media (max-width: 512px) {
@@ -56,7 +56,7 @@
   right: 10px;
   float: right;
   transform: translateY(-50%);
-  // color: $color-white;
+  // color: var(--color-white);
 
   @media (max-width: 768px) {
     // display: none;
@@ -79,7 +79,7 @@
   width: 24px;
   height: 24px;
   transform: translateY(-50%);
-  color: $color-white;
+  color: var(--color-white);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
@@ -118,6 +118,6 @@
   svg {
     width: 16px;
     height: 16px;
-    stroke: $color-white;
+    stroke: var(--color-white);
   }
 }
