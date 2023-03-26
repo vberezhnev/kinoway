@@ -13,7 +13,7 @@
   display: block;
   font-size: 15px;
   line-height: 18px;
-  color: $color-gray;
+  color: var(--color-gray);
   flex: 0 0 170px;
 
   @media (max-width: 576px) {

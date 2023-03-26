@@ -1,8 +1,46 @@
-import styles from "./Hero.module.scss";
-import { Box, Flex, Text, Heading, Link, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Button } from "@chakra-ui/react";
+import Link from "next/link";
+
+import { useGetFilmByIdQuery } from "@/services/KinowayService";
+import { useTypedSelector } from "@/hooks/useTypedSelector";
+import { useActions } from "@/hooks/useActions";
+
 import image from "../../images/hero-bg.jpg";
+import styles from "./Hero.module.scss";
 
 export const Hero = () => {
+  const filmId = "839458";
+
+  const { data, isFetching } = useGetFilmByIdQuery(filmId);
+  const {
+    alternativeName,
+    id,
+    name,
+    type,
+    shortDescription,
+    poster,
+    year,
+    rating,
+    similarMovies,
+    ageRating,
+    fees,
+    genres,
+    slogan,
+    budget,
+    movieLength,
+    countries,
+    premiere,
+    description,
+    facts,
+    persons,
+    tabs,
+    top10,
+    top250,
+    color,
+  }: any = { ...data };
+
+  console.log(data);
+
   return (
     <Box
       backgroundImage={`${image}`}
@@ -21,7 +59,6 @@ export const Hero = () => {
       <Flex className="container" paddingInline="15px">
         <Flex className="heroContent" marginTop="60px" flexDirection="column">
           <Text
-            className="heroSubtitle"
             color="kinoway.900"
             fontSize="var(--fs-4)"
             fontWeight="var(--fw-700)"
@@ -29,11 +66,14 @@ export const Hero = () => {
           >
             Kinoway
           </Text>
-          <Heading fontSize="60px" className="heroTitle" marginBottom="30px">
+          <Heading
+            fontSize="60px"
+            className={styles.heroTitle}
+            marginBottom="30px"
+          >
             Unlimited <strong>Movie</strong>,<br /> TVs Shows, &amp; More.
           </Heading>
           <Flex
-            className="metaWrapper"
             display="flex"
             flexWrap="wrap"
             justifyContent="flex-start"
@@ -42,7 +82,6 @@ export const Hero = () => {
             marginBottom="50px"
           >
             <Flex
-              className="badgeWrapper"
               display="flex"
               flexWrap="wrap"
               alignItems="center"
@@ -52,7 +91,6 @@ export const Hero = () => {
               <Box className={`${styles.badge} ${styles.badgeOutline}`}>HD</Box>
             </Flex>
             <Flex
-              className="ganreWrapper"
               display="flex"
               flexWrap="wrap"
               alignItems="center"
@@ -79,13 +117,7 @@ export const Hero = () => {
                 Drama
               </Link>
             </Flex>
-            <Flex
-              className="dateTime"
-              display="flex"
-              flexWrap="wrap"
-              alignItems="center"
-              gap="15px"
-            >
+            <Flex display="flex" flexWrap="wrap" alignItems="center" gap="15px">
               <Flex
                 display="flex"
                 alignItems="center"
@@ -108,9 +140,25 @@ export const Hero = () => {
               </Flex>
             </Flex>
           </Flex>
-          <Button className={`${styles.btn} ${styles.btnPrimary}`}>
-            <span>Watch now</span>
-          </Button>
+          <Box>
+            <Link href={`/film/${id}`}>
+              <Button
+                color="var(--color_1)"
+                fontSize="var(--fs-11)"
+                fontWeight="var(--fw-700)"
+                textTransform="uppercase"
+                letterSpacing="2px"
+                p="16px 30px"
+                gap="10px"
+                alignItems="center"
+                borderRadius="50px"
+                border="2px solid var(--citrine)"
+                transition="var(--transition-1)"
+              >
+                Watch now
+              </Button>
+            </Link>
+          </Box>
         </Flex>
       </Flex>
     </Box>

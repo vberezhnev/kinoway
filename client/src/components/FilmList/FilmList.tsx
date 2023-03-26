@@ -25,8 +25,6 @@ const FilmList: FC<FilmItemProps> = ({ item }) => {
     ...item,
   };
 
-  console.log(poster);
-
   return (
     <div className={styles.styles_root}>
       <div>

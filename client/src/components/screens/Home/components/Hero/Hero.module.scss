@@ -93,3 +93,28 @@
     color: var(--color_2);
   }
 }
+
+.btn {
+  color: var(--color_1);
+  font-size: var(--fs-11);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border: 2px solid var(--citrine);
+  border-radius: 50px;
+  transition: var(--transition-1);
+  > ion-icon {
+    font-size: 18px;
+  }
+}
+.btnPrimary {
+  background: var(--rich-black-fogra-29);
+  &:is(:hover) {
+    background: var(--citrine);
+    color: var(--color_5);
+  }
+}

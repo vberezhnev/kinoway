@@ -37,8 +37,6 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
     ...item,
   };
 
-  console.log(item);
-
   return (
     <div className={styles.movieCard}>
       <Link href={`/film/${id}`}>
@@ -62,27 +60,4 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
       </div>
     </div>
   );
-
-  /* return (
-   *   <Link href={`/film/${id}`}>
-   *     <Card maxW="sm" w={260} minHeight={480}>
-   *       <CardBody>
-   *         <Box position="relative">
-   *           <Box position="absolute" left="10px" top="10px">
-   *             <MovieRating rating={rating} />
-   *           </Box>
-   *         </Box>
-   *         <Image src={poster?.previewUrl} borderRadius="md" w={222} h={333} />
-   *         <Stack mt="3" spacing="3"></Stack>
-   *         <Flex>
-   *           <Box>
-   *             <Heading size="md">{name}</Heading>
-   *             <Text color="gray.500">{alternativeName}</Text>
-   *           </Box>
-   *           <Spacer />
-   *         </Flex>
-   *       </CardBody>
-   *     </Card>
-   *   </Link>
-   * ); */
 };

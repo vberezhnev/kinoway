@@ -82,7 +82,7 @@
 
 .selected {
   font-weight: 400;
-  color: $color-primary;
+  color: var(--primary-color);
 
   &:after {
     opacity: 1;
