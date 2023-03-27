@@ -4,9 +4,6 @@ import { useGetFilmByIdQuery } from "@/services/KinowayService";
 import Link from "next/link";
 import Head from "next/head";
 
-import { SiKinopoisk } from "react-icons/si";
-import { FaImdb } from "react-icons/fa";
-
 import { BackButton } from "@/components/UI-components/BackButton/BackButton";
 import { ButtonPlayMovie } from "@/components/UI-components/ButtonPlayMovie/ButtonPlayMovie";
 
@@ -21,6 +18,9 @@ import {
 } from "./components";
 
 import "react-tabs/style/react-tabs.css";
+import { SiKinopoisk } from "react-icons/si";
+import { FaImdb } from "react-icons/fa";
+import { IoPlay } from "react-icons/io5";
 import { classNames } from "@/helpers/classNames";
 
 import { Badge, Box, Flex, Heading, Image } from "@chakra-ui/react";
@@ -141,183 +141,266 @@ export const Film = () => {
       condition: premiere?.world,
     },
   ];
+  /*
+   *   return (
+   *     <>
+   *       <Head>
+   *         <title>{movieTitle}</title>
+   *       </Head>
+   *       <section className={styles.section}>
+   *         <Box className={classNames("container wrapper", styles.container)}>
+   *           <Box
+   *             alignItems="center"
+   *             justifyContent="space-between"
+   *             mb={["30px", "25px"]}
+   *           >
+   *             <Flex>
+   *               <BackButton />
+   *             </Flex>
+   *           </Box>
+   *           <Box mt="2vh" mb={["50px", "30px"]}>
+   *             <Flex direction={["column", "column", "row"]}>
+   *               <Box
+   *                 position="relative"
+   *                 mr={[0, 0, "40px"]}
+   *                 mb={["20px", "20px", 0]}
+   *                 width="fit-content"
+   *                 flexShrink="0"
+   *               >
+   *                 <Image
+   *                   position="relative"
+   *                   w={["100%", "100%", "250px"]}
+   *                   height="auto"
+   *                   style={{ aspectRatio: "2 / 3" }}
+   *                   borderRadius="10px"
+   *                   overflow="hidden"
+   *                   objectFit="cover"
+   *                   src={data?.poster?.url}
+   *                   alt={shortDescription}
+   *                 />
+   *                 <MovieRating rating={rating} />
+   *               </Box>
+   *               <Box w="full">
+   *                 <Heading
+   *                   fontSize={{ base: "40px", md: "26px" }}
+   *                   fontWeight="800"
+   *                   lineHeight={["48px", "33px"]}
+   *                   maxW="650px"
+   *                   mb={["8px", "15px"]}
+   *                 >
+   *                   {movieTitle} {movieYear}
+   *                 </Heading>
+   *                 <Heading
+   *                   fontWeight="200"
+   *                   fontSize="18px"
+   *                   verticalAlign="middle"
+   *                   letterSpacing="-0.2px"
+   *                   lineHeight={["48px", "33px"]}
+   *                   mb="8px"
+   *                 >
+   *                   {alternativeName}
+   *                 </Heading>
+   *
+   *                 {top250 ? (
+   *                   <Badge
+   *                     colorScheme={top250 ? "green" : "red"}
+   *                     fontSize="1em"
+   *                     variant="solid"
+   *                   >
+   *                     Top 250: {top250}
+   *                   </Badge>
+   *                 ) : (
+   *                   <div></div>
+   *                 )}
+   *
+   *                 <Box
+   *                   alignItems="center"
+   *                   mt="15px"
+   *                   pt="10px"
+   *                   pr="10px"
+   *                   pb="10px"
+   *                   pl="0px"
+   *                   mb={["", "25px"]}
+   *                 >
+   *                   <Flex wrap="wrap">
+   *                     <ButtonPlayMovie>
+   *                       <Box>
+   *                         <a target="_blank">
+   *                           <Link
+   *                             href={`https://kinopoisk-watch.org/player/?id=${id}`}
+   *                           >
+   *                             <b>Смотреть (Плеер 1)</b>
+   *                           </Link>
+   *                         </a>
+   *                       </Box>
+   *                     </ButtonPlayMovie>
+   *
+   *                     <ButtonPlayMovie>
+   *                       <Box>
+   *                         <Link href={`https://flicksbar.cc/film/${id}/`}>
+   *                           <a target="_blank">
+   *                             <b>Смотреть (Плеер 2)</b>
+   *                           </a>
+   *                         </Link>
+   *                       </Box>
+   *                     </ButtonPlayMovie>
+   *
+   *                     <ButtonPlayMovie>
+   *                       <Box>
+   *                         <a target="_blank">
+   *                           <Link href={`https://vavada-7.com/#${id}`}>
+   *                             <b>Смотреть (Плеер 3)</b>
+   *                           </Link>
+   *                         </a>
+   *                       </Box>{" "}
+   *                     </ButtonPlayMovie>
+   *
+   *                     <ButtonPlayMovie>
+   *                       <Box>
+   *                         <a target="_blank">
+   *                           <Link href={`https://ww5.frkp.lol/film/${id}/`}>
+   *                             <b>Смотреть (Плеер 4)</b>
+   *                           </Link>
+   *                         </a>
+   *                       </Box>
+   *                     </ButtonPlayMovie>
+   *
+   *                     <MovieFavorite
+   *                       className={styles.btn}
+   *                       id={data?.id}
+   *                       disabled={false}
+   *                     />
+   *
+   *                     <MovieWatchLater
+   *                       className={styles.btn}
+   *                       id={data?.id}
+   *                       disabled={false}
+   *                     />
+   *
+   *                     <ButtonPlayMovie
+   *                       color="black"
+   *                       onClick={() => {
+   *                         router.push(`https://www.kinopoisk.ru/film/${id}`);
+   *                       }}
+   *                     >
+   *                       <SiKinopoisk />{" "}
+   *                     </ButtonPlayMovie>
+   *
+   *                     <ButtonPlayMovie
+   *                       color="black"
+   *                       onClick={() => {
+   *                         router.push(`https://www.imdb.com/title/${imdbId}`);
+   *                       }}
+   *                     >
+   *                       <FaImdb />{" "}
+   *                     </ButtonPlayMovie>
+   *                   </Flex>
+   *                 </Box>
+   *                 <Heading
+   *                   fontWeight="800"
+   *                   fontSize={["24px", "20px"]}
+   *                   lineHeight="30px"
+   *                 >
+   *                   О фильме
+   *                 </Heading>
+   *                 <Info items={items} />
+   *               </Box>
+   *             </Flex>
+   *           </Box>
+   *           <Box pb={["50px", "100px"]}>
+   *             <FilmTabs data={data} />
+   *           </Box>
+   *           {similarMovies?.length ? (
+   *             <Box pb={["50px", "100px"]}>
+   *               <SimilarMovies movies={similarMovies} />
+   *             </Box>
+   *           ) : null}{" "}
+   *           <Reviews />
+   *         </Box>
+   *       </section>
+   *     </>
+   *   );
+   *  */
 
   return (
-    <>
-      <Head>
-        <title>{movieTitle}</title>
-      </Head>
-      <section className={styles.section}>
-        <Box className={classNames("container wrapper", styles.container)}>
-          <Box
-            alignItems="center"
-            justifyContent="space-between"
-            mb={["30px", "25px"]}
-          >
-            <Flex>
-              <BackButton />
-            </Flex>
-          </Box>
-          <Box mt="2vh" mb={["50px", "30px"]}>
-            <Flex direction={["column", "column", "row"]}>
-              <Box
-                position="relative"
-                mr={[0, 0, "40px"]}
-                mb={["20px", "20px", 0]}
-                width="fit-content"
-                flexShrink="0"
+    <main>
+      <article>
+        <section className={styles.movieDetail}>
+          <div className={styles.container}>
+            <figure className={styles.movieDetailBanner}>
+              <img src={data?.poster?.url} alt="Free guy movie poster" />
+              <button className={styles.playBtn}>
+                <IoPlay />{" "}
+              </button>
+            </figure>
+            <div className={styles.movieDetailContent}>
+              <p className={styles.detailSubtitle}>New Episodes</p>
+              <h1 className={`${styles.h1} ${styles.detailTitle}`}>{name}</h1>
+              <div className={styles.metaWrapper}>
+                <div className={styles.badgeWrapper}>
+                  <div className={styles.genreWrapper}>
+                    <Info items={items} />
+                  </div>
+                  <div className={`${styles.badge} ${styles.badgeFill}`}>
+                    PG 13
+                  </div>
+                  <div className={`${styles.badge} ${styles.badgeOutline}`}>
+                    HD
+                  </div>
+                </div>
+                <div className={styles.dateTime}>
+                  <div>
+                    {/* <ion-icon name="calendar-outline"></ion-icon> */}
+                    <time dateTime="2021">2021</time>
+                  </div>
+                  <div>
+                    {/* <ion-icon name="time-outline"></ion-icon> */}
+                    <time dateTime="PT115M">115 min</time>
+                  </div>
+                </div>
+              </div>
+              <p className={styles.storyline}>{description}</p>
+              <div className={styles.detailsActions}>
+                <button className={styles.share}>
+                  {/* <ion-icon name="share-social"></ion-icon> */}
+                  <span>Share</span>
+                </button>
+                <div className={styles.titleWrapper}>
+                  <p className={styles.title}>Prime Video</p>
+                  <p className={styles.text}>Streaming Channels</p>
+                </div>
+                <button className={`${styles.btn} ${styles.btnPrimary}`}>
+                  {/* <ion-icon name="play"></ion-icon> */}
+                  <span>Watch Now</span>
+                </button>
+              </div>
+              <a
+                href="./assets/images/movie-4.png"
+                download
+                className={styles.downloadBtn}
               >
-                <Image
-                  position="relative"
-                  w={["100%", "100%", "250px"]}
-                  height="auto"
-                  style={{ aspectRatio: "2 / 3" }}
-                  borderRadius="10px"
-                  overflow="hidden"
-                  objectFit="cover"
-                  src={data?.poster?.url}
-                  alt={shortDescription}
-                />
-                <MovieRating rating={rating} />
-              </Box>
-              <Box w="full">
-                <Heading
-                  fontSize={{ base: "40px", md: "26px" }}
-                  fontWeight="800"
-                  lineHeight={["48px", "33px"]}
-                  maxW="650px"
-                  mb={["8px", "15px"]}
-                >
-                  {movieTitle} {movieYear}
-                </Heading>
-                <Heading
-                  fontWeight="200"
-                  fontSize="18px"
-                  verticalAlign="middle"
-                  letterSpacing="-0.2px"
-                  lineHeight={["48px", "33px"]}
-                  mb="8px"
-                >
-                  {alternativeName}
-                </Heading>
-
-                {top250 ? (
-                  <Badge
-                    colorScheme={top250 ? "green" : "red"}
-                    fontSize="1em"
-                    variant="solid"
-                  >
-                    Top 250: {top250}
-                  </Badge>
-                ) : (
-                  <div></div>
-                )}
-
-                <Box
-                  alignItems="center"
-                  mt="15px"
-                  pt="10px"
-                  pr="10px"
-                  pb="10px"
-                  pl="0px"
-                  mb={["", "25px"]}
-                >
-                  <Flex wrap="wrap">
-                    <ButtonPlayMovie>
-                      <Box>
-                        <a target="_blank">
-                          <Link
-                            href={`https://kinopoisk-watch.org/player/?id=${id}`}
-                          >
-                            <b>Смотреть (Плеер 1)</b>
-                          </Link>
-                        </a>
-                      </Box>
-                    </ButtonPlayMovie>
-
-                    <ButtonPlayMovie>
-                      <Box>
-                        <Link href={`https://flicksbar.cc/film/${id}/`}>
-                          <a target="_blank">
-                            <b>Смотреть (Плеер 2)</b>
-                          </a>
-                        </Link>
-                      </Box>
-                    </ButtonPlayMovie>
-
-                    <ButtonPlayMovie>
-                      <Box>
-                        <a target="_blank">
-                          <Link href={`https://vavada-7.com/#${id}`}>
-                            <b>Смотреть (Плеер 3)</b>
-                          </Link>
-                        </a>
-                      </Box>{" "}
-                    </ButtonPlayMovie>
-
-                    <ButtonPlayMovie>
-                      <Box>
-                        <a target="_blank">
-                          <Link href={`https://ww5.frkp.lol/film/${id}/`}>
-                            <b>Смотреть (Плеер 4)</b>
-                          </Link>
-                        </a>
-                      </Box>
-                    </ButtonPlayMovie>
-
-                    <MovieFavorite
-                      className={styles.btn}
-                      id={data?.id}
-                      disabled={false}
-                    />
-
-                    <MovieWatchLater
-                      className={styles.btn}
-                      id={data?.id}
-                      disabled={false}
-                    />
-
-                    <ButtonPlayMovie
-                      color="black"
-                      onClick={() => {
-                        router.push(`https://www.kinopoisk.ru/film/${id}`);
-                      }}
-                    >
-                      <SiKinopoisk />{" "}
-                    </ButtonPlayMovie>
-
-                    <ButtonPlayMovie
-                      color="black"
-                      onClick={() => {
-                        router.push(`https://www.imdb.com/title/${imdbId}`);
-                      }}
-                    >
-                      <FaImdb />{" "}
-                    </ButtonPlayMovie>
-                  </Flex>
-                </Box>
-                <Heading
-                  fontWeight="800"
-                  fontSize={["24px", "20px"]}
-                  lineHeight="30px"
-                >
-                  О фильме
-                </Heading>
-                <Info items={items} />
-              </Box>
-            </Flex>
-          </Box>
-          <Box pb={["50px", "100px"]}>
-            <FilmTabs data={data} />
-          </Box>
-          {similarMovies?.length ? (
-            <Box pb={["50px", "100px"]}>
-              <SimilarMovies movies={similarMovies} />
-            </Box>
-          ) : null}{" "}
-          <Reviews />
-        </Box>
-      </section>
-    </>
+                <span>Download</span>
+                {/* <ion-icon name="download-outline"></ion-icon> */}
+              </a>
+            </div>
+          </div>
+        </section>
+        <section className={styles.tvSeries}>
+          <div className={styles.container}>
+            <p className={styles.sectionSubtitle}>Best TV Series</p>
+            <h2 className={`${styles.h2} ${styles.sectionTitle}`}>
+              World Best TV Series
+            </h2>
+            <ul className={styles.moviesList}>
+              {similarMovies?.length ? (
+                <li>
+                  <SimilarMovies movies={similarMovies} />
+                </li>
+              ) : null}{" "}
+            </ul>
+          </div>
+        </section>
+      </article>
+    </main>
   );
 };

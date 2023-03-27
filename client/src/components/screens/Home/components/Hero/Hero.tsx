@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Heading, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 
 import { useGetFilmByIdQuery } from "@/services/KinowayService";
@@ -8,9 +8,10 @@ import { useActions } from "@/hooks/useActions";
 import image from "../../images/hero-bg.jpg";
 import styles from "./Hero.module.scss";
 
-export const Hero = () => {
-  const filmId = "839458";
+import BsFillPlayFill from "react-icons/bs";
+import { ButtonPlayMovie } from "@/UI/ButtonPlayMovie/ButtonPlayMovie";
 
+export const Hero = (filmId: any) => {
   const { data, isFetching } = useGetFilmByIdQuery(filmId);
   const {
     alternativeName,
@@ -49,6 +50,7 @@ export const Hero = () => {
       backgroundPosition="center"
       minHeight="750px"
       height="100vh"
+      mt="-50px"
       maxHeight="1000px"
       display="flex"
       justifyContent="flex-start"
@@ -59,7 +61,7 @@ export const Hero = () => {
       <Flex className="container" paddingInline="15px">
         <Flex className="heroContent" marginTop="60px" flexDirection="column">
           <Text
-            color="kinoway.900"
+            color="var(--secondary-color)"
             fontSize="var(--fs-4)"
             fontWeight="var(--fw-700)"
             marginBottom="10px"
@@ -99,7 +101,6 @@ export const Hero = () => {
               <Link
                 href="#"
                 color="$color_4"
-                fontSize="var(--fs-9)"
                 fontWeight="var(--fw-500)"
                 transition="var(--transition-1)"
                 _hover={{ color: "$color_2" }}
@@ -109,7 +110,6 @@ export const Hero = () => {
               <Link
                 href="#"
                 color="$color_4"
-                fontSize="var(--fs-9)"
                 fontWeight="var(--fw-500)"
                 transition="var(--transition-1)"
                 _hover={{ color: "$color_2" }}
@@ -136,27 +136,16 @@ export const Hero = () => {
                 fontSize="var(--fs-9)"
                 fontWeight="var(--fw-500)"
               >
-                <time dateTime="PT128M">128 min</time>
+                <time>{movieLength} min</time>
               </Flex>
             </Flex>
           </Flex>
           <Box>
             <Link href={`/film/${id}`}>
-              <Button
-                color="var(--color_1)"
-                fontSize="var(--fs-11)"
-                fontWeight="var(--fw-700)"
-                textTransform="uppercase"
-                letterSpacing="2px"
-                p="16px 30px"
-                gap="10px"
-                alignItems="center"
-                borderRadius="50px"
-                border="2px solid var(--citrine)"
-                transition="var(--transition-1)"
-              >
+              <ButtonPlayMovie startIcon="<BsFillPlayFill />">
+                {" "}
                 Watch now
-              </Button>
+              </ButtonPlayMovie>
             </Link>
           </Box>
         </Flex>

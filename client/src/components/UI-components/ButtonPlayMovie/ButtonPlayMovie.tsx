@@ -11,6 +11,7 @@ import { useRipple } from "react-use-ripple";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import styles from "./ButtonPlayMovie.module.scss";
 import { Box, Button, Stack } from "@chakra-ui/react";
+/* import { FaIcons } from "react-icons/fa"; */
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   startIcon?: ReactNode;
@@ -36,26 +37,28 @@ export const ButtonPlayMovieComponent = forwardRef<
     ref
   ) => {
     const buttonRef = useRef<HTMLButtonElement>(null);
-    const commonRef = ref || buttonRef;
 
     return (
       <Button
-        borderRadius="full"
-        pt={6}
-        pr={8}
-        pb={6}
-        pl={8}
-        m={1}
-        color="white"
+        color="var(--color_1)"
+        fontSize="var(--fs-11)"
+        fontWeight="var(--fw-700)"
+        textTransform="uppercase"
+        letterSpacing="2px"
+        display="flex"
+        alignItems="center"
+        gap={2}
+        padding="16px 30px"
+        border="2px solid var(--citrine)"
+        borderRadius="50px"
+        transition="var(--transition-1)"
+        bg="var(--rich-black-fogra-29)"
         _hover={{
-          background: "#424242",
-          color: "white",
+          bg: "var(--citrine)",
+          color: "var(--color_5)",
         }}
-        onClick={onClick}
-        bg="#313131"
-        {...props}
       >
-        {startIcon && <span className={styles.startIcon}>{startIcon}</span>}{" "}
+        {/* {startIcon && <FaIcons className={styles.startIcon} icon={startIcon} />} */}
         {children}
       </Button>
     );

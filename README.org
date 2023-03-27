@@ -90,20 +90,22 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 15) 
 
 
-*** Sever (Rust) (Not started yet) [1/3]
+*** Server (Rust) (Not started yet) [1/3]
 1) [ ] Deploy server
 2) [ ] Add main endpoints
 3) [X] Create ~.env.local~ and ~.env.example~
 4) 
 
  User model:
- #+begin_src json
-   {
-     "id": 1,
-     "role": "admin",
-     "email": "johndoe123@gmail.com",
-     "password": "password123",
-     "displayName": "John Doe",
-     "avatarUrl":"https://avatar.png" || path-to-default-image,
+ #+begin_src rust
+   struct User {
+       "id": 1,
+       "role": String::from("admin"),
+       "email": String::from("johndoe123@gmail.com"),
+       "password": String::from("password123"),
+       "displayName": String::from("John Doe"),
+       "avatarUrl": String::from("https://avatar.png")
    }
  #+end_src
+
+ #+RESULTS:

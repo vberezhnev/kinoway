@@ -107,7 +107,7 @@ export const Footer = () => {
           zIndex="999"
         >
           <Text mt="20px" mb="20px">
-            Made with love by{" "}
+            Made with 🫀 by{" "}
             <Link href="https://berezhnev.vercel.app">
               <ChakraLink
                 href="https://berezhnev.netlify.app"
