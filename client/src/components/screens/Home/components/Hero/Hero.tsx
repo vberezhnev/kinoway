@@ -104,7 +104,6 @@ export const Hero = (filmId: any) => {
               <Link
                 href="#"
                 color="$color_4"
-                fontWeight="var(--chakra-colors-fw-500)"
                 transition="var(--transition-1)"
                 _hover={{ color: "$color_2" }}
               >
@@ -113,7 +112,6 @@ export const Hero = (filmId: any) => {
               <Link
                 href="#"
                 color="$color_4"
-                fontWeight="var(--fw-500)"
                 transition="var(--transition-1)"
                 _hover={{ color: "$color_2" }}
               >

@@ -48,10 +48,12 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
         <a href={`/film/${id}`}>
           <h3 className={styles.cardTitle}>{name}</h3>
         </a>
-        <time>{year}</time>
+        <time>
+          <b>{year}</b>
+        </time>
       </div>
       <div className={styles.cardMeta}>
-        <div className={styles.badge}>HD</div>
+        <div className={`${styles.badge} ${styles.badgeFill}`}>HD</div>
         <div className={styles.duration}>
           <time>{type}</time>
         </div>

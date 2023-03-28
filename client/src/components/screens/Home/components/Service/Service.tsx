@@ -1,10 +1,15 @@
+import image from "@/public/images/service-banner.jpg";
+import Image from "next/image";
+import { IoVideocam, IoTv, IoDownloadOutline } from "react-icons/io5";
+
 export const Service = () => {
   return (
     <div className="container">
       <div className="service-banner">
         <figure>
-          <img
-            src="./assets/images/service-banner.jpg"
+          <Image
+            src={image}
+            layout="fixed"
             alt="HD 4k resolution! only $3.99"
           />
         </figure>
@@ -14,7 +19,7 @@ export const Service = () => {
           className="service-btn"
         >
           <span>Download</span>
-          {/* <ion-icon name="download-outline" /> */}
+          <IoDownloadOutline />
         </a>
       </div>
       <div className="service-content">
@@ -28,7 +33,9 @@ export const Service = () => {
         <ul className="service-list">
           <li>
             <div className="service-card">
-              <div className="card-icon">{/* <ion-icon name="tv" /> */}</div>
+              <div className="card-icon">
+                <IoTv />{" "}
+              </div>
               <div className="card-content">
                 <h3 className="h3 card-title">Enjoy on Your TV.</h3>
                 <p className="card-text">
@@ -41,7 +48,7 @@ export const Service = () => {
           <li>
             <div className="service-card">
               <div className="card-icon">
-                {/* <ion-icon name="videocam" /> */}
+                <IoVideocam />
               </div>
               <div className="card-content">
                 <h3 className="h3 card-title">Watch Everywhere.</h3>

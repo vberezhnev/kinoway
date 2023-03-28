@@ -13,7 +13,11 @@
 
 body {
   // font-family: "Comfortaa", sans-serif;
-  -webkit-transition: background-color 300ms linear;
-  -ms-transition: background-color 300ms linear;
-  transition: background-color 300ms linear;
+  // -webkit-transition: background-color 300ms linear;
+  // -ms-transition: background-color 300ms linear;
+  // transition: background-color 300ms linear;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

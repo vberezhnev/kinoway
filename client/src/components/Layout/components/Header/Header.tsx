@@ -40,13 +40,13 @@ export const Header = (props: any) => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setBgColor({
-          color: "#313131",
-          transition: "background-color 0.5s ease-out",
+          color: "#131119",
+          transition: "background-color 200ms ease-out",
         });
       } else {
         setBgColor({
-          color: "rgb(49, 49, 49, 0.8)",
-          transition: "background-color 0.5s ease-out",
+          color: "rgb(19, 17, 25, 0.8)",
+          transition: "background-color 200ms ease-out",
         });
       }
     };
@@ -159,6 +159,7 @@ export const Header = (props: any) => {
    *   );
    * };
    */
+
   const NavBarContainer = ({ children, ...props }: any) => {
     return (
       <Flex
