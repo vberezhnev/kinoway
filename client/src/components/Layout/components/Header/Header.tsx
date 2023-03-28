@@ -26,7 +26,10 @@ import {
 export const Header = (props: any) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isOpen, setIsOpen] = useState(false); //React.useState(false)
-  const [bgColor, setBgColor] = useState("transparent");
+  const [bgColor, setBgColor] = useState({
+    color: "transparent",
+    transition: "background-color 0.5s ease-out",
+  });
 
   const bg = useColorModeValue("#313131", "#313131");
   const color = useColorModeValue("white", "white");
@@ -36,9 +39,15 @@ export const Header = (props: any) => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setBgColor("#313131");
+        setBgColor({
+          color: "#313131",
+          transition: "background-color 0.5s ease-out",
+        });
       } else {
-        setBgColor("transparent");
+        setBgColor({
+          color: "rgb(49, 49, 49, 0.8)",
+          transition: "background-color 0.5s ease-out",
+        });
       }
     };
 
@@ -133,7 +142,7 @@ export const Header = (props: any) => {
       <Box {...props}>
         <Link href={RoutesEnum.Home} legacyBehavior>
           <Text fontSize="2xl" fontWeight="bold">
-            KINOWAY
+            KINO<strong style={{ color: "var(--citrine)" }}>WAY</strong>
           </Text>
         </Link>
       </Box>
@@ -172,9 +181,9 @@ export const Header = (props: any) => {
 
   return (
     <NavBarContainer
-      bg={bgColor}
+      style={{ transition: bgColor.transition }}
+      bg={bgColor.color}
       {...props}
-      transition="background-color 200ms linear"
     >
       <Logo
         w="200px"
