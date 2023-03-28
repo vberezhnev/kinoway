@@ -12,6 +12,7 @@
       "@/constants/*": ["src/constants/*"],
       "@/hooks/*": ["src/hooks/*"],
 
+      "@/public/*": ["public/*"],
       "@/styles/*": ["styles/*"]
     },
     "target": "es5",

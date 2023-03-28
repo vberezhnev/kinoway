@@ -1,10 +1,8 @@
-// import styles from "./Header.module.scss";
 import Link from "next/link";
-import React, { useState } from "react";
-// import variables from "../../../../styles/variables.module.scss";
-// components
-import { Search } from "@/components/Search/Search";
+import React, { useState, useEffect } from "react";
 
+import { Search } from "@/components/Search/Search";
+import headerImage from "@/public/images/footer-bg.jpg";
 import { RoutesEnum } from "@/constants/routes";
 import {
   MoonIcon,
@@ -28,11 +26,26 @@ import {
 export const Header = (props: any) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isOpen, setIsOpen] = useState(false); //React.useState(false)
+  const [bgColor, setBgColor] = useState("transparent");
 
   const bg = useColorModeValue("#313131", "#313131");
   const color = useColorModeValue("white", "white");
 
   const toggle = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setBgColor("#313131");
+      } else {
+        setBgColor("transparent");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const MenuLinks = ({ isOpen }: any) => {
     return (
@@ -159,7 +172,7 @@ export const Header = (props: any) => {
 
   return (
     <NavBarContainer
-      bg="#1A202C"
+      bg={bgColor}
       {...props}
       transition="background-color 200ms linear"
     >

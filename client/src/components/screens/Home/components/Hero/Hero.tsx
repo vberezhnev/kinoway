@@ -5,10 +5,9 @@ import { useGetFilmByIdQuery } from "@/services/KinowayService";
 import { useTypedSelector } from "@/hooks/useTypedSelector";
 import { useActions } from "@/hooks/useActions";
 
-import image from "../../images/hero-bg.jpg";
+/* import image from "@/public/images/hero-bg5.jpg"; */
 import styles from "./Hero.module.scss";
 
-import BsFillPlayFill from "react-icons/bs";
 import { ButtonPlayMovie } from "@/UI/ButtonPlayMovie/ButtonPlayMovie";
 
 export const Hero = (filmId: any) => {
@@ -44,13 +43,12 @@ export const Hero = (filmId: any) => {
 
   return (
     <Box
-      backgroundImage={`${image}`}
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
       backgroundPosition="center"
       minHeight="750px"
       height="100vh"
-      mt="-50px"
+      mt="-130px"
       maxHeight="1000px"
       display="flex"
       justifyContent="flex-start"
@@ -59,11 +57,16 @@ export const Hero = (filmId: any) => {
       className={styles.hero}
     >
       <Flex className="container" paddingInline="15px">
-        <Flex className="heroContent" marginTop="60px" flexDirection="column">
+        <Flex
+          color="white"
+          className="heroContent"
+          marginTop="60px"
+          flexDirection="column"
+        >
           <Text
-            color="var(--secondary-color)"
+            color="var(--primary-color)"
             fontSize="var(--fs-4)"
-            fontWeight="var(--fw-700)"
+            fontWeight={700}
             marginBottom="10px"
           >
             Kinoway
@@ -101,7 +104,7 @@ export const Hero = (filmId: any) => {
               <Link
                 href="#"
                 color="$color_4"
-                fontWeight="var(--fw-500)"
+                fontWeight="var(--chakra-colors-fw-500)"
                 transition="var(--transition-1)"
                 _hover={{ color: "$color_2" }}
               >

@@ -7,9 +7,7 @@ import { Service } from "@/components/screens/Home/components/Service/Service";
 import { CTA } from "@/components/screens/Home/components/CTA/CTA";
 import { NewFilms } from "@/components/screens/Home/components/NewFilms/NewFilms";
 import { NewSeries } from "@/components/screens/Home/components/NewSeries/NewSeries";
-import { RandomFilms } from "@/components/screens/Home/components/RandomFilms/RandomFilms";
 
-/* import styles from "./Home.module.scss"; */
 import "./Home.scss";
 
 const Home: NextPage = () => {
