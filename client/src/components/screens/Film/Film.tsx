@@ -20,10 +20,26 @@ import {
 import "react-tabs/style/react-tabs.css";
 import { SiKinopoisk } from "react-icons/si";
 import { FaImdb } from "react-icons/fa";
-import { IoPlay } from "react-icons/io5";
+import {
+  IoPlay,
+  IoShare,
+  IoDownload,
+  IoCalendarNumberOutline,
+} from "react-icons/io5";
 import { classNames } from "@/helpers/classNames";
 
-import { Badge, Box, Flex, Heading, Image } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Flex,
+  Heading,
+  Button,
+  Container,
+  Icon,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import { Tabs } from "@/UI/Tabs/Tabs";
 
 import styles from "./Film.module.scss";
@@ -329,9 +345,11 @@ export const Film = () => {
           <div className={styles.container}>
             <figure className={styles.movieDetailBanner}>
               <img src={data?.poster?.url} alt="Free guy movie poster" />
-              <button className={styles.playBtn}>
-                <IoPlay />{" "}
-              </button>
+              <Link href={`https://kinopoisk-watch.org/player/?id=${id}`}>
+                <button className={styles.playBtn}>
+                  <IoPlay />{" "}
+                </button>
+              </Link>
             </figure>
             <div className={styles.movieDetailContent}>
               <p className={styles.detailSubtitle}>New Episodes</p>
@@ -348,31 +366,61 @@ export const Film = () => {
                     HD
                   </div>
                 </div>
-                <div className={styles.dateTime}>
-                  <div>
-                    {/* <ion-icon name="calendar-outline"></ion-icon> */}
-                    <time dateTime="2021">2021</time>
-                  </div>
-                  <div>
-                    {/* <ion-icon name="time-outline"></ion-icon> */}
-                    <time dateTime="PT115M">115 min</time>
-                  </div>
-                </div>
               </div>
+
+              {top250 ? (
+                <Badge
+                  colorScheme={top250 ? "green" : "red"}
+                  fontSize="1em"
+                  variant="solid"
+                >
+                  Top 250: {top250}
+                </Badge>
+              ) : (
+                <div></div>
+              )}
               <p className={styles.storyline}>{description}</p>
               <div className={styles.detailsActions}>
                 <button className={styles.share}>
-                  {/* <ion-icon name="share-social"></ion-icon> */}
+                  <IoShare />
                   <span>Share</span>
                 </button>
                 <div className={styles.titleWrapper}>
                   <p className={styles.title}>Prime Video</p>
                   <p className={styles.text}>Streaming Channels</p>
                 </div>
-                <button className={`${styles.btn} ${styles.btnPrimary}`}>
-                  {/* <ion-icon name="play"></ion-icon> */}
-                  <span>Watch Now</span>
-                </button>
+
+                <ButtonPlayMovie>
+                  <Link href={`https://kinopoisk-watch.org/player/?id=${id}`}>
+                    <a target="_blank">
+                      <span>Watch Now (Player 1)</span>
+                    </a>
+                  </Link>
+                </ButtonPlayMovie>
+
+                <ButtonPlayMovie>
+                  <Link href={`https://flicksbar.cc/film/${id}`}>
+                    <a target="_blank">
+                      <span>Watch Now (Player 2)</span>
+                    </a>
+                  </Link>
+                </ButtonPlayMovie>
+
+                <ButtonPlayMovie>
+                  <Link href={`https://ww5.frkp.lol/film/${id}`}>
+                    <a target="_blank">
+                      <span>Watch Now (Player 3)</span>
+                    </a>
+                  </Link>
+                </ButtonPlayMovie>
+
+                <ButtonPlayMovie>
+                  <Link href={`https://vavada-7.com/#${id}`}>
+                    <a target="_blank">
+                      <span>Watch Now (Player 4)</span>
+                    </a>
+                  </Link>
+                </ButtonPlayMovie>
               </div>
               <a
                 href="./assets/images/movie-4.png"
@@ -380,7 +428,7 @@ export const Film = () => {
                 className={styles.downloadBtn}
               >
                 <span>Download</span>
-                {/* <ion-icon name="download-outline"></ion-icon> */}
+                <IoDownload />
               </a>
             </div>
           </div>
@@ -392,12 +440,13 @@ export const Film = () => {
               World Best TV Series
             </h2>
             <ul className={styles.moviesList}>
-              {similarMovies?.length ? (
-                <li>
-                  <SimilarMovies movies={similarMovies} />
-                </li>
-              ) : null}{" "}
+              {/* {similarMovies?.length ? (
+										<li>
+                    <SimilarMovies movies={similarMovies} />
+										</li>
+										) : null}{" "} */}
             </ul>
+            <Reviews />
           </div>
         </section>
       </article>
