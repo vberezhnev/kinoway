@@ -1,5 +1,5 @@
-import { Box, Flex, Text, Heading } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Flex, Text, Heading, Link } from "@chakra-ui/react";
+/* import Link from "next/link"; */
 
 import { useGetFilmByIdQuery } from "@/services/KinowayService";
 import { useTypedSelector } from "@/hooks/useTypedSelector";
@@ -10,7 +10,7 @@ import styles from "./Hero.module.scss";
 
 import { ButtonPlayMovie } from "@/UI/ButtonPlayMovie/ButtonPlayMovie";
 
-export const Hero = (filmId: any) => {
+export const Hero = ({ filmId }: any) => {
   const { data, isFetching } = useGetFilmByIdQuery(filmId);
   const {
     alternativeName,
@@ -38,8 +38,6 @@ export const Hero = (filmId: any) => {
     top250,
     color,
   }: any = { ...data };
-
-  console.log(data);
 
   return (
     <Box
@@ -104,16 +102,16 @@ export const Hero = (filmId: any) => {
               <Link
                 href="#"
                 color="$color_4"
-                transition="var(--transition-1)"
-                _hover={{ color: "$color_2" }}
+                _hover={{ color: "var(--color_2)" }}
+                style={{ transition: "var(--transition-1)" }}
               >
                 Romance,
               </Link>
               <Link
                 href="#"
                 color="$color_4"
-                transition="var(--transition-1)"
-                _hover={{ color: "$color_2" }}
+                style={{ transition: "var(--transition-1)" }}
+                _hover={{ color: "var(--color_2)" }}
               >
                 Drama
               </Link>
