@@ -80,8 +80,6 @@ export const Film = () => {
     color,
   }: any = { ...data };
 
-  console.log(data);
-
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
   const movieYear = year && `(${year})`;
   const worldFees = fees?.world?.value; // - fees?.usa?.value
@@ -341,7 +339,12 @@ export const Film = () => {
   return (
     <main>
       <article>
-        <section className={styles.movieDetail}>
+        <section
+          style={{
+            background: `#1F1F1F`,
+          }}
+          className={styles.movieDetail}
+        >
           <div className={styles.container}>
             <figure className={styles.movieDetailBanner}>
               <img src={data?.poster?.url} alt="Free guy movie poster" />
@@ -380,6 +383,7 @@ export const Film = () => {
                 <div></div>
               )}
               <p className={styles.storyline}>{description}</p>
+
               <div className={styles.detailsActions}>
                 <button className={styles.share}>
                   <IoShare />
@@ -422,17 +426,18 @@ export const Film = () => {
                   </Link>
                 </ButtonPlayMovie>
               </div>
-              <a
-                href="./assets/images/movie-4.png"
-                download
-                className={styles.downloadBtn}
-              >
+
+              <Box pb={["50px", "100px"]}>
+                <FilmTabs data={data} />{" "}
+              </Box>
+
+              <a href="#" download className={styles.downloadBtn}>
                 <span>Download</span>
                 <IoDownload />
               </a>
             </div>
           </div>
-        </section>
+        </section>{" "}
         <section className={styles.tvSeries}>
           <div className={styles.container}>
             <p className={styles.sectionSubtitle}>Best TV Series</p>

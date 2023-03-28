@@ -10,20 +10,11 @@ import {
   MoonIcon,
   SunIcon,
   StarIcon,
-  TimeIcon,
   CloseIcon,
   HamburgerIcon,
   CalendarIcon,
 } from "@chakra-ui/icons";
 import {
-  Menu,
-  MenuButton,
-  MenuList,
-  // MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   Flex,
   Button,
   useColorMode,
@@ -31,14 +22,7 @@ import {
   Box,
   Text,
   Stack,
-  Fade,
-  ScaleFade,
-  Slide,
-  SlideFade,
-  Collapse,
-  useDisclosure,
   Icon,
-  Heading,
 } from "@chakra-ui/react";
 
 export const Header = (props: any) => {

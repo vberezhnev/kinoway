@@ -63,7 +63,6 @@
   padding-inline: 15px;
 }
 .movieDetail {
-  background: url("../Home/images/movie-detail-bg.png") no-repeat;
   background-size: cover;
   background-position: center;
   padding-top: 160px;
@@ -72,10 +71,11 @@
     margin-bottom: 30px;
   }
 }
+
 .movieDetailBanner {
   position: relative;
   background: var(--gunmetal-1);
-  max-width: 300px;
+  max-width: 350px;
   margin-inline: auto;
   border-radius: 6px;
   overflow: hidden;
@@ -113,8 +113,8 @@
 .metaWrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
+  // justify-content: flex-start;
+  // align-items: start;
   gap: 15px 25px;
   margin-bottom: 50px;
 }
@@ -645,7 +645,7 @@
     .container {
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: start;
       gap: 50px;
     }
   }
