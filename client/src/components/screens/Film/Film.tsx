@@ -144,189 +144,20 @@ export const Film = () => {
       condition: premiere?.world,
     },
   ];
-  /*
-   *   return (
-   *     <>
-   *       <Head>
-   *         <title>{movieTitle}</title>
-   *       </Head>
-   *       <section className={styles.section}>
-   *         <Box className={classNames("container wrapper", styles.container)}>
-   *           <Box
-   *             alignItems="center"
-   *             justifyContent="space-between"
-   *             mb={["30px", "25px"]}
-   *           >
-   *             <Flex>
-   *               <BackButton />
-   *             </Flex>
-   *           </Box>
-   *           <Box mt="2vh" mb={["50px", "30px"]}>
-   *             <Flex direction={["column", "column", "row"]}>
-   *               <Box
-   *                 position="relative"
-   *                 mr={[0, 0, "40px"]}
-   *                 mb={["20px", "20px", 0]}
-   *                 width="fit-content"
-   *                 flexShrink="0"
-   *               >
-   *                 <Image
-   *                   position="relative"
-   *                   w={["100%", "100%", "250px"]}
-   *                   height="auto"
-   *                   style={{ aspectRatio: "2 / 3" }}
-   *                   borderRadius="10px"
-   *                   overflow="hidden"
-   *                   objectFit="cover"
-   *                   src={data?.poster?.url}
-   *                   alt={shortDescription}
-   *                 />
-   *                 <MovieRating rating={rating} />
-   *               </Box>
-   *               <Box w="full">
-   *                 <Heading
-   *                   fontSize={{ base: "40px", md: "26px" }}
-   *                   fontWeight="800"
-   *                   lineHeight={["48px", "33px"]}
-   *                   maxW="650px"
-   *                   mb={["8px", "15px"]}
-   *                 >
-   *                   {movieTitle} {movieYear}
-   *                 </Heading>
-   *                 <Heading
-   *                   fontWeight="200"
-   *                   fontSize="18px"
-   *                   verticalAlign="middle"
-   *                   letterSpacing="-0.2px"
-   *                   lineHeight={["48px", "33px"]}
-   *                   mb="8px"
-   *                 >
-   *                   {alternativeName}
-   *                 </Heading>
-   *
-   *                 {top250 ? (
-   *                   <Badge
-   *                     colorScheme={top250 ? "green" : "red"}
-   *                     fontSize="1em"
-   *                     variant="solid"
-   *                   >
-   *                     Top 250: {top250}
-   *                   </Badge>
-   *                 ) : (
-   *                   <div></div>
-   *                 )}
-   *
-   *                 <Box
-   *                   alignItems="center"
-   *                   mt="15px"
-   *                   pt="10px"
-   *                   pr="10px"
-   *                   pb="10px"
-   *                   pl="0px"
-   *                   mb={["", "25px"]}
-   *                 >
-   *                   <Flex wrap="wrap">
-   *                     <ButtonPlayMovie>
-   *                       <Box>
-   *                         <a target="_blank">
-   *                           <Link
-   *                             href={`https://kinopoisk-watch.org/player/?id=${id}`}
-   *                           >
-   *                             <b>Смотреть (Плеер 1)</b>
-   *                           </Link>
-   *                         </a>
-   *                       </Box>
-   *                     </ButtonPlayMovie>
-   *
-   *                     <ButtonPlayMovie>
-   *                       <Box>
-   *                         <Link href={`https://flicksbar.cc/film/${id}/`}>
-   *                           <a target="_blank">
-   *                             <b>Смотреть (Плеер 2)</b>
-   *                           </a>
-   *                         </Link>
-   *                       </Box>
-   *                     </ButtonPlayMovie>
-   *
-   *                     <ButtonPlayMovie>
-   *                       <Box>
-   *                         <a target="_blank">
-   *                           <Link href={`https://vavada-7.com/#${id}`}>
-   *                             <b>Смотреть (Плеер 3)</b>
-   *                           </Link>
-   *                         </a>
-   *                       </Box>{" "}
-   *                     </ButtonPlayMovie>
-   *
-   *                     <ButtonPlayMovie>
-   *                       <Box>
-   *                         <a target="_blank">
-   *                           <Link href={`https://ww5.frkp.lol/film/${id}/`}>
-   *                             <b>Смотреть (Плеер 4)</b>
-   *                           </Link>
-   *                         </a>
-   *                       </Box>
-   *                     </ButtonPlayMovie>
-   *
-   *                     <MovieFavorite
-   *                       className={styles.btn}
-   *                       id={data?.id}
-   *                       disabled={false}
-   *                     />
-   *
-   *                     <MovieWatchLater
-   *                       className={styles.btn}
-   *                       id={data?.id}
-   *                       disabled={false}
-   *                     />
-   *
-   *                     <ButtonPlayMovie
-   *                       color="black"
-   *                       onClick={() => {
-   *                         router.push(`https://www.kinopoisk.ru/film/${id}`);
-   *                       }}
-   *                     >
-   *                       <SiKinopoisk />{" "}
-   *                     </ButtonPlayMovie>
-   *
-   *                     <ButtonPlayMovie
-   *                       color="black"
-   *                       onClick={() => {
-   *                         router.push(`https://www.imdb.com/title/${imdbId}`);
-   *                       }}
-   *                     >
-   *                       <FaImdb />{" "}
-   *                     </ButtonPlayMovie>
-   *                   </Flex>
-   *                 </Box>
-   *                 <Heading
-   *                   fontWeight="800"
-   *                   fontSize={["24px", "20px"]}
-   *                   lineHeight="30px"
-   *                 >
-   *                   О фильме
-   *                 </Heading>
-   *                 <Info items={items} />
-   *               </Box>
-   *             </Flex>
-   *           </Box>
-   *           <Box pb={["50px", "100px"]}>
-   *             <FilmTabs data={data} />
-   *           </Box>
-   *           {similarMovies?.length ? (
-   *             <Box pb={["50px", "100px"]}>
-   *               <SimilarMovies movies={similarMovies} />
-   *             </Box>
-   *           ) : null}{" "}
-   *           <Reviews />
-   *         </Box>
-   *       </section>
-   *     </>
-   *   );
-   *  */
 
   return (
     <main>
+      <Head>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`Kinoway — ${name}`} />
+        <meta property="og:description" content={`${description}`} />
+        <meta property="og:image" content={`${data?.poster?.url}`} />
+        <meta
+          property="og:url"
+          content={`https://kinoway.vercel.app/film/${id}`}
+        />
+      </Head>
+
       <article>
         <section
           style={{
