@@ -1,5 +1,6 @@
 .item {
-  border-radius: 5px;
+  border-radius: 8px;
+  color: black;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -21,6 +22,7 @@
 }
 
 .author {
+  color: var(--color-dark);
   margin-bottom: 15px;
 }
 
@@ -30,6 +32,7 @@
   line-height: 22px;
   font-weight: 600;
   margin-bottom: 21px;
+  color: var(--color-dark);
 
   @media (max-width: 576px) {
     font-size: 17px;
@@ -44,7 +47,7 @@
   word-wrap: break-word;
   font-size: 14px;
   line-height: 20px;
-  color: #393939;
+  color: var(--color-light-dark);
 
   &.truncated {
     max-height: 100px;
