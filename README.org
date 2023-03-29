@@ -49,18 +49,18 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 ** ToDo List
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 
-*** Client (TS) [10/21]
-1) [-] Add "Too many requests" API from Kinopoisk error
+*** Client (TS) [12/21]
+1) [-] Add "Too many requests" error
 2) [X] Add loader for all pages
-3) [ ] Add reviews section form movies
+3) [X] Add reviews section for movies
 4) [ ] Add filters
 5) [ ] Create "Actor" page
-6) [ ] Create "Random films" section with 4-5 random films
+6) [-] Create "Random films" section with 4-5 random films
 7) [ ] Create "View more" page with films, TV shows and filters
 8) [X] Create 404 page
 9) [ ] Add rating to SearchList component
 10) [ ] Delete ~.module.scss~ files and move to whole ChakraUI
-11) [ ] Add more content for [[file:client/src/components/screens/Film/Film.tsx][Film.tsx]]
+11) [X] Add more content for [[file:client/src/components/screens/Film/Film.tsx][Film.tsx]]
 12) [X] Create component to provide ~data~ on it. Like ~<Content data={data} loading={isLoading} error={isError} />~
 13) [X] Fix "NaN" mark of film in SearchResults component
 14) [X] Fix "NaN" mark of film in SimilarMovies component
@@ -76,18 +76,11 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 1) [X] Update buttons 
 2) [X] Update theme switcher
 3) [X] Update film cards
-4) [ ] Update LoadMoreButton
+4) [X] Update LoadMoreButton
 5) [-] Update spinner
 6) [X] Update header. Add burger menu
 7) [X] Update PlayMovie button
-8) [ ] Do something with [[file:client/src/components/Catalog/Catalog.tsx][Catalog.tsx]]
-9) 
-10) 
-11) 
-12) 
-13) 
-14) 
-15) 
+8) [-] Do something with [[file:client/src/components/Catalog/Catalog.tsx][Catalog.tsx]]
 
 
 *** Server (Rust) (Not started yet) [1/3]
@@ -100,11 +93,11 @@ Watch movies and TV series for free, in high definition, with no restrictions!
  #+begin_src rust
    struct User {
        "id": 1,
-       "role": String::from("admin"),
-       "email": String::from("johndoe123@gmail.com"),
-       "password": String::from("password123"),
-       "displayName": String::from("John Doe"),
-       "avatarUrl": String::from("https://avatar.png")
+       "role": String, // "admin"
+       "email": String, // "johndoe123@gmail.com"
+       "password": String, // "password123"
+       "displayName": String, // "John Doe"
+       "avatarUrl": String // "https://avatar.png"
    }
  #+end_src
 
