@@ -106,7 +106,7 @@ export const Hero = ({ filmId }: any) => {
                 _hover={{ color: "var(--color_2)" }}
                 style={{ transition: "var(--transition-1)" }}
               >
-                Romance,
+                {genres ? `${genres[0].name},` : ""}
               </Link>
               <Link
                 href="#"
@@ -114,7 +114,15 @@ export const Hero = ({ filmId }: any) => {
                 style={{ transition: "var(--transition-1)" }}
                 _hover={{ color: "var(--color_2)" }}
               >
-                Drama
+                {genres ? `${genres[1].name},` : ""}
+              </Link>
+              <Link
+                href="#"
+                color="$color_4"
+                style={{ transition: "var(--transition-1)" }}
+                _hover={{ color: "var(--color_2)" }}
+              >
+                {genres ? `${genres[2].name}` : ""}
               </Link>
             </Flex>
             <Flex display="flex" flexWrap="wrap" alignItems="center" gap="15px">
@@ -126,7 +134,7 @@ export const Hero = ({ filmId }: any) => {
                 fontSize="var(--fs-9)"
                 fontWeight="var(--fw-500)"
               >
-                <time dateTime="2022">2022</time>
+                <time>{year}</time>
               </Flex>
               <Flex
                 display="flex"
@@ -144,7 +152,7 @@ export const Hero = ({ filmId }: any) => {
             <Link href={`/film/${id}`}>
               <ButtonPlayMovie>
                 <BsFillPlayFill />
-                Watch now
+                Смотреть фильм
               </ButtonPlayMovie>
             </Link>
           </Box>

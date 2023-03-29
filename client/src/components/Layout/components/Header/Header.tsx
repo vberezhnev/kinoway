@@ -69,21 +69,21 @@ export const Header = (props: any) => {
           direction={["column", "row", "row", "row"]}
           pt={[4, 4, 0, 0]}
         >
-          <Button
-            bg={bg}
-            color={color}
-            onClick={() => toggleColorMode()}
-            _hover={{
-              background: "#424242",
-              color: "white",
-            }}
-          >
-            {colorMode === "light" ? (
-              <MoonIcon boxSize={5} />
-            ) : (
-              <SunIcon boxSize={5} />
-            )}
-          </Button>
+          {/* <Button
+								bg={bg}
+								color={color}
+								onClick={() => toggleColorMode()}
+								_hover={{
+								background: "#424242",
+								color: "white",
+								}}
+								>
+								{colorMode === "light" ? (
+								<MoonIcon boxSize={5} />
+								) : (
+								<SunIcon boxSize={5} />
+								)}
+								</Button> */}
           <Link href={RoutesEnum.Favorites}>
             <Button
               mr={2}

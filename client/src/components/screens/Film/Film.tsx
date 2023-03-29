@@ -205,7 +205,7 @@ export const Film = () => {
                 <div></div>
               )}
 
-              <Flex gap={3}>
+              <Flex gap={3} m={2}>
                 <ButtonPlayMovie
                   color="white"
                   onClick={() => {
@@ -240,7 +240,7 @@ export const Film = () => {
                 <ButtonPlayMovie>
                   <Link href={`https://kinopoisk-watch.org/player/?id=${id}`}>
                     <a target="_blank">
-                      <span>Watch Now (Player 1)</span>
+                      <span>Смотреть (Player 1)</span>
                     </a>
                   </Link>
                 </ButtonPlayMovie>
@@ -248,7 +248,7 @@ export const Film = () => {
                 <ButtonPlayMovie>
                   <Link href={`https://flicksbar.cc/film/${id}`}>
                     <a target="_blank">
-                      <span>Watch Now (Player 2)</span>
+                      <span>Смотреть (Player 2)</span>
                     </a>
                   </Link>
                 </ButtonPlayMovie>
@@ -256,7 +256,7 @@ export const Film = () => {
                 <ButtonPlayMovie>
                   <Link href={`https://ww5.frkp.lol/film/${id}`}>
                     <a target="_blank">
-                      <span>Watch Now (Player 3)</span>
+                      <span>Смотреть (Player 3)</span>
                     </a>
                   </Link>
                 </ButtonPlayMovie>
@@ -264,7 +264,7 @@ export const Film = () => {
                 <ButtonPlayMovie>
                   <Link href={`https://vavada-7.com/#${id}`}>
                     <a target="_blank">
-                      <span>Watch Now (Player 4)</span>
+                      <span>Смотреть (Player 4)</span>
                     </a>
                   </Link>
                 </ButtonPlayMovie>
