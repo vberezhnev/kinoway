@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { useWatchLater } from "@/hooks/useWatchLater";
 import { ButtonPlayMovie } from "@/UI/ButtonPlayMovie/ButtonPlayMovie";
 import { classNames } from "@/helpers/classNames";
@@ -22,6 +22,8 @@ export const MovieWatchLater: FC<MovieWatchLaterProps> = ({
   disabled,
 }) => {
   const { toggleWatchLater } = useWatchLater();
+
+  console.log(id);
 
   return (
     <ButtonPlayMovie

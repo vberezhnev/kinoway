@@ -11,7 +11,6 @@ import { useRipple } from "react-use-ripple";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import styles from "./ButtonPlayMovie.module.scss";
 import { Box, Button, Stack } from "@chakra-ui/react";
-/* import { FaIcons } from "react-icons/fa"; */
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   startIcon?: ReactNode;
@@ -57,8 +56,10 @@ export const ButtonPlayMovieComponent = forwardRef<
           bg: "var(--citrine)",
           color: "var(--color_5)",
         }}
+        {...props}
+        onClick={onClick}
       >
-        {/* {startIcon && <FaIcons className={styles.startIcon} icon={startIcon} />} */}
+        {startIcon && <span className={styles.startIcon}>{startIcon}</span>}
         {children}
       </Button>
     );

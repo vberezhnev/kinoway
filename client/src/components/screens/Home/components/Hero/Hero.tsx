@@ -9,6 +9,7 @@ import { useActions } from "@/hooks/useActions";
 import styles from "./Hero.module.scss";
 
 import { ButtonPlayMovie } from "@/UI/ButtonPlayMovie/ButtonPlayMovie";
+import { BsFillPlayFill } from "react-icons/bs";
 
 export const Hero = ({ filmId }: any) => {
   const { data, isFetching } = useGetFilmByIdQuery(filmId);
@@ -141,8 +142,8 @@ export const Hero = ({ filmId }: any) => {
           </Flex>
           <Box>
             <Link href={`/film/${id}`}>
-              <ButtonPlayMovie startIcon="<BsFillPlayFill />">
-                {" "}
+              <ButtonPlayMovie>
+                <BsFillPlayFill />
                 Watch now
               </ButtonPlayMovie>
             </Link>

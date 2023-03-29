@@ -28,18 +28,7 @@ import {
 } from "react-icons/io5";
 import { classNames } from "@/helpers/classNames";
 
-import {
-  Badge,
-  Box,
-  Flex,
-  Heading,
-  Button,
-  Container,
-  Icon,
-  Image,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Badge, Box, Flex } from "@chakra-ui/react";
 import { Tabs } from "@/UI/Tabs/Tabs";
 
 import styles from "./Film.module.scss";
@@ -356,7 +345,9 @@ export const Film = () => {
             </figure>
             <div className={styles.movieDetailContent}>
               <p className={styles.detailSubtitle}>New Episodes</p>
-              <h1 className={`${styles.h1} ${styles.detailTitle}`}>{name}</h1>
+              <h1 className={`${styles.h1} ${styles.detailTitle}`}>
+                <b>{name}</b>
+              </h1>
               <div className={styles.metaWrapper}>
                 <div className={styles.badgeWrapper}>
                   <div className={styles.genreWrapper}>
@@ -382,6 +373,27 @@ export const Film = () => {
               ) : (
                 <div></div>
               )}
+
+              <Flex gap={3}>
+                <ButtonPlayMovie
+                  color="white"
+                  onClick={() => {
+                    router.push(`https://www.kinopoisk.ru/film/${id}`);
+                  }}
+                >
+                  <SiKinopoisk size={30} />{" "}
+                </ButtonPlayMovie>
+
+                <ButtonPlayMovie
+                  color="white"
+                  onClick={() => {
+                    router.push(`https://www.imdb.com/title/${imdbId}`);
+                  }}
+                >
+                  <FaImdb size={30} />{" "}
+                </ButtonPlayMovie>
+              </Flex>
+
               <p className={styles.storyline}>{description}</p>
 
               <div className={styles.detailsActions}>
@@ -425,6 +437,9 @@ export const Film = () => {
                     </a>
                   </Link>
                 </ButtonPlayMovie>
+
+                <MovieWatchLater id={data?.id} disabled={false} />
+                <MovieFavorite id={data?.id} disabled={false} />
               </div>
 
               <Box pb={["50px", "100px"]}>
