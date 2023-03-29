@@ -285,18 +285,18 @@
     color: var(--color_5);
   }
 }
-.moviesList {
-  display: grid;
-  gap: 50px;
-}
-.moviesList.hasScrollbar {
-  display: flex;
-  justify-content: flex-start;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-snap-type: inline mandatory;
-  padding-bottom: 25px;
-}
+// .moviesList {
+//   display: grid;
+//   gap: 50px;
+// }
+// .moviesList.hasScrollbar {
+//   display: flex;
+//   justify-content: flex-start;
+//   gap: 30px;
+//   overflow-x: auto;
+//   scroll-snap-type: inline mandatory;
+//   padding-bottom: 25px;
+// }
 .hasScrollbar {
   &::-webkit-scrollbar {
     height: 8px;

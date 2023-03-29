@@ -30,6 +30,7 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
     year,
     name,
     alternativeName,
+    movieLength,
     names,
     type,
     rating,
@@ -41,7 +42,7 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
     <div className={styles.movieCard}>
       <Link href={`/film/${id}`}>
         <figure className={styles.cardBanner}>
-          <img src={poster?.url} alt={description} className="img" />
+          <img src={poster?.url} alt={description} className={styles.img} />
         </figure>
       </Link>
       <div className={styles.titleWrapper}>
@@ -55,7 +56,7 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
       <div className={styles.cardMeta}>
         <div className={`${styles.badge} ${styles.badgeFill}`}>HD</div>
         <div className={styles.duration}>
-          <time>{type}</time>
+          <time>{movieLength} min</time>
         </div>
         <div className={styles.rating}></div>
         <MovieRating rating={rating} />
