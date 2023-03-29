@@ -151,7 +151,7 @@ export const Film = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content={`Kinoway — ${name ? name : "Загрузка..."}`}
+          content={`Kinoway — ${name ? name : "Загрузка"}`}
         />
         <meta
           property="og:description"
