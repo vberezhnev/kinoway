@@ -3,7 +3,6 @@ import { GetStaticProps } from "next";
 import { initStore } from "@/store/store";
 import Head from "next/head";
 import { getNewFilms, getNewSeries } from "@/services/KinowayService";
-//import Image from "next/image";
 
 import Home from "../components/screens/Home/Home";
 
