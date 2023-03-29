@@ -149,9 +149,18 @@ export const Film = () => {
     <main>
       <Head>
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`Kinoway — ${name}`} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={data?.poster?.url} />
+        <meta
+          property="og:title"
+          content={`Kinoway — ${name ? name : "Загрузка..."}`}
+        />
+        <meta
+          property="og:description"
+          content={description ? description : "Загрузка..."}
+        />
+        <meta
+          property="og:image"
+          content={data?.poster?.url ? data?.poster?.url : ""}
+        />
         <meta
           property="og:url"
           content={`https://kinoway.vercel.app/film/${id}`}
