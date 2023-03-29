@@ -26,8 +26,8 @@
       }
     }
     img {
-      width: 300px;
-      height: 450px;
+      // width: 300px;
+      // height: 450px;
       object-fit: cover;
     }
   }
@@ -45,7 +45,7 @@
   }
   .cardTitle {
     color: var(--color_1);
-    font-size: var(--fs-7);
+    font-size: var(--fs-5);
     transition: var(--transition-1);
     &:is(:hover) {
       color: var(--color_2);

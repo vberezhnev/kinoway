@@ -23,6 +23,8 @@ interface FilmItemProps {
 }
 
 export const FilmCard: FC<FilmItemProps> = ({ item }) => {
+  console.log(item);
+
   const {
     id,
     poster,
@@ -42,7 +44,7 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
     <div className={styles.movieCard}>
       <Link href={`/film/${id}`}>
         <figure className={styles.cardBanner}>
-          <img src={poster?.url} alt={description} className={styles.img} />
+          <img src={poster?.previewUrl} alt={description} />
         </figure>
       </Link>
       <div className={styles.titleWrapper}>
