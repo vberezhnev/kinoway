@@ -37,6 +37,8 @@ export const Film = () => {
   //   query: { id },
   // } = useRouter();
   const { data, isLoading, isError } = useGetFilmByIdQuery(id);
+  console.log(data);
+
   const {
     alternativeName,
     name,
@@ -68,7 +70,8 @@ export const Film = () => {
   const worldFees = fees?.world?.value; // - fees?.usa?.value
 
   // @ts-ignore
-  const imdbId = `${data?.externalId?.imdb}`;
+  const imdbId = "data?.externalId?.imdb";
+  const tmdbId = "data?.externalId?.tmdb";
 
   const items = [
     {
@@ -179,17 +182,25 @@ export const Film = () => {
             </figure>
             <div className={styles.movieDetailContent}>
               <p className={styles.detailSubtitle}>New Episodes</p>
+
+              <div className={styles.badgeWrapper}>
+                <div className={styles.genreWrapper}>
+                  <MovieRating rating={rating} />
+                </div>
+
+                <div className={`${styles.badge} ${styles.badgeOutline}`}>
+                  HD
+                </div>
+              </div>
+
               <h1 className={`${styles.h1} ${styles.detailTitle}`}>
                 <b>{name}</b>
               </h1>
+
               <div className={styles.metaWrapper}>
                 <div className={styles.badgeWrapper}>
                   <div className={styles.genreWrapper}>
                     <Info items={items} />
-                  </div>
-                  <MovieRating rating={rating} />
-                  <div className={`${styles.badge} ${styles.badgeOutline}`}>
-                    HD
                   </div>
                 </div>
               </div>
@@ -243,6 +254,15 @@ export const Film = () => {
                       <path d="M0 8.885h2.281V0H0zM7.136 0l-.528 4.157-.325-2.259A61.705 61.705 0 006.007 0H3.053v8.885H5.05l.008-5.866.836 5.866h1.42l.804-5.997v5.997h1.99V0H7.135M13.672 1.604c.088.048.145.13.17.245.032.115.04.376.04.777v3.445c0 .589-.04.949-.114 1.08-.073.14-.276.205-.6.205V1.52c.243 0 .413.025.504.083zm-.026 7.281c.544 0 .958-.032 1.226-.09.276-.057.504-.163.682-.32.186-.146.316-.359.39-.629.072-.27.121-.802.121-1.596V3.134c0-.843-.032-1.408-.088-1.694a1.546 1.546 0 00-.374-.777C15.4.425 15.1.263 14.71.155 14.328.057 13.687 0 12.59 0h-1.705v8.885h2.76zM19.8 6.734c0 .425-.024.695-.066.809-.04.115-.226.172-.364.172-.13 0-.228-.057-.268-.163-.05-.107-.073-.36-.073-.752V4.45c0-.4.023-.654.065-.752.04-.097.13-.147.26-.147.138 0 .324.05.372.172.05.114.073.36.073.728v2.283zM16.836 0v8.885h2.054l.138-.564c.186.228.389.4.617.515.218.107.552.164.811.164.365 0 .674-.09.934-.286.26-.188.43-.418.503-.679.065-.262.106-.655.106-1.187V4.353c0-.532-.017-.884-.04-1.048a1.25 1.25 0 00-.204-.507 1.209 1.209 0 00-.511-.401c-.22-.09-.48-.14-.788-.14-.26 0-.593.058-.82.156-.22.107-.422.27-.608.483V0h-2.192z"></path>
                     </g>
                   </svg>{" "}
+                </ButtonPlayMovie>
+
+                <ButtonPlayMovie
+                  color="white"
+                  onClick={() => {
+                    router.push(`https://www.themoviedb.org/movie/${tmdbId}`);
+                  }}
+                >
+                  <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg" />{" "}
                 </ButtonPlayMovie>
               </Flex>
 

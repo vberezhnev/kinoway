@@ -11,13 +11,16 @@ export const MovieRating: FC<MovieRatingProps> = ({ rating, className }) => {
   const kpRating = Number(rating?.kp);
   const imdbRating = Number(rating?.imdb);
 
-  const bgStyle = {
+  const bgStyleKP = {
     backgroundColor:
-      kpRating >= 6 && imdbRating >= 6
-        ? "#3BB33B"
-        : kpRating < 6 && imdbRating < 6
-        ? "#D32F2F"
-        : "#5F5F5F",
+      kpRating >= 6 ? "#3BB33B" : kpRating < 6 ? "#D32F2F" : "#5F5F5F",
+    borderRadius: "0",
+    padding: "3px 10px 3px 10px",
+  };
+
+  const bgStyleIMDb = {
+    backgroundColor:
+      imdbRating >= 6 ? "#3BB33B" : imdbRating < 6 ? "#D32F2F" : "#5F5F5F",
     borderRadius: "0",
     padding: "3px 10px 3px 10px",
   };
@@ -27,7 +30,7 @@ export const MovieRating: FC<MovieRatingProps> = ({ rating, className }) => {
       {rating && (
         <Box className={className}>
           <Flex alignItems="center">
-            <Box style={bgStyle} mr={1}>
+            <Box style={bgStyleKP} mr={1}>
               <Flex alignItems="center">
                 <Box mr={2}>
                   <svg
@@ -50,9 +53,7 @@ export const MovieRating: FC<MovieRatingProps> = ({ rating, className }) => {
               </Flex>
             </Box>
 
-            <br />
-
-            <Box style={bgStyle}>
+            <Box style={bgStyleIMDb}>
               <Flex alignItems="center">
                 <Box mr={2}>
                   <svg

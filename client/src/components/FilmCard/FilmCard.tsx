@@ -56,7 +56,7 @@ export const FilmCard: FC<FilmItemProps> = ({ item }) => {
       <div className={styles.cardMeta}>
         <div className={`${styles.badge} ${styles.badgeFill}`}>HD</div>
         <div className={styles.duration}>
-          <time>{movieLength} min</time>
+          <time>{movieLength} мин</time>
         </div>
         <div className={styles.rating}></div>
         <MovieRating rating={rating} />

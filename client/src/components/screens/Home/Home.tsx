@@ -48,32 +48,32 @@ const Home: NextPage = () => {
             <Service />
           </section>
 
-          <section className="top-rated">
-            <div className="container">
+          {/* <section className="top-rated">
+							<div className="container">
               <p className="section-subtitle">Online Streaming</p>
               <h2 className="h2 section-title">Top Rated Movies</h2>
               <ul className="filter-list">
-                <li>
-                  <button className="filter-btn">Movies</button>
-                </li>
-                <li>
-                  <button className="filter-btn">TV Shows</button>
-                </li>
-                <li>
-                  <button className="filter-btn">Documentary</button>
-                </li>
-                <li>
-                  <button className="filter-btn">Sports</button>
-                </li>
+              <li>
+              <button className="filter-btn">Movies</button>
+              </li>
+              <li>
+              <button className="filter-btn">TV Shows</button>
+              </li>
+              <li>
+              <button className="filter-btn">Documentary</button>
+              </li>
+              <li>
+              <button className="filter-btn">Sports</button>
+              </li>
               </ul>
               <ul className="movies-list  has-scrollbar">
-                <li>
-                  <NewFilms />
-                </li>
+              <li>
+              <NewFilms />
+              </li>
               </ul>
-            </div>
-          </section>
-
+							</div>
+							</section>
+						*/}
           <section className="tv-series">
             <div className="container">
               <p className="section-subtitle">Best TV Series</p>
