@@ -25,18 +25,7 @@ interface FilmItemProps {
 export const FilmCard: FC<FilmItemProps> = ({ item }) => {
   console.log(item);
 
-  const {
-    id,
-    poster,
-    description,
-    year,
-    name,
-    alternativeName,
-    movieLength,
-    names,
-    type,
-    rating,
-  }: any = {
+  const { id, poster, description, year, name, movieLength, rating }: any = {
     ...item,
   };
 
