@@ -54,5 +54,6 @@ export const PersonInfo: FC<PersonInfoProps> = ({ data }) => {
     },
   ];
 
+  //@ts-ignore
   return <Info items={items} />;
 };

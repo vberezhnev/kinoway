@@ -17,7 +17,6 @@ export const SearchItem: FC<SearchItemProps> = ({ item }) => {
     <Link href={`/film/${id}`}>
       <div>
         <a className={styles.container}>
-          <MovieRating className={styles.rating} rating={rating} />
           <div className={styles.left}>
             <div className={styles.imageContainer}>
               <Image
@@ -37,6 +36,8 @@ export const SearchItem: FC<SearchItemProps> = ({ item }) => {
               </span>
             </div>
           </div>
+          <br />
+          <MovieRating className={styles.rating} rating={rating} />
         </a>
       </div>
     </Link>

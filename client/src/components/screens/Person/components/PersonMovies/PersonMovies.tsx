@@ -6,15 +6,17 @@ import { FilmCard } from "@/components/FilmCard/FilmCard";
 import styles from "./PersonMovies.module.scss";
 
 interface PersonMoviesProps {
-  movies: IMovie[] | undefined;
+  movies: IMovie[];
 }
 
 export const PersonMovies: FC<PersonMoviesProps> = ({ movies }) => {
+  console.log(movies);
+
   return (
     <div className={styles.container}>
       <Carousel title="Фильмы и сериалы" quantity={movies?.length}>
         {movies?.map((data, idx) => {
-          const { rating, ...item } = data;
+          const { ...item } = data;
 
           return (
             <SwiperSlide className={styles.item} key={idx}>

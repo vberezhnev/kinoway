@@ -4,6 +4,7 @@ import Image from "next/image";
 import { IMovie } from "@/types/IMovie";
 import { MovieRating } from "@/components/UI-components/MovieRating/MovieRating";
 
+import { Badge } from "@chakra-ui/react";
 import styles from "./FilmList.module.scss";
 
 interface FilmItemProps {
@@ -11,6 +12,7 @@ interface FilmItemProps {
 }
 
 const FilmList: FC<FilmItemProps> = ({ item }) => {
+  console.log(item);
   const {
     id,
     poster,
@@ -21,13 +23,16 @@ const FilmList: FC<FilmItemProps> = ({ item }) => {
     type,
     rating,
     alternativeName,
+    movieLength,
+    top10,
+    top250,
   }: any = {
     ...item,
   };
 
   return (
-    <div className={styles.styles_root}>
-      <div>
+    <div className={styles.movieCard}>
+      <div className={styles.poster}>
         <Image
           className={styles.image}
           src={poster ? poster.previewUrl : "/public/vercel.svg"}
@@ -36,25 +41,43 @@ const FilmList: FC<FilmItemProps> = ({ item }) => {
         />
       </div>
 
-      <div className={styles.styles_content}>
+      <div className={styles.content}>
         <div className={styles.main}>
-          <h3>
-            <Link className={styles.movieTitle} href={`/film/${id}`}>
-              {name}
+          <h3 className={styles.title}>
+            <Link href={`/film/${id}`}>
+              <a>{name}</a>
             </Link>
           </h3>
-          <p className={styles.secondInfo}>
+          <p className={styles.subTitle}>
             {alternativeName}, {year}
           </p>
+          <p className={styles.duration}>{movieLength}</p>
+          <MovieRating rating={rating} className={styles.rating} />
+          {/* <p className={styles.description}>{description}</p> */}
         </div>
+
         <div className={styles.user}>
-          <div className={styles.rating}>
-            <div className={styles.kinoway}>
-              <MovieRating rating={rating} className={styles.kinowayValue} />
-              <span className={styles.kinowayValue}>{}</span>
-              <span className={styles.kinowayCount}>17 667</span>
-              <div className={styles.kinowayCount}>Топ 250: 1</div>
-            </div>
+          <div className={styles.stats}>
+            {top10 ? (
+              <Badge
+                className={styles.stat}
+                colorScheme="green"
+                fontSize="14px"
+                variant="solid"
+              >
+                Top 10: {top10}
+              </Badge>
+            ) : null}
+            {top250 ? (
+              <Badge
+                className={styles.stat}
+                colorScheme="green"
+                fontSize="14px"
+                variant="solid"
+              >
+                Top 250: {top250}
+              </Badge>
+            ) : null}
           </div>
         </div>
       </div>

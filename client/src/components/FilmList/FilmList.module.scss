@@ -1,95 +1,40 @@
 @import "../../styles/variables.module.scss";
 
-.styles_root {
-  position: relative;
+.movieCard {
   display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 18px 20px;
-  border-radius: 8px;
-  transition-timing-function: ease-out;
-  transition-duration: 0.15s;
-  // border-bottom: 1px #888;
-  margin: 2vh 0 1vh 0;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--color-light-dark);
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  transition: background-color 0.2s ease-in-out;
 
-  div {
+  &:hover {
+    background-color: var(--color-gray);
+  }
+
+  .poster {
+    margin-right: 24px;
+    flex-shrink: 0;
+
     .image {
-      min-width: 64px;
-      border-radius: 4px;
+      border-radius: 8px;
     }
   }
 
-  .styles_content {
-    width: 100%;
-    margin-left: 20px;
+  .content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    flex-grow: 1;
 
     .main {
-      margin-right: 15px;
-      max-width: 360px;
-
-      .movieTitle {
-        text-decoration: none;
-        line-height: 22px;
+      .title {
+        margin-bottom: 14px;
+        font-size: 24px;
         font-weight: bold;
-      }
-
-      .secondInfo {
-        display: block;
-        font-size: 15px;
-        color: var(--color-gray);
-        padding-bottom: 4px;
-      }
-    }
-
-    .user {
-      display: flex;
-      align-items: flex-start;
-      margin-top: 0;
-      margin-left: auto;
-
-      .rating {
-        min-width: 85px;
-        margin-top: 4px;
-        margin-right: 20px;
-
-        .kinoway {
-          display: none;
-          flex-wrap: wrap;
-          align-items: baseline;
-          margin-bottom: 4px;
-
-          .kinowayValue {
-            display: none;
-            font-size: 22px;
-            font-weight: bold;
-            color: #3bb33b;
-            margin-right: 4px;
-          }
-
-          .kinowayCount {
-            color: #777;
-          }
-        }
       }
     }
   }
-}
-
-.styles_root {
-  background-color: #f7f7f7;
-}
-
-.styles_root:hover {
-  background-color: #e6e6e6;
-}
-
-[data-theme="dark"] .styles_root {
-  background-color: #333;
-}
-
-[data-theme="dark"] .styles_root:hover {
-  background-color: #444;
 }

@@ -217,6 +217,18 @@ export const Film = () => {
                 <div></div>
               )}
 
+              {top10 ? (
+                <Badge
+                  colorScheme={top10 ? "green" : "red"}
+                  fontSize="1em"
+                  variant="solid"
+                >
+                  Top 10: {top10}
+                </Badge>
+              ) : (
+                <div></div>
+              )}
+
               <Flex gap={3} m={2}>
                 <ButtonPlayMovie
                   color="white"

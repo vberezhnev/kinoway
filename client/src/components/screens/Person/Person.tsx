@@ -3,20 +3,17 @@ import { useGetPersonByIdQuery } from "@/services/KinowayService";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { Title } from "@/UI/Title/Title";
 import { BackButton } from "@/UI/BackButton/BackButton";
 import { PersonInfo, PersonTabs } from "./components";
 
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import styles from "./Person.module.scss";
-import classNames from "classnames";
+import { Heading, Box, Flex, Image } from "@chakra-ui/react";
 
 export const Person = () => {
   const {
     query: { id },
   } = useRouter();
   const { data } = useGetPersonByIdQuery(id);
-  const { name, enName, previewUrl, photo } = { ...data };
+  const { name, enName, photo } = { ...data };
 
   return (
     <>
@@ -49,6 +46,9 @@ export const Person = () => {
               marginRight={{ base: 0, md: "50px" }}
               marginBottom={{ base: "20px", sm: "30px" }}
               width={{ base: "100%", md: "fit-content" }}
+              w={{ base: "250px", sm: "300px" }}
+              h={{ base: "166px", sm: "auto" }}
+              overflow="hidden"
             >
               <Image
                 src={photo}
@@ -58,13 +58,12 @@ export const Person = () => {
                 backgroundColor="gray.800"
                 width={{ base: "250px", sm: "300px" }}
                 height="auto"
-                aspectRatio={{ base: 2 / 3, md: "auto" }}
               />
             </Box>
             <Box className="right" width={{ base: "100%", md: "auto" }}>
-              <Title
+              <Heading
                 variant="h1"
-                fontWeight={800}
+                fontWeight="800px"
                 fontSize={{ base: "26px", sm: "40px" }}
                 lineHeight={{ base: "33px", sm: "48px" }}
                 maxWidth="650px"
@@ -72,8 +71,8 @@ export const Person = () => {
                 color="white"
               >
                 {name}
-              </Title>
-              <Text
+              </Heading>
+              <Heading
                 display="block"
                 fontWeight={300}
                 fontSize="20px"
@@ -82,8 +81,8 @@ export const Person = () => {
                 color="white"
               >
                 {enName}
-              </Text>
-              <Title
+              </Heading>
+              <Heading
                 variant="h2"
                 fontWeight={800}
                 fontSize={{ base: "20px", sm: "24px" }}
@@ -92,7 +91,7 @@ export const Person = () => {
                 color="white"
               >
                 О персоне
-              </Title>
+              </Heading>
               <PersonInfo data={data} />
             </Box>
           </Flex>
