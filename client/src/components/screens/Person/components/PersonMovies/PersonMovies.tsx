@@ -6,7 +6,7 @@ import { FilmCard } from "@/components/FilmCard/FilmCard";
 import styles from "./PersonMovies.module.scss";
 
 interface PersonMoviesProps {
-  movies: IMovie[];
+  movies: IMovie[] | undefined;
 }
 
 export const PersonMovies: FC<PersonMoviesProps> = ({ movies }) => {

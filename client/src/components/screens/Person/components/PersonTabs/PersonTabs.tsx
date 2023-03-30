@@ -5,7 +5,7 @@ import { IPerson } from "@/types/IPerson";
 import { PersonMovies } from "../index";
 
 interface PersonTabsProps {
-  data: IPerson;
+  data: IPerson | undefined;
 }
 
 export const PersonTabs: FC<PersonTabsProps> = ({ data }) => {
