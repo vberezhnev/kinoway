@@ -142,7 +142,9 @@ export const Header = (props: any) => {
       <Box {...props}>
         <Link href={RoutesEnum.Home} legacyBehavior>
           <Text fontSize="2xl" fontWeight="bold">
-            KINO<strong style={{ color: "var(--citrine)" }}>WAY</strong>
+            <b>
+              KINO<strong style={{ color: "var(--citrine)" }}>WAY</strong>
+            </b>
           </Text>
         </Link>
       </Box>
