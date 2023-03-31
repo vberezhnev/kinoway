@@ -11,14 +11,14 @@ import { FilmCard } from "@/components/FilmCard/FilmCard";
 import { FiltersToggle } from "./components/FiltersToggle/FiltersToggle";
 import { Pagination } from "@/UI/Pagination/Pagination";
 import { Spinner, SpinnerSizes } from "@/UI/Spinner/Spinner";
-import {
-  Previous,
-  Paginator,
-  PageGroup,
-  Page,
-  Next,
-  generatePages
-} from "chakra-paginator";
+/* import {
+ *   Previous,
+ *   Paginator,
+ *   PageGroup,
+ *   Page,
+ *   Next,
+ *   generatePages
+ * } from "chakra-paginator"; */
 
 import { IMovies } from "@/types/IMovies";
 
@@ -67,7 +67,7 @@ module Catalog {
   export const Grid = ({ data }: ContentProps) => {
     return (
       <div className={styles.grid}>
-        {data?.docs?.map(el => (
+        {data?.docs?.map((el) => (
           <FilmCard key={el.id} item={el} />
         ))}
       </div>
@@ -84,7 +84,7 @@ module Catalog {
   };
 
   export const Content = ({ data, isLoading, isFetching }: ContentProps) => {
-    const { page } = useTypedSelector(state => state.paginationReducer);
+    const { page } = useTypedSelector((state) => state.paginationReducer);
     const { setPage } = useActions();
 
     useEffect(() => {
