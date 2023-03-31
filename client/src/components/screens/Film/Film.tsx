@@ -14,7 +14,7 @@ import {
   MovieFavorite,
   MovieWatchLater,
   SimilarMovies,
-  FilmTabs
+  FilmTabs,
 } from "./components";
 
 import "react-tabs/style/react-tabs.css";
@@ -31,11 +31,11 @@ import styles from "./Film.module.scss";
 export const Film = () => {
   const router = useRouter();
   const { id } = router.query;
+  const { push } = useRouter();
 
   /* const {
-       push,
-       query: { id },
-       } = useRouter(); */
+   *   push: { id },
+   * } = useRouter(); */
   const { data, isLoading, isError } = useGetFilmByIdQuery(id);
   console.log(data);
 
@@ -62,7 +62,7 @@ export const Film = () => {
     tabs,
     top10,
     top250,
-    color
+    color,
   }: any = { ...data };
 
   const movieTitle = name ? name : isLoading ? "Загрузка" : "Без названия";
@@ -82,12 +82,12 @@ export const Film = () => {
           {el?.name}
         </Fragment>
       )),
-      condition: countries?.length
+      condition: countries?.length,
     },
     {
       caption: "Дата выхода",
       value: movieYear,
-      condition: movieYear
+      condition: movieYear,
     },
     {
       caption: "Жанр",
@@ -97,7 +97,7 @@ export const Film = () => {
           {el?.name ? el?.name : "Неизвестен"}
         </Fragment>
       )),
-      condition: genres?.length
+      condition: genres?.length,
     },
     { caption: "Слоган", value: slogan, condition: slogan },
     {
@@ -116,30 +116,30 @@ export const Film = () => {
           {ageRating}+
         </Box>
       ),
-      condition: ageRating
+      condition: ageRating,
     },
     {
       caption: "Бюджет",
       value: `${budget?.currency} ${budget?.value}`, //${convertNumbers(budget?.value)}
-      condition: budget?.value
+      condition: budget?.value,
     },
     { caption: "Время", value: `${movieLength} мин`, condition: movieLength },
     {
       caption: "Сборы в США",
       value: `${fees?.usa?.currency ? fees?.usa?.currency : "—"}`, //${convertNumbers(fees?.usa?.value)}
-      condition: fees?.usa
+      condition: fees?.usa,
     },
     {
       //${convertNumbers(worldFees)}
       caption: "Сборы в мире",
       value: `${fees?.world?.value ? fees?.world?.value : "—"} `, //${convertNumbers(fees?.world?.value)}
-      condition: fees?.usa
+      condition: fees?.usa,
     },
     {
       caption: "Премьера в мире",
       value: premiere?.world, //convertTimestampToDate(premiere?.world, "D MMMM YYYY")
-      condition: premiere?.world
-    }
+      condition: premiere?.world,
+    },
   ];
 
   return (
@@ -167,7 +167,7 @@ export const Film = () => {
       <article>
         <section
           style={{
-            background: `#141414`
+            background: `#141414`,
           }}
           className={styles.movieDetail}
         >
@@ -290,14 +290,10 @@ export const Film = () => {
                   <p className={styles.text}>Streaming Channels</p>
                 </div>
 
-                <ButtonPlayMovie>
-                  <Link href={`https://kinoway.vercel.app/room/${id}`}>
-                    {" "}
-                    TODO: Hardcode. Change to p
-                    <a target="_blank">
-                      <span>Смотреть (Player 1)</span>
-                    </a>
-                  </Link>
+                <ButtonPlayMovie onClick={() => push(`/room/${id}`)}>
+                  {" "}
+                  {/* TODO: Hardcode. Change to push */}
+                  <span>Смотреть (Player 1)</span>
                 </ButtonPlayMovie>
 
                 <ButtonPlayMovie>
