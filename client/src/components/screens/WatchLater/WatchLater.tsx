@@ -1,12 +1,12 @@
 import { useGetFavoritesQuery } from "@/services/KinowayService";
 import { useTypedSelector } from "@/hooks/useTypedSelector";
-// import { Filters } from '@/components/Filters/Filters';
 import { useWatchLater } from "@/hooks/useWatchLater";
+
+import { Filters } from "@/components/Filters/Filters";
 import { FilmCard } from "@/components/FilmCard/FilmCard";
+import { Grid, GridItem } from "@chakra-ui/react";
 
 import styles from "./WatchLater.module.scss";
-import { Filters } from "@/components/Filters/Filters";
-import { Flex, Spacer, Grid, GridItem } from "@chakra-ui/react";
 
 export const WatchLater = () => {
   const { watchLater } = useWatchLater();
@@ -34,9 +34,9 @@ export const WatchLater = () => {
 
         {data?.docs.map((data: any, index: any) => {
           return (
-            <GridItem colSpan={{ base: 3, sm: 1 }}>
+            <GridItem key={index} colSpan={{ base: 3, sm: 1 }}>
               {" "}
-              <FilmCard item={data} key={index} />{" "}
+              <FilmCard item={data} />{" "}
             </GridItem>
           );
         })}
