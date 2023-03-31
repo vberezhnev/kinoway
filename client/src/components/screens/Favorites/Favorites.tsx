@@ -7,7 +7,15 @@ import { FilmCard } from "@/components/FilmCard/FilmCard";
 
 import styles from "./Favorites.module.scss";
 import { Filters } from "@/components/Filters/Filters";
-import { Flex, Spacer, Box, Wrap, WrapItem } from "@chakra-ui/react";
+import {
+  Flex,
+  Spacer,
+  Box,
+  Wrap,
+  WrapItem,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
 
 export const Favorites = () => {
   const { favorites } = useFavorites();
@@ -19,24 +27,27 @@ export const Favorites = () => {
     filters,
     query,
   });
-
   console.log(data);
-
   return (
     <div className={styles.container}>
-      <div className={styles.App}>
-        <Flex wrap="wrap">
-          <Box p={8}>
-            <Filters />
-          </Box>
-          <Spacer />
-          <Box p={8}>
-            {data?.docs.map((data: any, index: any) => {
-              return <FilmList item={data} key={index} />;
-            })}
-          </Box>
-        </Flex>
-      </div>
+      <Grid
+        templateColumns="repeat(4, 1fr)"
+        templateRows="repeat(3, 1fr)"
+        gap={6}
+      >
+        <GridItem rowSpan={3} colSpan={1}>
+          <Filters />
+        </GridItem>
+
+        {data?.docs.map((data: any, index: any) => {
+          return (
+            <GridItem colSpan={{ base: 3, sm: 1 }}>
+              {" "}
+              <FilmCard item={data} key={index} />{" "}
+            </GridItem>
+          );
+        })}
+      </Grid>
     </div>
   );
 };
