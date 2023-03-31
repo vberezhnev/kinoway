@@ -203,7 +203,9 @@ export const Filters = () => {
         </div>
       </div>
       <div className={styles.btns}>
-        <Button className={styles.btn}>Применить</Button>
+        <Button onClick={onSubmit} className={styles.btn}>
+          Применить
+        </Button>
         <Device desktop>
           <Button
             type="button"
