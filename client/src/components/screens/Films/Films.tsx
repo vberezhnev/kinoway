@@ -10,8 +10,6 @@ export const Films = () => {
   const { page } = useTypedSelector((state) => state.paginationReducer);
   const { data, isLoading, isFetching } = useGetFilmsQuery({ page, filters });
 
-  const { Container, Heading, Description, Body, Content } = Catalog;
-
   return (
     <div className="container">
       <Grid

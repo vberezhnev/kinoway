@@ -49,28 +49,30 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 ** ToDo List
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 
-*** Client (TS) [12/21]
+*** Client (TS) [18/23]
 1) [-] Add "Too many requests" error
 2) [X] Add loader for all pages
 3) [X] Add reviews section for movies
-4) [ ] Add filters
-5) [ ] Create "Actor" page
+4) [X] Add filters
+5) [X] Create "Actor" page
 6) [-] Create "Random films" section with 4-5 random films
-7) [ ] Create "View more" page with films, TV shows and filters
-8) [X] Create 404 page
-9) [ ] Add rating to SearchList component
-10) [ ] Delete ~.module.scss~ files and move to whole ChakraUI
-11) [X] Add more content for [[file:client/src/components/screens/Film/Film.tsx][Film.tsx]]
-12) [X] Create component to provide ~data~ on it. Like ~<Content data={data} loading={isLoading} error={isError} />~
-13) [X] Fix "NaN" mark of film in SearchResults component
-14) [X] Fix "NaN" mark of film in SimilarMovies component
-15) [X] Fix "Similar movies" component
-16) [X] Add "Watch later" button (component)
-17) [X] Fix footer on film search page
-18) [-] Optimize film page opening
-19) [X] Redesign main page
-20) [X] Redesign film page
-21) [-] Change logic of ~Hero.tsx~ compoennt. Like ~Header movieData={pathToData}~.
+7) [X] Create "View more" page with films, TV shows
+8) [X] Add filters
+9) [X] Create 404 page
+10) [X] Add rating to SearchList component
+11) [ ] Delete ~.module.scss~ files and move to whole ChakraUI
+12) [ ] Add and change Catalog.tsx
+13) [X] Add more content for [[file:client/src/components/screens/Film/Film.tsx][Film.tsx]]
+14) [X] Create component to provide ~data~ on it. Like ~<Content data={data} loading={isLoading} error={isError} />~
+15) [X] Fix "NaN" mark of film in SearchResults component
+16) [X] Fix "NaN" mark of film in SimilarMovies component
+17) [X] Fix "Similar movies" component
+18) [X] Add "Watch later" button (component)
+19) [X] Fix footer on film search page
+20) [-] Optimize film page opening
+21) [X] Redesign main page
+22) [X] Redesign film page
+23) [-] Change logic of ~Hero.tsx~ compoennt. Like ~Header movieData={pathToData}~.
 
 **** ChakraUI
 1) [X] Update buttons 
@@ -87,17 +89,17 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 1) [ ] Deploy server
 2) [ ] Add main endpoints
 3) [X] Create ~.env.local~ and ~.env.example~
-4) 
+4) [ ] Connect avatar_url uploading with [[https://api.imgbb.com/][imgbb]]
 
  User model:
  #+begin_src rust
    struct User {
-       "id": 1,
-       "role": String, // "admin"
-       "email": String, // "johndoe123@gmail.com"
-       "password": String, // "password123"
-       "displayName": String, // "John Doe"
-       "avatarUrl": String // "https://avatar.png"
+       id: i64,
+       role: String, // "admin"
+       email: String, // "johndoe123@gmail.com"
+       password: String, // "password123"
+       display_name: String, // "John Doe"
+       avatar_url: String // "https://avatar.png"
    }
  #+end_src
 
