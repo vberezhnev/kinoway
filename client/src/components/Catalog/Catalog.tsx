@@ -1,14 +1,26 @@
-import { PropsWithChildren, useEffect } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
+
+import { useTypedSelector } from "@/hooks/useTypedSelector";
+import { useActions } from "@/hooks/useActions";
+
+import classNames from "classnames";
+import styles from "./Catalog.module.scss";
+
+import { Title } from "@/UI/Title/Title";
 import { FilmCard } from "@/components/FilmCard/FilmCard";
 import { FiltersToggle } from "./components/FiltersToggle/FiltersToggle";
 import { Pagination } from "@/UI/Pagination/Pagination";
 import { Spinner, SpinnerSizes } from "@/UI/Spinner/Spinner";
-import { Title } from "@/UI/Title/Title";
+import {
+  Previous,
+  Paginator,
+  PageGroup,
+  Page,
+  Next,
+  generatePages
+} from "chakra-paginator";
+
 import { IMovies } from "@/types/IMovies";
-import { useTypedSelector } from "@/hooks/useTypedSelector";
-import { useActions } from "@/hooks/useActions";
-import classNames from "classnames";
-import styles from "./Catalog.module.scss";
 
 interface ContentProps {
   data: IMovies | undefined;
@@ -55,7 +67,7 @@ module Catalog {
   export const Grid = ({ data }: ContentProps) => {
     return (
       <div className={styles.grid}>
-        {data?.docs?.map((el) => (
+        {data?.docs?.map(el => (
           <FilmCard key={el.id} item={el} />
         ))}
       </div>
@@ -72,7 +84,7 @@ module Catalog {
   };
 
   export const Content = ({ data, isLoading, isFetching }: ContentProps) => {
-    const { page } = useTypedSelector((state) => state.paginationReducer);
+    const { page } = useTypedSelector(state => state.paginationReducer);
     const { setPage } = useActions();
 
     useEffect(() => {
