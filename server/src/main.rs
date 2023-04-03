@@ -1,3 +1,4 @@
+#[allow(unused)]
 #[macro_use]
 extern crate rocket;
 
@@ -148,7 +149,7 @@ fn main() {
     let auth_domain = env::var("FIREBASE_AUTH_DOMAIN").unwrap();
     let database_url = env::var("FIREBASE_DATABASE_URL").unwrap();
 
-    let firebase = Firebase::new("PROJECT_ID", "SERVICE_ACCOUNT_KEY_PATH").unwrap();
+    let firebase = Firebase::new(project_id, "SERVICE_ACCOUNT_KEY_PATH").unwrap();
 
     rocket::ignite()
         .manage(firebase)

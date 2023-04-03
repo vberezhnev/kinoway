@@ -11,6 +11,8 @@ import { FilmCard } from "@/components/FilmCard/FilmCard";
 import { FiltersToggle } from "./components/FiltersToggle/FiltersToggle";
 import { Pagination } from "@/UI/Pagination/Pagination";
 import { Spinner, SpinnerSizes } from "@/UI/Spinner/Spinner";
+import { GridItem } from "@chakra-ui/react";
+import { Grid as GridChakra } from "@chakra-ui/react";
 /* import {
  *   Previous,
  *   Paginator,
@@ -21,6 +23,7 @@ import { Spinner, SpinnerSizes } from "@/UI/Spinner/Spinner";
  * } from "chakra-paginator"; */
 
 import { IMovies } from "@/types/IMovies";
+import { Filters } from "../Filters/Filters";
 
 interface ContentProps {
   data: IMovies | undefined;
@@ -31,6 +34,7 @@ interface ContentProps {
 function Catalog({ children }: PropsWithChildren<{}>) {
   return <div className={styles.catalog}>{children}</div>;
 }
+
 module Catalog {
   export const Container = ({ children }: PropsWithChildren<{}>) => {
     return (
@@ -66,20 +70,34 @@ module Catalog {
 
   export const Grid = ({ data }: ContentProps) => {
     return (
-      <div className={styles.grid}>
-        {data?.docs?.map((el) => (
-          <FilmCard key={el.id} item={el} />
+      <Grid>
+        {data?.docs?.map((data: any, index: any) => (
+          <GridItem key={index}>
+            <FilmCard item={data} />
+          </GridItem>
         ))}
-      </div>
+      </Grid>
+    );
+  };
+
+  export const Filters = () => {
+    return (
+      <GridItem rowSpan={3} colSpan={1}>
+        <Filters />
+      </GridItem>
     );
   };
 
   export const Body = ({ children }: PropsWithChildren<{}>) => {
     return (
-      <div className={styles.body}>
-        <FiltersToggle />
+      <GridChakra
+        templateColumns="repeat(4, 1fr)"
+        templateRows="repeat(3, 1fr)"
+        gap={6}
+      >
+        {/* <FiltersToggle /> */}
         {children}
-      </div>
+      </GridChakra>
     );
   };
 
