@@ -89,11 +89,16 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 7) [X] Update PlayMovie button
 8) [-] Do something with [[file:client/src/components/Catalog/Catalog.tsx][Catalog.tsx]]
 
-*** Server (Rust) (Not started yet) [1/3]
+*** Server (Rust) (Not started yet) [1/4]
 1) [ ] Deploy server
-2) [ ] Add main endpoints
-3) [X] Create ~.env.local~ and ~.env.example~
-4) [ ] Connect avatar_url uploading with [[https://api.imgbb.com/][imgbb]]
+2) [ ] Connect firebase DB
+3) [ ] Add main endpoints
+   1) [ ] ~/register~ @POST
+   2) [ ] ~/login~ @POST
+   3) [ ] ~/favorite_movies~ @POST
+   4) [ ] ~/movies~ @GET
+4) [X] Create ~.env.local~ and ~.env.example~
+5) [ ] Connect avatar_url uploading with [[https://api.imgbb.com/][imgbb]]
 
  User model:
  #+begin_src rust

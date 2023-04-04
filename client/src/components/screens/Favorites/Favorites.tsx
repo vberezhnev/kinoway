@@ -3,7 +3,7 @@ import { useTypedSelector } from "@/hooks/useTypedSelector";
 import { useFavorites } from "@/hooks/useFavorite";
 
 import { FilmCard } from "@/components/FilmCard/FilmCard";
-import { Filters } from "@/components/Filters/Filters";
+/* import { Filters } from "@/components/Filters/Filters"; */
 import { Grid, GridItem } from "@chakra-ui/react";
 import { Catalog } from "@/components/Catalog/Catalog";
 
@@ -21,16 +21,12 @@ export const Favorites = () => {
   });
   console.log(data);
 
-  const { Container, Content, Body } = Catalog;
+  const { Filters, Container, Content, Body } = Catalog;
 
   return (
     <Catalog>
       <Container>
         <Body>
-          <GridItem rowSpan={3} colSpan={1}>
-            <Filters />
-          </GridItem>
-
           <Content data={data} isLoading={isLoading} isFetching={isFetching} />
         </Body>
       </Container>

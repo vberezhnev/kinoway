@@ -12,7 +12,7 @@ import { FiltersToggle } from "./components/FiltersToggle/FiltersToggle";
 import { Pagination } from "@/UI/Pagination/Pagination";
 import { Spinner, SpinnerSizes } from "@/UI/Spinner/Spinner";
 import { GridItem } from "@chakra-ui/react";
-import { Grid as GridChakra } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 /* import {
  *   Previous,
  *   Paginator,
@@ -68,18 +68,14 @@ module Catalog {
     );
   };
 
-  export const Grid = ({ data }: ContentProps) => {
-    return (
-      <Grid>
-        {data?.docs?.map((data: any, index: any) => (
-          <GridItem key={index}>
-            <FilmCard item={data} />
-          </GridItem>
-        ))}
-      </Grid>
-    );
-  };
-
+  /* export const Grid = ({ data }: ContentProps) => {
+   *   {data?.docs?.map((data: any, index: any) => (
+   *     <GridItem key={index}>
+   *       <FilmCard item={data} />
+   *     </GridItem>
+   *   ))}
+   * };
+   */
   export const Filters = () => {
     return (
       <GridItem rowSpan={3} colSpan={1}>
@@ -90,14 +86,14 @@ module Catalog {
 
   export const Body = ({ children }: PropsWithChildren<{}>) => {
     return (
-      <GridChakra
+      <Grid
         templateColumns="repeat(4, 1fr)"
         templateRows="repeat(3, 1fr)"
         gap={6}
       >
         {/* <FiltersToggle /> */}
         {children}
-      </GridChakra>
+      </Grid>
     );
   };
 
@@ -111,7 +107,15 @@ module Catalog {
 
     const CatalogContent = (
       <>
-        <Catalog.Grid data={data} />
+        <Grid>
+          <Filters />
+
+          {data?.docs?.map((data: any, index: any) => (
+            <GridItem key={index} rowSpan={3} colSpan={1}>
+              <FilmCard item={data} />
+            </GridItem>
+          ))}
+        </Grid>
         <Pagination page={page} setPage={setPage} pages={data?.pages} />
       </>
     );
