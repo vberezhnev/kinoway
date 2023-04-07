@@ -18,7 +18,7 @@ export const Room = () => {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "/player.js";
+    script.src = "http://kinobd.ru/js/player_.js";
     document.body.appendChild(script);
 
     return () => {
