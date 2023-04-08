@@ -23,9 +23,10 @@ import { Grid as GridChakra } from "@chakra-ui/react";
  * } from "chakra-paginator"; */
 
 import { IMovies } from "@/types/IMovies";
+import { IMovie } from "@/types/IMovie";
 
 interface ContentProps {
-  data: IMovies | undefined;
+  data: IMovies | IMovie | undefined;
   isFetching?: boolean;
   isLoading?: boolean;
 }
@@ -69,31 +70,40 @@ module Catalog {
 
   export const Grid = ({ data }: ContentProps) => {
     return (
-      <GridChakra>
+      <>
         {data?.docs?.map((data: any, index: any) => (
-          <FilmCard key={index} item={data} />
+          <GridItem key={index}>
+            <FilmCard item={data} />
+          </GridItem>
         ))}
-      </GridChakra>
+      </>
     );
   };
 
-  export const CustomFilters = () => {
-    return (
-      <GridItem rowSpan={3} colSpan={1}>
-        <Filters />
-      </GridItem>
-    );
-  };
+  /* export const Movies = ({ data }: ContentProps) => {
+			 <GridItem >
+			 <FilmCard item={data} />
+			 </GridItem>
+			 );
+			 }; */
+
+  /* export const CustomFilters = () => {
+   *   return (
+   *     <GridItem rowSpan={3} colSpan={1}>
+   *       <Filters />
+   *     </GridItem>
+   *   );
+   * }; */
 
   export const Body = ({ children }: PropsWithChildren<{}>) => {
     return (
-      <Grid
+      <GridChakra
         templateColumns="repeat(4, 1fr)"
         templateRows="repeat(3, 1fr)"
         gap={6}
       >
         {children}
-      </Grid>
+      </GridChakra>
     );
   };
 
@@ -107,7 +117,14 @@ module Catalog {
 
     const CatalogContent = (
       <>
-        <Catalog.Grid data={data} />
+        {/* <Catalog.Grid data={data} /> */}
+
+        {data?.docs?.map((data: any, index: any) => (
+          <GridItem>
+            <FilmCard item={data} />
+          </GridItem>
+        ))}
+
         <Pagination page={page} setPage={setPage} pages={data?.pages} />
       </>
     );

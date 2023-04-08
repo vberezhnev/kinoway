@@ -74,10 +74,11 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 22) [X] Fix "Similar movies" component
 23) [X] Fix footer on film search page
 24) [X] Optimize film page opening
-25) [ ] Person -> Bugfix FilmCard component: images
-26) [X] Redesign film page
-27) [X] Redesign main page
-28) [ ] Rewrite components with Catalog.tsx
+25) [ ] @BUGFIX: [[file:client/src/components/Catalog/Catalog.tsx][Catalog.tsx]] and [[file:client/src/components/screens/Favorites/Favorites.tsx][Favorites.tsx]]. Grid plecment + load contents.
+26) [ ] Person -> Bugfix FilmCard component: images
+27) [X] Redesign film page
+28) [X] Redesign main page
+29) [ ] Rewrite components with Catalog.tsx
 
 **** ChakraUI
 1) [X] Update buttons 
