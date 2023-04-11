@@ -85,12 +85,12 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 7) [X] @CHANGE: Update PlayMovie button
 8) [-] @CHANGE: Do something with [[file:client/src/components/Catalog/Catalog.tsx][Catalog.tsx]]
    
-**** Fix ~N~ [4/7]
+**** Fix ~N~ [5/7]
 1) [X] @BUGFIX: "NaN" mark of film in SearchResults component
 2) [X] @BUGFIX: "NaN" mark of film in SimilarMovies component
 3) [X] @BUGFIX: "Similar movies" component
 4) [ ] @BUGFIX: [[file:client/src/components/Catalog/Catalog.tsx][Catalog.tsx]] and [[file:client/src/components/screens/Favorites/Favorites.tsx][Favorites.tsx]]. Grid plecment + load contents.
-5) [ ] @BUGFIX: Favorites & WatchLater components. Not all films are display
+5) [X] @BUGFIX: Favorites & WatchLater components. Not all films are display
 6) [X] @BUGFIX: footer on film search page
 7) [ ] @BUGFIX: Person -> FilmCard component: images
 
