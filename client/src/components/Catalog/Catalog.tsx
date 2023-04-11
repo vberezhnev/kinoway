@@ -26,7 +26,7 @@ import { IMovies } from "@/types/IMovies";
 import { IMovie } from "@/types/IMovie";
 
 interface ContentProps {
-  data: IMovies | IMovie | undefined;
+  data: IMovies | undefined;
   isFetching?: boolean;
   isLoading?: boolean;
 }
@@ -120,7 +120,7 @@ module Catalog {
         {/* <Catalog.Grid data={data} /> */}
 
         {data?.docs?.map((data: any, index: any) => (
-          <GridItem>
+          <GridItem key={index}>
             <FilmCard item={data} />
           </GridItem>
         ))}

@@ -13,6 +13,7 @@ export const Person = () => {
     query: { id },
   } = useRouter();
   const { data } = useGetPersonByIdQuery(id);
+  console.log(data);
   const { name, enName, photo } = { ...data };
 
   return (

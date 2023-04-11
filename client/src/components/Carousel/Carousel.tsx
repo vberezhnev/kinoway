@@ -1,7 +1,6 @@
 import { FC, PropsWithChildren, useRef } from "react";
 import { Swiper } from "swiper/react";
 import { SliderBtn } from "@/components/UI-components/SliderBtn/SliderBtn";
-//import { Title } from '@/UI-components/Title/Title';
 import SwiperClass, { Navigation } from "swiper";
 import styles from "./Carousel.module.scss";
 import "swiper/css";

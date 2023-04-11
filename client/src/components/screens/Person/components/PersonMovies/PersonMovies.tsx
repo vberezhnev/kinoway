@@ -10,13 +10,12 @@ interface PersonMoviesProps {
 }
 
 export const PersonMovies: FC<PersonMoviesProps> = ({ movies }) => {
-  console.log(movies);
-
   return (
     <div className={styles.container}>
       <Carousel title="Фильмы и сериалы" quantity={movies?.length}>
         {movies?.map((data, idx) => {
           const { ...item } = data;
+          console.log(item);
 
           return (
             <SwiperSlide className={styles.item} key={idx}>

@@ -49,7 +49,7 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 ** ToDo List
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 
-*** Client (TS)
+*** Client (TypeScript)
 **** Add ~N~ [13/14]
 1) [X] @ADD: "Actor" page
 2) [X] @ADD: "Random films" section with 4-5 random films
