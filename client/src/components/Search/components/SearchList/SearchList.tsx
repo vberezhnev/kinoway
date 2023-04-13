@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { useGetFilmsBySearchQuery } from "@/services/KinowayService";
-//import { Spinner, SpinnerSizes } from "@/UI/Spinner/Spinner";
-import { Button } from "@/components/UI-components/Button/Button";
+import { Spinner } from "@chakra-ui/react";
 
 // Components
 import { ButtonBase } from "@/components/UI-components/ButtonBase/ButtonBase";
@@ -20,6 +19,8 @@ export const SearchList: FC<SearchListProps> = ({ value }) => {
     type,
     limit: 100,
   });
+
+  console.log(data);
   const { docs } = { ...data };
 
   useEffect(() => {
@@ -31,43 +32,6 @@ export const SearchList: FC<SearchListProps> = ({ value }) => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.top}>
-        <div className={styles.btns}>
-          <Button
-            onClick={() => handleChangeType("1")}
-            bg="#313131"
-            color="white"
-            _hover={{
-              background: "#424242",
-              color: "white",
-            }}
-          >
-            Фильмы
-          </Button>
-          <Button
-            onClick={() => handleChangeType("2")}
-            bg="#313131"
-            color="white"
-            _hover={{
-              background: "#424242",
-              color: "white",
-            }}
-          >
-            Сериалы
-          </Button>
-          <Button
-            onClick={() => handleChangeType("3")}
-            bg="#313131"
-            color="white"
-            _hover={{
-              background: "#424242",
-              color: "white",
-            }}
-          >
-            Мультики
-          </Button>
-        </div>
-      </div>
       <>
         {docs?.length ? (
           <>
@@ -81,7 +45,13 @@ export const SearchList: FC<SearchListProps> = ({ value }) => {
               </>
             ) : (
               <div className={styles.loader}>
-                {/* <Spinner variant="dark" size={2} /> */}
+                <Spinner
+                  thickness="4px"
+                  speed="0.65s"
+                  emptyColor="gray.200"
+                  color="kinoway.100"
+                  size="xl"
+                />{" "}
               </div>
             )}
           </>
