@@ -57,14 +57,14 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 4) [X] @ADD: "View more" page with films, TV shows
 5) [X] @ADD: "Watch later" button (component)
 6) [X] @ADD: 404 page
-7) [ ] @ADD: component to provide ~data~ on it. Like ~<Content data={data} loading={isLoading} error={isError} />~
+7) [X] @ADD: component to provide ~data~ on it. Like ~<Content data={data} loading={isLoading} error={isError} />~
 8) [X] @ADD: filters
-9) [X] @ADD: filters
-10) [X] @ADD: loader for all pages
-11) [X] @ADD: more content for [[file:client/src/components/screens/Film/Film.tsx][Film.tsx]]
-12) [X] @ADD: rating to SearchList component
-13) [X] @ADD: reviews section for movies
-14) [X] @ADD: ~Room~ component
+9) [X] @ADD: loader for all pages
+10) [X] @ADD: more content for [[file:client/src/components/screens/Film/Film.tsx][Film.tsx]]
+11) [X] @ADD: rating to SearchList component
+12) [X] @ADD: reviews section for movies
+13) [X] @ADD: ~Room~ component
+14) [ ] @ADD: Fast search with new endpoints in API.
 
 **** Change / Delete ~N~ [3/7]
 1) [ ] @CHANGE: [[file:client/src/components/Catalog/Catalog.tsx][Catalog.tsx]]
@@ -72,8 +72,8 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 3) [X] @CHANGE: Redesign film page
 4) [X] @CHANGE: Redesign main page
 5) [ ] @CHANGE: Rewrite components with [[file:client/src/components/Catalog/Catalog.tsx][Catalog.tsx]]
-6) [ ] @DELETE: ~.module.scss~ files and move to whole ChakraUI
-7) [ ] @DELETE: and change _all_ ~any~ types in code
+7) [ ] @DELETE: ~.module.scss~ files and move to whole ChakraUI
+8) [ ] @DELETE: and change _all_ ~any~ types in code
 
 ***** ChakraUI [6/8]
 1) [X] @CHANGE: Update buttons 
@@ -107,7 +107,7 @@ Watch movies and TV series for free, in high definition, with no restrictions!
    - [X] ~/movies~ @GET
 5) [ ] Connect avatar_url uploading with [[https://api.imgbb.com/][imgbb]]
 6) [ ] User model:
-   
+
   #+begin_src rust
     struct User {
         id: i64,
