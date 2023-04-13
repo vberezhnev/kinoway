@@ -165,12 +165,7 @@ export const Film = () => {
       </Head>
 
       <article>
-        <section
-          style={{
-            background: `#141414`,
-          }}
-          className={styles.movieDetail}
-        >
+        <section className={styles.movieDetail}>
           <div className={styles.container}>
             <figure className={styles.movieDetailBanner}>
               <img src={data?.poster?.url} alt="Free guy movie poster" />
