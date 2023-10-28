@@ -1,7 +1,5 @@
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
-
-import styles from "./Layout.module.scss";
 import { Box } from "@chakra-ui/react";
 
 export const Layout = ({ children, props }: any): JSX.Element => {

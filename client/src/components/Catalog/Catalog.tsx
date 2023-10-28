@@ -91,17 +91,17 @@ module Catalog {
    *   );
    * }; */
 
-  export const Body = ({ children }: PropsWithChildren<{}>) => {
-    return (
-      <GridChakra
-        templateColumns="repeat(4, 1fr)"
-        templateRows="repeat(4, 1fr)"
-        gap={6}
-      >
-        {children}
-      </GridChakra>
-    );
-  };
+  /* export const Body = ({ children }: PropsWithChildren<{}>) => {
+   *   return (
+   *     <GridChakra
+   *       templateColumns="repeat(4, 1fr)"
+   *       templateRows="repeat(4, 1fr)"
+   *       gap={6}
+   *     >
+   *       {children}
+   *     </GridChakra>
+   *   );
+   * }; */
 
   export const Content = ({ data, isLoading, isFetching }: ContentProps) => {
     const { page } = useTypedSelector((state) => state.paginationReducer);

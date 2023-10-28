@@ -50,7 +50,7 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 - ~@components~ *is architecture fail.* *We shall use* ~../../../../~
 
 *** Client (TypeScript)
-**** Add ~N~ [13/14]
+**** Add ~N~ [14/14]
 1) [X] @ADD: "Actor" page
 2) [X] @ADD: "Random films" section with 4-5 random films
 3) [X] @ADD: "Too many requests" error
@@ -64,7 +64,7 @@ Watch movies and TV series for free, in high definition, with no restrictions!
 11) [X] @ADD: rating to SearchList component
 12) [X] @ADD: reviews section for movies
 13) [X] @ADD: ~Room~ component
-14) [ ] @ADD: Fast search with new endpoints in API.
+14) [X] @ADD: Fast search with new endpoints in API.
 
 **** Change / Delete ~N~ [3/7]
 1) [ ] @CHANGE: [[file:client/src/components/Catalog/Catalog.tsx][Catalog.tsx]]

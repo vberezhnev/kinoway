@@ -43,6 +43,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   const theme = extendTheme({
+    initialColorMode: "light",
+    useSystemColorMode: false,
     colors: {
       kinoway: {
         100: "#6754c7",
